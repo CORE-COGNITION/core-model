@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+logs/*
+!logs/.gitkeep
+results_evals/
+trained_models/
+.claude/settings.local.json
+tokenized_cache/
+results_browser/site/
+plotting/cache_2209/

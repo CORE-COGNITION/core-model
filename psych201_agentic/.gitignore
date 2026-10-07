@@ -1,0 +1,5 @@
+data/
+hf/*/*.csv
+hf/*/.cache/
+results_simulations/
+hf/

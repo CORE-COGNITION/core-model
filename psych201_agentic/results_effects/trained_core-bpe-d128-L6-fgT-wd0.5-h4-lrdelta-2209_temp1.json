@@ -1,0 +1,680 @@
+{
+ "agent": "trained_core-bpe-d128-L6-fgT-wd0.5-h4-lrdelta-2209_temp1",
+ "n_reproduced": 60,
+ "n_evaluated": 67,
+ "n_studies": 32,
+ "rows": [
+  {
+   "study": "badham_2017_deficits",
+   "effect_name": "learning_over_blocks",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.6,
+   "effect_size": 0.18934461805555558,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "badham_2017_deficits",
+   "effect_name": "structure_complexity",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.58,
+   "effect_size": 0.12360749421296295,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "bahrami_2020_arm",
+   "effect_name": "best_choice_above_chance",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.25,
+   "effect_size": 0.6123394069828949,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "bahrami_2020_arm",
+   "effect_name": "choice_accuracy_improves",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.0,
+   "effect_size": 0.044743758354043095,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "binz_2022_heuristics",
+   "effect_name": "above_chance_accuracy",
+   "experiment": "exp0,exp1,exp2",
+   "reproduced": true,
+   "original_effect_size": 0.712,
+   "effect_size": 0.629071729957806,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "binz_2022_heuristics",
+   "effect_name": "learning_over_trials",
+   "experiment": "exp0,exp1,exp2",
+   "reproduced": false,
+   "original_effect_size": 0.133,
+   "effect_size": 0.03270351702974702,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "binz_2022_heuristics",
+   "effect_name": "four_feature_unknown_no_learning",
+   "experiment": "exp3",
+   "reproduced": false,
+   "original_effect_size": -0.01,
+   "effect_size": 0.03430884538939408,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "breslav_2022_shuffle",
+   "effect_name": "deplete_replenish_bias",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": NaN,
+   "effect_size": 0.13451642990386004,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "chambon_2020_information",
+   "effect_name": "confirmatory_free_choice_learning",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.27,
+   "effect_size": 0.3140408266587311,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "chambon_2020_information",
+   "effect_name": "counterfactual_feedback_benefit",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.08,
+   "effect_size": 0.08093208649221013,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "chambon_2020_information",
+   "effect_name": "motor_independence_go_nogo",
+   "experiment": "exp3",
+   "reproduced": true,
+   "original_effect_size": 0.15,
+   "effect_size": 0.20442070238670862,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "chen_2018_agedependent",
+   "effect_name": "reward_approach_bias",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.1042,
+   "effect_size": 0.1187,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "cheung_2024_large",
+   "effect_name": "framing_effect_study2",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.15,
+   "effect_size": 0.1,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "cheung_2024_large",
+   "effect_name": "framing_effect_study3",
+   "experiment": "exp2",
+   "reproduced": true,
+   "original_effect_size": 0.25,
+   "effect_size": 0.1698,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "christian_2026_resolving",
+   "effect_name": "exploit_increases_as_nights_remaining_decreases",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": -0.073,
+   "effect_size": -0.06430428420281306,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "christian_2026_resolving",
+   "effect_name": "exploit_timing_across_horizons",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": -0.073,
+   "effect_size": -0.3617639945002762,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "christian_2026_resolving",
+   "effect_name": "runtime_balance",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.0,
+   "effect_size": 0.05027922135990614,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "cohen_2020_rational",
+   "effect_name": "attribution_causal_alignment",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 87.69,
+   "effect_size": 1.233693059970969,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "cohen_2020_rational",
+   "effect_name": "learning_over_trials",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 100.46,
+   "effect_size": 0.023571460677638986,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "dentella_2023_systematic",
+   "effect_name": "overall_accuracy_above_chance",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.5,
+   "effect_size": 0.594125,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "dentella_2023_systematic",
+   "effect_name": "accuracy_above_chance_ungrammatical",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.5,
+   "effect_size": 0.6445000000000001,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "dentella_2023_systematic",
+   "effect_name": "human_response_stability",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.5,
+   "effect_size": 0.20166666666666666,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "dubois_2022_valuefree",
+   "effect_name": "horizon_exploration_lower_ev",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.265,
+   "effect_size": 0.12688167410478032,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "dubois_2022_valuefree",
+   "effect_name": "directed_exploration_information",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.796,
+   "effect_size": 0.31241886880509334,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "dubois_2022_valuefree",
+   "effect_name": "high_value_bandit_frequency",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.797,
+   "effect_size": 0.31241886880509334,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "evangelidis_2022_upscaling",
+   "effect_name": "upscaling_basic_study1",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.44,
+   "effect_size": 0.5572816534777644,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "feherdasilva_2023_rethinking",
+   "effect_name": "model_based_stay",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": NaN,
+   "effect_size": 0.3409120284668991,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "feherdasilva_2023_rethinking",
+   "effect_name": "model_based_weight_story",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": NaN,
+   "effect_size": 0.48377547030908763,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "feng_2021_dynamics",
+   "effect_name": "directed_exploration_horizon",
+   "experiment": "exp0/exp1 (pooled)",
+   "reproduced": true,
+   "original_effect_size": 0.1,
+   "effect_size": 0.07104166666666667,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "feng_2021_dynamics",
+   "effect_name": "random_exploration_horizon",
+   "experiment": "exp0/exp1 (pooled)",
+   "reproduced": true,
+   "original_effect_size": -0.01,
+   "effect_size": -0.0033824855364365473,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "flesch_2018_comparing",
+   "effect_name": "blocked_beats_interleaved_test_accuracy",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.47,
+   "effect_size": 0.2310071332059255,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "flesch_2018_comparing",
+   "effect_name": "blocked_reduces_cardinal_irrelevant_intrusion",
+   "experiment": "exp0",
+   "reproduced": false,
+   "original_effect_size": 0.31,
+   "effect_size": -0.14785333610345508,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "flesch_2018_comparing",
+   "effect_name": "blocked_reduces_diagonal_irrelevant_intrusion",
+   "experiment": "exp1",
+   "reproduced": false,
+   "original_effect_size": 0.34,
+   "effect_size": -0.03562554443484343,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "frey_2017_risk",
+   "effect_name": "mpl_ev_sensitivity",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.8,
+   "effect_size": 0.8328428571428571,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "gershman_2018_deconstructing",
+   "effect_name": "first_trial_uncertainty_preference",
+   "experiment": "exp0,exp1",
+   "reproduced": true,
+   "original_effect_size": 1.4430092014798641,
+   "effect_size": 1.0054639629773103,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "gnther_2022_patterns",
+   "effect_name": "catch_trial_accuracy",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.085,
+   "effect_size": 0.12,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "gnther_2022_patterns",
+   "effect_name": "relations_systematic_nonuniform",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.0625,
+   "effect_size": 0.19583333333333333,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "gnther_2022_patterns",
+   "effect_name": "high_interpretational_variability",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 2.338,
+   "effect_size": 2.0170588201266266,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "gunadi_2022_impact",
+   "effect_name": "direction_effect_single",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.44200000000000006,
+   "effect_size": 0.4912410299704517,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "gunadi_2022_impact",
+   "effect_name": "frequency_moderation_direction",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": -2.9,
+   "effect_size": -2.6410513507890174,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "haines_2020_anxiety",
+   "effect_name": "delay_discounting_gradient",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": -1.0,
+   "effect_size": -0.01054477001285696,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "jagadish_2023_zeroshot",
+   "effect_name": "zero_shot_above_chance_exp0",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.215,
+   "effect_size": 0.13977663230240553,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "jagadish_2023_zeroshot",
+   "effect_name": "zero_shot_above_chance_exp1",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.17,
+   "effect_size": 0.04889455782312924,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "jagadish_2023_zeroshot",
+   "effect_name": "curriculum_beats_noncurriculum_exp0",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": -1.18,
+   "effect_size": -0.976590549695981,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "jagadish_2023_zeroshot",
+   "effect_name": "curriculum_beats_noncurriculum_exp1",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": -1.18,
+   "effect_size": -0.4607495994972184,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "jagadish_2023_zeroshot",
+   "effect_name": "learning_continues_in_composition_exp0",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": -0.21,
+   "effect_size": -0.1348516238125905,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "jagadish_2023_zeroshot",
+   "effect_name": "learning_continues_in_composition_exp1",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": -0.216,
+   "effect_size": -0.2169825962700403,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "kool_2016_when",
+   "effect_name": "daw_stay_reward_maineffect",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.5486022849069043,
+   "effect_size": 0.07244559166872896,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "kool_2016_when",
+   "effect_name": "daw_stay_reward_common_interaction",
+   "experiment": "exp0",
+   "reproduced": false,
+   "original_effect_size": 0.3833091289349539,
+   "effect_size": 0.029585197077347407,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "kool_2016_when",
+   "effect_name": "novel_stay_same_vs_diff_after_reward",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.7106702286666042,
+   "effect_size": 0.159157979709864,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "moutoussis_2018_change",
+   "effect_name": "pavlovian_congruency_performance",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.18,
+   "effect_size": 0.12831497348021215,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "moutoussis_2018_change",
+   "effect_name": "pavlovian_congruency_performance",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.18,
+   "effect_size": 0.12882194244604317,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "olschewski_2024_frequent",
+   "effect_name": "frequent_winner_study1",
+   "experiment": "exp0",
+   "reproduced": false,
+   "original_effect_size": 0.672,
+   "effect_size": 0.5277165595347414,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "olschewski_2024_frequent",
+   "effect_name": "frequent_winner_study2",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.671,
+   "effect_size": 0.5699833333333334,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "olschewski_2024_frequent",
+   "effect_name": "intrinsic_right_skew_study3",
+   "experiment": "exp2",
+   "reproduced": false,
+   "original_effect_size": 0.542,
+   "effect_size": 0.5115,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "plonsky_2025_predicting",
+   "effect_name": "expected_value_sensitivity",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.33,
+   "effect_size": 0.32495435568704406,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "plonsky_2025_predicting",
+   "effect_name": "advantage_option_overchosen",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.6,
+   "effect_size": 0.6068003341687552,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "russek_2024_heuristics",
+   "effect_name": "additive_heuristic_components_drive_choice",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 1.0,
+   "effect_size": 2.0900792936175643,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "shahar_2019_improving",
+   "effect_name": "mb_choice_transition_reward_interaction",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.251,
+   "effect_size": 0.013299396828915455,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "spektor_2024_absolute",
+   "effect_name": "context_effect_risky_choice",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.195,
+   "effect_size": 0.1200220628792057,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "spektor_2024_absolute",
+   "effect_name": "stability_risky_choice",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": 0.513,
+   "effect_size": 0.44237050482996887,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "spektor_2024_absolute",
+   "effect_name": "context_effect_risky_choice_exp3",
+   "experiment": "exp2",
+   "reproduced": true,
+   "original_effect_size": 0.307,
+   "effect_size": 0.045906432748538006,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "steingroever_2015_data",
+   "effect_name": "igt_learning_net_score_increase",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": NaN,
+   "effect_size": 3.734126984126984,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "steingroever_2015_data",
+   "effect_name": "igt_learning_advantageous_late_blocks",
+   "experiment": "exp1",
+   "reproduced": true,
+   "original_effect_size": NaN,
+   "effect_size": 1.7777777777777777,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "thoma_2025_emerging",
+   "effect_name": "static_high_probability_learning",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 0.07000000000000006,
+   "effect_size": 0.056634521654365666,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "vandendriessche_2022_contextual",
+   "effect_name": "learning_accuracy_above_chance",
+   "experiment": "exp0",
+   "reproduced": true,
+   "original_effect_size": 4.02119385257662,
+   "effect_size": 9.981285717414607,
+   "status": "ok",
+   "error": null
+  },
+  {
+   "study": "vantiel_2021_probabilistic",
+   "effect_name": "monotonicity_validity",
+   "experiment": "exp3",
+   "reproduced": true,
+   "original_effect_size": 0.4,
+   "effect_size": 0.4726456136456137,
+   "status": "ok",
+   "error": null
+  }
+ ],
+ "no_script": [],
+ "study_errors": []
+}

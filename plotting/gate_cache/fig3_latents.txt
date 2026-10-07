@@ -1,0 +1,13 @@
+Panels A-B: 47 experiments, agent trained_core-phoneme-d128-L6-fgT-wd0.5-h4-lrdelta-2209_temp1.
+  layer 1: median beta 0.441, median tau 7.9 tokens
+  layer 2: median beta 0.415, median tau 25.7 tokens
+  layer 3: median beta 0.386, median tau 27.0 tokens
+  layer 4: median beta 0.339, median tau 43.0 tokens
+  layer 5: median beta 0.289, median tau 4.5 tokens
+  layer 6: median beta 0.171, median tau 0.9 tokens
+Panels C-D: layer 5, 17 game experiments, gates over the feedback; channels picked among those where >= 14 of 17 experiments agree.
+learning rate beta, layer 5 head 4 channel 14:
+  over the game: first fifth 0.460 -> last fifth 0.355: -22.7%; experiments 15 decrease, 2 increase; sign test p = 0.0023; t(16) = -4.76, p = 0.00021
+timescale tau, layer 5 head 3 channel 16:
+  over the game: first fifth 142.186 tokens -> last fifth 393.253 tokens: +176.6%; experiments 1 decrease, 16 increase; sign test p = 0.00027; t(16) = 3.75, p = 0.0018
+  at the boundary: last fifth 393.253 tokens -> boundary 80.108 tokens: -79.6%; experiments 17 drop, 0 rise; sign test p = 1.5e-05; t(16) = -4.19, p = 0.00069

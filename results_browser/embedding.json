@@ -1,0 +1,691 @@
+{
+ "model": "sentence-transformers/all-MiniLM-L6-v2",
+ "method": "UMAP (n_neighbors=15, min_dist=0.3, cosine, seed 0)",
+ "points": [
+  {
+   "experiment": "akata_2025_playing/exp0.csv",
+   "x": -0.3805,
+   "y": 16.3547
+  },
+  {
+   "experiment": "anvari_2024_testing/exp0.csv",
+   "x": 1.0274,
+   "y": 15.334
+  },
+  {
+   "experiment": "anvari_2024_testing/exp1.csv",
+   "x": 1.4136,
+   "y": 15.3383
+  },
+  {
+   "experiment": "badham_2017_deficits/exp0.csv",
+   "x": 1.9535,
+   "y": 13.6316
+  },
+  {
+   "experiment": "bahrami_2020_arm/exp0.csv",
+   "x": -1.0476,
+   "y": 16.0768
+  },
+  {
+   "experiment": "barnby_2022_knowing/exp0.csv",
+   "x": 4.2807,
+   "y": 16.7199
+  },
+  {
+   "experiment": "bavard_2018_referencepoint/exp0.csv",
+   "x": 3.0138,
+   "y": 12.7565
+  },
+  {
+   "experiment": "bavard_2018_referencepoint/exp1.csv",
+   "x": 3.2437,
+   "y": 13.0713
+  },
+  {
+   "experiment": "bavard_2021_two/exp0.csv",
+   "x": 4.0041,
+   "y": 12.2985
+  },
+  {
+   "experiment": "bavard_2021_two/exp1.csv",
+   "x": 4.2999,
+   "y": 12.0181
+  },
+  {
+   "experiment": "bavard_2021_two/exp2.csv",
+   "x": 4.1739,
+   "y": 12.1964
+  },
+  {
+   "experiment": "bavard_2021_two/exp3.csv",
+   "x": 4.4252,
+   "y": 12.0651
+  },
+  {
+   "experiment": "bavard_2021_two/exp4.csv",
+   "x": 3.9096,
+   "y": 12.0013
+  },
+  {
+   "experiment": "bavard_2021_two/exp5.csv",
+   "x": 4.2576,
+   "y": 12.3277
+  },
+  {
+   "experiment": "bavard_2021_two/exp6.csv",
+   "x": 3.7853,
+   "y": 11.9241
+  },
+  {
+   "experiment": "bavard_2021_two/exp7.csv",
+   "x": 4.2053,
+   "y": 11.8632
+  },
+  {
+   "experiment": "binz_2022_heuristics/exp0.csv",
+   "x": 1.8213,
+   "y": 11.586
+  },
+  {
+   "experiment": "binz_2022_heuristics/exp1.csv",
+   "x": 1.6932,
+   "y": 11.7002
+  },
+  {
+   "experiment": "binz_2022_heuristics/exp2.csv",
+   "x": 1.6003,
+   "y": 11.4951
+  },
+  {
+   "experiment": "binz_2022_heuristics/exp3.csv",
+   "x": 1.4311,
+   "y": 11.8817
+  },
+  {
+   "experiment": "breslav_2022_shuffle/exp0.csv",
+   "x": -0.9629,
+   "y": 16.1563
+  },
+  {
+   "experiment": "chambon_2020_information/exp0.csv",
+   "x": 2.497,
+   "y": 13.2418
+  },
+  {
+   "experiment": "chambon_2020_information/exp1.csv",
+   "x": 2.3792,
+   "y": 13.5142
+  },
+  {
+   "experiment": "chambon_2020_information/exp2.csv",
+   "x": 2.4799,
+   "y": 13.0581
+  },
+  {
+   "experiment": "chambon_2020_information/exp3.csv",
+   "x": 2.7405,
+   "y": 13.2835
+  },
+  {
+   "experiment": "chen_2018_agedependent/exp0.csv",
+   "x": 0.4867,
+   "y": 15.1796
+  },
+  {
+   "experiment": "cheung_2024_large/exp0.csv",
+   "x": 4.2143,
+   "y": 14.4643
+  },
+  {
+   "experiment": "cheung_2024_large/exp1.csv",
+   "x": 4.3233,
+   "y": 14.6963
+  },
+  {
+   "experiment": "cheung_2024_large/exp2.csv",
+   "x": 4.2264,
+   "y": 14.6272
+  },
+  {
+   "experiment": "christian_2026_resolving/exp0.csv",
+   "x": 0.3642,
+   "y": 15.4215
+  },
+  {
+   "experiment": "ciranka_2025_internal/exp0.csv",
+   "x": 4.7835,
+   "y": 13.2405
+  },
+  {
+   "experiment": "cohen_2020_rational/exp0.csv",
+   "x": 0.9108,
+   "y": 12.5682
+  },
+  {
+   "experiment": "cox_2018_information/exp0.csv",
+   "x": 3.0351,
+   "y": 14.217
+  },
+  {
+   "experiment": "decker_2016_from/exp0.csv",
+   "x": 1.0067,
+   "y": 10.9358
+  },
+  {
+   "experiment": "dentella_2023_systematic/exp0.csv",
+   "x": 2.8777,
+   "y": 14.7261
+  },
+  {
+   "experiment": "dezfouli_2019_models/exp0.csv",
+   "x": 2.0907,
+   "y": 15.768
+  },
+  {
+   "experiment": "dubois_2022_valuefree/exp0.csv",
+   "x": 0.4344,
+   "y": 16.6569
+  },
+  {
+   "experiment": "evangelidis_2022_upscaling/exp0.csv",
+   "x": 5.7074,
+   "y": 16.8826
+  },
+  {
+   "experiment": "evangelidis_2022_upscaling/exp1.csv",
+   "x": 5.663,
+   "y": 16.6065
+  },
+  {
+   "experiment": "evangelidis_2022_upscaling/exp2.csv",
+   "x": 5.2112,
+   "y": 16.697
+  },
+  {
+   "experiment": "evangelidis_2022_upscaling/exp3.csv",
+   "x": 6.0864,
+   "y": 16.5002
+  },
+  {
+   "experiment": "evangelidis_2022_upscaling/exp4.csv",
+   "x": 5.9115,
+   "y": 16.6942
+  },
+  {
+   "experiment": "evangelidis_2022_upscaling/exp6.csv",
+   "x": 5.5084,
+   "y": 16.7601
+  },
+  {
+   "experiment": "evangelidis_2022_upscaling/exp7.csv",
+   "x": 5.8751,
+   "y": 16.9326
+  },
+  {
+   "experiment": "fan_2022_trait/exp0.csv",
+   "x": -1.21,
+   "y": 16.8546
+  },
+  {
+   "experiment": "fan_2022_trait/exp1.csv",
+   "x": -0.3772,
+   "y": 16.8165
+  },
+  {
+   "experiment": "feherdasilva_2023_rethinking/exp0.csv",
+   "x": 2.0274,
+   "y": 12.924
+  },
+  {
+   "experiment": "feng_2021_dynamics/exp0.csv",
+   "x": -0.4312,
+   "y": 15.965
+  },
+  {
+   "experiment": "feng_2021_dynamics/exp1.csv",
+   "x": -0.4748,
+   "y": 15.9274
+  },
+  {
+   "experiment": "flesch_2018_comparing/exp0.csv",
+   "x": 0.8804,
+   "y": 16.519
+  },
+  {
+   "experiment": "flesch_2018_comparing/exp1.csv",
+   "x": 1.1512,
+   "y": 16.5597
+  },
+  {
+   "experiment": "flesch_2018_comparing/exp2.csv",
+   "x": 0.6241,
+   "y": 16.4247
+  },
+  {
+   "experiment": "flesch_2018_comparing/exp3.csv",
+   "x": 0.4848,
+   "y": 16.733
+  },
+  {
+   "experiment": "frey_2017_risk/exp0.csv",
+   "x": 2.6714,
+   "y": 17.4144
+  },
+  {
+   "experiment": "frey_2017_risk/exp1.csv",
+   "x": 2.5338,
+   "y": 17.0614
+  },
+  {
+   "experiment": "frey_2017_risk/exp4.csv",
+   "x": 1.4543,
+   "y": 14.891
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp0.csv",
+   "x": 3.8066,
+   "y": 16.7524
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp1.csv",
+   "x": 4.1936,
+   "y": 16.5263
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp2.csv",
+   "x": 3.9911,
+   "y": 16.1987
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp3.csv",
+   "x": 4.1003,
+   "y": 16.0806
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp4.csv",
+   "x": 3.5339,
+   "y": 16.3506
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp5.csv",
+   "x": 4.1638,
+   "y": 16.7203
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp6.csv",
+   "x": 4.5222,
+   "y": 16.1972
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp7.csv",
+   "x": 4.3395,
+   "y": 16.4608
+  },
+  {
+   "experiment": "garcia_2023_experiential/exp8.csv",
+   "x": 3.8997,
+   "y": 16.8712
+  },
+  {
+   "experiment": "gershman_2018_deconstructing/exp0.csv",
+   "x": -0.5246,
+   "y": 16.8775
+  },
+  {
+   "experiment": "gershman_2018_deconstructing/exp1.csv",
+   "x": -0.8178,
+   "y": 16.7311
+  },
+  {
+   "experiment": "gnther_2020_trying/exp0.csv",
+   "x": 2.9685,
+   "y": 13.9868
+  },
+  {
+   "experiment": "gnther_2020_trying/exp1.csv",
+   "x": 2.567,
+   "y": 14.2054
+  },
+  {
+   "experiment": "gnther_2022_patterns/exp0.csv",
+   "x": 3.049,
+   "y": 13.668
+  },
+  {
+   "experiment": "gunadi_2022_impact/exp0.csv",
+   "x": 6.0306,
+   "y": 15.6765
+  },
+  {
+   "experiment": "gunadi_2022_impact/exp1.csv",
+   "x": 6.2963,
+   "y": 15.6787
+  },
+  {
+   "experiment": "gunadi_2022_impact/exp2.csv",
+   "x": 6.2767,
+   "y": 16.177
+  },
+  {
+   "experiment": "gunadi_2022_impact/exp3.csv",
+   "x": 6.146,
+   "y": 16.073
+  },
+  {
+   "experiment": "gunadi_2022_impact/exp4.csv",
+   "x": 6.175,
+   "y": 15.5471
+  },
+  {
+   "experiment": "gunadi_2022_impact/exp5.csv",
+   "x": 5.814,
+   "y": 15.4305
+  },
+  {
+   "experiment": "haines_2020_anxiety/exp0.csv",
+   "x": 4.6165,
+   "y": 15.8652
+  },
+  {
+   "experiment": "heffner_2022_probabilistic/exp0.csv",
+   "x": 3.1499,
+   "y": 15.8589
+  },
+  {
+   "experiment": "jagadish_2023_zeroshot/exp0.csv",
+   "x": -1.459,
+   "y": 15.7377
+  },
+  {
+   "experiment": "jagadish_2023_zeroshot/exp1.csv",
+   "x": -1.4786,
+   "y": 16.1117
+  },
+  {
+   "experiment": "jansen_2021_rational/exp0.csv",
+   "x": 3.6287,
+   "y": 14.9467
+  },
+  {
+   "experiment": "jansen_2021_rational/exp1.csv",
+   "x": 3.8646,
+   "y": 14.981
+  },
+  {
+   "experiment": "kool_2016_when/exp0.csv",
+   "x": 0.7998,
+   "y": 10.8761
+  },
+  {
+   "experiment": "kool_2016_when/exp1.csv",
+   "x": 1.2125,
+   "y": 11.2361
+  },
+  {
+   "experiment": "kool_2017_costbenefit/exp0.csv",
+   "x": 0.7339,
+   "y": 11.3142
+  },
+  {
+   "experiment": "kool_2017_costbenefit/exp1.csv",
+   "x": 0.8595,
+   "y": 11.4595
+  },
+  {
+   "experiment": "krueger_2024_identifying/exp0.csv",
+   "x": 4.6877,
+   "y": 12.7665
+  },
+  {
+   "experiment": "krueger_2024_identifying/exp1.csv",
+   "x": 4.7411,
+   "y": 12.5516
+  },
+  {
+   "experiment": "levering_2019_revisiting/exp0.csv",
+   "x": 1.5273,
+   "y": 13.5148
+  },
+  {
+   "experiment": "moutoussis_2018_change/exp0.csv",
+   "x": 2.1395,
+   "y": 14.2527
+  },
+  {
+   "experiment": "moutoussis_2018_change/exp1.csv",
+   "x": 2.344,
+   "y": 14.1475
+  },
+  {
+   "experiment": "nussenbaum_2023_novelty/exp0.csv",
+   "x": 1.6514,
+   "y": 12.8668
+  },
+  {
+   "experiment": "nussenbaum_2024_sensitivity/exp0.csv",
+   "x": -1.3339,
+   "y": 16.556
+  },
+  {
+   "experiment": "nussenbaum_2024_sensitivity/exp1.csv",
+   "x": -1.5041,
+   "y": 16.4699
+  },
+  {
+   "experiment": "olschewski_2024_frequent/exp0.csv",
+   "x": 0.5316,
+   "y": 18.524
+  },
+  {
+   "experiment": "olschewski_2024_frequent/exp1.csv",
+   "x": 0.6754,
+   "y": 18.4455
+  },
+  {
+   "experiment": "olschewski_2024_frequent/exp2.csv",
+   "x": 0.4977,
+   "y": 18.5363
+  },
+  {
+   "experiment": "olschewski_2024_frequent/exp3.csv",
+   "x": 0.6486,
+   "y": 18.4195
+  },
+  {
+   "experiment": "olschewski_2024_frequent/exp4.csv",
+   "x": -0.8156,
+   "y": 16.6002
+  },
+  {
+   "experiment": "olschewski_2024_frequent/exp5.csv",
+   "x": -0.8966,
+   "y": 16.9715
+  },
+  {
+   "experiment": "olschewski_2025_optimal/exp0.csv",
+   "x": 2.9169,
+   "y": 17.3155
+  },
+  {
+   "experiment": "olschewski_2025_optimal/exp1.csv",
+   "x": 3.1713,
+   "y": 17.3682
+  },
+  {
+   "experiment": "pirrone_2024_subjective/exp0.csv",
+   "x": 2.8009,
+   "y": 17.3408
+  },
+  {
+   "experiment": "plonsky_2025_predicting/exp0.csv",
+   "x": 2.5649,
+   "y": 16.6007
+  },
+  {
+   "experiment": "russek_2024_heuristics/exp0.csv",
+   "x": 4.9034,
+   "y": 12.8865
+  },
+  {
+   "experiment": "russek_2024_heuristics/exp1.csv",
+   "x": 4.2712,
+   "y": 12.7033
+  },
+  {
+   "experiment": "sadeghiyeh_2020_temporal/exp0.csv",
+   "x": -0.6497,
+   "y": 16.2186
+  },
+  {
+   "experiment": "sadeghiyeh_2020_temporal/exp1.csv",
+   "x": 5.0134,
+   "y": 15.0175
+  },
+  {
+   "experiment": "schulz_2020_finding/exp0.csv",
+   "x": 0.233,
+   "y": 14.9696
+  },
+  {
+   "experiment": "schulz_2020_finding/exp1.csv",
+   "x": 0.1274,
+   "y": 15.1739
+  },
+  {
+   "experiment": "schulz_2020_finding/exp2.csv",
+   "x": 0.4806,
+   "y": 14.9614
+  },
+  {
+   "experiment": "schulz_2020_finding/exp3.csv",
+   "x": -0.1375,
+   "y": 14.9374
+  },
+  {
+   "experiment": "schulz_2020_finding/exp4.csv",
+   "x": 0.1765,
+   "y": 14.7642
+  },
+  {
+   "experiment": "shahar_2019_improving/exp0.csv",
+   "x": 2.4193,
+   "y": 15.3411
+  },
+  {
+   "experiment": "singh_2019_training/exp0.csv",
+   "x": 4.0769,
+   "y": 13.8775
+  },
+  {
+   "experiment": "singh_2019_training/exp1.csv",
+   "x": 3.8982,
+   "y": 13.722
+  },
+  {
+   "experiment": "singh_2019_training/exp2.csv",
+   "x": 4.1351,
+   "y": 13.58
+  },
+  {
+   "experiment": "spektor_2024_absolute/exp0.csv",
+   "x": 3.1861,
+   "y": 17.1494
+  },
+  {
+   "experiment": "spektor_2024_absolute/exp1.csv",
+   "x": 2.8252,
+   "y": 16.9324
+  },
+  {
+   "experiment": "spektor_2024_absolute/exp2.csv",
+   "x": 3.076,
+   "y": 17.0838
+  },
+  {
+   "experiment": "steingroever_2015_data/exp0.csv",
+   "x": -1.6585,
+   "y": 15.2176
+  },
+  {
+   "experiment": "steingroever_2015_data/exp1.csv",
+   "x": -1.6311,
+   "y": 15.299
+  },
+  {
+   "experiment": "steingroever_2015_data/exp2.csv",
+   "x": -1.8397,
+   "y": 15.2762
+  },
+  {
+   "experiment": "suthaharan_2021_paranoia/exp0.csv",
+   "x": -0.5767,
+   "y": 15.3578
+  },
+  {
+   "experiment": "suthaharan_2021_paranoia/exp1.csv",
+   "x": 4.0301,
+   "y": 16.4242
+  },
+  {
+   "experiment": "thoma_2025_emerging/exp0.csv",
+   "x": 2.255,
+   "y": 13.2811
+  },
+  {
+   "experiment": "vandendriessche_2022_contextual/exp0.csv",
+   "x": 2.3635,
+   "y": 12.7384
+  },
+  {
+   "experiment": "vantiel_2021_probabilistic/exp2.csv",
+   "x": 3.3846,
+   "y": 14.3724
+  },
+  {
+   "experiment": "vantiel_2021_probabilistic/exp3.csv",
+   "x": 3.1959,
+   "y": 14.6588
+  },
+  {
+   "experiment": "witte_2024_how/exp0.csv",
+   "x": 3.3507,
+   "y": 14.1081
+  },
+  {
+   "experiment": "wu_2023_chunking/exp0.csv",
+   "x": 2.3455,
+   "y": 14.7351
+  },
+  {
+   "experiment": "wu_2023_chunking/exp1.csv",
+   "x": 2.1598,
+   "y": 14.4536
+  },
+  {
+   "experiment": "xu_2021_novelty/exp0.csv",
+   "x": 1.865,
+   "y": 13.8345
+  },
+  {
+   "experiment": "xu_2023_augmenting/exp0.csv",
+   "x": 3.3697,
+   "y": 14.5371
+  },
+  {
+   "experiment": "zorowitz_2023_data/exp0.csv",
+   "x": 0.896,
+   "y": 11.1163
+  },
+  {
+   "experiment": "zorowitz_2023_data/exp1.csv",
+   "x": 1.2434,
+   "y": 10.7898
+  },
+  {
+   "experiment": "zorowitz_2023_data/exp2.csv",
+   "x": 1.1564,
+   "y": 10.9258
+  }
+ ]
+}

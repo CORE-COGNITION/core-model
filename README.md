@@ -32,8 +32,8 @@ The training and test sets are on the Hugging Face Hub:
 The code loads them directly from the Hub, pinned to a revision (`DATA_REPOS` in `utils.py`).
 `psych201_agentic/build_dataset.py` rebuilds both splits from the source repositories.
 
-The simulators and effect analyses of the individual studies are downloaded at pinned commits with
-`python psych201_agentic/fetch_hf_scripts.py` (into `psych201_agentic/hf/`).
+The simulators and effect analyses of the individual studies, as used in the paper, are in `psych201_agentic/hf/`
+(copies of the Hugging-Brain repositories at the commits pinned in `psych201_agentic/manifest.json`).
 
 ## Usage
 

@@ -1,0 +1,2936 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>witte_2024_how</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / witte_2024_how</nav>
+<h1>witte_2024_how</h1>
+<p class="tags"><span class="chip paradigm">bandit</span> <span class="chip minor">psych-201</span></p>
+<p>Two-session online retest study (Prolific; N=238 with at least one session, 236 in session 1, 177 in session 2) measuring human exploration across three few-armed bandit tasks: a Horizon task (80 rounds of 4 forced + 1/6 free slot choices, information and horizon conditions), a two-armed bandit (30 rounds x 10 free choices under Stable/Drifting reward conditions), and a restless 4-arm bandit (200 consecutive choices among drifting arms). Participants also completed three working-memory tasks (updating, operation span, symmetry span) and exploration/mood/anxiety/depression questionnaires. Responses are keyboard arm choices with RT and reward per trial, Likert-scale questionnaire items, and WM accuracy scores. The research goal was the psychometric reliability, convergent/external validity, and improved computational modeling (UCB/directed/random exploration, hierarchical Bayesian and ML fits) of model-based exploration measures.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">322,140</div><div class="tile-sub">33,540 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.364</div><div class="tile-sub">rank 2 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE (no phonemes)</div><div class="tile-sub">test NLL (avg) 0.363</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="12223.9918" title="CORE: 12,224.0 nats"><span class="track"><span class="bar core" style="width:50.4%"></span></span><span class="num">12,224.0</span></td><td class="num" data-v="0.3645">0.3645</td><td class="num" data-v="33540">33,540</td><td class="num" data-v="0.368">0.3680</td><td class="num" data-v="288600.0">288,600</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="12310.3915" title="CORE (no prediction errors): 12,310.4 nats"><span class="track"><span class="bar core" style="width:50.8%"></span></span><span class="num">12,310.4</span></td><td class="num" data-v="0.367">0.3670</td><td class="num" data-v="33540">33,540</td><td class="num" data-v="0.373">0.3730</td><td class="num" data-v="288600.0">288,600</td></tr><tr class="best"><td>CORE (no phonemes) <span class="pill best-pill">best</span></td><td class="barcell" data-v="12184.3558" title="CORE (no phonemes): 12,184.4 nats"><span class="track"><span class="bar core" style="width:50.2%"></span></span><span class="num">12,184.4</span></td><td class="num" data-v="0.3633">0.3633</td><td class="num" data-v="33540">33,540</td><td class="num" data-v="0.3657">0.3657</td><td class="num" data-v="288600.0">288,600</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="12831.836" title="CORE (no forgetting): 12,831.8 nats"><span class="track"><span class="bar core" style="width:52.9%"></span></span><span class="num">12,831.8</span></td><td class="num" data-v="0.3826">0.3826</td><td class="num" data-v="33540">33,540</td><td class="num" data-v="0.3901">0.3901</td><td class="num" data-v="288600.0">288,600</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="17496.6912" title="CORE (no hierarchy): 17,496.7 nats"><span class="track"><span class="bar core" style="width:72.2%"></span></span><span class="num">17,496.7</span></td><td class="num" data-v="0.5217">0.5217</td><td class="num" data-v="33540">33,540</td><td class="num" data-v="0.5429">0.5429</td><td class="num" data-v="288600.0">288,600</td></tr><tr><td>Transformer</td><td class="barcell" data-v="14839.2367" title="Transformer: 14,839.2 nats"><span class="track"><span class="bar base" style="width:61.2%"></span></span><span class="num">14,839.2</span></td><td class="num" data-v="0.4424">0.4424</td><td class="num" data-v="33540">33,540</td><td class="num" data-v="0.459">0.4590</td><td class="num" data-v="288600.0">288,600</td></tr><tr><td>Centaur</td><td class="barcell" data-v="24248.3555" title="Centaur: 24,248.4 nats"><span class="track"><span class="bar base" style="width:100.0%"></span></span><span class="num">24,248.4</span></td><td class="num" data-v="0.723">0.7230</td><td class="num" data-v="33540">33,540</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>ExplorationBattery</td><td class="num">238</td><td class="num">322,140</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option></select></label><div class="transcript" id="t0"><pre>You take part in a two-session study on decision-making and memory.
+You are m, age 26, education code 16, income band 8.
+Session session1
+In the memory phase you complete three working-memory tasks in a row: an operation-span task, a symmetry-span task, and an updating task. In each you recall items while doing a concurrent processing task. The scores below are your recorded results for the phase.
+Your recall accuracy on the operation-span task was 0.734444.
+Your recall accuracy on the symmetry-span task was 0.788889.
+Your recall accuracy on the updating task was 0.54.
+Your processing accuracy on the operation-span task was 0.980556.
+Your processing accuracy on the symmetry-span task was 0.986111.
+Your proportion of timed-out processing responses on the operation-span task was 0.
+Your proportion of timed-out processing responses on the symmetry-span task was 0.
+Your mean processing reaction time on the operation-span task was 9921.4 ms.
+Your mean processing reaction time on the symmetry-span task was 4124.92 ms.
+You now play the Horizon task.
+In this task you play many rounds with two slot machines: left = S, right = K. A message above the machines tells you whether this is a long round (10 picks) or a short round (5 picks). In the first four picks of every round one machine is highlighted and you must press that machine&#x27;s key; after that you choose freely. After every pick you see the points that machine paid out.
+Round 1: long, information condition 0.
+The S machine is highlighted, so you press S. You win 54 points.
+The K machine is highlighted, so you press K. You win 46 points.
+The S machine is highlighted, so you press S. You win 66 points.
+The K machine is highlighted, so you press K. You win 35 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 67 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+Round 2: short, information condition 0.
+The K machine is highlighted, so you press K. You win 35 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The K machine is highlighted, so you press K. You win 40 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 35 points.
+Round 3: long, information condition -1.
+The K machine is highlighted, so you press K. You win 60 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The K machine is highlighted, so you press K. You win 54 points.
+The K machine is highlighted, so you press K. You win 55 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+Round 4: long, information condition -1.
+The K machine is highlighted, so you press K. You win 78 points.
+The K machine is highlighted, so you press K. You win 64 points.
+The K machine is highlighted, so you press K. You win 70 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">K</mark>. You win 68 points.
+You press <mark title="human response">K</mark>. You win 72 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+Round 5: short, information condition 0.
+The S machine is highlighted, so you press S. You win 38 points.
+The K machine is highlighted, so you press K. You win 32 points.
+The S machine is highlighted, so you press S. You win 30 points.
+The K machine is highlighted, so you press K. You win 26 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 40 points.
+Round 6: short, information condition 0.
+The S machine is highlighted, so you press S. You win 56 points.
+The S machine is highlighted, so you press S. You win 59 points.
+The K machine is highlighted, so you press K. You win 42 points.
+The K machine is highlighted, so you press K. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 62 points.
+Round 7: short, information condition 1.
+The S machine is highlighted, so you press S. You win 48 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The K machine is highlighted, so you press K. You win 50 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 46 points.
+Round 8: short, information condition -1.
+The K machine is highlighted, so you press K. You win 54 points.
+The S machine is highlighted, so you press S. You win 68 points.
+The K machine is highlighted, so you press K. You win 53 points.
+The K machine is highlighted, so you press K. You win 52 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 61 points.
+Round 9: long, information condition 0.
+The K machine is highlighted, so you press K. You win 14 points.
+The K machine is highlighted, so you press K. You win 16 points.
+The S machine is highlighted, so you press S. You win 34 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 14 points.
+You press <mark title="human response">S</mark>. You win 33 points.
+You press <mark title="human response">S</mark>. You win 33 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">S</mark>. You win 32 points.
+Round 10: short, information condition 1.
+The K machine is highlighted, so you press K. You win 45 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 67 points.
+Round 11: long, information condition 0.
+The K machine is highlighted, so you press K. You win 59 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The K machine is highlighted, so you press K. You win 79 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 68 points.
+You press <mark title="human response">K</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 67 points.
+You press <mark title="human response">K</mark>. You win 75 points.
+Round 12: short, information condition 1.
+The K machine is highlighted, so you press K. You win 26 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The S machine is highlighted, so you press S. You win 38 points.
+The S machine is highlighted, so you press S. You win 49 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 43 points.
+Round 13: short, information condition 0.
+The K machine is highlighted, so you press K. You win 78 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 81 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 82 points.
+Round 14: long, information condition 0.
+The K machine is highlighted, so you press K. You win 51 points.
+The K machine is highlighted, so you press K. You win 42 points.
+The S machine is highlighted, so you press S. You win 46 points.
+The S machine is highlighted, so you press S. You win 35 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 56 points.
+You press <mark title="human response">K</mark>. You win 43 points.
+Round 15: short, information condition -1.
+The K machine is highlighted, so you press K. You win 38 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The K machine is highlighted, so you press K. You win 44 points.
+The K machine is highlighted, so you press K. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 64 points.
+Round 16: short, information condition 0.
+The S machine is highlighted, so you press S. You win 64 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The K machine is highlighted, so you press K. You win 71 points.
+The K machine is highlighted, so you press K. You win 74 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 73 points.
+Round 17: short, information condition 1.
+The K machine is highlighted, so you press K. You win 60 points.
+The S machine is highlighted, so you press S. You win 59 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 67 points.
+Round 18: short, information condition 0.
+The K machine is highlighted, so you press K. You win 45 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The K machine is highlighted, so you press K. You win 44 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 52 points.
+Round 19: long, information condition -1.
+The K machine is highlighted, so you press K. You win 33 points.
+The K machine is highlighted, so you press K. You win 36 points.
+The K machine is highlighted, so you press K. You win 37 points.
+The S machine is highlighted, so you press S. You win 38 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">K</mark>. You win 35 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">S</mark>. You win 45 points.
+Round 20: long, information condition 1.
+The K machine is highlighted, so you press K. You win 16 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The S machine is highlighted, so you press S. You win 49 points.
+The S machine is highlighted, so you press S. You win 49 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 5 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+Round 21: long, information condition 0.
+The S machine is highlighted, so you press S. You win 35 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The K machine is highlighted, so you press K. You win 67 points.
+The K machine is highlighted, so you press K. You win 72 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+Round 22: long, information condition 1.
+The S machine is highlighted, so you press S. You win 67 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 44 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+Round 23: long, information condition 1.
+The K machine is highlighted, so you press K. You win 73 points.
+The S machine is highlighted, so you press S. You win 36 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 68 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+Round 24: short, information condition 0.
+The K machine is highlighted, so you press K. You win 45 points.
+The S machine is highlighted, so you press S. You win 42 points.
+The S machine is highlighted, so you press S. You win 49 points.
+The K machine is highlighted, so you press K. You win 42 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 48 points.
+Round 25: long, information condition 1.
+The K machine is highlighted, so you press K. You win 33 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The S machine is highlighted, so you press S. You win 44 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+Round 26: long, information condition 0.
+The S machine is highlighted, so you press S. You win 57 points.
+The K machine is highlighted, so you press K. You win 62 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The K machine is highlighted, so you press K. You win 51 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+Round 27: short, information condition 0.
+The S machine is highlighted, so you press S. You win 40 points.
+The K machine is highlighted, so you press K. You win 82 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The K machine is highlighted, so you press K. You win 67 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 72 points.
+Round 28: long, information condition 0.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 91 points.
+The S machine is highlighted, so you press S. You win 67 points.
+The K machine is highlighted, so you press K. You win 94 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 89 points.
+You press <mark title="human response">K</mark>. You win 93 points.
+You press <mark title="human response">K</mark>. You win 89 points.
+You press <mark title="human response">K</mark>. You win 97 points.
+You press <mark title="human response">K</mark>. You win 93 points.
+You press <mark title="human response">K</mark>. You win 94 points.
+Round 29: long, information condition 0.
+The K machine is highlighted, so you press K. You win 71 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 69 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">K</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">K</mark>. You win 58 points.
+Round 30: short, information condition -1.
+The S machine is highlighted, so you press S. You win 41 points.
+The K machine is highlighted, so you press K. You win 30 points.
+The K machine is highlighted, so you press K. You win 38 points.
+The K machine is highlighted, so you press K. You win 41 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 47 points.
+Round 31: long, information condition 1.
+The S machine is highlighted, so you press S. You win 32 points.
+The S machine is highlighted, so you press S. You win 37 points.
+The K machine is highlighted, so you press K. You win 59 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 61 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+Round 32: short, information condition 1.
+The S machine is highlighted, so you press S. You win 41 points.
+The K machine is highlighted, so you press K. You win 12 points.
+The S machine is highlighted, so you press S. You win 34 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 35 points.
+Round 33: long, information condition 0.
+The S machine is highlighted, so you press S. You win 43 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The K machine is highlighted, so you press K. You win 39 points.
+The K machine is highlighted, so you press K. You win 36 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 31 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+Round 34: short, information condition 0.
+The K machine is highlighted, so you press K. You win 12 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The S machine is highlighted, so you press S. You win 42 points.
+The K machine is highlighted, so you press K. You win 21 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 30 points.
+Round 35: short, information condition 1.
+The S machine is highlighted, so you press S. You win 65 points.
+The K machine is highlighted, so you press K. You win 70 points.
+The S machine is highlighted, so you press S. You win 59 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 66 points.
+Round 36: long, information condition -1.
+The K machine is highlighted, so you press K. You win 85 points.
+The K machine is highlighted, so you press K. You win 81 points.
+The K machine is highlighted, so you press K. You win 85 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 79 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 79 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+Round 37: long, information condition -1.
+The K machine is highlighted, so you press K. You win 45 points.
+The K machine is highlighted, so you press K. You win 52 points.
+The K machine is highlighted, so you press K. You win 50 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+Round 38: short, information condition 1.
+The K machine is highlighted, so you press K. You win 53 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 48 points.
+Round 39: long, information condition 1.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 65 points.
+The S machine is highlighted, so you press S. You win 67 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+Round 40: long, information condition -1.
+The S machine is highlighted, so you press S. You win 45 points.
+The K machine is highlighted, so you press K. You win 19 points.
+The K machine is highlighted, so you press K. You win 24 points.
+The K machine is highlighted, so you press K. You win 19 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 34 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+Round 41: long, information condition 1.
+The S machine is highlighted, so you press S. You win 46 points.
+The S machine is highlighted, so you press S. You win 44 points.
+The K machine is highlighted, so you press K. You win 59 points.
+The S machine is highlighted, so you press S. You win 46 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+Round 42: short, information condition 0.
+The S machine is highlighted, so you press S. You win 59 points.
+The K machine is highlighted, so you press K. You win 74 points.
+The K machine is highlighted, so you press K. You win 64 points.
+The S machine is highlighted, so you press S. You win 56 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 68 points.
+Round 43: long, information condition 0.
+The K machine is highlighted, so you press K. You win 59 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The K machine is highlighted, so you press K. You win 54 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 54 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+Round 44: short, information condition 0.
+The S machine is highlighted, so you press S. You win 41 points.
+The S machine is highlighted, so you press S. You win 44 points.
+The K machine is highlighted, so you press K. You win 30 points.
+The K machine is highlighted, so you press K. You win 40 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 40 points.
+Round 45: long, information condition 0.
+The K machine is highlighted, so you press K. You win 46 points.
+The S machine is highlighted, so you press S. You win 50 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The K machine is highlighted, so you press K. You win 47 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 46 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 36 points.
+Round 46: long, information condition -1.
+The K machine is highlighted, so you press K. You win 71 points.
+The K machine is highlighted, so you press K. You win 65 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The K machine is highlighted, so you press K. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 65 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+Round 47: short, information condition 0.
+The K machine is highlighted, so you press K. You win 28 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The K machine is highlighted, so you press K. You win 31 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 61 points.
+Round 48: long, information condition 1.
+The S machine is highlighted, so you press S. You win 39 points.
+The K machine is highlighted, so you press K. You win 46 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The S machine is highlighted, so you press S. You win 38 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">K</mark>. You win 54 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+Round 49: short, information condition 1.
+The S machine is highlighted, so you press S. You win 37 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The S machine is highlighted, so you press S. You win 38 points.
+The K machine is highlighted, so you press K. You win 37 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 31 points.
+Round 50: long, information condition 0.
+The S machine is highlighted, so you press S. You win 61 points.
+The K machine is highlighted, so you press K. You win 58 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The K machine is highlighted, so you press K. You win 50 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">S</mark>. You win 53 points.
+You press <mark title="human response">S</mark>. You win 55 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+Round 51: short, information condition -1.
+The K machine is highlighted, so you press K. You win 69 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 64 points.
+The K machine is highlighted, so you press K. You win 67 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 65 points.
+Round 52: long, information condition 0.
+The K machine is highlighted, so you press K. You win 56 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The S machine is highlighted, so you press S. You win 38 points.
+The K machine is highlighted, so you press K. You win 52 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+Round 53: short, information condition 1.
+The S machine is highlighted, so you press S. You win 41 points.
+The S machine is highlighted, so you press S. You win 37 points.
+The S machine is highlighted, so you press S. You win 44 points.
+The K machine is highlighted, so you press K. You win 66 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 69 points.
+Round 54: short, information condition 0.
+The K machine is highlighted, so you press K. You win 48 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The K machine is highlighted, so you press K. You win 52 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 63 points.
+Round 55: short, information condition -1.
+The K machine is highlighted, so you press K. You win 47 points.
+The K machine is highlighted, so you press K. You win 55 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The K machine is highlighted, so you press K. You win 56 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 45 points.
+Round 56: long, information condition 1.
+The S machine is highlighted, so you press S. You win 61 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The S machine is highlighted, so you press S. You win 55 points.
+The K machine is highlighted, so you press K. You win 50 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+Round 57: short, information condition 0.
+The K machine is highlighted, so you press K. You win 57 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 59 points.
+The S machine is highlighted, so you press S. You win 50 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 45 points.
+Round 58: long, information condition 0.
+The S machine is highlighted, so you press S. You win 60 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 28 points.
+The K machine is highlighted, so you press K. You win 31 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">K</mark>. You win 21 points.
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">K</mark>. You win 32 points.
+Round 59: long, information condition 0.
+The S machine is highlighted, so you press S. You win 69 points.
+The K machine is highlighted, so you press K. You win 74 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The K machine is highlighted, so you press K. You win 73 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">K</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 71 points.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+Round 60: long, information condition -1.
+The K machine is highlighted, so you press K. You win 36 points.
+The K machine is highlighted, so you press K. You win 29 points.
+The S machine is highlighted, so you press S. You win 68 points.
+The K machine is highlighted, so you press K. You win 27 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+Round 61: short, information condition -1.
+The K machine is highlighted, so you press K. You win 61 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The K machine is highlighted, so you press K. You win 71 points.
+The K machine is highlighted, so you press K. You win 67 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 69 points.
+Round 62: short, information condition 0.
+The K machine is highlighted, so you press K. You win 34 points.
+The K machine is highlighted, so you press K. You win 31 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 65 points.
+Round 63: long, information condition 0.
+The S machine is highlighted, so you press S. You win 48 points.
+The K machine is highlighted, so you press K. You win 20 points.
+The K machine is highlighted, so you press K. You win 12 points.
+The S machine is highlighted, so you press S. You win 46 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">K</mark>. You win 22 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 34 points.
+Round 64: long, information condition -1.
+The K machine is highlighted, so you press K. You win 48 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The K machine is highlighted, so you press K. You win 55 points.
+The K machine is highlighted, so you press K. You win 50 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 71 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+Round 65: short, information condition -1.
+The K machine is highlighted, so you press K. You win 84 points.
+The K machine is highlighted, so you press K. You win 76 points.
+The K machine is highlighted, so you press K. You win 84 points.
+The S machine is highlighted, so you press S. You win 52 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 74 points.
+Round 66: short, information condition -1.
+The K machine is highlighted, so you press K. You win 9 points.
+The K machine is highlighted, so you press K. You win 14 points.
+The K machine is highlighted, so you press K. You win 8 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 46 points.
+Round 67: short, information condition -1.
+The S machine is highlighted, so you press S. You win 42 points.
+The K machine is highlighted, so you press K. You win 79 points.
+The K machine is highlighted, so you press K. You win 70 points.
+The K machine is highlighted, so you press K. You win 74 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 67 points.
+Round 68: short, information condition 0.
+The S machine is highlighted, so you press S. You win 54 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The K machine is highlighted, so you press K. You win 48 points.
+The K machine is highlighted, so you press K. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 61 points.
+Round 69: short, information condition 0.
+The K machine is highlighted, so you press K. You win 68 points.
+The K machine is highlighted, so you press K. You win 75 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 69 points.
+Round 70: long, information condition 0.
+The K machine is highlighted, so you press K. You win 29 points.
+The K machine is highlighted, so you press K. You win 30 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The S machine is highlighted, so you press S. You win 48 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 33 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+Round 71: long, information condition 0.
+The S machine is highlighted, so you press S. You win 41 points.
+The K machine is highlighted, so you press K. You win 62 points.
+The K machine is highlighted, so you press K. You win 62 points.
+The S machine is highlighted, so you press S. You win 34 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 67 points.
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 69 points.
+Round 72: long, information condition 0.
+The S machine is highlighted, so you press S. You win 65 points.
+The K machine is highlighted, so you press K. You win 51 points.
+The K machine is highlighted, so you press K. You win 41 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+You press <mark title="human response">K</mark>. You win 56 points.
+Round 73: long, information condition 1.
+The S machine is highlighted, so you press S. You win 66 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The K machine is highlighted, so you press K. You win 60 points.
+The S machine is highlighted, so you press S. You win 67 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">S</mark>. You win 54 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 65 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+Round 74: short, information condition 0.
+The K machine is highlighted, so you press K. You win 48 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The K machine is highlighted, so you press K. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 39 points.
+Round 75: long, information condition 0.
+The S machine is highlighted, so you press S. You win 63 points.
+The K machine is highlighted, so you press K. You win 55 points.
+The K machine is highlighted, so you press K. You win 45 points.
+The S machine is highlighted, so you press S. You win 54 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">S</mark>. You win 65 points.
+Round 76: long, information condition -1.
+The K machine is highlighted, so you press K. You win 66 points.
+The K machine is highlighted, so you press K. You win 76 points.
+The K machine is highlighted, so you press K. You win 74 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 72 points.
+You press <mark title="human response">K</mark>. You win 81 points.
+You press <mark title="human response">K</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 72 points.
+Round 77: short, information condition 1.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 96 points.
+The S machine is highlighted, so you press S. You win 67 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 86 points.
+Round 78: short, information condition -1.
+The K machine is highlighted, so you press K. You win 52 points.
+The K machine is highlighted, so you press K. You win 50 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The K machine is highlighted, so you press K. You win 50 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 61 points.
+Round 79: short, information condition 0.
+The K machine is highlighted, so you press K. You win 62 points.
+The K machine is highlighted, so you press K. You win 61 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The S machine is highlighted, so you press S. You win 46 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 60 points.
+Round 80: short, information condition 0.
+The K machine is highlighted, so you press K. You win 75 points.
+The S machine is highlighted, so you press S. You win 55 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The K machine is highlighted, so you press K. You win 66 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 73 points.
+You now play the two-armed bandit.
+In this task you play 30 rounds of 10 free choices between the same two slot machines: left (S) and right (K). Within a round the machines pay points that may stay stable or drift; after each choice you see the points the chosen machine paid.
+Round 1 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">K</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+Round 2 (reward condition: arm 1 stable, arm 2 drifting).
+You press <mark title="human response">S</mark>. You win 68 points.
+You press <mark title="human response">K</mark>. You win 75 points.
+You press <mark title="human response">K</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 78 points.
+You press <mark title="human response">S</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 75 points.
+You press <mark title="human response">K</mark>. You win 75 points.
+You press <mark title="human response">K</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 78 points.
+You press <mark title="human response">S</mark>. You win 71 points.
+Round 3 (reward condition: both arms drifting).
+You press <mark title="human response">K</mark>. You win 15 points.
+You press <mark title="human response">S</mark>. You win 11 points.
+You press <mark title="human response">S</mark>. You win 7 points.
+You press <mark title="human response">K</mark>. You win 16 points.
+You press <mark title="human response">K</mark>. You win 15 points.
+You press <mark title="human response">K</mark>. You win 14 points.
+You press <mark title="human response">K</mark>. You win 10 points.
+You press <mark title="human response">K</mark>. You win 8 points.
+You press <mark title="human response">S</mark>. You win 22 points.
+You press <mark title="human response">K</mark>. You win 8 points.
+Round 4 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">S</mark>. You win 29 points.
+You press <mark title="human response">K</mark>. You win 25 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+Round 5 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">K</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 41 points.
+Round 6 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 48 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+Round 7 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 72 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">K</mark>. You win 85 points.
+You press <mark title="human response">K</mark>. You win 81 points.
+You press <mark title="human response">S</mark>. You win 76 points.
+You press <mark title="human response">K</mark>. You win 78 points.
+You press <mark title="human response">K</mark>. You win 76 points.
+You press <mark title="human response">K</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+Round 8 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+Round 9 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">S</mark>. You win 67 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 80 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+Round 10 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 72 points.
+You press <mark title="human response">S</mark>. You win 74 points.
+You press <mark title="human response">S</mark>. You win 75 points.
+You press <mark title="human response">S</mark>. You win 76 points.
+You press <mark title="human response">K</mark>. You win 71 points.
+You press <mark title="human response">S</mark>. You win 73 points.
+You press <mark title="human response">S</mark>. You win 74 points.
+You press <mark title="human response">S</mark>. You win 75 points.
+You press <mark title="human response">S</mark>. You win 75 points.
+You press <mark title="human response">S</mark>. You win 74 points.
+Round 11 (reward condition: both arms drifting).
+You press <mark title="human response">K</mark>. You win 79 points.
+You press <mark title="human response">S</mark>. You win 79 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 75 points.
+You press <mark title="human response">K</mark>. You win 72 points.
+You press <mark title="human response">S</mark>. You win 72 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+Round 12 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">K</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 32 points.
+You press <mark title="human response">K</mark>. You win 40 points.
+You press <mark title="human response">K</mark>. You win 40 points.
+You press <mark title="human response">K</mark>. You win 37 points.
+You press <mark title="human response">K</mark>. You win 39 points.
+You press <mark title="human response">K</mark>. You win 38 points.
+You press <mark title="human response">K</mark>. You win 38 points.
+You press <mark title="human response">K</mark>. You win 38 points.
+Round 13 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">K</mark>. You win 88 points.
+You press <mark title="human response">K</mark>. You win 89 points.
+You press <mark title="human response">K</mark>. You win 88 points.
+You press <mark title="human response">K</mark>. You win 88 points.
+You press <mark title="human response">K</mark>. You win 87 points.
+You press <mark title="human response">S</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 89 points.
+You press <mark title="human response">K</mark>. You win 89 points.
+You press <mark title="human response">S</mark>. You win 86 points.
+You press <mark title="human response">K</mark>. You win 87 points.
+Round 14 (reward condition: both arms drifting).
+You press <mark title="human response">K</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">K</mark>. You win 25 points.
+You press <mark title="human response">S</mark>. You win 32 points.
+You press <mark title="human response">S</mark>. You win 31 points.
+You press <mark title="human response">S</mark>. You win 31 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 29 points.
+Round 15 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 70 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+You press <mark title="human response">S</mark>. You win 67 points.
+You press <mark title="human response">S</mark>. You win 69 points.
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 69 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+You press <mark title="human response">S</mark>. You win 69 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+Round 16 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">K</mark>. You win 16 points.
+You press <mark title="human response">S</mark>. You win 12 points.
+You press <mark title="human response">S</mark>. You win 8 points.
+You press <mark title="human response">K</mark>. You win 14 points.
+You press <mark title="human response">K</mark>. You win 16 points.
+You press <mark title="human response">K</mark>. You win 14 points.
+You press <mark title="human response">K</mark>. You win 16 points.
+You press <mark title="human response">K</mark>. You win 15 points.
+You press <mark title="human response">K</mark>. You win 15 points.
+You press <mark title="human response">K</mark>. You win 14 points.
+Round 17 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">S</mark>. You win 47 points.
+You press <mark title="human response">S</mark>. You win 47 points.
+You press <mark title="human response">S</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 54 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 54 points.
+Round 18 (reward condition: both arms drifting).
+You press <mark title="human response">K</mark>. You win 72 points.
+You press <mark title="human response">S</mark>. You win 87 points.
+You press <mark title="human response">S</mark>. You win 95 points.
+You press <mark title="human response">S</mark>. You win 84 points.
+You press <mark title="human response">S</mark>. You win 81 points.
+You press <mark title="human response">S</mark>. You win 82 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 77 points.
+You press <mark title="human response">S</mark>. You win 72 points.
+You press <mark title="human response">S</mark>. You win 67 points.
+Round 19 (reward condition: both arms drifting).
+You press <mark title="human response">K</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 54 points.
+You press <mark title="human response">K</mark>. You win 58 points.
+Round 20 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 25 points.
+You press <mark title="human response">S</mark>. You win 20 points.
+You press <mark title="human response">K</mark>. You win 23 points.
+You press <mark title="human response">K</mark>. You win 21 points.
+You press <mark title="human response">K</mark>. You win 25 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 26 points.
+Round 21 (reward condition: arm 1 stable, arm 2 drifting).
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 58 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 56 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 56 points.
+Round 22 (reward condition: arm 1 stable, arm 2 drifting).
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">S</mark>. You win 78 points.
+You press <mark title="human response">S</mark>. You win 78 points.
+You press <mark title="human response">S</mark>. You win 80 points.
+You press <mark title="human response">S</mark>. You win 77 points.
+You press <mark title="human response">S</mark>. You win 78 points.
+You press <mark title="human response">S</mark>. You win 80 points.
+You press <mark title="human response">S</mark>. You win 79 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 79 points.
+Round 23 (reward condition: both arms drifting).
+You press <mark title="human response">K</mark>. You win 21 points.
+You press <mark title="human response">S</mark>. You win 21 points.
+You press <mark title="human response">S</mark>. You win 21 points.
+You press <mark title="human response">K</mark>. You win 8 points.
+You press <mark title="human response">S</mark>. You win 22 points.
+You press <mark title="human response">S</mark>. You win 19 points.
+You press <mark title="human response">S</mark>. You win 29 points.
+You press <mark title="human response">S</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 26 points.
+You press <mark title="human response">S</mark>. You win 28 points.
+Round 24 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">K</mark>. You win 61 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">K</mark>. You win 61 points.
+Round 25 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">K</mark>. You win 10 points.
+You press <mark title="human response">S</mark>. You win 14 points.
+You press <mark title="human response">S</mark>. You win 16 points.
+You press <mark title="human response">S</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 12 points.
+You press <mark title="human response">S</mark>. You win 26 points.
+You press <mark title="human response">S</mark>. You win 26 points.
+You press <mark title="human response">S</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+Round 26 (reward condition: both arms drifting).
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+Round 27 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 30 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">K</mark>. You win 29 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">S</mark>. You win 34 points.
+You press <mark title="human response">S</mark>. You win 34 points.
+Round 28 (reward condition: arm 1 stable, arm 2 drifting).
+You press <mark title="human response">K</mark>. You win 6 points.
+You press <mark title="human response">S</mark>. You win 12 points.
+You press <mark title="human response">S</mark>. You win 10 points.
+You press <mark title="human response">S</mark>. You win 10 points.
+You press <mark title="human response">S</mark>. You win 10 points.
+You press <mark title="human response">K</mark>. You win 20 points.
+You press <mark title="human response">K</mark>. You win 13 points.
+You press <mark title="human response">K</mark>. You win 14 points.
+You press <mark title="human response">K</mark>. You win 11 points.
+You press <mark title="human response">K</mark>. You win 19 points.
+Round 29 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 25 points.
+You press <mark title="human response">K</mark>. You win 17 points.
+You press <mark title="human response">S</mark>. You win 15 points.
+You press <mark title="human response">S</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 27 points.
+You press <mark title="human response">K</mark>. You win 30 points.
+You press <mark title="human response">K</mark>. You win 36 points.
+You press <mark title="human response">K</mark>. You win 43 points.
+You press <mark title="human response">K</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 39 points.
+Round 30 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 28 points.
+You press <mark title="human response">K</mark>. You win 25 points.
+You press <mark title="human response">S</mark>. You win 28 points.
+You press <mark title="human response">S</mark>. You win 27 points.
+You press <mark title="human response">S</mark>. You win 28 points.
+You press <mark title="human response">K</mark>. You win 25 points.
+You press <mark title="human response">S</mark>. You win 27 points.
+You press <mark title="human response">S</mark>. You win 28 points.
+You press <mark title="human response">S</mark>. You win 29 points.
+You press <mark title="human response">S</mark>. You win 28 points.
+You now play the restless bandit.
+In this task you play one long round of 200 free choices between four slot machines, played with S, D, K and L. After each choice you see the points the chosen machine paid out; the machines&#x27; average payouts drift slowly.
+You press <mark title="human response">S</mark>. You gain 46 points.
+You press <mark title="human response">D</mark>. You gain 52 points.
+You press <mark title="human response">K</mark>. You gain 49 points.
+You press <mark title="human response">L</mark>. You gain 51 points.
+You press <mark title="human response">L</mark>. You gain 65 points.
+You press <mark title="human response">D</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 59 points.
+You press <mark title="human response">L</mark>. You gain 62 points.
+You press <mark title="human response">L</mark>. You gain 61 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">D</mark>. You gain 51 points.
+You press <mark title="human response">D</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 59 points.
+You press <mark title="human response">L</mark>. You gain 68 points.
+You press <mark title="human response">L</mark>. You gain 52 points.
+You press <mark title="human response">L</mark>. You gain 47 points.
+You press <mark title="human response">L</mark>. You gain 51 points.
+You press <mark title="human response">L</mark>. You gain 57 points.
+You press <mark title="human response">K</mark>. You gain 32 points.
+You press <mark title="human response">S</mark>. You gain 36 points.
+You press <mark title="human response">L</mark>. You gain 41 points.
+You press <mark title="human response">L</mark>. You gain 52 points.
+You press <mark title="human response">L</mark>. You gain 48 points.
+You press <mark title="human response">D</mark>. You gain 66 points.
+You press <mark title="human response">D</mark>. You gain 69 points.
+You press <mark title="human response">D</mark>. You gain 74 points.
+You press <mark title="human response">D</mark>. You gain 64 points.
+You press <mark title="human response">D</mark>. You gain 72 points.
+You press <mark title="human response">D</mark>. You gain 76 points.
+You press <mark title="human response">D</mark>. You gain 75 points.
+You press <mark title="human response">D</mark>. You gain 78 points.
+You press <mark title="human response">D</mark>. You gain 71 points.
+You press <mark title="human response">D</mark>. You gain 75 points.
+You press <mark title="human response">D</mark>. You gain 54 points.
+You press <mark title="human response">D</mark>. You gain 64 points.
+You press <mark title="human response">L</mark>. You gain 62 points.
+You press <mark title="human response">L</mark>. You gain 48 points.
+You press <mark title="human response">L</mark>. You gain 67 points.
+You press <mark title="human response">K</mark>. You gain 45 points.
+You press <mark title="human response">L</mark>. You gain 59 points.
+You press <mark title="human response">L</mark>. You gain 56 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 59 points.
+You press <mark title="human response">L</mark>. You gain 56 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">L</mark>. You gain 62 points.
+You press <mark title="human response">L</mark>. You gain 65 points.
+You press <mark title="human response">L</mark>. You gain 67 points.
+You press <mark title="human response">L</mark>. You gain 63 points.
+You press <mark title="human response">L</mark>. You gain 63 points.
+You press <mark title="human response">L</mark>. You gain 54 points.
+You press <mark title="human response">D</mark>. You gain 38 points.
+You press <mark title="human response">D</mark>. You gain 37 points.
+You press <mark title="human response">S</mark>. You gain 51 points.
+You press <mark title="human response">K</mark>. You gain 44 points.
+You press <mark title="human response">K</mark>. You gain 45 points.
+You press <mark title="human response">S</mark>. You gain 48 points.
+You press <mark title="human response">S</mark>. You gain 57 points.
+You press <mark title="human response">S</mark>. You gain 54 points.
+You press <mark title="human response">S</mark>. You gain 53 points.
+You press <mark title="human response">S</mark>. You gain 50 points.
+You press <mark title="human response">S</mark>. You gain 53 points.
+You press <mark title="human response">L</mark>. You gain 55 points.
+You press <mark title="human response">L</mark>. You gain 48 points.
+You press <mark title="human response">L</mark>. You gain 53 points.
+You press <mark title="human response">D</mark>. You gain 33 points.
+You press <mark title="human response">S</mark>. You gain 57 points.
+You press <mark title="human response">S</mark>. You gain 44 points.
+You press <mark title="human response">S</mark>. You gain 48 points.
+You press <mark title="human response">L</mark>. You gain 53 points.
+You press <mark title="human response">L</mark>. You gain 63 points.
+You press <mark title="human response">L</mark>. You gain 64 points.
+You press <mark title="human response">L</mark>. You gain 53 points.
+You press <mark title="human response">L</mark>. You gain 60 points.
+You press <mark title="human response">L</mark>. You gain 52 points.
+You press <mark title="human response">L</mark>. You gain 53 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 54 points.
+You press <mark title="human response">L</mark>. You gain 55 points.
+You press <mark title="human response">L</mark>. You gain 60 points.
+You press <mark title="human response">L</mark>. You gain 53 points.
+You press <mark title="human response">L</mark>. You gain 55 points.
+You press <mark title="human response">K</mark>. You gain 68 points.
+You press <mark title="human response">K</mark>. You gain 74 points.
+You press <mark title="human response">K</mark>. You gain 81 points.
+You press <mark title="human response">K</mark>. You gain 70 points.
+You press <mark title="human response">K</mark>. You gain 78 points.
+You press <mark title="human response">K</mark>. You gain 78 points.
+You press <mark title="human response">K</mark>. You gain 81 points.
+You press <mark title="human response">K</mark>. You gain 78 points.
+You press <mark title="human response">K</mark>. You gain 86 points.
+You press <mark title="human response">K</mark>. You gain 77 points.
+You press <mark title="human response">K</mark>. You gain 74 points.
+You press <mark title="human response">K</mark>. You gain 84 points.
+You press <mark title="human response">K</mark>. You gain 81 points.
+You press <mark title="human response">K</mark>. You gain 82 points.
+You press <mark title="human response">K</mark>. You gain 71 points.
+You press <mark title="human response">K</mark>. You gain 80 points.
+You press <mark title="human response">K</mark>. You gain 74 points.
+You press <mark title="human response">K</mark>. You gain 88 points.
+You press <mark title="human response">K</mark>. You gain 78 points.
+You press <mark title="human response">K</mark>. You gain 71 points.
+You press <mark title="human response">K</mark>. You gain 73 points.
+You press <mark title="human response">K</mark>. You gain 85 points.
+You press <mark title="human response">K</mark>. You gain 78 points.
+You press <mark title="human response">K</mark>. You gain 81 points.
+You press <mark title="human response">K</mark>. You gain 73 points.
+You press <mark title="human response">K</mark>. You gain 74 points.
+You press <mark title="human response">K</mark>. You gain 74 points.
+You press <mark title="human response">K</mark>. You gain 76 points.
+You press <mark title="human response">K</mark>. You gain 78 points.
+You press <mark title="human response">D</mark>. You gain 46 points.
+You press <mark title="human response">S</mark>. You gain 46 points.
+You press <mark title="human response">K</mark>. You gain 71 points.
+You press <mark title="human response">K</mark>. You gain 68 points.
+You press <mark title="human response">K</mark>. You gain 64 points.
+You press <mark title="human response">K</mark>. You gain 57 points.
+You press <mark title="human response">K</mark>. You gain 61 points.
+You press <mark title="human response">K</mark>. You gain 58 points.
+You press <mark title="human response">K</mark>. You gain 59 points.
+You press <mark title="human response">K</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 65 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">L</mark>. You gain 67 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">L</mark>. You gain 75 points.
+You press <mark title="human response">L</mark>. You gain 70 points.
+You press <mark title="human response">L</mark>. You gain 73 points.
+You press <mark title="human response">L</mark>. You gain 79 points.
+You press <mark title="human response">L</mark>. You gain 74 points.
+You press <mark title="human response">L</mark>. You gain 65 points.
+You press <mark title="human response">L</mark>. You gain 75 points.
+You press <mark title="human response">L</mark>. You gain 66 points.
+You press <mark title="human response">L</mark>. You gain 67 points.
+You press <mark title="human response">L</mark>. You gain 67 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 62 points.
+You press <mark title="human response">L</mark>. You gain 62 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">K</mark>. You gain 58 points.
+You press <mark title="human response">D</mark>. You gain 58 points.
+You press <mark title="human response">S</mark>. You gain 37 points.
+You press <mark title="human response">D</mark>. You gain 53 points.
+You press <mark title="human response">D</mark>. You gain 58 points.
+You press <mark title="human response">D</mark>. You gain 56 points.
+You press <mark title="human response">K</mark>. You gain 59 points.
+You press <mark title="human response">K</mark>. You gain 52 points.
+You press <mark title="human response">K</mark>. You gain 53 points.
+You press <mark title="human response">K</mark>. You gain 48 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 64 points.
+You press <mark title="human response">L</mark>. You gain 62 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 60 points.
+You press <mark title="human response">L</mark>. You gain 61 points.
+You press <mark title="human response">L</mark>. You gain 57 points.
+You press <mark title="human response">L</mark>. You gain 61 points.
+You press <mark title="human response">L</mark>. You gain 62 points.
+You press <mark title="human response">L</mark>. You gain 67 points.
+You press <mark title="human response">L</mark>. You gain 64 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">L</mark>. You gain 65 points.
+You press <mark title="human response">L</mark>. You gain 53 points.
+You press <mark title="human response">L</mark>. You gain 54 points.
+You press <mark title="human response">K</mark>. You gain 50 points.
+You press <mark title="human response">D</mark>. You gain 57 points.
+You press <mark title="human response">S</mark>. You gain 30 points.
+You press <mark title="human response">D</mark>. You gain 43 points.
+You press <mark title="human response">D</mark>. You gain 56 points.
+You press <mark title="human response">L</mark>. You gain 64 points.
+You press <mark title="human response">L</mark>. You gain 56 points.
+You press <mark title="human response">L</mark>. You gain 61 points.
+You press <mark title="human response">L</mark>. You gain 60 points.
+You press <mark title="human response">L</mark>. You gain 49 points.
+You press <mark title="human response">L</mark>. You gain 51 points.
+You press <mark title="human response">L</mark>. You gain 53 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 51 points.
+You press <mark title="human response">K</mark>. You gain 46 points.
+You press <mark title="human response">D</mark>. You gain 52 points.
+You press <mark title="human response">L</mark>. You gain 45 points.
+You press <mark title="human response">L</mark>. You gain 43 points.
+You press <mark title="human response">L</mark>. You gain 52 points.
+You press <mark title="human response">L</mark>. You gain 40 points.
+You press <mark title="human response">D</mark>. You gain 44 points.
+You press <mark title="human response">D</mark>. You gain 47 points.
+You press <mark title="human response">K</mark>. You gain 50 points.
+You press <mark title="human response">S</mark>. You gain 55 points.
+You press <mark title="human response">S</mark>. You gain 44 points.
+You press <mark title="human response">S</mark>. You gain 46 points.
+You press <mark title="human response">S</mark>. You gain 40 points.
+You press <mark title="human response">K</mark>. You gain 54 points.
+You press <mark title="human response">K</mark>. You gain 56 points.
+You press <mark title="human response">K</mark>. You gain 66 points.
+You press <mark title="human response">K</mark>. You gain 62 points.
+You press <mark title="human response">K</mark>. You gain 60 points.
+You press <mark title="human response">K</mark>. You gain 57 points.
+Finally you complete five questionnaires. For each item you are given a statement or a word and answer with a single number on the stated scale. Answer each item with exactly that number.
+PANAS: for each of the 20 words below, rate how well it describes how you feel right now (0 = very slightly or not at all, 1 = a little, 2 = moderately, 3 = quite a bit, 4 = extremely).
+Item 1: you respond 4.
+Item 2: you respond 0.
+Item 3: you respond 3.
+Item 4: you respond 0.
+Item 5: you respond 3.
+Item 6: you respond 0.
+Item 7: you respond 0.
+Item 8: you respond 0.
+Item 9: you respond 4.
+Item 10: you respond 2.
+Item 11: you respond 0.
+Item 12: you respond 3.
+Item 13: you respond 0.
+Item 14: you respond 3.
+Item 15: you respond 0.
+Item 16: you respond 4.
+Item 17: you respond 4.
+Item 18: you respond 0.
+Item 19: you respond 4.
+Item 20: you respond 0.
+STICSA: for each of the 22 statements below, rate how often it is generally true for you (0 = almost never, 1 = occasionally, 2 = often, 3 = almost always).
+Item 1: you respond 0.
+Item 2: you respond 1.
+Item 3: you respond 0.
+Item 4: you respond 0.
+Item 5: you respond 0.
+Item 6: you respond 0.
+Item 7: you respond 0.
+Item 8: you respond 0.
+Item 9: you respond 0.
+Item 10: you respond 3.
+Item 11: you respond 1.
+Item 12: you respond 0.
+Item 13: you respond 1.
+Item 14: you respond 0.
+Item 15: you respond 0.
+Item 16: you respond 0.
+Item 17: you respond 0.
+Item 18: you respond 0.
+Item 19: you respond 0.
+Item 20: you respond 0.
+Item 21: you respond 0.
+Item 22: you respond 0.
+BIG_5 openness: for each of the 6 statements below, rate your agreement (0 = disagree strongly, 1 = disagree a little, 2 = neutral, 3 = agree a little, 4 = agree strongly).
+Item 1: you respond 3.
+Item 2: you respond 0.
+Item 3: you respond 4.
+Item 4: you respond 0.
+Item 5: you respond 4.
+Item 6: you respond 0.
+PHQ_9: for each of the 10 items below, rate how often you have been bothered by it over the last two weeks (0 = not at all, 1 = several days, 2 = more than half the days, 3 = nearly every day).
+Item 1: you respond 0.
+Item 2: you respond 0.
+Item 3: you respond 1.
+Item 4: you respond 1.
+Item 5: you respond 0.
+Item 6: you respond 0.
+Item 7: you respond 0.
+Item 8: you respond 0.
+Item 9: you respond 0.
+Item 10: you respond 0.
+CEI: for each of the 4 statements below, rate your agreement (0 = strongly disagree, 1 = disagree, 2 = somewhat disagree, 3 = neither, 4 = somewhat agree, 5 = agree, 6 = strongly agree).
+Item 1: you respond 4.
+Item 2: you respond 5.
+Item 3: you respond 0.
+Item 4: you respond 5.
+Session session2
+In the memory phase you complete three working-memory tasks in a row: an operation-span task, a symmetry-span task, and an updating task. In each you recall items while doing a concurrent processing task. The scores below are your recorded results for the phase.
+Your recall accuracy on the operation-span task was 0.892063.
+Your recall accuracy on the symmetry-span task was 0.955556.
+Your recall accuracy on the updating task was 0.73.
+Your processing accuracy on the operation-span task was 0.980952.
+Your processing accuracy on the symmetry-span task was 0.983333.
+Your proportion of timed-out processing responses on the operation-span task was 0.
+Your proportion of timed-out processing responses on the symmetry-span task was 0.
+Your mean processing reaction time on the operation-span task was 8940.93 ms.
+Your mean processing reaction time on the symmetry-span task was 8530.92 ms.
+You now play the Horizon task.
+In this task you play many rounds with two slot machines: left = S, right = K. A message above the machines tells you whether this is a long round (10 picks) or a short round (5 picks). In the first four picks of every round one machine is highlighted and you must press that machine&#x27;s key; after that you choose freely. After every pick you see the points that machine paid out.
+Round 1: short, information condition -1.
+The K machine is highlighted, so you press K. You win 47 points.
+The K machine is highlighted, so you press K. You win 40 points.
+The K machine is highlighted, so you press K. You win 53 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 57 points.
+Round 2: short, information condition -1.
+The K machine is highlighted, so you press K. You win 34 points.
+The K machine is highlighted, so you press K. You win 42 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The K machine is highlighted, so you press K. You win 34 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 48 points.
+Round 3: long, information condition 0.
+The K machine is highlighted, so you press K. You win 53 points.
+The S machine is highlighted, so you press S. You win 42 points.
+The K machine is highlighted, so you press K. You win 62 points.
+The S machine is highlighted, so you press S. You win 46 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 57 points.
+You press <mark title="human response">K</mark>. You win 68 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+Round 4: short, information condition -1.
+The K machine is highlighted, so you press K. You win 3 points.
+The K machine is highlighted, so you press K. You win 8 points.
+The K machine is highlighted, so you press K. You win 11 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 37 points.
+Round 5: short, information condition 0.
+The S machine is highlighted, so you press S. You win 61 points.
+The K machine is highlighted, so you press K. You win 37 points.
+The S machine is highlighted, so you press S. You win 67 points.
+The K machine is highlighted, so you press K. You win 42 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 55 points.
+Round 6: short, information condition -1.
+The K machine is highlighted, so you press K. You win 73 points.
+The K machine is highlighted, so you press K. You win 71 points.
+The S machine is highlighted, so you press S. You win 48 points.
+The K machine is highlighted, so you press K. You win 74 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 69 points.
+Round 7: long, information condition 1.
+The K machine is highlighted, so you press K. You win 58 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The S machine is highlighted, so you press S. You win 65 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 57 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+Round 8: long, information condition -1.
+The K machine is highlighted, so you press K. You win 83 points.
+The K machine is highlighted, so you press K. You win 85 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The K machine is highlighted, so you press K. You win 87 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 85 points.
+You press <mark title="human response">K</mark>. You win 78 points.
+You press <mark title="human response">K</mark>. You win 85 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 81 points.
+Round 9: long, information condition 0.
+The S machine is highlighted, so you press S. You win 46 points.
+The K machine is highlighted, so you press K. You win 14 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The K machine is highlighted, so you press K. You win 12 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+Round 10: short, information condition 0.
+The K machine is highlighted, so you press K. You win 47 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The K machine is highlighted, so you press K. You win 49 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 44 points.
+Round 11: short, information condition 1.
+The K machine is highlighted, so you press K. You win 34 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The S machine is highlighted, so you press S. You win 37 points.
+The S machine is highlighted, so you press S. You win 47 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 30 points.
+Round 12: short, information condition 0.
+The S machine is highlighted, so you press S. You win 63 points.
+The K machine is highlighted, so you press K. You win 88 points.
+The K machine is highlighted, so you press K. You win 85 points.
+The S machine is highlighted, so you press S. You win 59 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 93 points.
+Round 13: short, information condition 0.
+The S machine is highlighted, so you press S. You win 58 points.
+The K machine is highlighted, so you press K. You win 48 points.
+The S machine is highlighted, so you press S. You win 59 points.
+The K machine is highlighted, so you press K. You win 53 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 66 points.
+Round 14: short, information condition 0.
+The K machine is highlighted, so you press K. You win 63 points.
+The S machine is highlighted, so you press S. You win 37 points.
+The S machine is highlighted, so you press S. You win 36 points.
+The K machine is highlighted, so you press K. You win 60 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 67 points.
+Round 15: long, information condition 0.
+The K machine is highlighted, so you press K. You win 41 points.
+The S machine is highlighted, so you press S. You win 34 points.
+The S machine is highlighted, so you press S. You win 44 points.
+The K machine is highlighted, so you press K. You win 56 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+Round 16: short, information condition 0.
+The K machine is highlighted, so you press K. You win 60 points.
+The K machine is highlighted, so you press K. You win 55 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The S machine is highlighted, so you press S. You win 46 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 53 points.
+Round 17: long, information condition 0.
+The K machine is highlighted, so you press K. You win 37 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The S machine is highlighted, so you press S. You win 71 points.
+The K machine is highlighted, so you press K. You win 37 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">S</mark>. You win 65 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+Round 18: short, information condition 1.
+The S machine is highlighted, so you press S. You win 62 points.
+The S machine is highlighted, so you press S. You win 56 points.
+The K machine is highlighted, so you press K. You win 28 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 63 points.
+Round 19: long, information condition -1.
+The K machine is highlighted, so you press K. You win 52 points.
+The S machine is highlighted, so you press S. You win 66 points.
+The K machine is highlighted, so you press K. You win 60 points.
+The K machine is highlighted, so you press K. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">S</mark>. You win 69 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+Round 20: long, information condition 0.
+The K machine is highlighted, so you press K. You win 69 points.
+The S machine is highlighted, so you press S. You win 42 points.
+The S machine is highlighted, so you press S. You win 36 points.
+The K machine is highlighted, so you press K. You win 66 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 81 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 76 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 71 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+Round 21: long, information condition 0.
+The K machine is highlighted, so you press K. You win 35 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The K machine is highlighted, so you press K. You win 35 points.
+The S machine is highlighted, so you press S. You win 36 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">K</mark>. You win 31 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+Round 22: short, information condition 1.
+The K machine is highlighted, so you press K. You win 94 points.
+The S machine is highlighted, so you press S. You win 68 points.
+The S machine is highlighted, so you press S. You win 55 points.
+The S machine is highlighted, so you press S. You win 56 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 85 points.
+Round 23: long, information condition 1.
+The S machine is highlighted, so you press S. You win 62 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The K machine is highlighted, so you press K. You win 50 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 65 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+Round 24: long, information condition 0.
+The K machine is highlighted, so you press K. You win 58 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The K machine is highlighted, so you press K. You win 57 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 65 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">S</mark>. You win 60 points.
+Round 25: long, information condition 1.
+The K machine is highlighted, so you press K. You win 31 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">S</mark>. You win 47 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+Round 26: short, information condition 1.
+The S machine is highlighted, so you press S. You win 49 points.
+The S machine is highlighted, so you press S. You win 35 points.
+The K machine is highlighted, so you press K. You win 55 points.
+The S machine is highlighted, so you press S. You win 42 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 58 points.
+Round 27: long, information condition 0.
+The S machine is highlighted, so you press S. You win 63 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The K machine is highlighted, so you press K. You win 69 points.
+The K machine is highlighted, so you press K. You win 69 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 65 points.
+Round 28: short, information condition 1.
+The S machine is highlighted, so you press S. You win 60 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The K machine is highlighted, so you press K. You win 58 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 65 points.
+Round 29: short, information condition 1.
+The S machine is highlighted, so you press S. You win 60 points.
+The S machine is highlighted, so you press S. You win 67 points.
+The S machine is highlighted, so you press S. You win 59 points.
+The K machine is highlighted, so you press K. You win 54 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 64 points.
+Round 30: long, information condition 1.
+The S machine is highlighted, so you press S. You win 59 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The K machine is highlighted, so you press K. You win 42 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 65 points.
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+Round 31: long, information condition 0.
+The S machine is highlighted, so you press S. You win 65 points.
+The K machine is highlighted, so you press K. You win 26 points.
+The S machine is highlighted, so you press S. You win 65 points.
+The K machine is highlighted, so you press K. You win 33 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+Round 32: long, information condition 1.
+The S machine is highlighted, so you press S. You win 39 points.
+The S machine is highlighted, so you press S. You win 39 points.
+The K machine is highlighted, so you press K. You win 59 points.
+The S machine is highlighted, so you press S. You win 52 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+Round 33: long, information condition 0.
+The S machine is highlighted, so you press S. You win 55 points.
+The K machine is highlighted, so you press K. You win 51 points.
+The K machine is highlighted, so you press K. You win 48 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 65 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 64 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+Round 34: long, information condition 0.
+The K machine is highlighted, so you press K. You win 37 points.
+The K machine is highlighted, so you press K. You win 36 points.
+The S machine is highlighted, so you press S. You win 38 points.
+The S machine is highlighted, so you press S. You win 46 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 33 points.
+You press <mark title="human response">S</mark>. You win 33 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">K</mark>. You win 34 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+Round 35: short, information condition 0.
+The K machine is highlighted, so you press K. You win 44 points.
+The S machine is highlighted, so you press S. You win 70 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The K machine is highlighted, so you press K. You win 46 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 62 points.
+Round 36: short, information condition 0.
+The S machine is highlighted, so you press S. You win 35 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The K machine is highlighted, so you press K. You win 61 points.
+The K machine is highlighted, so you press K. You win 62 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 59 points.
+Round 37: short, information condition 1.
+The S machine is highlighted, so you press S. You win 41 points.
+The S machine is highlighted, so you press S. You win 33 points.
+The K machine is highlighted, so you press K. You win 18 points.
+The S machine is highlighted, so you press S. You win 35 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 35 points.
+Round 38: long, information condition 0.
+The K machine is highlighted, so you press K. You win 30 points.
+The S machine is highlighted, so you press S. You win 44 points.
+The S machine is highlighted, so you press S. You win 38 points.
+The K machine is highlighted, so you press K. You win 38 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 40 points.
+You press <mark title="human response">K</mark>. You win 33 points.
+You press <mark title="human response">K</mark>. You win 26 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 47 points.
+You press <mark title="human response">S</mark>. You win 46 points.
+Round 39: short, information condition -1.
+The K machine is highlighted, so you press K. You win 33 points.
+The S machine is highlighted, so you press S. You win 42 points.
+The K machine is highlighted, so you press K. You win 35 points.
+The K machine is highlighted, so you press K. You win 38 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 40 points.
+Round 40: short, information condition 1.
+The S machine is highlighted, so you press S. You win 43 points.
+The K machine is highlighted, so you press K. You win 45 points.
+The S machine is highlighted, so you press S. You win 35 points.
+The S machine is highlighted, so you press S. You win 47 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 34 points.
+Round 41: short, information condition 0.
+The S machine is highlighted, so you press S. You win 42 points.
+The S machine is highlighted, so you press S. You win 36 points.
+The K machine is highlighted, so you press K. You win 34 points.
+The K machine is highlighted, so you press K. You win 28 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 40 points.
+Round 42: short, information condition 0.
+The K machine is highlighted, so you press K. You win 41 points.
+The K machine is highlighted, so you press K. You win 40 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 61 points.
+Round 43: long, information condition 1.
+The K machine is highlighted, so you press K. You win 50 points.
+The S machine is highlighted, so you press S. You win 37 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 57 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+Round 44: short, information condition 0.
+The S machine is highlighted, so you press S. You win 68 points.
+The K machine is highlighted, so you press K. You win 54 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The K machine is highlighted, so you press K. You win 47 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 65 points.
+Round 45: long, information condition 1.
+The K machine is highlighted, so you press K. You win 37 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The S machine is highlighted, so you press S. You win 42 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 32 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+Round 46: short, information condition 0.
+The S machine is highlighted, so you press S. You win 38 points.
+The K machine is highlighted, so you press K. You win 79 points.
+The S machine is highlighted, so you press S. You win 36 points.
+The K machine is highlighted, so you press K. You win 68 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 70 points.
+Round 47: short, information condition 0.
+The S machine is highlighted, so you press S. You win 47 points.
+The K machine is highlighted, so you press K. You win 51 points.
+The K machine is highlighted, so you press K. You win 52 points.
+The S machine is highlighted, so you press S. You win 49 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 38 points.
+Round 48: long, information condition 0.
+The S machine is highlighted, so you press S. You win 41 points.
+The K machine is highlighted, so you press K. You win 73 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The K machine is highlighted, so you press K. You win 67 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 64 points.
+You press <mark title="human response">K</mark>. You win 76 points.
+You press <mark title="human response">K</mark>. You win 71 points.
+You press <mark title="human response">K</mark>. You win 69 points.
+You press <mark title="human response">K</mark>. You win 67 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+Round 49: long, information condition -1.
+The K machine is highlighted, so you press K. You win 22 points.
+The S machine is highlighted, so you press S. You win 36 points.
+The K machine is highlighted, so you press K. You win 15 points.
+The K machine is highlighted, so you press K. You win 25 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 47 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 45 points.
+Round 50: short, information condition -1.
+The K machine is highlighted, so you press K. You win 86 points.
+The S machine is highlighted, so you press S. You win 62 points.
+The K machine is highlighted, so you press K. You win 80 points.
+The K machine is highlighted, so you press K. You win 82 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 76 points.
+Round 51: short, information condition -1.
+The K machine is highlighted, so you press K. You win 70 points.
+The K machine is highlighted, so you press K. You win 70 points.
+The K machine is highlighted, so you press K. You win 71 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 70 points.
+Round 52: short, information condition 0.
+The S machine is highlighted, so you press S. You win 39 points.
+The K machine is highlighted, so you press K. You win 29 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The K machine is highlighted, so you press K. You win 27 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 42 points.
+Round 53: long, information condition -1.
+The S machine is highlighted, so you press S. You win 59 points.
+The K machine is highlighted, so you press K. You win 72 points.
+The K machine is highlighted, so you press K. You win 74 points.
+The K machine is highlighted, so you press K. You win 69 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 69 points.
+You press <mark title="human response">K</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 68 points.
+You press <mark title="human response">K</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 81 points.
+Round 54: long, information condition 1.
+The S machine is highlighted, so you press S. You win 60 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The S machine is highlighted, so you press S. You win 65 points.
+The K machine is highlighted, so you press K. You win 21 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 67 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 70 points.
+You press <mark title="human response">S</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 58 points.
+Round 55: short, information condition 0.
+The K machine is highlighted, so you press K. You win 36 points.
+The K machine is highlighted, so you press K. You win 55 points.
+The S machine is highlighted, so you press S. You win 47 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 43 points.
+Round 56: long, information condition 0.
+The K machine is highlighted, so you press K. You win 90 points.
+The K machine is highlighted, so you press K. You win 75 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The S machine is highlighted, so you press S. You win 59 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 79 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">K</mark>. You win 90 points.
+Round 57: short, information condition -1.
+The K machine is highlighted, so you press K. You win 62 points.
+The K machine is highlighted, so you press K. You win 67 points.
+The K machine is highlighted, so you press K. You win 72 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 62 points.
+Round 58: long, information condition 1.
+The S machine is highlighted, so you press S. You win 57 points.
+The S machine is highlighted, so you press S. You win 65 points.
+The K machine is highlighted, so you press K. You win 94 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 92 points.
+You press <mark title="human response">K</mark>. You win 90 points.
+You press <mark title="human response">K</mark>. You win 90 points.
+You press <mark title="human response">K</mark>. You win 90 points.
+You press <mark title="human response">K</mark>. You win 92 points.
+You press <mark title="human response">K</mark>. You win 95 points.
+Round 59: long, information condition 0.
+The K machine is highlighted, so you press K. You win 56 points.
+The K machine is highlighted, so you press K. You win 71 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 69 points.
+You press <mark title="human response">K</mark>. You win 69 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 67 points.
+You press <mark title="human response">K</mark>. You win 72 points.
+Round 60: long, information condition -1.
+The K machine is highlighted, so you press K. You win 75 points.
+The K machine is highlighted, so you press K. You win 67 points.
+The K machine is highlighted, so you press K. You win 70 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 66 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+Round 61: long, information condition -1.
+The K machine is highlighted, so you press K. You win 28 points.
+The K machine is highlighted, so you press K. You win 36 points.
+The K machine is highlighted, so you press K. You win 31 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 34 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+Round 62: long, information condition 1.
+The S machine is highlighted, so you press S. You win 41 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The K machine is highlighted, so you press K. You win 46 points.
+The S machine is highlighted, so you press S. You win 48 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 46 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+Round 63: long, information condition 0.
+The K machine is highlighted, so you press K. You win 67 points.
+The K machine is highlighted, so you press K. You win 57 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 68 points.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 67 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+You press <mark title="human response">K</mark>. You win 69 points.
+Round 64: long, information condition 0.
+The S machine is highlighted, so you press S. You win 67 points.
+The K machine is highlighted, so you press K. You win 54 points.
+The S machine is highlighted, so you press S. You win 69 points.
+The K machine is highlighted, so you press K. You win 53 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 67 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 55 points.
+Round 65: short, information condition 0.
+The K machine is highlighted, so you press K. You win 71 points.
+The K machine is highlighted, so you press K. You win 67 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 64 points.
+Round 66: short, information condition 1.
+The S machine is highlighted, so you press S. You win 34 points.
+The K machine is highlighted, so you press K. You win 54 points.
+The S machine is highlighted, so you press S. You win 40 points.
+The S machine is highlighted, so you press S. You win 51 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 55 points.
+Round 67: short, information condition 0.
+The S machine is highlighted, so you press S. You win 37 points.
+The S machine is highlighted, so you press S. You win 43 points.
+The K machine is highlighted, so you press K. You win 38 points.
+The K machine is highlighted, so you press K. You win 34 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 45 points.
+Round 68: short, information condition 1.
+The K machine is highlighted, so you press K. You win 84 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The S machine is highlighted, so you press S. You win 60 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 82 points.
+Round 69: long, information condition 0.
+The K machine is highlighted, so you press K. You win 8 points.
+The S machine is highlighted, so you press S. You win 45 points.
+The K machine is highlighted, so you press K. You win 14 points.
+The S machine is highlighted, so you press S. You win 41 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 34 points.
+You press <mark title="human response">S</mark>. You win 33 points.
+You press <mark title="human response">S</mark>. You win 46 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 48 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+Round 70: short, information condition 0.
+The S machine is highlighted, so you press S. You win 60 points.
+The K machine is highlighted, so you press K. You win 68 points.
+The K machine is highlighted, so you press K. You win 66 points.
+The S machine is highlighted, so you press S. You win 56 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 67 points.
+Round 71: long, information condition -1.
+The K machine is highlighted, so you press K. You win 33 points.
+The K machine is highlighted, so you press K. You win 44 points.
+The S machine is highlighted, so you press S. You win 44 points.
+The K machine is highlighted, so you press K. You win 37 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+Round 72: long, information condition -1.
+The K machine is highlighted, so you press K. You win 66 points.
+The K machine is highlighted, so you press K. You win 68 points.
+The K machine is highlighted, so you press K. You win 66 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 72 points.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 68 points.
+You press <mark title="human response">K</mark>. You win 67 points.
+You press <mark title="human response">K</mark>. You win 70 points.
+You press <mark title="human response">K</mark>. You win 69 points.
+Round 73: long, information condition -1.
+The K machine is highlighted, so you press K. You win 59 points.
+The K machine is highlighted, so you press K. You win 64 points.
+The K machine is highlighted, so you press K. You win 61 points.
+The S machine is highlighted, so you press S. You win 63 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 60 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 61 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+Round 74: short, information condition -1.
+The S machine is highlighted, so you press S. You win 34 points.
+The K machine is highlighted, so you press K. You win 18 points.
+The K machine is highlighted, so you press K. You win 20 points.
+The K machine is highlighted, so you press K. You win 23 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 42 points.
+Round 75: short, information condition 0.
+The S machine is highlighted, so you press S. You win 56 points.
+The K machine is highlighted, so you press K. You win 36 points.
+The S machine is highlighted, so you press S. You win 58 points.
+The K machine is highlighted, so you press K. You win 38 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 55 points.
+Round 76: short, information condition 0.
+The K machine is highlighted, so you press K. You win 31 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The S machine is highlighted, so you press S. You win 59 points.
+The K machine is highlighted, so you press K. You win 34 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">S</mark>. You win 65 points.
+Round 77: long, information condition -1.
+The K machine is highlighted, so you press K. You win 10 points.
+The S machine is highlighted, so you press S. You win 35 points.
+The K machine is highlighted, so you press K. You win 14 points.
+The K machine is highlighted, so you press K. You win 12 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 32 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+Round 78: long, information condition 0.
+The K machine is highlighted, so you press K. You win 76 points.
+The S machine is highlighted, so you press S. You win 64 points.
+The K machine is highlighted, so you press K. You win 70 points.
+The S machine is highlighted, so you press S. You win 61 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 75 points.
+You press <mark title="human response">K</mark>. You win 67 points.
+You press <mark title="human response">K</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 75 points.
+You press <mark title="human response">K</mark>. You win 72 points.
+You press <mark title="human response">K</mark>. You win 69 points.
+Round 79: long, information condition 0.
+The K machine is highlighted, so you press K. You win 52 points.
+The S machine is highlighted, so you press S. You win 47 points.
+The K machine is highlighted, so you press K. You win 43 points.
+The S machine is highlighted, so you press S. You win 37 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make six free choices.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 54 points.
+You press <mark title="human response">K</mark>. You win 54 points.
+You press <mark title="human response">K</mark>. You win 57 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+Round 80: short, information condition -1.
+The K machine is highlighted, so you press K. You win 66 points.
+The S machine is highlighted, so you press S. You win 57 points.
+The K machine is highlighted, so you press K. You win 66 points.
+The K machine is highlighted, so you press K. You win 66 points.
+The machines disappear, reminding you how many free choices remain.
+You are told you can make one free choice.
+You press <mark title="human response">K</mark>. You win 67 points.
+You now play the two-armed bandit.
+In this task you play 30 rounds of 10 free choices between the same two slot machines: left (S) and right (K). Within a round the machines pay points that may stay stable or drift; after each choice you see the points the chosen machine paid.
+Round 1 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">K</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">K</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 38 points.
+You press <mark title="human response">K</mark>. You win 37 points.
+You press <mark title="human response">K</mark>. You win 39 points.
+You press <mark title="human response">K</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+Round 2 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">S</mark>. You win 79 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">S</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 80 points.
+You press <mark title="human response">K</mark>. You win 81 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">K</mark>. You win 78 points.
+You press <mark title="human response">K</mark>. You win 80 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+Round 3 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">S</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 54 points.
+You press <mark title="human response">S</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 67 points.
+You press <mark title="human response">S</mark>. You win 66 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+You press <mark title="human response">S</mark>. You win 70 points.
+You press <mark title="human response">S</mark>. You win 70 points.
+You press <mark title="human response">S</mark>. You win 68 points.
+Round 4 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 73 points.
+You press <mark title="human response">K</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 69 points.
+You press <mark title="human response">S</mark>. You win 77 points.
+You press <mark title="human response">S</mark>. You win 79 points.
+You press <mark title="human response">S</mark>. You win 75 points.
+You press <mark title="human response">S</mark>. You win 77 points.
+You press <mark title="human response">S</mark>. You win 79 points.
+You press <mark title="human response">S</mark>. You win 75 points.
+You press <mark title="human response">S</mark>. You win 77 points.
+Round 5 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 54 points.
+You press <mark title="human response">S</mark>. You win 55 points.
+You press <mark title="human response">S</mark>. You win 55 points.
+You press <mark title="human response">S</mark>. You win 55 points.
+You press <mark title="human response">S</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 54 points.
+You press <mark title="human response">S</mark>. You win 54 points.
+Round 6 (reward condition: arm 1 stable, arm 2 drifting).
+You press <mark title="human response">S</mark>. You win 56 points.
+You press <mark title="human response">K</mark>. You win 61 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">K</mark>. You win 56 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+Round 7 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">S</mark>. You win 30 points.
+You press <mark title="human response">K</mark>. You win 29 points.
+You press <mark title="human response">K</mark>. You win 25 points.
+You press <mark title="human response">S</mark>. You win 17 points.
+You press <mark title="human response">S</mark>. You win 12 points.
+You press <mark title="human response">S</mark>. You win 12 points.
+You press <mark title="human response">S</mark>. You win 15 points.
+You press <mark title="human response">K</mark>. You win 28 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+Round 8 (reward condition: both arms stable).
+You press <mark title="human response">K</mark>. You win 45 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">K</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">K</mark>. You win 45 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+Round 9 (reward condition: arm 1 stable, arm 2 drifting).
+You press <mark title="human response">K</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">K</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">S</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+Round 10 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">K</mark>. You win 34 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">K</mark>. You win 36 points.
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 48 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 55 points.
+You press <mark title="human response">S</mark>. You win 57 points.
+Round 11 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">K</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+You press <mark title="human response">K</mark>. You win 43 points.
+You press <mark title="human response">K</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+Round 12 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">S</mark>. You win 19 points.
+You press <mark title="human response">K</mark>. You win 26 points.
+You press <mark title="human response">S</mark>. You win 26 points.
+You press <mark title="human response">K</mark>. You win 27 points.
+You press <mark title="human response">K</mark>. You win 26 points.
+You press <mark title="human response">S</mark>. You win 27 points.
+You press <mark title="human response">S</mark>. You win 28 points.
+You press <mark title="human response">S</mark>. You win 29 points.
+You press <mark title="human response">S</mark>. You win 34 points.
+You press <mark title="human response">S</mark>. You win 27 points.
+Round 13 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 79 points.
+You press <mark title="human response">K</mark>. You win 79 points.
+You press <mark title="human response">S</mark>. You win 81 points.
+You press <mark title="human response">S</mark>. You win 80 points.
+You press <mark title="human response">S</mark>. You win 80 points.
+You press <mark title="human response">K</mark>. You win 62 points.
+You press <mark title="human response">S</mark>. You win 84 points.
+You press <mark title="human response">S</mark>. You win 83 points.
+You press <mark title="human response">S</mark>. You win 88 points.
+You press <mark title="human response">S</mark>. You win 88 points.
+Round 14 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 11 points.
+You press <mark title="human response">K</mark>. You win 7 points.
+You press <mark title="human response">S</mark>. You win 12 points.
+You press <mark title="human response">K</mark>. You win 6 points.
+You press <mark title="human response">K</mark>. You win 6 points.
+You press <mark title="human response">S</mark>. You win 13 points.
+You press <mark title="human response">S</mark>. You win 13 points.
+You press <mark title="human response">S</mark>. You win 13 points.
+You press <mark title="human response">S</mark>. You win 11 points.
+You press <mark title="human response">S</mark>. You win 12 points.
+Round 15 (reward condition: arm 1 stable, arm 2 drifting).
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 52 points.
+You press <mark title="human response">S</mark>. You win 52 points.
+Round 16 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 57 points.
+You press <mark title="human response">K</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+Round 17 (reward condition: arm 1 stable, arm 2 drifting).
+You press <mark title="human response">S</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 42 points.
+You press <mark title="human response">S</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 48 points.
+You press <mark title="human response">S</mark>. You win 48 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 49 points.
+Round 18 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 12 points.
+You press <mark title="human response">K</mark>. You win 15 points.
+You press <mark title="human response">S</mark>. You win 13 points.
+You press <mark title="human response">K</mark>. You win 16 points.
+You press <mark title="human response">K</mark>. You win 16 points.
+You press <mark title="human response">K</mark>. You win 14 points.
+You press <mark title="human response">S</mark>. You win 13 points.
+You press <mark title="human response">K</mark>. You win 14 points.
+You press <mark title="human response">K</mark>. You win 16 points.
+You press <mark title="human response">K</mark>. You win 15 points.
+Round 19 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 23 points.
+You press <mark title="human response">K</mark>. You win 17 points.
+You press <mark title="human response">K</mark>. You win 18 points.
+You press <mark title="human response">K</mark>. You win 18 points.
+You press <mark title="human response">S</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 22 points.
+You press <mark title="human response">S</mark>. You win 23 points.
+You press <mark title="human response">S</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 23 points.
+You press <mark title="human response">S</mark>. You win 24 points.
+Round 20 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 63 points.
+You press <mark title="human response">S</mark>. You win 44 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 60 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 54 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 36 points.
+Round 21 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">S</mark>. You win 35 points.
+You press <mark title="human response">K</mark>. You win 39 points.
+You press <mark title="human response">S</mark>. You win 37 points.
+You press <mark title="human response">K</mark>. You win 38 points.
+You press <mark title="human response">K</mark>. You win 39 points.
+You press <mark title="human response">K</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 30 points.
+You press <mark title="human response">K</mark>. You win 38 points.
+You press <mark title="human response">K</mark>. You win 37 points.
+You press <mark title="human response">K</mark>. You win 39 points.
+Round 22 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">K</mark>. You win 48 points.
+You press <mark title="human response">K</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+You press <mark title="human response">K</mark>. You win 46 points.
+You press <mark title="human response">S</mark>. You win 26 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+Round 23 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 65 points.
+You press <mark title="human response">K</mark>. You win 85 points.
+You press <mark title="human response">K</mark>. You win 84 points.
+You press <mark title="human response">K</mark>. You win 85 points.
+You press <mark title="human response">K</mark>. You win 88 points.
+You press <mark title="human response">K</mark>. You win 96 points.
+You press <mark title="human response">K</mark>. You win 90 points.
+You press <mark title="human response">K</mark>. You win 89 points.
+You press <mark title="human response">K</mark>. You win 90 points.
+You press <mark title="human response">K</mark>. You win 85 points.
+Round 24 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">K</mark>. You win 24 points.
+You press <mark title="human response">S</mark>. You win 30 points.
+You press <mark title="human response">S</mark>. You win 31 points.
+You press <mark title="human response">S</mark>. You win 33 points.
+You press <mark title="human response">S</mark>. You win 29 points.
+You press <mark title="human response">S</mark>. You win 29 points.
+You press <mark title="human response">K</mark>. You win 26 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 38 points.
+Round 25 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">S</mark>. You win 57 points.
+You press <mark title="human response">K</mark>. You win 58 points.
+You press <mark title="human response">K</mark>. You win 56 points.
+You press <mark title="human response">K</mark>. You win 58 points.
+You press <mark title="human response">K</mark>. You win 57 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 56 points.
+You press <mark title="human response">K</mark>. You win 59 points.
+You press <mark title="human response">K</mark>. You win 58 points.
+Round 26 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">K</mark>. You win 28 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 43 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 25 points.
+You press <mark title="human response">S</mark>. You win 41 points.
+You press <mark title="human response">S</mark>. You win 40 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+Round 27 (reward condition: both arms drifting).
+You press <mark title="human response">S</mark>. You win 45 points.
+You press <mark title="human response">K</mark>. You win 44 points.
+You press <mark title="human response">S</mark>. You win 42 points.
+You press <mark title="human response">K</mark>. You win 38 points.
+You press <mark title="human response">S</mark>. You win 39 points.
+You press <mark title="human response">K</mark>. You win 47 points.
+You press <mark title="human response">K</mark>. You win 53 points.
+You press <mark title="human response">K</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 55 points.
+You press <mark title="human response">K</mark>. You win 57 points.
+Round 28 (reward condition: both arms drifting).
+You press <mark title="human response">K</mark>. You win 13 points.
+You press <mark title="human response">S</mark>. You win 15 points.
+You press <mark title="human response">K</mark>. You win 11 points.
+You press <mark title="human response">S</mark>. You win 8 points.
+You press <mark title="human response">S</mark>. You win 7 points.
+You press <mark title="human response">K</mark>. You win 17 points.
+You press <mark title="human response">K</mark>. You win 15 points.
+You press <mark title="human response">K</mark>. You win 12 points.
+You press <mark title="human response">K</mark>. You win 13 points.
+You press <mark title="human response">K</mark>. You win 13 points.
+Round 29 (reward condition: arm 1 drifting, arm 2 stable).
+You press <mark title="human response">S</mark>. You win 52 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">K</mark>. You win 49 points.
+You press <mark title="human response">S</mark>. You win 54 points.
+You press <mark title="human response">S</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">K</mark>. You win 50 points.
+You press <mark title="human response">S</mark>. You win 53 points.
+You press <mark title="human response">S</mark>. You win 51 points.
+Round 30 (reward condition: both arms stable).
+You press <mark title="human response">S</mark>. You win 75 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">S</mark>. You win 77 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You press <mark title="human response">S</mark>. You win 74 points.
+You press <mark title="human response">K</mark>. You win 82 points.
+You press <mark title="human response">K</mark>. You win 80 points.
+You press <mark title="human response">K</mark>. You win 83 points.
+You now play the restless bandit.
+In this task you play one long round of 200 free choices between four slot machines, played with S, D, K and L. After each choice you see the points the chosen machine paid out; the machines&#x27; average payouts drift slowly.
+You press <mark title="human response">K</mark>. You gain 55 points.
+You press <mark title="human response">D</mark>. You gain 43 points.
+You press <mark title="human response">S</mark>. You gain 38 points.
+You press <mark title="human response">L</mark>. You gain 48 points.
+You press <mark title="human response">K</mark>. You gain 50 points.
+You press <mark title="human response">K</mark>. You gain 50 points.
+You press <mark title="human response">K</mark>. You gain 53 points.
+You press <mark title="human response">K</mark>. You gain 69 points.
+You press <mark title="human response">K</mark>. You gain 57 points.
+You press <mark title="human response">K</mark>. You gain 62 points.
+You press <mark title="human response">K</mark>. You gain 53 points.
+You press <mark title="human response">L</mark>. You gain 59 points.
+You press <mark title="human response">D</mark>. You gain 56 points.
+You press <mark title="human response">S</mark>. You gain 43 points.
+You press <mark title="human response">L</mark>. You gain 65 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">L</mark>. You gain 64 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">K</mark>. You gain 45 points.
+You press <mark title="human response">D</mark>. You gain 33 points.
+You press <mark title="human response">S</mark>. You gain 38 points.
+You press <mark title="human response">L</mark>. You gain 66 points.
+You press <mark title="human response">L</mark>. You gain 69 points.
+You press <mark title="human response">L</mark>. You gain 60 points.
+You press <mark title="human response">L</mark>. You gain 63 points.
+You press <mark title="human response">L</mark>. You gain 61 points.
+You press <mark title="human response">L</mark>. You gain 58 points.
+You press <mark title="human response">L</mark>. You gain 63 points.
+You press <mark title="human response">L</mark>. You gain 64 points.
+You press <mark title="human response">L</mark>. You gain 67 points.
+You press <mark title="human response">L</mark>. You gain 59 points.
+You press <mark title="human response">L</mark>. You gain 59 points.
+You press <mark title="human response">L</mark>. You gain 63 points.
+You press <mark title="human response">L</mark>. You gain 57 points.
+You press <mark title="human response">L</mark>. You gain 65 points.
+You press <mark title="human response">L</mark>. You gain 59 points.
+You press <mark title="human response">L</mark>. You gain 57 points.
+You press <mark title="human response">L</mark>. You gain 52 points.
+You press <mark title="human response">L</mark>. You gain 45 points.
+You press <mark title="human response">L</mark>. You gain 47 points.
+You press <mark title="human response">K</mark>. You gain 45 points.
+You press <mark title="human response">D</mark>. You gain 36 points.
+You press <mark title="human response">S</mark>. You gain 44 points.
+You press <mark title="human response">K</mark>. You gain 44 points.
+You press <mark title="human response">K</mark>. You gain 42 points.
+You press <mark title="human response">L</mark>. You gain 49 points.
+You press <mark title="human response">L</mark>. You gain 48 points.
+You press <mark title="human response">L</mark>. You gain 45 points.
+You press <mark title="human response">S</mark>. You gain 44 points.
+You press <mark title="human response">D</mark>. You gain 45 points.
+You press <mark title="human response">D</mark>. You gain 48 points.
+You press <mark title="human response">D</mark>. You gain 44 points.
+You press <mark title="human response">D</mark>. You gain 46 points.
+You press <mark title="human response">D</mark>. You gain 41 points.
+You press <mark title="human response">K</mark>. You gain 54 points.
+You press <mark title="human response">K</mark>. You gain 45 points.
+You press <mark title="human response">K</mark>. You gain 46 points.
+You press <mark title="human response">K</mark>. You gain 48 points.
+You press <mark title="human response">S</mark>. You gain 44 points.
+You press <mark title="human response">K</mark>. You gain 62 points.
+You press <mark title="human response">K</mark>. You gain 72 points.
+You press <mark title="human response">K</mark>. You gain 68 points.
+You press <mark title="human response">K</mark>. You gain 65 points.
+You press <mark title="human response">K</mark>. You gain 68 points.
+You press <mark title="human response">K</mark>. You gain 64 points.
+You press <mark title="human response">K</mark>. You gain 64 points.
+You press <mark title="human response">K</mark>. You gain 54 points.
+You press <mark title="human response">K</mark>. You gain 65 points.
+You press <mark title="human response">K</mark>. You gain 63 points.
+You press <mark title="human response">K</mark>. You gain 53 points.
+You press <mark title="human response">K</mark>. You gain 56 points.
+You press <mark title="human response">K</mark>. You gain 61 points.
+You press <mark title="human response">K</mark>. You gain 64 points.
+You press <mark title="human response">K</mark>. You gain 51 points.
+You press <mark title="human response">K</mark>. You gain 62 points.
+You press <mark title="human response">K</mark>. You gain 64 points.
+You press <mark title="human response">L</mark>. You gain 57 points.
+You press <mark title="human response">L</mark>. You gain 45 points.
+You press <mark title="human response">L</mark>. You gain 51 points.
+You press <mark title="human response">D</mark>. You gain 54 points.
+You press <mark title="human response">S</mark>. You gain 43 points.
+You press <mark title="human response">K</mark>. You gain 44 points.
+You press <mark title="human response">K</mark>. You gain 37 points.
+You press <mark title="human response">K</mark>. You gain 44 points.
+You press <mark title="human response">D</mark>. You gain 48 points.
+You press <mark title="human response">D</mark>. You gain 47 points.
+You press <mark title="human response">D</mark>. You gain 43 points.
+You press <mark title="human response">D</mark>. You gain 46 points.
+You press <mark title="human response">S</mark>. You gain 46 points.
+You press <mark title="human response">S</mark>. You gain 47 points.
+You press <mark title="human response">S</mark>. You gain 62 points.
+You press <mark title="human response">S</mark>. You gain 57 points.
+You press <mark title="human response">S</mark>. You gain 60 points.
+You press <mark title="human response">S</mark>. You gain 56 points.
+You press <mark title="human response">S</mark>. You gain 66 points.
+You press <mark title="human response">S</mark>. You gain 56 points.
+You press <mark title="human response">S</mark>. You gain 66 points.
+You press <mark title="human response">S</mark>. You gain 70 points.
+You press <mark title="human response">S</mark>. You gain 63 points.
+You press <mark title="human response">S</mark>. You gain 69 points.
+You press <mark title="human response">S</mark>. You gain 68 points.
+You press <mark title="human response">S</mark>. You gain 69 points.
+You press <mark title="human response">S</mark>. You gain 68 points.
+You press <mark title="human response">S</mark>. You gain 78 points.
+You press <mark title="human response">S</mark>. You gain 71 points.
+You press <mark title="human response">S</mark>. You gain 70 points.
+You press <mark title="human response">S</mark>. You gain 62 points.
+You press <mark title="human response">S</mark>. You gain 60 points.
+You press <mark title="human response">S</mark>. You gain 53 points.
+You press <mark title="human response">S</mark>. You gain 61 points.
+You press <mark title="human response">K</mark>. You gain 59 points.
+You press <mark title="human response">D</mark>. You gain 63 points.
+You press <mark title="human response">L</mark>. You gain 47 points.
+You press <mark title="human response">D</mark>. You gain 49 points.
+You press <mark title="human response">D</mark>. You gain 51 points.
+You press <mark title="human response">D</mark>. You gain 54 points.
+You press <mark title="human response">S</mark>. You gain 71 points.
+You press <mark title="human response">S</mark>. You gain 61 points.
+You press <mark title="human response">S</mark>. You gain 59 points.
+You press <mark title="human response">S</mark>. You gain 59 points.
+You press <mark title="human response">S</mark>. You gain 64 points.
+You press <mark title="human response">S</mark>. You gain 74 points.
+You press <mark title="human response">S</mark>. You gain 71 points.
+You press <mark title="human response">S</mark>. You gain 73 points.
+You press <mark title="human response">S</mark>. You gain 68 points.
+You press <mark title="human response">S</mark>. You gain 72 points.
+You press <mark title="human response">S</mark>. You gain 68 points.
+You press <mark title="human response">S</mark>. You gain 70 points.
+You press <mark title="human response">S</mark>. You gain 66 points.
+You press <mark title="human response">S</mark>. You gain 68 points.
+You press <mark title="human response">S</mark>. You gain 67 points.
+You press <mark title="human response">S</mark>. You gain 66 points.
+You press <mark title="human response">S</mark>. You gain 71 points.
+You press <mark title="human response">S</mark>. You gain 76 points.
+You press <mark title="human response">S</mark>. You gain 63 points.
+You press <mark title="human response">S</mark>. You gain 71 points.
+You press <mark title="human response">S</mark>. You gain 67 points.
+You press <mark title="human response">S</mark>. You gain 74 points.
+You press <mark title="human response">S</mark>. You gain 66 points.
+You press <mark title="human response">S</mark>. You gain 63 points.
+You press <mark title="human response">S</mark>. You gain 68 points.
+You press <mark title="human response">S</mark>. You gain 75 points.
+You press <mark title="human response">S</mark>. You gain 65 points.
+You press <mark title="human response">S</mark>. You gain 75 points.
+You press <mark title="human response">S</mark>. You gain 68 points.
+You press <mark title="human response">S</mark>. You gain 74 points.
+You press <mark title="human response">S</mark>. You gain 63 points.
+You press <mark title="human response">S</mark>. You gain 78 points.
+You press <mark title="human response">S</mark>. You gain 73 points.
+You press <mark title="human response">S</mark>. You gain 63 points.
+You press <mark title="human response">S</mark>. You gain 59 points.
+You press <mark title="human response">S</mark>. You gain 59 points.
+You press <mark title="human response">K</mark>. You gain 69 points.
+You press <mark title="human response">K</mark>. You gain 64 points.
+You press <mark title="human response">K</mark>. You gain 66 points.
+You press <mark title="human response">K</mark>. You gain 57 points.
+You press <mark title="human response">D</mark>. You gain 51 points.
+You press <mark title="human response">L</mark>. You gain 25 points.
+You press <mark title="human response">S</mark>. You gain 44 points.
+You press <mark title="human response">S</mark>. You gain 42 points.
+You press <mark title="human response">K</mark>. You gain 72 points.
+You press <mark title="human response">K</mark>. You gain 70 points.
+You press <mark title="human response">K</mark>. You gain 71 points.
+You press <mark title="human response">K</mark>. You gain 78 points.
+You press <mark title="human response">K</mark>. You gain 77 points.
+You press <mark title="human response">K</mark>. You gain 75 points.
+You press <mark title="human response">K</mark>. You gain 74 points.
+You press <mark title="human response">K</mark>. You gain 68 points.
+You press <mark title="human response">K</mark>. You gain 72 points.
+You press <mark title="human response">K</mark>. You gain 64 points.
+You press <mark title="human response">K</mark>. You gain 62 points.
+You press <mark title="human response">K</mark>. You gain 64 points.
+You press <mark title="human response">K</mark>. You gain 62 points.
+You press <mark title="human response">K</mark>. You gain 50 points.
+You press <mark title="human response">K</mark>. You gain 55 points.
+You press <mark title="human response">K</mark>. You gain 56 points.
+You press <mark title="human response">D</mark>. You gain 63 points.
+You press <mark title="human response">D</mark>. You gain 57 points.
+You press <mark title="human response">S</mark>. You gain 45 points.
+You press <mark title="human response">L</mark>. You gain 35 points.
+You press <mark title="human response">D</mark>. You gain 58 points.
+You press <mark title="human response">D</mark>. You gain 57 points.
+You press <mark title="human response">D</mark>. You gain 58 points.
+You press <mark title="human response">D</mark>. You gain 61 points.
+You press <mark title="human response">D</mark>. You gain 56 points.
+You press <mark title="human response">D</mark>. You gain 59 points.
+You press <mark title="human response">D</mark>. You gain 67 points.
+You press <mark title="human response">D</mark>. You gain 61 points.
+You press <mark title="human response">D</mark>. You gain 49 points.
+You press <mark title="human response">D</mark>. You gain 52 points.
+You press <mark title="human response">K</mark>. You gain 60 points.
+You press <mark title="human response">K</mark>. You gain 67 points.
+You press <mark title="human response">K</mark>. You gain 62 points.
+You press <mark title="human response">K</mark>. You gain 65 points.
+You press <mark title="human response">K</mark>. You gain 65 points.
+You press <mark title="human response">K</mark>. You gain 67 points.
+You press <mark title="human response">K</mark>. You gain 61 points.
+You press <mark title="human response">K</mark>. You gain 66 points.
+You press <mark title="human response">K</mark>. You gain 57 points.
+Finally you complete five questionnaires. For each item you are given a statement or a word and answer with a single number on the stated scale. Answer each item with exactly that number.
+PANAS: for each of the 20 words below, rate how well it describes how you feel right now (0 = very slightly or not at all, 1 = a little, 2 = moderately, 3 = quite a bit, 4 = extremely).
+Item 1: you respond 4.
+Item 2: you respond 0.
+Item 3: you respond 3.
+Item 4: you respond 0.
+Item 5: you respond 3.
+Item 6: you respond 0.
+Item 7: you respond 0.
+Item 8: you respond 0.
+Item 9: you respond 4.
+Item 10: you respond 4.
+Item 11: you respond 1.
+Item 12: you respond 4.
+Item 13: you respond 0.
+Item 14: you respond 3.
+Item 15: you respond 0.
+Item 16: you respond 4.
+Item 17: you respond 4.
+Item 18: you respond 0.
+Item 19: you respond 4.
+Item 20: you respond 0.
+STICSA: for each of the 22 statements below, rate how often it is generally true for you (0 = almost never, 1 = occasionally, 2 = often, 3 = almost always).
+Item 1: you respond 0.
+Item 2: you respond 1.
+Item 3: you respond 1.
+Item 4: you respond 1.
+Item 5: you respond 1.
+Item 6: you respond 0.
+Item 7: you respond 0.
+Item 8: you respond 0.
+Item 9: you respond 0.
+Item 10: you respond 3.
+Item 11: you respond 1.
+Item 12: you respond 0.
+Item 13: you respond 0.
+Item 14: you respond 0.
+Item 15: you respond 0.
+Item 16: you respond 0.
+Item 17: you respond 3.
+Item 18: you respond 3.
+Item 19: you respond 0.
+Item 20: you respond 0.
+Item 21: you respond 0.
+Item 22: you respond 0.
+BIG_5 openness: for each of the 6 statements below, rate your agreement (0 = disagree strongly, 1 = disagree a little, 2 = neutral, 3 = agree a little, 4 = agree strongly).
+Item 1: you respond 4.
+Item 2: you respond 0.
+Item 3: you respond 4.
+Item 4: you respond 0.
+Item 5: you respond 4.
+Item 6: you respond 0.
+PHQ_9: for each of the 10 items below, rate how often you have been bothered by it over the last two weeks (0 = not at all, 1 = several days, 2 = more than half the days, 3 = nearly every day).
+Item 1: you respond 0.
+Item 2: you respond 0.
+Item 3: you respond 1.
+Item 4: you respond 1.
+Item 5: you respond 0.
+Item 6: you respond 0.
+Item 7: you respond 0.
+Item 8: you respond 0.
+Item 9: you respond 0.
+Item 10: you respond 0.
+CEI: for each of the 4 statements below, rate your agreement (0 = strongly disagree, 1 = disagree, 2 = somewhat disagree, 3 = neither, 4 = somewhat agree, 5 = agree, 6 = strongly agree).
+Item 1: you respond 6.
+Item 2: you respond 5.
+Item 3: you respond 0.
+Item 4: you respond 4.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gnther_2022_patterns</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / gnther_2022_patterns</nav>
+<h1>gnther_2022_patterns</h1>
+<p class="tags"><span class="chip paradigm">compound-interpretation</span> <span class="chip minor">psych-201</span></p>
+<p>Two crowdsourced (Prolific) rating experiments test whether distributed semantic-vector representations (whole-word, additive, and CAOSS composition) predict people&#x27;s relational interpretations of English nominal compounds. In each trial a participant selects 1 of 16 possible relational meanings (e.g., X MADE OF Y, X HAS Y) for a presented compound. Experiment 1 (familiar compounds, ~575 items, data reused from Schmidtke et al. 2018 — present only as per-item aggregate counts) and Experiment 2 (408 novel compounds, N = 400 participants at 55 items each: 51 novel compounds from one of eight lists plus 4 catch trials) both yield per-compound frequency distributions over the 16 relations; a multivariate least-squares regression mapping system trained on the vectors under leave-one-out cross-validation predicts these distributions. The available trial-level data covers Experiment 2 (400 participants × 55 trials = 22,000 rows), where participants made a 16-relation forced-choice judgment per trial. Response is the selected relational-interpretation label.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">22,000</div><div class="tile-sub">2,200 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">1 / 3</div><div class="tile-sub"></div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">2.525</div><div class="tile-sub">rank 2 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">Centaur</div><div class="tile-sub">test NLL (avg) 2.492</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="5555.5679" title="CORE: 5,555.6 nats"><span class="track"><span class="bar core" style="width:89.2%"></span></span><span class="num">5,555.6</span></td><td class="num" data-v="2.5253">2.5253</td><td class="num" data-v="2200">2,200</td><td class="num" data-v="2.4706">2.4706</td><td class="num" data-v="19800.0">19,800</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="5700.7183" title="CORE (no prediction errors): 5,700.7 nats"><span class="track"><span class="bar core" style="width:91.5%"></span></span><span class="num">5,700.7</span></td><td class="num" data-v="2.5912">2.5912</td><td class="num" data-v="2200">2,200</td><td class="num" data-v="2.5369">2.5369</td><td class="num" data-v="19800.0">19,800</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="6231.2988" title="CORE (no phonemes): 6,231.3 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">6,231.3</span></td><td class="num" data-v="2.8324">2.8324</td><td class="num" data-v="2200">2,200</td><td class="num" data-v="0.651">0.6510</td><td class="num" data-v="19800.0">19,800</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="5857.832" title="CORE (no forgetting): 5,857.8 nats"><span class="track"><span class="bar core" style="width:94.0%"></span></span><span class="num">5,857.8</span></td><td class="num" data-v="2.6627">2.6627</td><td class="num" data-v="2200">2,200</td><td class="num" data-v="2.6408">2.6408</td><td class="num" data-v="19800.0">19,800</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="6136.3086" title="CORE (no hierarchy): 6,136.3 nats"><span class="track"><span class="bar core" style="width:98.5%"></span></span><span class="num">6,136.3</span></td><td class="num" data-v="2.7892">2.7892</td><td class="num" data-v="2200">2,200</td><td class="num" data-v="2.7629">2.7629</td><td class="num" data-v="19800.0">19,800</td></tr><tr><td>Transformer</td><td class="barcell" data-v="6197.7388" title="Transformer: 6,197.7 nats"><span class="track"><span class="bar base" style="width:99.5%"></span></span><span class="num">6,197.7</span></td><td class="num" data-v="2.8172">2.8172</td><td class="num" data-v="2200">2,200</td><td class="num" data-v="2.4668">2.4668</td><td class="num" data-v="19800.0">19,800</td></tr><tr class="best"><td>Centaur <span class="pill best-pill">best</span></td><td class="barcell" data-v="5482.5493" title="Centaur: 5,482.5 nats"><span class="track"><span class="bar base" style="width:88.0%"></span></span><span class="num">5,482.5</span></td><td class="num" data-v="2.4921">2.4921</td><td class="num" data-v="2200">2,200</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>CompoundRelationalJudgment</td><td class="num">400</td><td class="num">22,000</td><td class="num">1</td><td>yes</td><td><code>catch_trial_accuracy</code>, <code>relations_systematic_nonuniform</code>, <code>high_interpretational_variability</code></td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><div class="scroll"><table class="effects">
+<thead><tr><th>effect</th><th>experiment</th><th class="num">paper</th><th>CORE</th><th>CORE (no prediction errors)</th><th>CORE (no phonemes)</th><th>CORE (no forgetting)</th><th>CORE (no hierarchy)</th></tr></thead>
+<tbody><tr><td><code>catch_trial_accuracy</code><button class="eq-toggle" data-target="desc-0" aria-expanded="false">Description</button></td><td>exp0</td><td class="num">+0.085</td><td><span class="pill no">✗ no</span><div class="effect-val">+0.000</div></td><td><span class="pill no">✗ no</span><div class="effect-val">+0.000</div></td><td><span class="pill yes">✓ yes</span><div class="effect-val">+0.120</div></td><td><span class="pill no">✗ no</span><div class="effect-val">+0.000</div></td><td><span class="pill no">✗ no</span><div class="effect-val">+0.000</div></td></tr><tr class="eq-row" id="desc-0" hidden><td colspan="8"><p class="effect-desc">the four embedded catch trials (snow man, stone ware, sweat band, tea time) have well-defined normative answers; participants answer them at far above the 1/16 chance level, and only 34 of 400 (8.5%) participants are non-compliant (&lt;3 of 4 correct). Test: binomial proportion vs. chance; direction: accuracy &gt;&gt; chance.</p></td></tr><tr><td><code>relations_systematic_nonuniform</code><button class="eq-toggle" data-target="desc-1" aria-expanded="false">Description</button></td><td>exp0</td><td class="num">+0.062</td><td><span class="pill no">✗ no</span><div class="effect-val">+0.068</div></td><td><span class="pill no">✗ no</span><div class="effect-val">+0.068</div></td><td><span class="pill yes">✓ yes</span><div class="effect-val">+0.196</div></td><td><span class="pill no">✗ no</span><div class="effect-val">+0.066</div></td><td><span class="pill no">✗ no</span><div class="effect-val">+0.070</div></td></tr><tr class="eq-row" id="desc-1" hidden><td colspan="8"><p class="effect-desc">across the 16 possible relational interpretations, participants&#x27; choices are strongly non-uniform / systematic rather than random. Test: chi-square goodness-of-fit of the pooled relation counts against a uniform distribution; direction: observed distribution differs strongly from uniform, top relation far above the 1/16 chance share.</p></td></tr><tr><td><code>high_interpretational_variability</code><button class="eq-toggle" data-target="desc-2" aria-expanded="false">Description</button></td><td>exp0</td><td class="num">+2.338</td><td><span class="pill yes">✓ yes</span><div class="effect-val">+2.609</div></td><td><span class="pill yes">✓ yes</span><div class="effect-val">+2.607</div></td><td><span class="pill yes">✓ yes</span><div class="effect-val">+2.017</div></td><td><span class="pill yes">✓ yes</span><div class="effect-val">+2.611</div></td><td><span class="pill yes">✓ yes</span><div class="effect-val">+2.605</div></td></tr><tr class="eq-row" id="desc-2" hidden><td colspan="8"><p class="effect-desc">item-level relational entropy of the 408 novel compounds is high (paper reports M = 2.338), i.e., participants do not converge on a single relation but spread across several — substantial across-subject variation. Test: one-sample t-test that mean item entropy exceeds a near-unanimous baseline; direction: entropy clearly &gt; 0 / &gt; 1, p &lt; .05.</p></td></tr></tbody></table></div></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option></select></label><div class="transcript" id="t0"><pre>You are taking part in a study of how people interpret novel English compounds: words made of two familiar words combined, which you have almost certainly never seen before. In each trial you see one such novel compound written as two words. The FIRST word is the modifier; the SECOND word is the head. You must choose the one relation that best expresses what the whole compound means, from sixteen possibilities:
+A: the head causes the modifier
+B: the head is the modifier
+C: the head is during the modifier
+D: the head is used by the modifier
+E: the modifier is located at the head
+F: the modifier has the head
+G: the head is about the modifier
+H: the head is caused by the modifier
+I: the head is located at the modifier
+J: the head uses the modifier
+K: the head is made of the modifier
+L: the head is for the modifier
+M: the head is by the modifier
+N: the head has the modifier
+O: the head makes the modifier
+P: the head is from the modifier
+You answer by typing the letter that names the relation you choose, e.g. type the single letter next to your chosen relation.
+You see the novel compound &#x27;brick steak&#x27;. What does it mean? You press <mark title="human response">K</mark>.
+You see the novel compound &#x27;loin robe&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;sand quake&#x27;. What does it mean? You press <mark title="human response">H</mark>.
+You see the novel compound &#x27;meadow luck&#x27;. What does it mean? You press <mark title="human response">H</mark>.
+You see the novel compound &#x27;band rock&#x27;. What does it mean? You press <mark title="human response">H</mark>.
+You see the novel compound &#x27;hearth belly&#x27;. What does it mean? You press <mark title="human response">E</mark>.
+You see the novel compound &#x27;stone ware&#x27;. What does it mean? You press <mark title="human response">K</mark>.
+You see the novel compound &#x27;mast hoe&#x27;. What does it mean? You press <mark title="human response">I</mark>.
+You see the novel compound &#x27;byte miner&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;cash summer&#x27;. What does it mean? You press <mark title="human response">J</mark>.
+You see the novel compound &#x27;beef broker&#x27;. What does it mean? You press <mark title="human response">N</mark>.
+You see the novel compound &#x27;sea buoy&#x27;. What does it mean? You press <mark title="human response">I</mark>.
+You see the novel compound &#x27;bob load&#x27;. What does it mean? You press <mark title="human response">F</mark>.
+You see the novel compound &#x27;rose mill&#x27;. What does it mean? You press <mark title="human response">M</mark>.
+You see the novel compound &#x27;back boat&#x27;. What does it mean? You press <mark title="human response">I</mark>.
+You see the novel compound &#x27;hunter poll&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;bag street&#x27;. What does it mean? You press <mark title="human response">B</mark>.
+You see the novel compound &#x27;info finch&#x27;. What does it mean? You press <mark title="human response">N</mark>.
+You see the novel compound &#x27;skate band&#x27;. What does it mean? You press <mark title="human response">G</mark>.
+You see the novel compound &#x27;birth wife&#x27;. What does it mean? You press <mark title="human response">N</mark>.
+You see the novel compound &#x27;consul son&#x27;. What does it mean? You press <mark title="human response">F</mark>.
+You see the novel compound &#x27;tea time&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;milk friend&#x27;. What does it mean? You press <mark title="human response">K</mark>.
+You see the novel compound &#x27;switch job&#x27;. What does it mean? You press <mark title="human response">H</mark>.
+You see the novel compound &#x27;tree soil&#x27;. What does it mean? You press <mark title="human response">F</mark>.
+You see the novel compound &#x27;use record&#x27;. What does it mean? You press <mark title="human response">C</mark>.
+You see the novel compound &#x27;ion riding&#x27;. What does it mean? You press <mark title="human response">H</mark>.
+You see the novel compound &#x27;lunch day&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;win slot&#x27;. What does it mean? You press <mark title="human response">A</mark>.
+You see the novel compound &#x27;day fish&#x27;. What does it mean? You press <mark title="human response">C</mark>.
+You see the novel compound &#x27;saw fuel&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;snow man&#x27;. What does it mean? You press <mark title="human response">K</mark>.
+You see the novel compound &#x27;tram fill&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;special owl&#x27;. What does it mean? You press <mark title="human response">B</mark>.
+You see the novel compound &#x27;shop room&#x27;. What does it mean? You press <mark title="human response">B</mark>.
+You see the novel compound &#x27;rein shine&#x27;. What does it mean? You press <mark title="human response">H</mark>.
+You see the novel compound &#x27;strait timer&#x27;. What does it mean? You press <mark title="human response">B</mark>.
+You see the novel compound &#x27;bubble step&#x27;. What does it mean? You press <mark title="human response">P</mark>.
+You see the novel compound &#x27;gilt round&#x27;. What does it mean? You press <mark title="human response">B</mark>.
+You see the novel compound &#x27;bog term&#x27;. What does it mean? You press <mark title="human response">C</mark>.
+You see the novel compound &#x27;shin click&#x27;. What does it mean? You press <mark title="human response">J</mark>.
+You see the novel compound &#x27;cheese road&#x27;. What does it mean? You press <mark title="human response">K</mark>.
+You see the novel compound &#x27;sweat band&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;anchor domain&#x27;. What does it mean? You press <mark title="human response">J</mark>.
+You see the novel compound &#x27;hair dress&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;meeting jar&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;sea storm&#x27;. What does it mean? You press <mark title="human response">I</mark>.
+You see the novel compound &#x27;dance swing&#x27;. What does it mean? You press <mark title="human response">P</mark>.
+You see the novel compound &#x27;jet giving&#x27;. What does it mean? You press <mark title="human response">G</mark>.
+You see the novel compound &#x27;goal coach&#x27;. What does it mean? You press <mark title="human response">G</mark>.
+You see the novel compound &#x27;waist set&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;sand tan&#x27;. What does it mean? You press <mark title="human response">P</mark>.
+You see the novel compound &#x27;review onset&#x27;. What does it mean? You press <mark title="human response">F</mark>.
+You see the novel compound &#x27;wine button&#x27;. What does it mean? You press <mark title="human response">L</mark>.
+You see the novel compound &#x27;folk line&#x27;. What does it mean? You press <mark title="human response">P</mark>.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>decker_2016_from</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / decker_2016_from</nav>
+<h1>decker_2016_from</h1>
+<p class="tags"><span class="chip paradigm">two-step-task</span> <span class="chip minor">psych-201</span></p>
+<p>Children, adolescents, and adults (N=59: 20 children ages 8–12, 20 adolescents ages 13–17, 19 adults ages 18–25) performed a two-step Markov decision task. On each paper-trial, participants first chose one of two spaceships (first stage), which probabilistically (70/30 common/rare) transitioned to one of two planets, then chose one of two aliens for a stochastic reward. The study tested whether model-based reinforcement learning increases across development by estimating the weighting parameter ω from a hybrid model-based/model-free RL model. Response type is binary choice across ~200 trials per participant (exp0).</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">23,246</div><div class="tile-sub">1,978 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.481</div><div class="tile-sub">rank 3 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE (no phonemes)</div><div class="tile-sub">test NLL (avg) 0.475</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="951.5091" title="CORE: 951.5 nats"><span class="track"><span class="bar core" style="width:82.1%"></span></span><span class="num">951.5</span></td><td class="num" data-v="0.481">0.4810</td><td class="num" data-v="1978">1,978</td><td class="num" data-v="0.5213">0.5213</td><td class="num" data-v="21268.0">21,268</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="955.6159" title="CORE (no prediction errors): 955.6 nats"><span class="track"><span class="bar core" style="width:82.5%"></span></span><span class="num">955.6</span></td><td class="num" data-v="0.4831">0.4831</td><td class="num" data-v="1978">1,978</td><td class="num" data-v="0.5217">0.5217</td><td class="num" data-v="21268.0">21,268</td></tr><tr class="best"><td>CORE (no phonemes) <span class="pill best-pill">best</span></td><td class="barcell" data-v="939.4326" title="CORE (no phonemes): 939.4 nats"><span class="track"><span class="bar core" style="width:81.1%"></span></span><span class="num">939.4</span></td><td class="num" data-v="0.4749">0.4749</td><td class="num" data-v="1978">1,978</td><td class="num" data-v="0.5176">0.5176</td><td class="num" data-v="21268.0">21,268</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="977.5253" title="CORE (no forgetting): 977.5 nats"><span class="track"><span class="bar core" style="width:84.3%"></span></span><span class="num">977.5</span></td><td class="num" data-v="0.4942">0.4942</td><td class="num" data-v="1978">1,978</td><td class="num" data-v="0.5365">0.5365</td><td class="num" data-v="21268.0">21,268</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="1158.9185" title="CORE (no hierarchy): 1,158.9 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">1,158.9</span></td><td class="num" data-v="0.5859">0.5859</td><td class="num" data-v="1978">1,978</td><td class="num" data-v="0.608">0.6080</td><td class="num" data-v="21268.0">21,268</td></tr><tr><td>Transformer</td><td class="barcell" data-v="991.9791" title="Transformer: 992.0 nats"><span class="track"><span class="bar base" style="width:85.6%"></span></span><span class="num">992.0</span></td><td class="num" data-v="0.5015">0.5015</td><td class="num" data-v="1978">1,978</td><td class="num" data-v="0.5554">0.5554</td><td class="num" data-v="21268.0">21,268</td></tr><tr><td>Centaur</td><td class="barcell" data-v="941.8253" title="Centaur: 941.8 nats"><span class="track"><span class="bar base" style="width:81.3%"></span></span><span class="num">941.8</span></td><td class="num" data-v="0.4762">0.4762</td><td class="num" data-v="1978">1,978</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>TwoStepTask</td><td class="num">59</td><td class="num">23,246</td><td class="num">3</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · age_group=adolescents</option><option value="t1">exp0 · age_group=children</option><option value="t2">exp0 · age_group=adults</option></select></label><div class="transcript" id="t0"><pre>You are a space explorer collecting space treasure. On each trial you first choose one of two spaceships. Each spaceship usually travels to one planet but sometimes to the other. After your spaceship travels, you arrive at a planet. On that planet you choose one of two aliens. If you pick the right alien, you find space treasure; otherwise you find nothing. The aliens&#x27; chances of giving treasure change slowly over time, so keep trying different choices.
+Press A to choose the first spaceship or B to choose the second spaceship. On each planet, press A to choose the first alien or B to choose the second alien.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!</pre></div><div class="transcript" id="t1" hidden><pre>You are a space explorer collecting space treasure. On each trial you first choose one of two spaceships. Each spaceship usually travels to one planet but sometimes to the other. After your spaceship travels, you arrive at a planet. On that planet you choose one of two aliens. If you pick the right alien, you find space treasure; otherwise you find nothing. The aliens&#x27; chances of giving treasure change slowly over time, so keep trying different choices.
+Press A to choose the first spaceship or B to choose the second spaceship. On each planet, press A to choose the first alien or B to choose the second alien.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.</pre></div><div class="transcript" id="t2" hidden><pre>You are a space explorer collecting space treasure. On each trial you first choose one of two spaceships. Each spaceship usually travels to one planet but sometimes to the other. After your spaceship travels, you arrive at a planet. On that planet you choose one of two aliens. If you pick the right alien, you find space treasure; otherwise you find nothing. The aliens&#x27; chances of giving treasure change slowly over time, so keep trying different choices.
+Press A to choose the first spaceship or B to choose the second spaceship. On each planet, press A to choose the first alien or B to choose the second alien.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">B</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet B. You choose an alien. You press <mark title="human response">B</mark>. You find nothing.
+You choose a spaceship. You press <mark title="human response">A</mark>. You travel to planet A. You choose an alien. You press <mark title="human response">A</mark>. You find space treasure!</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>akata_2025_playing</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / akata_2025_playing</nav>
+<h1>akata_2025_playing</h1>
+<p class="tags"><span class="chip paradigm">economic-game</span> <span class="chip minor">psych-201</span></p>
+<p>This is a single human study (N=195 Prolific participants) in which each participant was randomly assigned to play a finitely repeated Prisoner&#x27;s Dilemma (PD) and a Battle of the Sexes (BoS) game against either a base or chain-of-thought (&quot;Prompted&quot;) GPT-4, over 20 rounds (10 PD + 10 BoS, counterbalanced). On each round participants made a binary option choice (0/1) and received a per-round payoff (score); after each game they gave an opponent-belief judgment (whether they thought the other player was human or an LLM), stored as a response row of its own. The source also ships a per-round coordination flag the authors derived from the outcome. The research question is how LLMs behave and cooperate in repeated social interactions relative to humans, prominently showing that chain-of-thought-prompted GPT-4 elicits better scores and more successful coordination from human partners than base GPT-4.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">3,900</div><div class="tile-sub">380 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.536</div><div class="tile-sub">rank 3 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE (no prediction errors)</div><div class="tile-sub">test NLL (avg) 0.533</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="203.7547" title="CORE: 203.8 nats"><span class="track"><span class="bar core" style="width:78.2%"></span></span><span class="num">203.8</span></td><td class="num" data-v="0.5362">0.5362</td><td class="num" data-v="380">380</td><td class="num" data-v="0.5038">0.5038</td><td class="num" data-v="3520.0">3,520</td></tr><tr class="best"><td>CORE (no prediction errors) <span class="pill best-pill">best</span></td><td class="barcell" data-v="202.5495" title="CORE (no prediction errors): 202.5 nats"><span class="track"><span class="bar core" style="width:77.8%"></span></span><span class="num">202.5</span></td><td class="num" data-v="0.533">0.5330</td><td class="num" data-v="380">380</td><td class="num" data-v="0.5068">0.5068</td><td class="num" data-v="3520.0">3,520</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="203.6338" title="CORE (no phonemes): 203.6 nats"><span class="track"><span class="bar core" style="width:78.2%"></span></span><span class="num">203.6</span></td><td class="num" data-v="0.5359">0.5359</td><td class="num" data-v="380">380</td><td class="num" data-v="0.4962">0.4962</td><td class="num" data-v="3520.0">3,520</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="207.4487" title="CORE (no forgetting): 207.4 nats"><span class="track"><span class="bar core" style="width:79.6%"></span></span><span class="num">207.4</span></td><td class="num" data-v="0.5459">0.5459</td><td class="num" data-v="380">380</td><td class="num" data-v="0.5157">0.5157</td><td class="num" data-v="3520.0">3,520</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="260.5051" title="CORE (no hierarchy): 260.5 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">260.5</span></td><td class="num" data-v="0.6855">0.6855</td><td class="num" data-v="380">380</td><td class="num" data-v="0.6514">0.6514</td><td class="num" data-v="3520.0">3,520</td></tr><tr><td>Transformer</td><td class="barcell" data-v="211.4275" title="Transformer: 211.4 nats"><span class="track"><span class="bar base" style="width:81.2%"></span></span><span class="num">211.4</span></td><td class="num" data-v="0.5564">0.5564</td><td class="num" data-v="380">380</td><td class="num" data-v="0.5327">0.5327</td><td class="num" data-v="3520.0">3,520</td></tr><tr><td>Centaur</td><td class="barcell" data-v="208.8036" title="Centaur: 208.8 nats"><span class="track"><span class="bar base" style="width:80.2%"></span></span><span class="num">208.8</span></td><td class="num" data-v="0.5495">0.5495</td><td class="num" data-v="380">380</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>RepeatedGames</td><td class="num">195</td><td class="num">3,900</td><td class="num">2</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · condition=base</option><option value="t1">exp0 · condition=prompted</option></select></label><div class="transcript" id="t0"><pre>You are going to play two games against an artificial agent or another fellow human. Your opponent is randomly assigned and changes at the start of each game. Your goal is to gain as many points as possible in both games.
+Each game is a 2x2 game played with 2 players: you and the other player each choose between two options, Option F and Option J. Each game consists of 10 rounds. On each round, choose one of the two options by typing F or J (type F to choose Option F, J to choose Option J). You have 20 seconds to choose.
+After each game you will be asked whether you think your opponent was a human or an artificial agent; answer by typing Human or LLM.
+The game is a Battle of the Sexes. The rules are:
+If you choose J and the other player chooses J, you win 7 points and the other wins 10 points.
+If you choose J and the other player chooses F, you win 0 points and the other wins 0 points.
+If you choose F and the other player chooses J, you win 0 points and the other wins 0 points.
+If you choose F and the other player chooses F, you win 10 points and the other wins 7 points.
+You will play 10 rounds.
+Round 1: you press <mark title="human response">F</mark>. You won 0 points.
+Round 2: you press <mark title="human response">F</mark>. You won 10 points.
+Round 3: you press <mark title="human response">J</mark>. You won 0 points.
+Round 4: you press <mark title="human response">F</mark>. You won 0 points.
+Round 5: you press <mark title="human response">F</mark>. You won 0 points.
+Round 6: you press <mark title="human response">F</mark>. You won 0 points.
+Round 7: you press <mark title="human response">J</mark>. You won 7 points.
+Round 8: you press <mark title="human response">F</mark>. You won 10 points.
+Round 9: you press <mark title="human response">J</mark>. You won 0 points.
+Round 10: you press <mark title="human response">J</mark>. You won 0 points.
+Who do you think was your opponent in the previous game? You answer LLM.
+The game is a Prisoner&#x27;s Dilemma. The rules are:
+If you choose J and the other player chooses J, you win 8 points and the other wins 8 points.
+If you choose J and the other player chooses F, you win 0 points and the other wins 10 points.
+If you choose F and the other player chooses J, you win 10 points and the other wins 0 points.
+If you choose F and the other player chooses F, you win 5 points and the other wins 5 points.
+You will play 10 rounds.
+Round 1: you press <mark title="human response">J</mark>. You won 8 points.
+Round 2: you press <mark title="human response">J</mark>. You won 8 points.
+Round 3: you press <mark title="human response">J</mark>. You won 8 points.
+Round 4: you press <mark title="human response">J</mark>. You won 8 points.
+Round 5: you press <mark title="human response">J</mark>. You won 8 points.
+Round 6: you press <mark title="human response">J</mark>. You won 8 points.
+Round 7: you press <mark title="human response">J</mark>. You won 8 points.
+Round 8: you press <mark title="human response">J</mark>. You won 8 points.
+Round 9: you press <mark title="human response">J</mark>. You won 8 points.
+Round 10: you press <mark title="human response">J</mark>. You won 8 points.
+Who do you think was your opponent in the previous game? You answer Human.</pre></div><div class="transcript" id="t1" hidden><pre>You are going to play two games against an artificial agent or another fellow human. Your opponent is randomly assigned and changes at the start of each game. Your goal is to gain as many points as possible in both games.
+Each game is a 2x2 game played with 2 players: you and the other player each choose between two options, Option F and Option J. Each game consists of 10 rounds. On each round, choose one of the two options by typing F or J (type F to choose Option F, J to choose Option J). You have 20 seconds to choose.
+After each game you will be asked whether you think your opponent was a human or an artificial agent; answer by typing Human or LLM.
+The game is a Prisoner&#x27;s Dilemma. The rules are:
+If you choose J and the other player chooses J, you win 8 points and the other wins 8 points.
+If you choose J and the other player chooses F, you win 0 points and the other wins 10 points.
+If you choose F and the other player chooses J, you win 10 points and the other wins 0 points.
+If you choose F and the other player chooses F, you win 5 points and the other wins 5 points.
+You will play 10 rounds.
+Round 1: you press <mark title="human response">J</mark>. You won 8 points.
+Round 2: you press <mark title="human response">F</mark>. You won 10 points.
+Round 3: you press <mark title="human response">F</mark>. You won 5 points.
+Round 4: you press <mark title="human response">J</mark>. You won 8 points.
+Round 5: you press <mark title="human response">F</mark>. You won 10 points.
+Round 6: you press <mark title="human response">J</mark>. You won 0 points.
+Round 7: you press <mark title="human response">F</mark>. You won 5 points.
+Round 8: you press <mark title="human response">F</mark>. You won 10 points.
+Round 9: you press <mark title="human response">F</mark>. You won 5 points.
+Round 10: you press <mark title="human response">J</mark>. You won 0 points.
+Who do you think was your opponent in the previous game? You answer Human.
+The game is a Battle of the Sexes. The rules are:
+If you choose J and the other player chooses J, you win 7 points and the other wins 10 points.
+If you choose J and the other player chooses F, you win 0 points and the other wins 0 points.
+If you choose F and the other player chooses J, you win 0 points and the other wins 0 points.
+If you choose F and the other player chooses F, you win 10 points and the other wins 7 points.
+You will play 10 rounds.
+Round 1: you press <mark title="human response">F</mark>. You won 0 points.
+Round 2: you press <mark title="human response">F</mark>. You won 0 points.
+Round 3: you press <mark title="human response">F</mark>. You won 0 points.
+Round 4: you press <mark title="human response">J</mark>. You won 7 points.
+Round 5: you press <mark title="human response">F</mark>. You won 10 points.
+Round 6: you press <mark title="human response">F</mark>. You won 10 points.
+Round 7: you press <mark title="human response">F</mark>. You won 10 points.
+Round 8: you press <mark title="human response">J</mark>. You won 0 points.
+Round 9: you press <mark title="human response">F</mark>. You won 10 points.
+Round 10: you press <mark title="human response">F</mark>. You won 10 points.
+Who do you think was your opponent in the previous game? You answer Human.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

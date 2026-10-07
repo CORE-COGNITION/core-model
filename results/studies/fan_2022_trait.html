@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fan_2022_trait</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / fan_2022_trait</nav>
+<h1>fan_2022_trait</h1>
+<p class="tags"><span class="chip paradigm">bandit</span> <span class="chip minor">psych-201</span></p>
+<p>Two online studies (total N=985; Study 1 N=501, Study 2 N=484) use a restless two-armed bandit task with volatility-induced uncertainty to measure exploration strategies. In each of 30 blocks a fresh pair of slot machines is presented for 10 two-alternative choices (response = choice left/right plus RT), under four volatility schedules (FS/SF/FF/SS, coded `condition`); Study 2 additionally includes a reward-prediction task (estimate + confidence rating). Trait anxiety was measured with the STAI-T and STICSA scales, decomposed into somatic/cognitive/factor scores. The headline results link somatic trait anxiety to reduced directed exploration (lower sensitivity to relative uncertainty in choice) and to underestimation of relative uncertainty; supported by computational learning/exploration models (uncertainty belief-update and directed-exploration models) and linked to choice-probability and RT predictions.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">295,500</div><div class="tile-sub">29,400 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.294</div><div class="tile-sub">rank 1 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE</div><div class="tile-sub">test NLL (avg) 0.294</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr class="best"><td>CORE <span class="pill best-pill">best</span></td><td class="barcell" data-v="8659.361" title="CORE: 8,659.4 nats"><span class="track"><span class="bar core" style="width:74.1%"></span></span><span class="num">8,659.4</span></td><td class="num" data-v="0.2945">0.2945</td><td class="num" data-v="29400">29,400</td><td class="num" data-v="0.2746">0.2746</td><td class="num" data-v="266100.0">266,100</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="8775.522" title="CORE (no prediction errors): 8,775.5 nats"><span class="track"><span class="bar core" style="width:75.1%"></span></span><span class="num">8,775.5</span></td><td class="num" data-v="0.2985">0.2985</td><td class="num" data-v="29400">29,400</td><td class="num" data-v="0.2775">0.2775</td><td class="num" data-v="266100.0">266,100</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="8687.302" title="CORE (no phonemes): 8,687.3 nats"><span class="track"><span class="bar core" style="width:74.4%"></span></span><span class="num">8,687.3</span></td><td class="num" data-v="0.2955">0.2955</td><td class="num" data-v="29400">29,400</td><td class="num" data-v="0.2734">0.2734</td><td class="num" data-v="266100.0">266,100</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="8943.1947" title="CORE (no forgetting): 8,943.2 nats"><span class="track"><span class="bar core" style="width:76.6%"></span></span><span class="num">8,943.2</span></td><td class="num" data-v="0.3042">0.3042</td><td class="num" data-v="29400">29,400</td><td class="num" data-v="0.2852">0.2852</td><td class="num" data-v="266100.0">266,100</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="11682.489" title="CORE (no hierarchy): 11,682.5 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">11,682.5</span></td><td class="num" data-v="0.3974">0.3974</td><td class="num" data-v="29400">29,400</td><td class="num" data-v="0.3727">0.3727</td><td class="num" data-v="266100.0">266,100</td></tr><tr><td>Transformer</td><td class="barcell" data-v="9581.4233" title="Transformer: 9,581.4 nats"><span class="track"><span class="bar base" style="width:82.0%"></span></span><span class="num">9,581.4</span></td><td class="num" data-v="0.3259">0.3259</td><td class="num" data-v="29400">29,400</td><td class="num" data-v="0.3078">0.3078</td><td class="num" data-v="266100.0">266,100</td></tr><tr><td>Centaur</td><td class="barcell" data-v="9287.4248" title="Centaur: 9,287.4 nats"><span class="track"><span class="bar base" style="width:79.5%"></span></span><span class="num">9,287.4</span></td><td class="num" data-v="0.3159">0.3159</td><td class="num" data-v="29400">29,400</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>TwoSlotBandit</td><td class="num">501</td><td class="num">150,300</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp1</td><td>TwoSlotBanditPredict</td><td class="num">484</td><td class="num">145,200</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option><option value="t1">exp1 · all participants</option></select></label><div class="transcript" id="t0"><pre>You are playing a two-slot-machine game to earn as many coins as you can. In each round, a fresh pair of slot machines appears on screen, one on the left and one on the right. On each play, you choose one machine; the machine pays out a number of coins, which may be positive or negative. Each round lasts 10 plays, and then a new pair of machines appears. Press A to play the left machine or B to play the right machine.
+Round 1: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You lose 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+Round 2: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 25 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 25 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 23 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 25 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 25 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+Round 3: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 12 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+Round 4: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 18 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 19 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+Round 5: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You lose 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 17 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 13 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 13 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 12 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+Round 6: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+Round 7: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You lose 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 12 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 12 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 12 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 8 coins.
+Round 8: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+Round 9: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 25 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 26 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 25 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 28 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 27 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 27 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 25 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 29 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 26 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 26 coins.
+Round 10: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 19 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 20 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 19 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 19 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 20 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 18 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 20 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 22 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 18 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 19 coins.
+Round 11: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 18 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 16 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 16 coins.
+Round 12: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 2 coins.
+Round 13: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 4 coins.
+Round 14: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 14 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+Round 15: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 16 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 17 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+Round 16: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+Round 17: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You lose 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 1 coins.
+Round 18: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+Round 19: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 4 coins.
+Round 20: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 15 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 3 coins.
+Round 21: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You lose 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 13 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 14 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 8 coins.
+Round 22: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You lose 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+Round 23: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+Round 24: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You lose 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+Round 25: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+Round 26: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+Round 27: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+Round 28: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+Round 29: A fresh pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 18 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 18 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 25 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 27 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 28 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 30 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 26 coins.
+Round 30: A fresh pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 17 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 17 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 18 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 18 coins.</pre></div><div class="transcript" id="t1" hidden><pre>You are playing a two-slot-machine game to earn as many coins as you can. In each round, a fresh pair of slot machines appears on screen, one on the left and one on the right. On each play, you choose one machine; the machine pays out a number of coins, which may be positive or negative. Each round lasts 10 plays, and then a new pair of machines appears. Press A to play the left machine or B to play the right machine. After each round of the game, you are asked to make reward predictions for the two machines you just played. For each machine, first type your estimate of how many coins it will pay out on its next play (an integer, which may be negative), then rate how confident you are in that estimate from 0 to 10.
+Round 1: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 13 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 12 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+Now you make reward predictions for round 1&#x27;s two machines.
+For the right machine, your prediction of next-play coins: -5.
+Your confidence in that estimate (0-10): 7.
+For the left machine, your prediction of next-play coins: 14.
+Your confidence in that estimate (0-10): 6.
+Round 2: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 1 coins.
+Now you make reward predictions for round 2&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -10.
+Your confidence in that estimate (0-10): 7.
+For the right machine, your prediction of next-play coins: 0.
+Your confidence in that estimate (0-10): 8.
+Round 3: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+Now you make reward predictions for round 3&#x27;s two machines.
+For the right machine, your prediction of next-play coins: 12.
+Your confidence in that estimate (0-10): 9.
+For the left machine, your prediction of next-play coins: -8.
+Your confidence in that estimate (0-10): 8.
+Round 4: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+Now you make reward predictions for round 4&#x27;s two machines.
+For the right machine, your prediction of next-play coins: 10.
+Your confidence in that estimate (0-10): 8.
+For the left machine, your prediction of next-play coins: 5.
+Your confidence in that estimate (0-10): 7.
+Round 5: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 17 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 17 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 18 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 17 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 18 coins.
+Now you make reward predictions for round 5&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 17.
+Your confidence in that estimate (0-10): 8.
+For the right machine, your prediction of next-play coins: 4.
+Your confidence in that estimate (0-10): 7.
+Round 6: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 15 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 15 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 14 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 14 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+Now you make reward predictions for round 6&#x27;s two machines.
+For the right machine, your prediction of next-play coins: 10.
+Your confidence in that estimate (0-10): 5.
+For the left machine, your prediction of next-play coins: 2.
+Your confidence in that estimate (0-10): 4.
+Round 7: A new pair of slot machines appears.
+You press <mark title="human response">B</mark> for the right machine. You gain 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 5 coins.
+Now you make reward predictions for round 7&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -8.
+Your confidence in that estimate (0-10): 5.
+For the right machine, your prediction of next-play coins: 4.
+Your confidence in that estimate (0-10): 6.
+Round 8: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 23 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 23 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 23 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 23 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 25 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 25 coins.
+Now you make reward predictions for round 8&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 12.
+Your confidence in that estimate (0-10): 2.
+For the right machine, your prediction of next-play coins: 24.
+Your confidence in that estimate (0-10): 8.
+Round 9: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 15 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 17 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 17 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 19 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 20 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 19 coins.
+Now you make reward predictions for round 9&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 6.
+Your confidence in that estimate (0-10): 4.
+For the right machine, your prediction of next-play coins: 19.
+Your confidence in that estimate (0-10): 8.
+Round 10: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+Now you make reward predictions for round 10&#x27;s two machines.
+For the right machine, your prediction of next-play coins: 0.
+Your confidence in that estimate (0-10): 7.
+For the left machine, your prediction of next-play coins: 10.
+Your confidence in that estimate (0-10): 8.
+Round 11: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 17 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 10 coins.
+Now you make reward predictions for round 11&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -9.
+Your confidence in that estimate (0-10): 8.
+For the right machine, your prediction of next-play coins: -17.
+Your confidence in that estimate (0-10): 8.
+Round 12: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 18 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 18 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 13 coins.
+Now you make reward predictions for round 12&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 15.
+Your confidence in that estimate (0-10): 7.
+For the right machine, your prediction of next-play coins: -7.
+Your confidence in that estimate (0-10): 2.
+Round 13: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+Now you make reward predictions for round 13&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -12.
+Your confidence in that estimate (0-10): 2.
+For the right machine, your prediction of next-play coins: 4.
+Your confidence in that estimate (0-10): 4.
+Round 14: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+Now you make reward predictions for round 14&#x27;s two machines.
+For the right machine, your prediction of next-play coins: 10.
+Your confidence in that estimate (0-10): 7.
+For the left machine, your prediction of next-play coins: 1.
+Your confidence in that estimate (0-10): 4.
+Round 15: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 13 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+Now you make reward predictions for round 15&#x27;s two machines.
+For the right machine, your prediction of next-play coins: -13.
+Your confidence in that estimate (0-10): 7.
+For the left machine, your prediction of next-play coins: 5.
+Your confidence in that estimate (0-10): 6.
+Round 16: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 3 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+Now you make reward predictions for round 16&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -4.
+Your confidence in that estimate (0-10): 5.
+For the right machine, your prediction of next-play coins: 7.
+Your confidence in that estimate (0-10): 6.
+Round 17: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 14 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+Now you make reward predictions for round 17&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 0.
+Your confidence in that estimate (0-10): 2.
+For the right machine, your prediction of next-play coins: 13.
+Your confidence in that estimate (0-10): 7.
+Round 18: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+Now you make reward predictions for round 18&#x27;s two machines.
+For the right machine, your prediction of next-play coins: -7.
+Your confidence in that estimate (0-10): 6.
+For the left machine, your prediction of next-play coins: 4.
+Your confidence in that estimate (0-10): 5.
+Round 19: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+Now you make reward predictions for round 19&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 6.
+Your confidence in that estimate (0-10): 7.
+For the right machine, your prediction of next-play coins: -5.
+Your confidence in that estimate (0-10): 6.
+Round 20: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+Now you make reward predictions for round 20&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -7.
+Your confidence in that estimate (0-10): 4.
+For the right machine, your prediction of next-play coins: 9.
+Your confidence in that estimate (0-10): 7.
+Round 21: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 23 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 24 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 27 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 25 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 29 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 29 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 29 coins.
+Now you make reward predictions for round 21&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 6.
+Your confidence in that estimate (0-10): 6.
+For the right machine, your prediction of next-play coins: 28.
+Your confidence in that estimate (0-10): 7.
+Round 22: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 17 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 17 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 15 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+Now you make reward predictions for round 22&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -16.
+Your confidence in that estimate (0-10): 7.
+For the right machine, your prediction of next-play coins: 12.
+Your confidence in that estimate (0-10): 5.
+Round 23: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 13 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 9 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 5 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 4 coins.
+Now you make reward predictions for round 23&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -11.
+Your confidence in that estimate (0-10): 2.
+For the right machine, your prediction of next-play coins: -5.
+Your confidence in that estimate (0-10): 8.
+Round 24: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 16 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 13 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 15 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 1 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 1 coins.
+Now you make reward predictions for round 24&#x27;s two machines.
+For the right machine, your prediction of next-play coins: -14.
+Your confidence in that estimate (0-10): 5.
+For the left machine, your prediction of next-play coins: 0.
+Your confidence in that estimate (0-10): 7.
+Round 25: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 8 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 9 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 7 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 3 coins.
+Now you make reward predictions for round 25&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 5.
+Your confidence in that estimate (0-10): 5.
+For the right machine, your prediction of next-play coins: -6.
+Your confidence in that estimate (0-10): 4.
+Round 26: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 1 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 15 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 15 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 6 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+Now you make reward predictions for round 26&#x27;s two machines.
+For the right machine, your prediction of next-play coins: -15.
+Your confidence in that estimate (0-10): 7.
+For the left machine, your prediction of next-play coins: -1.
+Your confidence in that estimate (0-10): 5.
+Round 27: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 10 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 8 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 7 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 11 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 12 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 14 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 13 coins.
+Now you make reward predictions for round 27&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -10.
+Your confidence in that estimate (0-10): 6.
+For the right machine, your prediction of next-play coins: 11.
+Your confidence in that estimate (0-10): 8.
+Round 28: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 14 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 4 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 5 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 22 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 19 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 19 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 18 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 17 coins.
+Now you make reward predictions for round 28&#x27;s two machines.
+For the right machine, your prediction of next-play coins: 5.
+Your confidence in that estimate (0-10): 3.
+For the left machine, your prediction of next-play coins: 17.
+Your confidence in that estimate (0-10): 6.
+Round 29: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 16 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">B</mark> for the right machine. You gain 0 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 19 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 17 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 15 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 14 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 11 coins.
+Now you make reward predictions for round 29&#x27;s two machines.
+For the left machine, your prediction of next-play coins: 15.
+Your confidence in that estimate (0-10): 6.
+For the right machine, your prediction of next-play coins: 0.
+Your confidence in that estimate (0-10): 8.
+Round 30: A new pair of slot machines appears.
+You press <mark title="human response">A</mark> for the left machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 10 coins.
+You press <mark title="human response">B</mark> for the right machine. You lose 11 coins.
+You press <mark title="human response">A</mark> for the left machine. You gain 0 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 2 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 4 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 3 coins.
+You press <mark title="human response">A</mark> for the left machine. You lose 4 coins.
+Now you make reward predictions for round 30&#x27;s two machines.
+For the left machine, your prediction of next-play coins: -3.
+Your confidence in that estimate (0-10): 8.
+For the right machine, your prediction of next-play coins: -10.
+Your confidence in that estimate (0-10): 8.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

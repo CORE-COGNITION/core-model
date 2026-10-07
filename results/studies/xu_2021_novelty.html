@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xu_2021_novelty</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / xu_2021_novelty</nav>
+<h1>xu_2021_novelty</h1>
+<p class="tags"><span class="chip paradigm">planning</span> <span class="chip minor">psych-101</span> <span class="chip minor">psych-201</span></p>
+<p>A single experiment with 12 human participants (N=12; subject 10 quit) performing a sequential grid-world decision-making task. Participants navigate from a start state to a goal across 5 episodes in each of two blocks, making one discrete 4-action choice per trial; reward arrives only on reaching the goal. Block 1 (env 3) contains many novel states to probe novelty-driven exploration; block 2 (env 4) swaps the transitions of two states to test surprise-driven re-adaptation. The paper asks whether a novelty (exploration bonus) is distinct from surprise (prediction-error-driven learning), fitting the SurNoR model-based RL algorithm and comparing 13 RL models against the 3,047 trials of choice data.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">3,047</div><div class="tile-sub">253 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">1.007</div><div class="tile-sub">rank 2 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE (no phonemes)</div><div class="tile-sub">test NLL (avg) 0.947</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="254.8276" title="CORE: 254.8 nats"><span class="track"><span class="bar core" style="width:72.2%"></span></span><span class="num">254.8</span></td><td class="num" data-v="1.0072">1.0072</td><td class="num" data-v="253">253</td><td class="num" data-v="0.8819">0.8819</td><td class="num" data-v="2794.0">2,794</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="255.7893" title="CORE (no prediction errors): 255.8 nats"><span class="track"><span class="bar core" style="width:72.5%"></span></span><span class="num">255.8</span></td><td class="num" data-v="1.011">1.0110</td><td class="num" data-v="253">253</td><td class="num" data-v="0.8798">0.8798</td><td class="num" data-v="2794.0">2,794</td></tr><tr class="best"><td>CORE (no phonemes) <span class="pill best-pill">best</span></td><td class="barcell" data-v="239.5017" title="CORE (no phonemes): 239.5 nats"><span class="track"><span class="bar core" style="width:67.9%"></span></span><span class="num">239.5</span></td><td class="num" data-v="0.9466">0.9466</td><td class="num" data-v="253">253</td><td class="num" data-v="0.813">0.8130</td><td class="num" data-v="2794.0">2,794</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="264.723" title="CORE (no forgetting): 264.7 nats"><span class="track"><span class="bar core" style="width:75.0%"></span></span><span class="num">264.7</span></td><td class="num" data-v="1.0463">1.0463</td><td class="num" data-v="253">253</td><td class="num" data-v="0.9518">0.9518</td><td class="num" data-v="2794.0">2,794</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="352.9471" title="CORE (no hierarchy): 352.9 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">352.9</span></td><td class="num" data-v="1.395">1.3950</td><td class="num" data-v="253">253</td><td class="num" data-v="1.3953">1.3953</td><td class="num" data-v="2794.0">2,794</td></tr><tr><td>Transformer</td><td class="barcell" data-v="328.6346" title="Transformer: 328.6 nats"><span class="track"><span class="bar base" style="width:93.1%"></span></span><span class="num">328.6</span></td><td class="num" data-v="1.299">1.2990</td><td class="num" data-v="253">253</td><td class="num" data-v="1.2326">1.2326</td><td class="num" data-v="2794.0">2,794</td></tr><tr><td>Centaur</td><td class="barcell" data-v="264.8194" title="Centaur: 264.8 nats"><span class="track"><span class="bar base" style="width:75.0%"></span></span><span class="num">264.8</span></td><td class="num" data-v="1.0467">1.0467</td><td class="num" data-v="253">253</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>NoveltySwitchState</td><td class="num">12</td><td class="num">3,047</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option></select></label><div class="transcript" id="t0"><pre>You are navigating a maze of 11 rooms, each shown as an image on screen. One of the rooms is the goal image; your task is to find the shortest path to it. At each room you see four grey buttons below the image. Button 1 is pressed with B, button 2 with C, button 3 with D, button 4 with A. Pressing a button moves you to the next room. You receive no feedback along the way; when you reach the goal image you earn a reward and the episode ends. You will run several episodes, each starting in a new room.
+Episode 1 starts in a new room.
+You are in room 5. You press <mark title="human response">B</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">B</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">B</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">B</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">B</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">B</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">C</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">B</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">C</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">D</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">C</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">C</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">D</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">A</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">C</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">A</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">D</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">A</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">A</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">D</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">A</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">A</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">D</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">D</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">C</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">A</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">A</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 2 starts in a new room.
+You are in room 8. You press <mark title="human response">D</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 3 starts in a new room.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 4 starts in a new room.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">B</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 5 starts in a new room.
+You are in room 7. You press <mark title="human response">C</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">A</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">D</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 6 starts in a new room.
+You are in room 5. You press <mark title="human response">B</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">A</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">C</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">D</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">D</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">C</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">A</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">D</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">A</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">C</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">D</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">A</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">A</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">B</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">A</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">D</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">B</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">A</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">C</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">C</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">A</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">B</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">C</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">D</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">C</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">D</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">B</mark>. You move to room 7. You get no reward.
+You are in room 7. You press <mark title="human response">B</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">A</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">B</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">A</mark>. You move to room 8. You get no reward.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">A</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">B</mark>. You move to room 9. You get no reward.
+You are in room 9. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 7 starts in a new room.
+You are in room 8. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">C</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 8 starts in a new room.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 9 starts in a new room.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.
+Episode 10 starts in a new room.
+You are in room 7. You press <mark title="human response">D</mark>. You move to room 0. You get no reward.
+You are in room 0. You press <mark title="human response">D</mark>. You move to room 1. You get no reward.
+You are in room 1. You press <mark title="human response">C</mark>. You move to room 6. You get no reward.
+You are in room 6. You press <mark title="human response">A</mark>. You move to room 3. You get no reward.
+You are in room 3. You press <mark title="human response">B</mark>. You move to room 4. You get no reward.
+You are in room 4. You press <mark title="human response">D</mark>. You move to room 5. You get no reward.
+You are in room 5. You press <mark title="human response">C</mark>. You move to room 2. You get no reward.
+You are in room 2. You press <mark title="human response">B</mark>. You reach the goal image and earn a reward.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

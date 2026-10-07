@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>levering_2019_revisiting</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / levering_2019_revisiting</nav>
+<h1>levering_2019_revisiting</h1>
+<p class="tags"><span class="chip paradigm">category-learning</span> <span class="chip minor">psych-101</span></p>
+<p>One between-subjects category-learning experiment (N = 270; 144 LS, 126 NLS participants) comparing a linearly separable (LS) and a nonlinearly separable (NLS) category structure, a conceptual replication of Medin &amp; Schwanenflugel (1981). In each session, 25 training blocks present randomly selected exemplars requiring an Alpha/Beta category-membership classification with accuracy feedback and RT per trial, followed by a single-exemplar typicality-rating test (classify then rate 1–9) and a paired-exemplar typicality-choice test. The authors test whether NLS structures are as easy to learn as LS structures and compare human learning curves to ALCOVE, SUSTAIN, PROTO-ALCOVE, and DIVA cognitive models, finding NLS categories easier to learn and prototype (PROTO-ALCOVE) accounts incompatible with the observed data.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">44,280</div><div class="tile-sub">4,428 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.486</div><div class="tile-sub">rank 2 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE (no phonemes)</div><div class="tile-sub">test NLL (avg) 0.473</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="2152.9359" title="CORE: 2,152.9 nats"><span class="track"><span class="bar core" style="width:76.3%"></span></span><span class="num">2,152.9</span></td><td class="num" data-v="0.4862">0.4862</td><td class="num" data-v="4428">4,428</td><td class="num" data-v="0.3998">0.3998</td><td class="num" data-v="39852.0">39,852</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="2158.595" title="CORE (no prediction errors): 2,158.6 nats"><span class="track"><span class="bar core" style="width:76.5%"></span></span><span class="num">2,158.6</span></td><td class="num" data-v="0.4875">0.4875</td><td class="num" data-v="4428">4,428</td><td class="num" data-v="0.3988">0.3988</td><td class="num" data-v="39852.0">39,852</td></tr><tr class="best"><td>CORE (no phonemes) <span class="pill best-pill">best</span></td><td class="barcell" data-v="2096.1766" title="CORE (no phonemes): 2,096.2 nats"><span class="track"><span class="bar core" style="width:74.3%"></span></span><span class="num">2,096.2</span></td><td class="num" data-v="0.4734">0.4734</td><td class="num" data-v="4428">4,428</td><td class="num" data-v="0.3887">0.3887</td><td class="num" data-v="39852.0">39,852</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="2196.5221" title="CORE (no forgetting): 2,196.5 nats"><span class="track"><span class="bar core" style="width:77.9%"></span></span><span class="num">2,196.5</span></td><td class="num" data-v="0.4961">0.4961</td><td class="num" data-v="4428">4,428</td><td class="num" data-v="0.421">0.4210</td><td class="num" data-v="39852.0">39,852</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="2821.364" title="CORE (no hierarchy): 2,821.4 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">2,821.4</span></td><td class="num" data-v="0.6372">0.6372</td><td class="num" data-v="4428">4,428</td><td class="num" data-v="0.6015">0.6015</td><td class="num" data-v="39852.0">39,852</td></tr><tr><td>Transformer</td><td class="barcell" data-v="2285.8597" title="Transformer: 2,285.9 nats"><span class="track"><span class="bar base" style="width:81.0%"></span></span><span class="num">2,285.9</span></td><td class="num" data-v="0.5162">0.5162</td><td class="num" data-v="4428">4,428</td><td class="num" data-v="0.4346">0.4346</td><td class="num" data-v="39852.0">39,852</td></tr><tr><td>Centaur</td><td class="barcell" data-v="2182.4705" title="Centaur: 2,182.5 nats"><span class="track"><span class="bar base" style="width:77.4%"></span></span><span class="num">2,182.5</span></td><td class="num" data-v="0.4929">0.4929</td><td class="num" data-v="4428">4,428</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>CategoryLearning</td><td class="num">270</td><td class="num">44,280</td><td class="num">2</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · condition=ls, group=1</option><option value="t1">exp0 · condition=nls, group=2</option></select></label><div class="transcript" id="t0"><pre>You will learn to classify geometric shapes into two categories, Alpha and Beta. Each shape has three features: Shape, Color, and Size, each taking value 1 or 2. On each trial, a shape appears and you decide which category it belongs to: press A for Alpha or B for Beta. After each answer you are told whether you were correct. You train over 25 blocks, each covering all six training shapes once.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+The training phase is over and the test begins. You see each of the eight possible shapes (the six trained shapes plus two new ones). For each shape, first classify it: press A for Alpha or B for Beta. Then rate how typical that shape is of its category on a scale from 1 (not typical) to 9 (highly typical), typing one of 1, 2, 3, 4, 5, 6, 7, 8, or 9. No feedback is given.
+You see a shape with Shape 1, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>.
+You rate its typicality: 5.
+You see a shape with Shape 2, Color 2, Size 2. You decide it belongs to <mark title="human response">A</mark>.
+You rate its typicality: 3.
+You see a shape with Shape 1, Color 1, Size 1. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 5.
+You see a shape with Shape 2, Color 2, Size 1. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 8.
+You see a shape with Shape 1, Color 2, Size 1. You decide it belongs to <mark title="human response">A</mark>.
+You rate its typicality: 9.
+You see a shape with Shape 2, Color 1, Size 2. You decide it belongs to <mark title="human response">A</mark>.
+You rate its typicality: 4.
+You see a shape with Shape 2, Color 1, Size 1. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 3.
+You see a shape with Shape 1, Color 2, Size 2. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 5.
+Finally you see pairs of shapes. For each pair, decide which shape is more typical of its category: press A to pick the first shape or B to pick the second.
+You see a shape with Shape 2, Color 2, Size 2 and a shape with Shape 2, Color 2, Size 1. You judge the more typical shape is <mark title="human response">B</mark> (the second).
+You see a shape with Shape 2, Color 1, Size 1 and a shape with Shape 1, Color 1, Size 1. You judge the more typical shape is <mark title="human response">A</mark> (the first).
+You see a shape with Shape 1, Color 2, Size 2 and a shape with Shape 2, Color 2, Size 2. You judge the more typical shape is <mark title="human response">A</mark> (the first).
+You see a shape with Shape 2, Color 2, Size 2 and a shape with Shape 2, Color 1, Size 2. You judge the more typical shape is <mark title="human response">B</mark> (the second).
+You see a shape with Shape 1, Color 1, Size 1 and a shape with Shape 1, Color 1, Size 2. You judge the more typical shape is <mark title="human response">B</mark> (the second).
+You see a shape with Shape 1, Color 1, Size 1 and a shape with Shape 1, Color 2, Size 1. You judge the more typical shape is <mark title="human response">B</mark> (the second).</pre></div><div class="transcript" id="t1" hidden><pre>You will learn to classify geometric shapes into two categories, Alpha and Beta. Each shape has three features: Shape, Size, and Color, each taking value 1 or 2. On each trial, a shape appears and you decide which category it belongs to: press A for Alpha or B for Beta. After each answer you are told whether you were correct. You train over 25 blocks, each covering all six training shapes once.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">B</mark>. Incorrect. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Incorrect. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>. Correct. The correct category was Alpha.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>. Correct. The correct category was Beta.
+The training phase is over and the test begins. You see each of the eight possible shapes (the six trained shapes plus two new ones). For each shape, first classify it: press A for Alpha or B for Beta. Then rate how typical that shape is of its category on a scale from 1 (not typical) to 9 (highly typical), typing one of 1, 2, 3, 4, 5, 6, 7, 8, or 9. No feedback is given.
+You see a shape with Shape 1, Size 1, Color 2. You decide it belongs to <mark title="human response">A</mark>.
+You rate its typicality: 9.
+You see a shape with Shape 1, Size 2, Color 2. You decide it belongs to <mark title="human response">A</mark>.
+You rate its typicality: 9.
+You see a shape with Shape 2, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 9.
+You see a shape with Shape 1, Size 2, Color 1. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 9.
+You see a shape with Shape 2, Size 1, Color 1. You decide it belongs to <mark title="human response">A</mark>.
+You rate its typicality: 8.
+You see a shape with Shape 2, Size 2, Color 2. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 9.
+You see a shape with Shape 1, Size 1, Color 1. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 8.
+You see a shape with Shape 2, Size 1, Color 2. You decide it belongs to <mark title="human response">B</mark>.
+You rate its typicality: 9.
+Finally you see pairs of shapes. For each pair, decide which shape is more typical of its category: press A to pick the first shape or B to pick the second.
+You see a shape with Shape 1, Size 1, Color 1 and a shape with Shape 1, Size 1, Color 2. You judge the more typical shape is <mark title="human response">B</mark> (the second).
+You see a shape with Shape 2, Size 2, Color 2 and a shape with Shape 1, Size 2, Color 1. You judge the more typical shape is <mark title="human response">A</mark> (the first).
+You see a shape with Shape 1, Size 2, Color 2 and a shape with Shape 1, Size 1, Color 1. You judge the more typical shape is <mark title="human response">A</mark> (the first).
+You see a shape with Shape 2, Size 2, Color 1 and a shape with Shape 2, Size 2, Color 2. You judge the more typical shape is <mark title="human response">A</mark> (the first).
+You see a shape with Shape 1, Size 1, Color 1 and a shape with Shape 2, Size 1, Color 1. You judge the more typical shape is <mark title="human response">B</mark> (the second).
+You see a shape with Shape 2, Size 1, Color 2 and a shape with Shape 2, Size 2, Color 2. You judge the more typical shape is <mark title="human response">B</mark> (the second).</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

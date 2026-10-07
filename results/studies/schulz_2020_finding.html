@@ -1,0 +1,2185 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>schulz_2020_finding</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / schulz_2020_finding</nav>
+<h1>schulz_2020_finding</h1>
+<p class="tags"><span class="chip paradigm">bandit</span> <span class="chip minor">psych-101</span></p>
+<p>Five online multi-armed bandit experiments, each run on mechanical Turk: participants repeatedly choose among 8 arms arranged spatially (left-to-right), collecting noisy rewards whose expected value follows a latent function of arm position — linear gradient (Exp 1, N=119), scrambled rewards (Exp 2, N=82), linear with per-round random intercept (Exp 3, N=131), dynamics of structure learning with SRS/RSR block schedules (Exp 4, N=113), and change-point functions (Exp 5, N=159). Responses are single-key arm choices on each of 10 trials per round, with 30 fresh bandits (rounds) per participant; reward outcome and sometimes response time are recorded per trial. The research question is whether humans detect and exploit latent functional structure among options to guide exploration–exploitation (learning-to-learn across rounds); analysis compares hierarchical Bayesian models of Gaussian-process function learning, clustering of reward distributions, and uncertainty-guided exploration, and all three headline effects of Experiment 1 (structure reward benefit, within-round learning, and learning across rounds) reproduce on these files.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">143,196</div><div class="tile-sub">14,136 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.641</div><div class="tile-sub">rank 3 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">Centaur</div><div class="tile-sub">test NLL (avg) 0.637</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="9057.7959" title="CORE: 9,057.8 nats"><span class="track"><span class="bar core" style="width:68.6%"></span></span><span class="num">9,057.8</span></td><td class="num" data-v="0.6408">0.6408</td><td class="num" data-v="14136">14,136</td><td class="num" data-v="0.6472">0.6472</td><td class="num" data-v="129060.0">129,060</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="9109.2257" title="CORE (no prediction errors): 9,109.2 nats"><span class="track"><span class="bar core" style="width:69.0%"></span></span><span class="num">9,109.2</span></td><td class="num" data-v="0.6444">0.6444</td><td class="num" data-v="14136">14,136</td><td class="num" data-v="0.6452">0.6452</td><td class="num" data-v="129060.0">129,060</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="9039.7493" title="CORE (no phonemes): 9,039.7 nats"><span class="track"><span class="bar core" style="width:68.5%"></span></span><span class="num">9,039.7</span></td><td class="num" data-v="0.6395">0.6395</td><td class="num" data-v="14136">14,136</td><td class="num" data-v="0.631">0.6310</td><td class="num" data-v="129060.0">129,060</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="9940.9971" title="CORE (no forgetting): 9,941.0 nats"><span class="track"><span class="bar core" style="width:75.3%"></span></span><span class="num">9,941.0</span></td><td class="num" data-v="0.7032">0.7032</td><td class="num" data-v="14136">14,136</td><td class="num" data-v="0.7162">0.7162</td><td class="num" data-v="129060.0">129,060</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="13194.9438" title="CORE (no hierarchy): 13,194.9 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">13,194.9</span></td><td class="num" data-v="0.9334">0.9334</td><td class="num" data-v="14136">14,136</td><td class="num" data-v="0.9638">0.9638</td><td class="num" data-v="129060.0">129,060</td></tr><tr><td>Transformer</td><td class="barcell" data-v="10923.324" title="Transformer: 10,923.3 nats"><span class="track"><span class="bar base" style="width:82.8%"></span></span><span class="num">10,923.3</span></td><td class="num" data-v="0.7727">0.7727</td><td class="num" data-v="14136">14,136</td><td class="num" data-v="0.7967">0.7967</td><td class="num" data-v="129060.0">129,060</td></tr><tr class="best"><td>Centaur <span class="pill best-pill">best</span></td><td class="barcell" data-v="9003.0117" title="Centaur: 9,003.0 nats"><span class="track"><span class="bar base" style="width:68.2%"></span></span><span class="num">9,003.0</span></td><td class="num" data-v="0.6369">0.6369</td><td class="num" data-v="14136">14,136</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>LinearBandit</td><td class="num">118</td><td class="num">24,710</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp1</td><td>ScrambledBandit</td><td class="num">82</td><td class="num">18,838</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp2</td><td>ShiftedBandit</td><td class="num">131</td><td class="num">29,081</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp3</td><td>DynamicsBandit</td><td class="num">111</td><td class="num">25,367</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp4</td><td>ChangepointBandit</td><td class="num">159</td><td class="num">45,200</td><td class="num">2</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option><option value="t1">exp1 · all participants</option><option value="t2">exp2 · all participants</option><option value="t3">exp3 · all participants</option><option value="t4">exp4 · condition=random</option><option value="t5">exp4 · condition=structure</option></select></label><div class="transcript" id="t0"><pre>In this game you play 30 rounds of a slot-machine task. Each round, eight boxes are arranged left to right and labeled with the keys you press to choose them: A, S, D, F, J, K, L, and ; (semicolon), leftmost to rightmost. Each round has 10 trials. On each trial you press one key to sample that box, and you then see how many points that box gave you this time. Your goal is to gain as many points as possible. After each round the game resets: the same keys can now give different points, so treat every round afresh.
+
+Round 1 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 5.98 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 11.22 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 16.76 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 22.92 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 28.46 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 34.17 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 40.21 points.
+Trial 8: You press ; and gain 45.33 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 6.32 points.
+Trial 10: You press ; and gain 45.35 points.
+
+Round 2 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 2.7 points.
+Trial 2: You press ; and gain 43.57 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 25.96 points.
+Trial 4: You press ; and gain 43.59 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 14.67 points.
+Trial 6: You press ; and gain 43.74 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 36.98 points.
+Trial 8: You press ; and gain 43.47 points.
+Trial 9: You press ; and gain 42.87 points.
+Trial 10: You press ; and gain 43.46 points.
+
+Round 3 of 30.
+Trial 1: You press ; and gain 40.3 points.
+Trial 2: You press ; and gain 40.26 points.
+Trial 3: You press ; and gain 40.21 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 12.86 points.
+Trial 5: You press ; and gain 40.24 points.
+Trial 6: You press ; and gain 39.75 points.
+Trial 7: You press ; and gain 39.94 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 28.77 points.
+Trial 9: You press ; and gain 39.57 points.
+Trial 10: You press ; and gain 40.22 points.
+
+Round 4 of 30.
+Trial 1: You press ; and gain 14.33 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 33.09 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 37.77 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 42.83 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 19.02 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 28.55 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 42.63 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 33.33 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 42.52 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 43.09 points.
+
+Round 5 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 18.87 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 36.18 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 7.52 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 42.03 points.
+Trial 5: You press ; and gain 47.7 points.
+Trial 6: You press ; and gain 47.62 points.
+Trial 7: You press ; and gain 47.49 points.
+Trial 8: You press ; and gain 47.95 points.
+Trial 9: You press ; and gain 47.96 points.
+Trial 10: You press ; and gain 47.65 points.
+
+Round 6 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 35.49 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 24.22 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 39.81 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 40.13 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 44.99 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 45.54 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 45.81 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 45.55 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 46.1 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 45.33 points.
+
+Round 7 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 28.08 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 40.67 points.
+Trial 3: You press ; and gain 47.31 points.
+Trial 4: You press ; and gain 47.54 points.
+Trial 5: You press ; and gain 47.67 points.
+Trial 6: You press ; and gain 47.52 points.
+Trial 7: You press ; and gain 47.18 points.
+Trial 8: You press ; and gain 47.57 points.
+Trial 9: You press ; and gain 47.22 points.
+Trial 10: You press ; and gain 47.15 points.
+
+Round 8 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 47.7 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 30.44 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 47.39 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 46.73 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 47.14 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 47.49 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 46.84 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 47.33 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 46.98 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 47.65 points.
+
+Round 9 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 35.58 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 20.34 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 30.23 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 45.98 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 45.73 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 45.71 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 45.47 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 46.32 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 46.48 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 45.98 points.
+
+Round 10 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 13.81 points.
+Trial 2: You press ; and gain 25.45 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 47.1 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 47.77 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 19.07 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 47.52 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 47.5 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 47.72 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 47.91 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 47.34 points.
+
+Round 11 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 34.75 points.
+Trial 2: You press ; and gain 7.88 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 18.3 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 29.12 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 2.81 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 14.05 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 23.99 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 39.71 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 29.17 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 40.2 points.
+
+Round 12 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 44.08 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 43.74 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 43.84 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 43.56 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 43.51 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 44.1 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 44.28 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 43.74 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 43.47 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 43.38 points.
+
+Round 13 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 4.59 points.
+Trial 2: You press ; and gain 42.37 points.
+Trial 3: You press ; and gain 41.7 points.
+Trial 4: You press ; and gain 41.7 points.
+Trial 5: You press ; and gain 41.82 points.
+Trial 6: You press ; and gain 42.29 points.
+Trial 7: You press ; and gain 41.53 points.
+Trial 8: You press ; and gain 42.03 points.
+Trial 9: You press ; and gain 41.67 points.
+Trial 10: You press ; and gain 41.82 points.
+
+Round 14 of 30.
+Trial 1: You press ; and gain 43.08 points.
+Trial 2: You press ; and gain 43.9 points.
+Trial 3: You press ; and gain 43.86 points.
+Trial 4: You press ; and gain 43.63 points.
+Trial 5: You press ; and gain 43.44 points.
+Trial 6: You press ; and gain 43.54 points.
+Trial 7: You press ; and gain 43.91 points.
+Trial 8: You press ; and gain 44.02 points.
+Trial 9: You press ; and gain 43.77 points.
+Trial 10: You press ; and gain 43.59 points.
+
+Round 15 of 30.
+Trial 1: You press ; and gain 6.33 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 46.03 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 46.06 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 45.75 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 45.84 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 45.6 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 45.88 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 46.22 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 45.88 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 45.43 points.
+
+Round 16 of 30.
+Trial 1: You press ; and gain 5.07 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 34.58 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 11.31 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 45.61 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 45.69 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 46.04 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 46.53 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 46.17 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 46.24 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 45.99 points.
+
+Round 17 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 48.01 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 48.11 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 48.02 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 48.34 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 47.71 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 47.29 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 47.78 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 47.48 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 48.16 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 47.68 points.
+
+Round 18 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 5.69 points.
+Trial 2: You press ; and gain 47.5 points.
+Trial 3: You press ; and gain 47.13 points.
+Trial 4: You press ; and gain 46.65 points.
+Trial 5: You press ; and gain 47.21 points.
+Trial 6: You press ; and gain 47.22 points.
+Trial 7: You press ; and gain 47.18 points.
+Trial 8: You press ; and gain 47.36 points.
+Trial 9: You press ; and gain 48.21 points.
+Trial 10: You press ; and gain 47.06 points.
+
+Round 19 of 30.
+Trial 1: You press ; and gain 2.84 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 43.09 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 43.49 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 43.64 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 43.37 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 43.3 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 43.41 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 43.62 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 44.18 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 43.31 points.
+
+Round 20 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 36.18 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 14.61 points.
+Trial 3: You press ; and gain 31.17 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 9.26 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 25.9 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 4.66 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 19.93 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 41.89 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 41.69 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 42.04 points.
+
+Round 21 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 17.58 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 26.63 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 22.67 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 7.89 points.
+Trial 5: You press ; and gain 40.63 points.
+Trial 6: You press ; and gain 40.71 points.
+Trial 7: You press ; and gain 40.54 points.
+Trial 8: You press ; and gain 40.63 points.
+Trial 9: You press ; and gain 40.67 points.
+Trial 10: You press ; and gain 40.55 points.
+
+Round 22 of 30.
+Trial 1: You press ; and gain 46.39 points.
+Trial 2: You press ; and gain 46.0 points.
+Trial 3: You press ; and gain 46.37 points.
+Trial 4: You press ; and gain 46.18 points.
+Trial 5: You press ; and gain 46.44 points.
+Trial 6: You press ; and gain 45.91 points.
+Trial 7: You press ; and gain 46.13 points.
+Trial 8: You press ; and gain 46.28 points.
+Trial 9: You press ; and gain 46.42 points.
+Trial 10: You press ; and gain 46.0 points.
+
+Round 23 of 30.
+Trial 1: You press ; and gain 9.82 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 42.48 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 42.2 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 42.34 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 42.86 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 42.24 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 42.89 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 42.86 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 42.95 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 43.22 points.
+
+Round 24 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 46.96 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 47.19 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 47.13 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 47.71 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 47.13 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 47.3 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 47.7 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 47.28 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 47.26 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 47.14 points.
+
+Round 25 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 40.16 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 40.21 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 40.4 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 39.79 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 39.75 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 39.42 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 40.07 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 40.26 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 40.35 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 40.66 points.
+
+Round 26 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 18.82 points.
+Trial 2: You press ; and gain 46.72 points.
+Trial 3: You press ; and gain 46.5 points.
+Trial 4: You press ; and gain 47.1 points.
+Trial 5: You press ; and gain 46.57 points.
+Trial 6: You press ; and gain 47.1 points.
+Trial 7: You press ; and gain 46.89 points.
+Trial 8: You press ; and gain 46.9 points.
+Trial 9: You press ; and gain 46.81 points.
+Trial 10: You press ; and gain 46.68 points.
+
+Round 27 of 30.
+Trial 1: You press ; and gain 7.97 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 19.85 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 2.04 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 32.19 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 44.6 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 43.51 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 43.38 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 43.64 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 43.98 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 43.84 points.
+
+Round 28 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 45.57 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 45.36 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 45.84 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 45.44 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 45.19 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 46.06 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 45.13 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 45.33 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 45.44 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 45.65 points.
+
+Round 29 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 37.77 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 11.26 points.
+Trial 3: You press ; and gain 32.86 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 22.33 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 27.41 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 16.7 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 5.26 points.
+Trial 8: You press ; and gain 32.37 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 38.04 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 38.17 points.
+
+Round 30 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 2.82 points.
+Trial 2: You press ; and gain 41.84 points.
+Trial 3: You press ; and gain 41.28 points.
+Trial 4: You press ; and gain 41.39 points.
+Trial 5: You press ; and gain 40.99 points.
+Trial 6: You press ; and gain 41.65 points.
+Trial 7: You press ; and gain 41.1 points.
+Trial 8: You press ; and gain 41.22 points.
+Trial 9: You press ; and gain 40.54 points.
+Trial 10: You press ; and gain 41.14 points.</pre></div><div class="transcript" id="t1" hidden><pre>In this game you play 30 rounds of a slot-machine task. Each round, eight boxes are arranged left to right and labeled with the keys you press to choose them: A, S, D, F, J, K, L, and ; (semicolon), leftmost to rightmost. Each round has 10 trials. On each trial you press one key to sample that box, and you then see how many points that box gave you this time. Your goal is to gain as many points as possible. After each round the game resets: the same keys can now give different points, so treat every round afresh.
+
+Round 1 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 36.35 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 40.8 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 20.45 points.
+Trial 4: You press ; and gain 30.66 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 10.44 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 5.77 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 15.43 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 24.96 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 35.48 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 35.94 points.
+
+Round 2 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 40.57 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 40.55 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 39.6 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 40.61 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 39.94 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 40.5 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 40.45 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 40.46 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 39.96 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 40.47 points.
+
+Round 3 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 40.96 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 46.03 points.
+Trial 3: You press ; and gain 36.14 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 46.68 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 19.72 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 46.7 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 46.74 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 45.97 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 46.78 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 46.77 points.
+
+Round 4 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 10.34 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 18.39 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 37.25 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 32.27 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 27.94 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 13.89 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 23.19 points.
+Trial 8: You press ; and gain 41.8 points.
+Trial 9: You press ; and gain 41.8 points.
+Trial 10: You press ; and gain 41.93 points.
+
+Round 5 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 21.86 points.
+Trial 2: You press ; and gain 43.6 points.
+Trial 3: You press ; and gain 42.82 points.
+Trial 4: You press ; and gain 43.28 points.
+Trial 5: You press ; and gain 42.92 points.
+Trial 6: You press ; and gain 43.51 points.
+Trial 7: You press ; and gain 43.76 points.
+Trial 8: You press ; and gain 43.33 points.
+Trial 9: You press ; and gain 43.97 points.
+Trial 10: You press ; and gain 43.44 points.
+
+Round 6 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 23.88 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 35.43 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 11.93 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 5.99 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 47.04 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 46.91 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 46.7 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 46.84 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 47.15 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 47.17 points.
+
+Round 7 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 19.27 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 34.88 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 29.78 points.
+Trial 4: You press ; and gain 39.87 points.
+Trial 5: You press ; and gain 40.4 points.
+Trial 6: You press ; and gain 40.59 points.
+Trial 7: You press ; and gain 40.14 points.
+Trial 8: You press ; and gain 39.71 points.
+Trial 9: You press ; and gain 40.62 points.
+Trial 10: You press ; and gain 40.4 points.
+
+Round 8 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 9.28 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 31.71 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 18.23 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 35.95 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 27.41 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 22.8 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 13.27 points.
+Trial 8: You press ; and gain 40.58 points.
+Trial 9: You press ; and gain 40.58 points.
+Trial 10: You press ; and gain 40.76 points.
+
+Round 9 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 9.37 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 4.53 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 14.93 points.
+Trial 4: You press ; and gain 30.4 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 25.09 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 41.63 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 41.47 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 41.63 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 41.21 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 41.18 points.
+
+Round 10 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 9.13 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 38.97 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 39.31 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 39.44 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 39.33 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 39.56 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 39.51 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 39.23 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 38.83 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 39.12 points.
+
+Round 11 of 30.
+Trial 1: You press ; and gain 25.98 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 5.7 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 35.81 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 41.05 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 41.55 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 41.23 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 40.75 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 40.76 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 40.92 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 41.01 points.
+
+Round 12 of 30.
+Trial 1: You press ; and gain 3.7 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 43.93 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 43.99 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 44.29 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 44.8 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 44.05 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 44.86 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 44.15 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 44.1 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 44.09 points.
+
+Round 13 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 20.0 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 37.72 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 32.0 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 14.74 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 37.88 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 37.8 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 38.0 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 38.1 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 37.98 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 38.02 points.
+
+Round 14 of 30.
+Trial 1: You press ; and gain 7.89 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 23.02 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 17.59 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 38.0 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 38.47 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 38.46 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 38.36 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 39.24 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 38.22 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 38.2 points.
+
+Round 15 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 34.65 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 34.5 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 34.6 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 34.36 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 34.41 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 34.97 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 34.66 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 34.71 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 35.29 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 34.67 points.
+
+Round 16 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 31.88 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 8.75 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 27.07 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 22.52 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 13.69 points.
+Trial 6: You press ; and gain 41.06 points.
+Trial 7: You press ; and gain 40.93 points.
+Trial 8: You press ; and gain 41.25 points.
+Trial 9: You press ; and gain 40.95 points.
+Trial 10: You press ; and gain 41.41 points.
+
+Round 17 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 35.92 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 36.03 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 36.11 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 36.25 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 35.93 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 35.76 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 36.26 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 36.21 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 36.23 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 36.1 points.
+
+Round 18 of 30.
+Trial 1: You press ; and gain 41.87 points.
+Trial 2: You press ; and gain 41.74 points.
+Trial 3: You press ; and gain 41.75 points.
+Trial 4: You press ; and gain 42.25 points.
+Trial 5: You press ; and gain 42.08 points.
+Trial 6: You press ; and gain 42.14 points.
+Trial 7: You press ; and gain 41.95 points.
+Trial 8: You press ; and gain 42.28 points.
+Trial 9: You press ; and gain 42.1 points.
+Trial 10: You press ; and gain 42.03 points.
+
+Round 19 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 11.35 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 22.49 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 6.16 points.
+Trial 4: You press ; and gain 34.16 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 45.77 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 45.97 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 45.97 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 46.03 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 45.88 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 45.96 points.
+
+Round 20 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 17.11 points.
+Trial 2: You press ; and gain 40.93 points.
+Trial 3: You press ; and gain 41.67 points.
+Trial 4: You press ; and gain 41.12 points.
+Trial 5: You press ; and gain 40.6 points.
+Trial 6: You press ; and gain 40.47 points.
+Trial 7: You press ; and gain 40.79 points.
+Trial 8: You press ; and gain 41.46 points.
+Trial 9: You press ; and gain 41.14 points.
+Trial 10: You press ; and gain 41.24 points.
+
+Round 21 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 38.0 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 37.59 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 37.3 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 37.29 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 37.86 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 37.73 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 37.94 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 37.29 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 37.58 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 38.11 points.
+
+Round 22 of 30.
+Trial 1: You press ; and gain 33.29 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 44.11 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 43.47 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 44.32 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 43.51 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 43.53 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 44.1 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 43.74 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 44.61 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 44.01 points.
+
+Round 23 of 30.
+Trial 1: You press ; and gain 42.9 points.
+Trial 2: You press ; and gain 43.53 points.
+Trial 3: You press ; and gain 43.69 points.
+Trial 4: You press ; and gain 43.74 points.
+Trial 5: You press ; and gain 43.06 points.
+Trial 6: You press ; and gain 43.52 points.
+Trial 7: You press ; and gain 43.15 points.
+Trial 8: You press ; and gain 43.08 points.
+Trial 9: You press ; and gain 43.69 points.
+Trial 10: You press ; and gain 43.47 points.
+
+Round 24 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 9.02 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 27.42 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 21.76 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 39.8 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 40.35 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 40.21 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 40.12 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 40.47 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 39.96 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 39.97 points.
+
+Round 25 of 30.
+Trial 1: You press ; and gain 40.79 points.
+Trial 2: You press ; and gain 41.43 points.
+Trial 3: You press ; and gain 40.93 points.
+Trial 4: You press ; and gain 41.26 points.
+Trial 5: You press ; and gain 41.26 points.
+Trial 6: You press ; and gain 41.53 points.
+Trial 7: You press ; and gain 41.53 points.
+Trial 8: You press ; and gain 41.62 points.
+Trial 9: You press ; and gain 41.33 points.
+Trial 10: You press ; and gain 41.45 points.
+
+Round 26 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 14.67 points.
+Trial 2: You press ; and gain 10.41 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 30.81 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 35.32 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 40.62 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 40.89 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 40.63 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 40.44 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 40.66 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 40.89 points.
+
+Round 27 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 32.37 points.
+Trial 2: You press ; and gain 3.03 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 26.89 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 9.6 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 38.03 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 38.03 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 37.9 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 38.31 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 38.44 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 37.91 points.
+
+Round 28 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 12.67 points.
+Trial 2: You press ; and gain 6.33 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 18.81 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 35.74 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 30.19 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 42.08 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 41.81 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 41.87 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 41.75 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 41.97 points.
+
+Round 29 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 20.58 points.
+Trial 2: You press ; and gain 1.92 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 39.18 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 39.37 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 39.11 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 39.51 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 38.72 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 39.06 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 38.92 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 39.4 points.
+
+Round 30 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 12.44 points.
+Trial 2: You press ; and gain 44.23 points.
+Trial 3: You press ; and gain 44.43 points.
+Trial 4: You press ; and gain 44.08 points.
+Trial 5: You press ; and gain 43.44 points.
+Trial 6: You press ; and gain 44.08 points.
+Trial 7: You press ; and gain 44.38 points.
+Trial 8: You press ; and gain 43.84 points.
+Trial 9: You press ; and gain 44.3 points.
+Trial 10: You press ; and gain 43.98 points.</pre></div><div class="transcript" id="t2" hidden><pre>In this game you play 30 rounds of a slot-machine task. Each round, eight boxes are arranged left to right and labeled with the keys you press to choose them: A, S, D, F, J, K, L, and ; (semicolon), leftmost to rightmost. Each round has 10 trials. On each trial you press one key to sample that box, and you then see how many points that box gave you this time. Your goal is to gain as many points as possible. After each round the game resets: the same keys can now give different points, so treat every round afresh. The point range can change from round to round; you are paid based on your relative performance within each round.
+
+Round 1 of 30.
+Trial 1: You press ; and gain 72.72 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 67.25 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 61.18 points.
+Trial 4: You press ; and gain 72.18 points.
+Trial 5: You press ; and gain 71.77 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 33.08 points.
+Trial 7: You press ; and gain 72.62 points.
+Trial 8: You press ; and gain 72.64 points.
+Trial 9: You press ; and gain 72.27 points.
+Trial 10: You press ; and gain 72.65 points.
+
+Round 2 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 57.44 points.
+Trial 2: You press ; and gain 24.31 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 43.09 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 57.69 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 57.55 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 57.65 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 57.66 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 57.33 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 57.29 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 57.34 points.
+
+Round 3 of 30.
+Trial 1: You press ; and gain 15.62 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 53.15 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 32.43 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 54.03 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 53.92 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 54.08 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 53.1 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 54.32 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 54.23 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 53.85 points.
+
+Round 4 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 53.36 points.
+Trial 2: You press ; and gain 72.35 points.
+Trial 3: You press ; and gain 71.91 points.
+Trial 4: You press ; and gain 72.49 points.
+Trial 5: You press ; and gain 72.68 points.
+Trial 6: You press ; and gain 72.19 points.
+Trial 7: You press ; and gain 72.32 points.
+Trial 8: You press ; and gain 72.78 points.
+Trial 9: You press ; and gain 72.54 points.
+Trial 10: You press ; and gain 72.6 points.
+
+Round 5 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 24.9 points.
+Trial 2: You press ; and gain 64.5 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 59.55 points.
+Trial 4: You press ; and gain 64.62 points.
+Trial 5: You press ; and gain 65.18 points.
+Trial 6: You press ; and gain 64.86 points.
+Trial 7: You press ; and gain 64.72 points.
+Trial 8: You press ; and gain 65.07 points.
+Trial 9: You press ; and gain 64.76 points.
+Trial 10: You press ; and gain 64.24 points.
+
+Round 6 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 32.14 points.
+Trial 2: You press ; and gain 66.06 points.
+Trial 3: You press ; and gain 67.03 points.
+Trial 4: You press ; and gain 67.05 points.
+Trial 5: You press ; and gain 66.87 points.
+Trial 6: You press ; and gain 66.54 points.
+Trial 7: You press ; and gain 66.88 points.
+Trial 8: You press ; and gain 66.23 points.
+Trial 9: You press ; and gain 66.83 points.
+Trial 10: You press ; and gain 66.79 points.
+
+Round 7 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 40.47 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 75.44 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 75.53 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 76.07 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 75.49 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 75.46 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 75.1 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 75.6 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 75.49 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 75.45 points.
+
+Round 8 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 37.34 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 51.82 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 47.44 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 51.46 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 52.3 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 51.98 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 51.8 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 52.22 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 51.86 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 52.27 points.
+
+Round 9 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 47.32 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 26.93 points.
+Trial 3: You press ; and gain 31.68 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 36.95 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 52.59 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 42.67 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 26.95 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 62.96 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 62.47 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 62.26 points.
+
+Round 10 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 77.02 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 76.58 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 77.46 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 77.44 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 77.23 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 76.81 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 76.95 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 77.82 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 76.75 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 77.38 points.
+
+Round 11 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 12.27 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 21.92 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 35.67 points.
+Trial 4: You press ; and gain 16.86 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 31.37 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 46.09 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 45.39 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 45.8 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 46.12 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 45.96 points.
+
+Round 12 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 15.06 points.
+Trial 2: You press ; and gain 19.69 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 40.83 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 35.72 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 30.04 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 25.0 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 40.89 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 40.54 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 40.14 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 39.95 points.
+
+Round 13 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 43.58 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 55.84 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 55.92 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 56.04 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 55.17 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 55.64 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 55.61 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 55.12 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 55.84 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 55.94 points.
+
+Round 14 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 38.99 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 22.26 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 44.25 points.
+Trial 4: You press ; and gain 49.73 points.
+Trial 5: You press ; and gain 49.24 points.
+Trial 6: You press ; and gain 49.06 points.
+Trial 7: You press ; and gain 49.57 points.
+Trial 8: You press ; and gain 49.79 points.
+Trial 9: You press ; and gain 49.56 points.
+Trial 10: You press ; and gain 49.67 points.
+
+Round 15 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 24.62 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 36.63 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 54.33 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 54.17 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 54.41 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 54.43 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 54.4 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 54.22 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 53.96 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 54.13 points.
+
+Round 16 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 77.41 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 77.36 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 77.91 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 77.31 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 76.91 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 77.58 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 77.4 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 77.73 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 77.07 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 77.71 points.
+
+Round 17 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 38.17 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 33.35 points.
+Trial 3: You press ; and gain 14.78 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 56.13 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 56.52 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 56.0 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 56.1 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 56.21 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 56.23 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 56.1 points.
+
+Round 18 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 53.06 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 52.33 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 52.23 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 52.74 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 52.28 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 52.02 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 52.49 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 52.83 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 52.1 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 52.66 points.
+
+Round 19 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 27.87 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 34.49 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 39.6 points.
+Trial 4: You press ; and gain 45.53 points.
+Trial 5: You press ; and gain 44.39 points.
+Trial 6: You press ; and gain 44.94 points.
+Trial 7: You press ; and gain 45.17 points.
+Trial 8: You press ; and gain 45.1 points.
+Trial 9: You press ; and gain 45.38 points.
+Trial 10: You press ; and gain 44.94 points.
+
+Round 20 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 71.43 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 71.62 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 71.99 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 72.06 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 72.47 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 72.26 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 72.51 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 71.69 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 72.39 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 71.94 points.
+
+Round 21 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 72.29 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 71.47 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 72.0 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 71.5 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 71.17 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 71.36 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 71.83 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 71.51 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 71.45 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 71.68 points.
+
+Round 22 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 57.77 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 63.17 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 62.5 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 63.14 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 62.17 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 62.99 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 62.53 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 62.59 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 62.92 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 62.71 points.
+
+Round 23 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 44.92 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 50.29 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 55.99 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 84.02 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 66.98 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 84.2 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 83.88 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 83.68 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 83.49 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 83.55 points.
+
+Round 24 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 49.94 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 44.98 points.
+Trial 3: You press ; and gain 38.24 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 56.16 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 56.4 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 56.47 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 56.42 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 56.13 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 56.28 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 56.36 points.
+
+Round 25 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 53.64 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 32.44 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 58.59 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 58.1 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 58.0 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 58.38 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 58.5 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 58.82 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 58.77 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 58.53 points.
+
+Round 26 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 28.67 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 23.51 points.
+Trial 3: You press ; and gain 56.85 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 51.07 points.
+Trial 5: You press ; and gain 56.51 points.
+Trial 6: You press ; and gain 56.27 points.
+Trial 7: You press ; and gain 56.09 points.
+Trial 8: You press ; and gain 56.13 points.
+Trial 9: You press ; and gain 56.2 points.
+Trial 10: You press ; and gain 56.51 points.
+
+Round 27 of 30.
+Trial 1: You press ; and gain 40.36 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 57.14 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 61.46 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 67.27 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 72.72 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 78.67 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 77.58 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 78.28 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 78.04 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 77.88 points.
+
+Round 28 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 40.79 points.
+Trial 2: You press ; and gain 79.79 points.
+Trial 3: You press ; and gain 80.36 points.
+Trial 4: You press ; and gain 79.87 points.
+Trial 5: You press ; and gain 79.69 points.
+Trial 6: You press ; and gain 79.95 points.
+Trial 7: You press ; and gain 79.53 points.
+Trial 8: You press ; and gain 80.15 points.
+Trial 9: You press ; and gain 79.76 points.
+Trial 10: You press ; and gain 79.65 points.
+
+Round 29 of 30.
+Trial 1: You press ; and gain 32.13 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 43.18 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 26.02 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 15.19 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 21.02 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 37.31 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 48.56 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 54.33 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 54.0 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 53.63 points.
+
+Round 30 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 30.0 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 24.38 points.
+Trial 3: You press ; and gain 8.64 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 45.74 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 40.01 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 45.73 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 45.45 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 45.74 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 45.32 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 45.99 points.</pre></div><div class="transcript" id="t3" hidden><pre>In this game you play 30 rounds of a slot-machine task. Each round, eight boxes are arranged left to right and labeled with the keys you press to choose them: A, S, D, F, J, K, L, and ; (semicolon), leftmost to rightmost. Each round has 10 trials. On each trial you press one key to sample that box, and you then see how many points that box gave you this time. Your goal is to gain as many points as possible. After each round the game resets: the same keys can now give different points, so treat every round afresh.
+
+Round 1 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 6.69 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 11.53 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 16.05 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 6.53 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 20.89 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 25.85 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 31.46 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 35.95 points.
+Trial 9: You press ; and gain 40.51 points.
+Trial 10: You press ; and gain 40.92 points.
+
+Round 2 of 30.
+Trial 1: You press ; and gain 45.47 points.
+Trial 2: You press ; and gain 45.34 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 39.53 points.
+Trial 4: You press ; and gain 45.26 points.
+Trial 5: You press ; and gain 45.18 points.
+Trial 6: You press ; and gain 45.31 points.
+Trial 7: You press ; and gain 45.25 points.
+Trial 8: You press ; and gain 45.16 points.
+Trial 9: You press ; and gain 45.89 points.
+Trial 10: You press ; and gain 45.69 points.
+
+Round 3 of 30.
+Trial 1: You press ; and gain 2.68 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 8.87 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 45.84 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 45.56 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 46.07 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 26.94 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 46.02 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 45.9 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 45.85 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 45.48 points.
+
+Round 4 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 4.75 points.
+Trial 2: You press ; and gain 40.72 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 35.57 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 25.49 points.
+Trial 5: You press ; and gain 41.0 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 8.98 points.
+Trial 7: You press ; and gain 41.09 points.
+Trial 8: You press ; and gain 40.78 points.
+Trial 9: You press ; and gain 40.94 points.
+Trial 10: You press ; and gain 40.3 points.
+
+Round 5 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 6.19 points.
+Trial 2: You press ; and gain 44.93 points.
+Trial 3: You press ; and gain 44.56 points.
+Trial 4: You press ; and gain 44.37 points.
+Trial 5: You press ; and gain 44.49 points.
+Trial 6: You press ; and gain 45.03 points.
+Trial 7: You press ; and gain 44.8 points.
+Trial 8: You press ; and gain 44.49 points.
+Trial 9: You press ; and gain 44.46 points.
+Trial 10: You press ; and gain 44.16 points.
+
+Round 6 of 30.
+Trial 1: You press ; and gain 8.6 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 44.3 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 44.67 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 44.19 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 44.54 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 45.0 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 44.11 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 44.39 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 44.32 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 44.21 points.
+
+Round 7 of 30.
+Trial 1: You press ; and gain 41.2 points.
+Trial 2: You press ; and gain 41.39 points.
+Trial 3: You press ; and gain 41.56 points.
+Trial 4: You press ; and gain 41.28 points.
+Trial 5: You press ; and gain 40.72 points.
+Trial 6: You press ; and gain 41.47 points.
+Trial 7: You press ; and gain 40.9 points.
+Trial 8: You press ; and gain 41.63 points.
+Trial 9: You press ; and gain 41.92 points.
+Trial 10: You press ; and gain 41.15 points.
+
+Round 8 of 30.
+Trial 1: You press ; and gain 2.54 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 47.1 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 46.36 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 47.25 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 47.18 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 47.03 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 46.69 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 46.72 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 47.15 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 46.94 points.
+
+Round 9 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 44.81 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 44.51 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 44.0 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 44.85 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 43.4 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 43.44 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 44.33 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 44.05 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 44.5 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 44.02 points.
+
+Round 10 of 30.
+Trial 1: You press ; and gain 8.06 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 45.06 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 45.04 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 44.63 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 44.69 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 45.1 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 44.06 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 44.85 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 45.22 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 44.97 points.
+
+Round 11 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 20.73 points.
+Trial 2: You press ; and gain 8.75 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 46.1 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 45.9 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 45.55 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 46.0 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 45.7 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 45.21 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 45.75 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 46.08 points.
+
+Round 12 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 40.83 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 46.54 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 45.91 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 46.03 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 46.29 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 46.73 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 46.2 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 46.17 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 45.81 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 46.35 points.
+
+Round 13 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 39.49 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 34.18 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 28.38 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 23.76 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 39.48 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 39.2 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 39.29 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 40.09 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 38.89 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 39.56 points.
+
+Round 14 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 15.15 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 2.63 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 39.67 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 27.3 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 46.27 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 45.72 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 46.06 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 45.7 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 45.88 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 45.38 points.
+
+Round 15 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 30.88 points.
+Trial 2: You press ; and gain 19.13 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 41.25 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 35.95 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 40.69 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 13.3 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 8.11 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 40.85 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 41.13 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 41.21 points.
+
+Round 16 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 21.98 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 28.58 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 40.0 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 40.04 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 39.53 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 39.7 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 39.86 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 39.43 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 39.55 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 39.57 points.
+
+Round 17 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 21.31 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 40.66 points.
+Trial 3: You press ; and gain 27.61 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 15.21 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 40.44 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 40.87 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 40.39 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 40.05 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 40.8 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 41.04 points.
+
+Round 18 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 10.33 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 45.73 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 45.33 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 45.55 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 45.31 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 45.89 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 45.3 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 46.05 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 45.31 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 45.0 points.
+
+Round 19 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 36.97 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 16.67 points.
+Trial 3: You press ; and gain 32.07 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 6.44 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 36.7 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 36.79 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 36.94 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 37.14 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 36.9 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 36.61 points.
+
+Round 20 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 32.36 points.
+Trial 2: You press ; and gain 21.68 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 37.32 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 42.91 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 43.02 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 43.65 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 42.59 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 42.75 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 42.87 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 42.27 points.
+
+Round 21 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 31.52 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 14.06 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 25.1 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 42.77 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 42.18 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 42.69 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 42.79 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 42.64 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 42.86 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 42.48 points.
+
+Round 22 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 45.16 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 45.43 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 45.19 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 45.35 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 45.37 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 44.97 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 44.87 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 44.78 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 45.08 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 45.32 points.
+
+Round 23 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 9.1 points.
+Trial 2: You press ; and gain 41.36 points.
+Trial 3: You press ; and gain 41.89 points.
+Trial 4: You press ; and gain 40.53 points.
+Trial 5: You press ; and gain 41.44 points.
+Trial 6: You press ; and gain 41.14 points.
+Trial 7: You press ; and gain 41.1 points.
+Trial 8: You press ; and gain 41.56 points.
+Trial 9: You press ; and gain 41.63 points.
+Trial 10: You press ; and gain 41.16 points.
+
+Round 24 of 30.
+Trial 1: You press ; and gain 46.54 points.
+Trial 2: You press ; and gain 46.06 points.
+Trial 3: You press ; and gain 46.41 points.
+Trial 4: You press ; and gain 46.51 points.
+Trial 5: You press ; and gain 46.49 points.
+Trial 6: You press ; and gain 46.64 points.
+Trial 7: You press ; and gain 46.19 points.
+Trial 8: You press ; and gain 47.03 points.
+Trial 9: You press ; and gain 46.86 points.
+Trial 10: You press ; and gain 46.5 points.
+
+Round 25 of 30.
+Trial 1: You press ; and gain 45.47 points.
+Trial 2: You press ; and gain 45.29 points.
+Trial 3: You press ; and gain 45.3 points.
+Trial 4: You press ; and gain 45.14 points.
+Trial 5: You press ; and gain 45.73 points.
+Trial 6: You press ; and gain 45.97 points.
+Trial 7: You press ; and gain 45.23 points.
+Trial 8: You press ; and gain 45.35 points.
+Trial 9: You press ; and gain 45.18 points.
+Trial 10: You press ; and gain 46.55 points.
+
+Round 26 of 30.
+Trial 1: You press ; and gain 40.68 points.
+Trial 2: You press ; and gain 41.05 points.
+Trial 3: You press ; and gain 41.09 points.
+Trial 4: You press ; and gain 40.25 points.
+Trial 5: You press ; and gain 40.34 points.
+Trial 6: You press ; and gain 40.38 points.
+Trial 7: You press ; and gain 40.99 points.
+Trial 8: You press ; and gain 41.32 points.
+Trial 9: You press ; and gain 41.2 points.
+Trial 10: You press ; and gain 40.66 points.
+
+Round 27 of 30.
+Trial 1: You press ; and gain 42.0 points.
+Trial 2: You press ; and gain 41.68 points.
+Trial 3: You press ; and gain 41.83 points.
+Trial 4: You press ; and gain 41.64 points.
+Trial 5: You press ; and gain 41.76 points.
+Trial 6: You press ; and gain 42.04 points.
+Trial 7: You press ; and gain 41.55 points.
+Trial 8: You press ; and gain 41.87 points.
+Trial 9: You press ; and gain 41.64 points.
+Trial 10: You press ; and gain 42.14 points.
+
+Round 28 of 30.
+Trial 1: You press ; and gain 6.98 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 43.5 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 44.08 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 44.38 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 44.39 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 43.84 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 44.6 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 43.89 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 43.89 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 43.78 points.
+
+Round 29 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 41.53 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 42.63 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 41.83 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 41.58 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 42.02 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 42.19 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 42.21 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 42.88 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 41.81 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 41.87 points.
+
+Round 30 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 41.41 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 41.45 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 40.76 points.
+Trial 4: You press <mark title="human response">A</mark> and gain 41.16 points.
+Trial 5: You press <mark title="human response">A</mark> and gain 41.04 points.
+Trial 6: You press <mark title="human response">A</mark> and gain 40.8 points.
+Trial 7: You press <mark title="human response">A</mark> and gain 40.88 points.
+Trial 8: You press <mark title="human response">A</mark> and gain 41.22 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 41.4 points.
+Trial 10: You press <mark title="human response">A</mark> and gain 40.78 points.</pre></div><div class="transcript" id="t4" hidden><pre>In this game you play 30 rounds of a slot-machine task. Each round, eight boxes are arranged left to right and labeled with the keys you press to choose them: A, S, D, F, J, K, L, and ; (semicolon), leftmost to rightmost. Each round has 10 trials. On each trial you press one key to sample that box, and you then see how many points that box gave you this time. Your goal is to gain as many points as possible. After each round the game resets: the same keys can now give different points, so treat every round afresh.
+
+Round 1 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 9.05 points.
+Trial 2: You press ; and gain 38.54 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 22.3 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 15.13 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 28.33 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 35.0 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 41.64 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 34.26 points.
+Trial 9: You press <mark title="human response">A</mark> and gain 8.67 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 34.75 points.
+
+Round 2 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 31.76 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 47.16 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 47.63 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 46.77 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 47.25 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 47.07 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 46.96 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 47.4 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 47.04 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 47.63 points.
+
+Round 3 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 25.17 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 42.05 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 30.85 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 39.27 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 8.37 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 36.42 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 19.69 points.
+Trial 8: You press ; and gain 13.71 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 42.62 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 42.68 points.
+
+Round 4 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 46.8 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 47.4 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 47.49 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 46.92 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 46.62 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 46.98 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 47.34 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 47.03 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 47.02 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 47.47 points.
+
+Round 5 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 23.21 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 47.55 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 47.54 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 47.93 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 47.34 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 47.07 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 47.43 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 47.98 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 47.16 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 47.63 points.
+
+Round 6 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 17.75 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 41.63 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 41.57 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 41.81 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 42.17 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 41.22 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 41.58 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 41.49 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 41.68 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 41.33 points.
+
+Round 7 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 43.81 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 42.83 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 43.0 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 42.93 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 43.24 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 43.69 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 43.35 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 43.21 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 43.31 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 43.28 points.
+
+Round 8 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 7.38 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 42.84 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 42.67 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 42.94 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 42.84 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 42.97 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 43.2 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 43.3 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 42.54 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 43.2 points.
+
+Round 9 of 30.
+Trial 1: You press ; and gain 15.0 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 39.03 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 9.64 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 45.82 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 45.47 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 46.08 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 46.15 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 46.44 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 45.92 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 45.83 points.
+
+Round 10 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 5.76 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 15.04 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 23.66 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 5.97 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 33.95 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 43.06 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 43.06 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 42.8 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 43.19 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 42.5 points.
+
+Round 11 of 30.
+Trial 1: You press ; and gain 29.46 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 22.48 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 43.78 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 43.32 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 44.36 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 44.11 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 43.61 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 44.08 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 43.93 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 43.99 points.
+
+Round 12 of 30.
+Trial 1: You press ; and gain 15.48 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 30.21 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 36.94 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 36.83 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 37.54 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 37.19 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 37.32 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 36.89 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 37.35 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 37.17 points.
+
+Round 13 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 4.38 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 40.12 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 40.55 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 40.07 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 40.75 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 40.41 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 40.09 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 40.23 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 40.43 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 40.84 points.
+
+Round 14 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 29.69 points.
+Trial 2: You press ; and gain 18.5 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 41.4 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 40.95 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 41.42 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 41.15 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 41.59 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 41.34 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 41.4 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 40.48 points.
+
+Round 15 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 41.66 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 42.02 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 41.76 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 42.12 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 42.14 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 42.22 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 42.6 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 41.71 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 42.06 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 42.28 points.
+
+Round 16 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 33.13 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 39.09 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 39.32 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 39.35 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 39.24 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 38.98 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 39.05 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 39.09 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 39.95 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 39.46 points.
+
+Round 17 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 44.48 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 44.68 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 45.41 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 44.93 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 44.97 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 45.02 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 44.16 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 45.15 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 44.55 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 44.76 points.
+
+Round 18 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 11.16 points.
+Trial 2: You press ; and gain 32.87 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 2.7 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 18.62 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 25.2 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 33.22 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 36.96 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 40.59 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 40.44 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 40.4 points.
+
+Round 19 of 30.
+Trial 1: You press ; and gain 26.99 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 39.56 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 39.72 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 40.33 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 39.55 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 39.75 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 39.39 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 40.43 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 39.85 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 39.77 points.
+
+Round 20 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 34.52 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 27.18 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 42.98 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 42.92 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 43.04 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 42.73 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 43.02 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 42.71 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 42.99 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 43.39 points.
+
+Round 21 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 30.07 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 43.16 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 43.66 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 43.44 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 44.19 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 43.13 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 43.06 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 43.58 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 43.61 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 43.47 points.
+
+Round 22 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 43.59 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 4.88 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 12.43 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 41.29 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 41.28 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 41.31 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 41.38 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 40.92 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 41.62 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 40.86 points.
+
+Round 23 of 30.
+Trial 1: You press ; and gain 7.81 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 19.15 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 40.19 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 40.4 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 40.04 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 40.42 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 40.39 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 40.87 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 40.8 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 40.23 points.
+
+Round 24 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 10.2 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 41.91 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 41.2 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 41.94 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 41.73 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 41.89 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 41.94 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 42.19 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 42.08 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 41.73 points.
+
+Round 25 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 37.04 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 43.33 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 42.92 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 42.98 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 43.76 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 42.97 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 42.98 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 42.81 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 42.6 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 43.43 points.
+
+Round 26 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 41.29 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 41.13 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 41.52 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 41.08 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 41.41 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 41.31 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 41.27 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 41.17 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 41.78 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 40.72 points.
+
+Round 27 of 30.
+Trial 1: You press <mark title="human response">F</mark> and gain 13.67 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 44.59 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 44.14 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 45.13 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 44.89 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 44.51 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 44.69 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 44.94 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 44.53 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 45.09 points.
+
+Round 28 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 13.75 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 38.14 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 34.05 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 6.77 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 27.92 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 42.2 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 42.09 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 41.62 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 41.61 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 42.08 points.
+
+Round 29 of 30.
+Trial 1: You press ; and gain 20.51 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 12.63 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 46.27 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 46.09 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 45.99 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 46.0 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 45.99 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 45.49 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 45.89 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 46.42 points.
+
+Round 30 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 2.37 points.
+Trial 2: You press ; and gain 29.19 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 33.96 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 23.98 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 34.11 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 40.21 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 39.16 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 39.48 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 39.37 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 39.06 points.</pre></div><div class="transcript" id="t5" hidden><pre>In this game you play 30 rounds of a slot-machine task. Each round, eight boxes are arranged left to right and labeled with the keys you press to choose them: A, S, D, F, J, K, L, and ; (semicolon), leftmost to rightmost. Each round has 10 trials. On each trial you press one key to sample that box, and you then see how many points that box gave you this time. Your goal is to gain as many points as possible. After each round the game resets: the same keys can now give different points, so treat every round afresh.
+
+Round 1 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 6.43 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 12.34 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 18.06 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 22.92 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 28.77 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 34.39 points.
+Trial 7: You press ; and gain 36.9 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 39.94 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 39.53 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 39.67 points.
+
+Round 2 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 6.64 points.
+Trial 2: You press ; and gain 39.24 points.
+Trial 3: You press ; and gain 39.15 points.
+Trial 4: You press ; and gain 39.19 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 42.05 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 36.14 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 42.35 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 42.72 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 41.86 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 42.32 points.
+
+Round 3 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 12.17 points.
+Trial 2: You press ; and gain 3.51 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 38.31 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 41.97 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 46.79 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 45.79 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 37.88 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 45.88 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 46.75 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 46.44 points.
+
+Round 4 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 37.98 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 43.27 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 33.77 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 43.22 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 42.87 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 43.23 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 42.65 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 42.86 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 42.82 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 43.16 points.
+
+Round 5 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 23.77 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 14.54 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 35.5 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 46.44 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 46.18 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 45.63 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 45.93 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 40.59 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 45.97 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 46.17 points.
+
+Round 6 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 43.16 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 43.74 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 43.22 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 42.95 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 42.46 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 43.68 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 43.44 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 43.54 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 43.36 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 43.14 points.
+
+Round 7 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 38.15 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 44.41 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 41.17 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 44.64 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 45.52 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 44.66 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 44.99 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 44.83 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 45.52 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 45.32 points.
+
+Round 8 of 30.
+Trial 1: You press ; and gain 8.53 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 15.22 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 35.01 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 37.92 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 41.54 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 35.14 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 41.58 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 41.24 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 41.48 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 41.23 points.
+
+Round 9 of 30.
+Trial 1: You press <mark title="human response">A</mark> and gain 7.37 points.
+Trial 2: You press ; and gain 35.1 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 38.5 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 42.82 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 35.26 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 42.09 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 42.36 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 42.54 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 42.52 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 42.35 points.
+
+Round 10 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 32.15 points.
+Trial 2: You press <mark title="human response">A</mark> and gain 28.73 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 35.82 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 39.61 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 32.08 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 23.71 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 16.6 points.
+Trial 8: You press ; and gain 7.82 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 40.16 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 40.15 points.
+
+Round 11 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 34.03 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 39.17 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 44.88 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 44.74 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 44.27 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 45.17 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 45.05 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 45.48 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 44.5 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 44.14 points.
+
+Round 12 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 39.82 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 33.61 points.
+Trial 3: You press <mark title="human response">A</mark> and gain 36.9 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 40.27 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 40.41 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 40.31 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 40.21 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 40.34 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 40.14 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 40.28 points.
+
+Round 13 of 30.
+Trial 1: You press <mark title="human response">J</mark> and gain 30.49 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 21.01 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 38.76 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 47.79 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 47.41 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 47.28 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 47.65 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 47.58 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 47.21 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 47.63 points.
+
+Round 14 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 16.65 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 36.83 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 42.4 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 47.43 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 46.59 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 47.44 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 47.11 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 47.24 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 47.13 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 47.03 points.
+
+Round 15 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 14.68 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 40.04 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 43.94 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 36.54 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 43.76 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 44.02 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 43.41 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 44.06 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 43.84 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 43.62 points.
+
+Round 16 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 42.85 points.
+Trial 2: You press <mark title="human response">J</mark> and gain 47.93 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 36.77 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 47.66 points.
+Trial 5: You press <mark title="human response">J</mark> and gain 47.95 points.
+Trial 6: You press <mark title="human response">J</mark> and gain 47.76 points.
+Trial 7: You press <mark title="human response">J</mark> and gain 47.56 points.
+Trial 8: You press <mark title="human response">J</mark> and gain 47.31 points.
+Trial 9: You press <mark title="human response">J</mark> and gain 47.45 points.
+Trial 10: You press <mark title="human response">J</mark> and gain 48.05 points.
+
+Round 17 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 36.48 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 41.19 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 31.65 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 41.72 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 41.87 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 40.96 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 41.28 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 41.19 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 41.71 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 41.27 points.
+
+Round 18 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 40.17 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 36.83 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 33.73 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 40.74 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 40.5 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 40.12 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 40.43 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 40.18 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 40.36 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 39.97 points.
+
+Round 19 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 40.91 points.
+Trial 2: You press <mark title="human response">F</mark> and gain 45.61 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 36.4 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 45.43 points.
+Trial 5: You press <mark title="human response">F</mark> and gain 45.54 points.
+Trial 6: You press <mark title="human response">F</mark> and gain 44.87 points.
+Trial 7: You press <mark title="human response">F</mark> and gain 45.63 points.
+Trial 8: You press <mark title="human response">F</mark> and gain 45.19 points.
+Trial 9: You press <mark title="human response">F</mark> and gain 45.08 points.
+Trial 10: You press <mark title="human response">F</mark> and gain 45.27 points.
+
+Round 20 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 21.17 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 41.12 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 37.72 points.
+Trial 4: You press <mark title="human response">F</mark> and gain 34.51 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 41.2 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 41.31 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 41.73 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 41.18 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 41.29 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 41.26 points.
+
+Round 21 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 35.73 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 40.97 points.
+Trial 3: You press ; and gain 38.68 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 41.5 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 42.14 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 41.14 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 41.1 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 41.35 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 41.36 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 41.52 points.
+
+Round 22 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 16.29 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 42.54 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 42.57 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 43.13 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 42.73 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 42.34 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 42.97 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 42.43 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 42.44 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 42.59 points.
+
+Round 23 of 30.
+Trial 1: You press <mark title="human response">D</mark> and gain 21.14 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 37.99 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 41.34 points.
+Trial 4: You press <mark title="human response">J</mark> and gain 35.07 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 41.19 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 41.64 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 41.55 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 41.11 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 40.57 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 41.33 points.
+
+Round 24 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 43.1 points.
+Trial 2: You press <mark title="human response">S</mark> and gain 43.56 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 43.16 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 42.95 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 43.04 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 42.73 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 42.79 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 43.4 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 43.01 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 42.97 points.
+
+Round 25 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 14.66 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 38.82 points.
+Trial 3: You press <mark title="human response">F</mark> and gain 32.88 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 44.83 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 45.6 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 45.41 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 45.68 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 45.86 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 45.71 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 45.59 points.
+
+Round 26 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 16.85 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 41.74 points.
+Trial 3: You press <mark title="human response">K</mark> and gain 41.4 points.
+Trial 4: You press <mark title="human response">K</mark> and gain 41.59 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 41.64 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 42.63 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 41.99 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 41.52 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 41.9 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 42.18 points.
+
+Round 27 of 30.
+Trial 1: You press <mark title="human response">S</mark> and gain 13.26 points.
+Trial 2: You press <mark title="human response">K</mark> and gain 40.77 points.
+Trial 3: You press <mark title="human response">J</mark> and gain 33.68 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 37.95 points.
+Trial 5: You press <mark title="human response">K</mark> and gain 40.83 points.
+Trial 6: You press <mark title="human response">K</mark> and gain 40.71 points.
+Trial 7: You press <mark title="human response">K</mark> and gain 40.8 points.
+Trial 8: You press <mark title="human response">K</mark> and gain 40.9 points.
+Trial 9: You press <mark title="human response">K</mark> and gain 40.92 points.
+Trial 10: You press <mark title="human response">K</mark> and gain 40.34 points.
+
+Round 28 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 19.75 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 35.88 points.
+Trial 3: You press <mark title="human response">S</mark> and gain 41.0 points.
+Trial 4: You press <mark title="human response">S</mark> and gain 41.2 points.
+Trial 5: You press <mark title="human response">S</mark> and gain 41.44 points.
+Trial 6: You press <mark title="human response">S</mark> and gain 40.94 points.
+Trial 7: You press <mark title="human response">S</mark> and gain 41.64 points.
+Trial 8: You press <mark title="human response">S</mark> and gain 41.4 points.
+Trial 9: You press <mark title="human response">S</mark> and gain 41.2 points.
+Trial 10: You press <mark title="human response">S</mark> and gain 41.21 points.
+
+Round 29 of 30.
+Trial 1: You press <mark title="human response">K</mark> and gain 34.28 points.
+Trial 2: You press <mark title="human response">L</mark> and gain 41.58 points.
+Trial 3: You press <mark title="human response">L</mark> and gain 40.92 points.
+Trial 4: You press <mark title="human response">L</mark> and gain 41.34 points.
+Trial 5: You press <mark title="human response">L</mark> and gain 41.53 points.
+Trial 6: You press <mark title="human response">L</mark> and gain 41.2 points.
+Trial 7: You press <mark title="human response">L</mark> and gain 41.63 points.
+Trial 8: You press <mark title="human response">L</mark> and gain 41.63 points.
+Trial 9: You press <mark title="human response">L</mark> and gain 41.08 points.
+Trial 10: You press <mark title="human response">L</mark> and gain 41.42 points.
+
+Round 30 of 30.
+Trial 1: You press <mark title="human response">L</mark> and gain 16.39 points.
+Trial 2: You press <mark title="human response">D</mark> and gain 40.96 points.
+Trial 3: You press <mark title="human response">D</mark> and gain 40.96 points.
+Trial 4: You press <mark title="human response">D</mark> and gain 40.95 points.
+Trial 5: You press <mark title="human response">D</mark> and gain 41.27 points.
+Trial 6: You press <mark title="human response">D</mark> and gain 41.57 points.
+Trial 7: You press <mark title="human response">D</mark> and gain 41.67 points.
+Trial 8: You press <mark title="human response">D</mark> and gain 41.73 points.
+Trial 9: You press <mark title="human response">D</mark> and gain 41.41 points.
+Trial 10: You press <mark title="human response">D</mark> and gain 41.63 points.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xu_2023_augmenting</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / xu_2023_augmenting</nav>
+<h1>xu_2023_augmenting</h1>
+<p class="tags"><span class="chip paradigm">adaptive-feedback-task</span> <span class="chip minor">psych-201</span></p>
+<p>N=79 participants (40 RL-agent group, 39 random baseline group) performed a modular arithmetic verification task (decide whether AB ≡ CD mod E, respond True/False). Each participant completed practice trials, then counterbalanced Control (no feedback) and Feedback sessions. The RL group received adaptive time-pressure feedback from a trained DRL agent (using a Drift-Diffusion Model simulation); the Random group received 50% random feedback. Key measures: binary choice accuracy, response time (ms), and self-reported attention and anxiety ratings (1-7) given once after each 100-trial test session. Research question: can a dual-DRL framework learn adaptive visual feedback to augment human cognitive performance?</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">14,148</div><div class="tile-sub">1,231 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.677</div><div class="tile-sub">rank 3 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">Centaur</div><div class="tile-sub">test NLL (avg) 0.501</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="833.2631" title="CORE: 833.3 nats"><span class="track"><span class="bar core" style="width:91.3%"></span></span><span class="num">833.3</span></td><td class="num" data-v="0.6769">0.6769</td><td class="num" data-v="1231">1,231</td><td class="num" data-v="0.6689">0.6689</td><td class="num" data-v="12917.0">12,917</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="835.3048" title="CORE (no prediction errors): 835.3 nats"><span class="track"><span class="bar core" style="width:91.5%"></span></span><span class="num">835.3</span></td><td class="num" data-v="0.6786">0.6786</td><td class="num" data-v="1231">1,231</td><td class="num" data-v="0.6695">0.6695</td><td class="num" data-v="12917.0">12,917</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="827.3665" title="CORE (no phonemes): 827.4 nats"><span class="track"><span class="bar core" style="width:90.6%"></span></span><span class="num">827.4</span></td><td class="num" data-v="0.6721">0.6721</td><td class="num" data-v="1231">1,231</td><td class="num" data-v="0.6614">0.6614</td><td class="num" data-v="12917.0">12,917</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="838.3072" title="CORE (no forgetting): 838.3 nats"><span class="track"><span class="bar core" style="width:91.8%"></span></span><span class="num">838.3</span></td><td class="num" data-v="0.681">0.6810</td><td class="num" data-v="1231">1,231</td><td class="num" data-v="0.6736">0.6736</td><td class="num" data-v="12917.0">12,917</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="912.8068" title="CORE (no hierarchy): 912.8 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">912.8</span></td><td class="num" data-v="0.7415">0.7415</td><td class="num" data-v="1231">1,231</td><td class="num" data-v="0.7289">0.7289</td><td class="num" data-v="12917.0">12,917</td></tr><tr><td>Transformer</td><td class="barcell" data-v="910.8529" title="Transformer: 910.9 nats"><span class="track"><span class="bar base" style="width:99.8%"></span></span><span class="num">910.9</span></td><td class="num" data-v="0.7399">0.7399</td><td class="num" data-v="1231">1,231</td><td class="num" data-v="0.7379">0.7379</td><td class="num" data-v="12917.0">12,917</td></tr><tr class="best"><td>Centaur <span class="pill best-pill">best</span></td><td class="barcell" data-v="616.9597" title="Centaur: 617.0 nats"><span class="track"><span class="bar base" style="width:67.6%"></span></span><span class="num">617.0</span></td><td class="num" data-v="0.5012">0.5012</td><td class="num" data-v="1231">1,231</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>ModularArithmetic</td><td class="num">79</td><td class="num">14,148</td><td class="num">2</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · condition=random</option><option value="t1">exp0 · condition=rl</option></select></label><div class="transcript" id="t0"><pre>You take part in a study on math problem solving. For each question you will see a congruence statement of the form &quot;AB ≡ CD (mod E)&quot;, where AB and CD are two two-digit numbers and E is a one-digit number. To answer, first subtract CD from AB, then judge whether the result is divisible by E. If it is, the statement is true; otherwise it is false. Take accuracy as your first priority, then answer as quickly as you can. You answer by pressing the button for True or False: press T for True, press F for False.
+In some blocks a progress bar may appear at the top of the screen while you are answering. It fills by one unit per second and resets after 5 seconds. It is only there to convey a sense of passing time; there is no penalty associated with it.
+First you complete a practice block to get familiar with the task. Then you complete two main blocks of 100 questions each. After each main block you will be asked to rate your current attention level and your current anxiety level, each on a scale from 1 to 7 (1 = lowest, 7 = highest); to answer, type a single number from 1 to 7.
+The practice block begins. You work through 8 practice problems. No progress bar is shown.
+You see the problem: 39 ≡ 26 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 51 ≡ 29 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 63 ≡ 12 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 23 ≡ 15 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 52 ≡ 34 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 58 ≡ 41 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 51 ≡ 39 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 21 ≡ 14 (mod 8). You press <mark title="human response">F</mark>.
+The next block of 100 questions begins. A progress bar may appear above the problem while you are answering.
+You see the problem: 96 ≡ 89 (mod 7). You press <mark title="human response">T</mark>.
+You see the problem: 21 ≡ 18 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 81 ≡ 36 (mod 5). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 79 ≡ 55 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 34 ≡ 24 (mod 9). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 87 ≡ 26 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 76 ≡ 44 (mod 5). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 79 ≡ 54 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 91 ≡ 39 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 54 ≡ 42 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 49 ≡ 15 (mod 6). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 24 ≡ 13 (mod 3). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 61 ≡ 37 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 64 ≡ 27 (mod 3). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 46 ≡ 19 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 73 ≡ 42 (mod 3). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 32 ≡ 25 (mod 7). You press <mark title="human response">T</mark>.
+You see the problem: 61 ≡ 19 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 54 ≡ 18 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 91 ≡ 36 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 94 ≡ 58 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 25 ≡ 15 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 94 ≡ 16 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 84 ≡ 69 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 59 ≡ 43 (mod 8). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 65 ≡ 32 (mod 3). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 84 ≡ 73 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 61 ≡ 13 (mod 6). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 32 ≡ 22 (mod 8). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 58 ≡ 31 (mod 6). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 74 ≡ 47 (mod 4). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 58 ≡ 31 (mod 9). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 52 ≡ 49 (mod 4). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 96 ≡ 75 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 95 ≡ 71 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 21 ≡ 13 (mod 8). You press <mark title="human response">T</mark>.
+You see the problem: 26 ≡ 12 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 23 ≡ 17 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 32 ≡ 14 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 32 ≡ 18 (mod 9). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 26 ≡ 12 (mod 7). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 45 ≡ 17 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 95 ≡ 39 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 83 ≡ 23 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 61 ≡ 43 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 62 ≡ 27 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 46 ≡ 19 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 24 ≡ 14 (mod 6). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 24 ≡ 12 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 47 ≡ 35 (mod 4). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 24 ≡ 18 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 99 ≡ 71 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 36 ≡ 23 (mod 8). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 89 ≡ 58 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 76 ≡ 68 (mod 8). You press <mark title="human response">T</mark>.
+You see the problem: 62 ≡ 47 (mod 3). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 33 ≡ 27 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 48 ≡ 39 (mod 5). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 95 ≡ 47 (mod 6). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 88 ≡ 59 (mod 6). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 85 ≡ 39 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 74 ≡ 16 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 81 ≡ 45 (mod 6). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 78 ≡ 41 (mod 9). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 21 ≡ 16 (mod 5). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 63 ≡ 58 (mod 5). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 68 ≡ 26 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 84 ≡ 74 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 83 ≡ 44 (mod 8). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 91 ≡ 28 (mod 7). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 57 ≡ 25 (mod 3). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 76 ≡ 61 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 98 ≡ 68 (mod 5). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 36 ≡ 13 (mod 7). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 78 ≡ 36 (mod 9). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 28 ≡ 13 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 57 ≡ 49 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 58 ≡ 39 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 85 ≡ 59 (mod 9). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 69 ≡ 45 (mod 3). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 99 ≡ 59 (mod 4). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 73 ≡ 39 (mod 9). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 64 ≡ 53 (mod 9). You press <mark title="human response">F</mark>.
+You finish this block of 100 questions. You rate your current attention level: 4. You rate your current anxiety level: 6.
+The next block of 100 questions begins. No progress bar is shown in this block.
+You see the problem: 83 ≡ 51 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 23 ≡ 11 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 58 ≡ 44 (mod 7). You press <mark title="human response">T</mark>.
+You see the problem: 45 ≡ 36 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 57 ≡ 18 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 68 ≡ 59 (mod 9). You press <mark title="human response">T</mark>.
+You see the problem: 27 ≡ 17 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 95 ≡ 67 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 79 ≡ 15 (mod 8). You press <mark title="human response">T</mark>.
+You see the problem: 69 ≡ 54 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 85 ≡ 34 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 64 ≡ 44 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 76 ≡ 55 (mod 7). You press <mark title="human response">T</mark>.
+You see the problem: 83 ≡ 48 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 27 ≡ 11 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 66 ≡ 49 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 67 ≡ 34 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 88 ≡ 57 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 54 ≡ 24 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 61 ≡ 47 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 47 ≡ 22 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 62 ≡ 44 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 99 ≡ 35 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 86 ≡ 58 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 61 ≡ 26 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 72 ≡ 69 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 22 ≡ 16 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 55 ≡ 26 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 66 ≡ 27 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 22 ≡ 12 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 88 ≡ 17 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 95 ≡ 71 (mod 8). You press <mark title="human response">T</mark>.
+You see the problem: 56 ≡ 21 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 26 ≡ 19 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 39 ≡ 19 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 56 ≡ 18 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 28 ≡ 19 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 32 ≡ 13 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 56 ≡ 35 (mod 7). You press <mark title="human response">T</mark>.
+You see the problem: 51 ≡ 28 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 78 ≡ 48 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 98 ≡ 53 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 24 ≡ 16 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 34 ≡ 12 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 86 ≡ 26 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 61 ≡ 27 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 63 ≡ 31 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 42 ≡ 15 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 72 ≡ 42 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 47 ≡ 17 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 26 ≡ 17 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 75 ≡ 59 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 21 ≡ 14 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 98 ≡ 89 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 46 ≡ 37 (mod 9). You press <mark title="human response">T</mark>.
+You see the problem: 91 ≡ 11 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 33 ≡ 22 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 89 ≡ 63 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 66 ≡ 51 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 29 ≡ 14 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 27 ≡ 19 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 62 ≡ 42 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 62 ≡ 55 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 88 ≡ 22 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 65 ≡ 44 (mod 7). You press <mark title="human response">T</mark>.
+You see the problem: 21 ≡ 15 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 38 ≡ 22 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 27 ≡ 19 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 32 ≡ 17 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 35 ≡ 23 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 34 ≡ 16 (mod 9). You press <mark title="human response">T</mark>.
+You see the problem: 56 ≡ 28 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 96 ≡ 11 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 44 ≡ 19 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 23 ≡ 16 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 37 ≡ 12 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 85 ≡ 49 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 56 ≡ 37 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 53 ≡ 41 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 27 ≡ 17 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 92 ≡ 76 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 68 ≡ 12 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 47 ≡ 27 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 23 ≡ 12 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 27 ≡ 11 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 53 ≡ 45 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 85 ≡ 51 (mod 4). You press <mark title="human response">F</mark>.
+You finish this block of 100 questions. You rate your current attention level: 5. You rate your current anxiety level: 6.</pre></div><div class="transcript" id="t1" hidden><pre>You take part in a study on math problem solving. For each question you will see a congruence statement of the form &quot;AB ≡ CD (mod E)&quot;, where AB and CD are two two-digit numbers and E is a one-digit number. To answer, first subtract CD from AB, then judge whether the result is divisible by E. If it is, the statement is true; otherwise it is false. Take accuracy as your first priority, then answer as quickly as you can. You answer by pressing the button for True or False: press T for True, press F for False.
+In some blocks a progress bar may appear at the top of the screen while you are answering. It fills by one unit per second and resets after 5 seconds. It is only there to convey a sense of passing time; there is no penalty associated with it.
+First you complete a practice block to get familiar with the task. Then you complete two main blocks of 100 questions each. After each main block you will be asked to rate your current attention level and your current anxiety level, each on a scale from 1 to 7 (1 = lowest, 7 = highest); to answer, type a single number from 1 to 7.
+The practice block begins. You work through 1 practice problems. No progress bar is shown.
+You see the problem: 59 ≡ 33 (mod 5). You press <mark title="human response">F</mark>.
+The next block of 100 questions begins. A progress bar may appear above the problem while you are answering.
+You see the problem: 46 ≡ 33 (mod 3). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 36 ≡ 22 (mod 8). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 61 ≡ 31 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 99 ≡ 84 (mod 8). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 69 ≡ 56 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 47 ≡ 31 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 43 ≡ 13 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 35 ≡ 25 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 23 ≡ 12 (mod 3). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 64 ≡ 46 (mod 9). You press <mark title="human response">T</mark>.
+You see the problem: 58 ≡ 41 (mod 8). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 78 ≡ 23 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 66 ≡ 13 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 26 ≡ 14 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 26 ≡ 17 (mod 9). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 47 ≡ 37 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 25 ≡ 16 (mod 9). You press <mark title="human response">T</mark>.
+You see the problem: 33 ≡ 23 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 38 ≡ 21 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 93 ≡ 63 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 27 ≡ 18 (mod 9). You press <mark title="human response">T</mark>.
+You see the problem: 62 ≡ 18 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 29 ≡ 17 (mod 6). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 55 ≡ 44 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 31 ≡ 12 (mod 6). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 77 ≡ 46 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 99 ≡ 54 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 28 ≡ 18 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 37 ≡ 17 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 24 ≡ 12 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 47 ≡ 27 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 93 ≡ 82 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 43 ≡ 37 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 78 ≡ 38 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 54 ≡ 14 (mod 8). You press <mark title="human response">T</mark>.
+You see the problem: 52 ≡ 45 (mod 3). You press <mark title="human response">F</mark>. A progress bar appears above the problem.
+You see the problem: 27 ≡ 12 (mod 5). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 27 ≡ 16 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 31 ≡ 11 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 87 ≡ 27 (mod 6). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 25 ≡ 16 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 62 ≡ 27 (mod 5). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 43 ≡ 34 (mod 3). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 83 ≡ 63 (mod 4). You press <mark title="human response">T</mark>. A progress bar appears above the problem.
+You see the problem: 64 ≡ 22 (mod 9). You press <mark title="human response">F</mark>.
+You finish this block of 100 questions. You rate your current attention level: 5. You rate your current anxiety level: 5.
+The next block of 100 questions begins. No progress bar is shown in this block.
+You see the problem: 72 ≡ 12 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 27 ≡ 11 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 81 ≡ 12 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 87 ≡ 57 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 44 ≡ 23 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 47 ≡ 37 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 96 ≡ 72 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 23 ≡ 14 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 69 ≡ 51 (mod 9). You press <mark title="human response">T</mark>.
+You see the problem: 92 ≡ 62 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 31 ≡ 21 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 49 ≡ 21 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 98 ≡ 41 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 65 ≡ 47 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 89 ≡ 59 (mod 4). You press <mark title="human response">F</mark>.
+You see the problem: 66 ≡ 36 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 31 ≡ 11 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 37 ≡ 25 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 38 ≡ 22 (mod 9). You press <mark title="human response">F</mark>.
+You see the problem: 78 ≡ 56 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 35 ≡ 12 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 35 ≡ 28 (mod 3). You press <mark title="human response">F</mark>.
+You see the problem: 34 ≡ 24 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 45 ≡ 31 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 33 ≡ 24 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 36 ≡ 26 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 68 ≡ 43 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 27 ≡ 11 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 27 ≡ 15 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 28 ≡ 13 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 27 ≡ 12 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 97 ≡ 69 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 67 ≡ 19 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 24 ≡ 16 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 69 ≡ 34 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 57 ≡ 21 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 44 ≡ 26 (mod 5). You press <mark title="human response">F</mark>.
+You see the problem: 84 ≡ 74 (mod 6). You press <mark title="human response">F</mark>.
+You see the problem: 86 ≡ 78 (mod 8). You press <mark title="human response">T</mark>.
+You see the problem: 65 ≡ 59 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 77 ≡ 65 (mod 8). You press <mark title="human response">F</mark>.
+You see the problem: 47 ≡ 23 (mod 4). You press <mark title="human response">T</mark>.
+You see the problem: 65 ≡ 47 (mod 9). You press <mark title="human response">T</mark>.
+You see the problem: 43 ≡ 33 (mod 5). You press <mark title="human response">T</mark>.
+You see the problem: 91 ≡ 55 (mod 6). You press <mark title="human response">T</mark>.
+You see the problem: 68 ≡ 33 (mod 7). You press <mark title="human response">F</mark>.
+You see the problem: 41 ≡ 11 (mod 3). You press <mark title="human response">T</mark>.
+You see the problem: 24 ≡ 13 (mod 3). You press <mark title="human response">F</mark>.
+You finish this block of 100 questions. You rate your current attention level: 4. You rate your current anxiety level: 5.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

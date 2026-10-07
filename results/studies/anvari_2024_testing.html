@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anvari_2024_testing</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / anvari_2024_testing</nav>
+<h1>anvari_2024_testing</h1>
+<p class="tags"><span class="chip paradigm">bandit</span> <span class="chip minor">psych-201</span></p>
+<p>A registered report testing whether five explore–exploit behavioural tasks converge on a general tendency to explore, generalize across task domains, and are stable over about one month. 678 UK Prolific participants completed the whole study at time1 (April 2023) and 254 of them repeated it at time2 about one month later. Each CSV pools both waves (`session`), and one `participant_id` identifies the same person in both waves and in all five experiments, so the paper&#x27;s test–retest and cross-task analyses can be run from these files. Participants who failed a task&#x27;s comprehension check six times skipped that task and have no rows in that experiment. exp0 (N = 672): five-armed bandit, per wave 1 practice block of 20 trials and 4 incentivized blocks of 40 trials. exp1 (N = 671): sampling paradigm, per wave 1 practice and 5 incentivized blocks of free sampling (2 to 100 samples) closed by the choice of the button to be paid from. exp2 (N = 674): observe-or-bet, per wave 1 practice block of 25 trials and 2 incentivized blocks of 50 trials. exp3 (N = 678): optional stopping with recall, per wave 1 practice and 8 incentivized blocks of up to 20 box openings. exp4 (N = 675): alien game (search on an NK payoff landscape), per wave 1 practice block of 3 trials and 3 incentivized blocks of 10 trials, each opened by a displayed starting combination. The paper&#x27;s headline analyses are CFA/latent-factor SEM and cross-task correlations; two within-task convergent-validity effects reproduce from the trial-level data (bandit switch rate with exploit-complement, paper r = 0.47; alien Hamming distance with active search, paper r = 0.52).</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">264,435</div><div class="tile-sub">19,265 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.635</div><div class="tile-sub">rank 1 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE</div><div class="tile-sub">test NLL (avg) 0.635</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr class="best"><td>CORE <span class="pill best-pill">best</span></td><td class="barcell" data-v="12226.5062" title="CORE: 12,226.5 nats"><span class="track"><span class="bar core" style="width:68.2%"></span></span><span class="num">12,226.5</span></td><td class="num" data-v="0.6346">0.6346</td><td class="num" data-v="19265">19,265</td><td class="num" data-v="0.5791">0.5791</td><td class="num" data-v="245170.0">245,170</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="12628.397" title="CORE (no prediction errors): 12,628.4 nats"><span class="track"><span class="bar core" style="width:70.4%"></span></span><span class="num">12,628.4</span></td><td class="num" data-v="0.6555">0.6555</td><td class="num" data-v="19265">19,265</td><td class="num" data-v="0.595">0.5950</td><td class="num" data-v="245170.0">245,170</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="12330.3667" title="CORE (no phonemes): 12,330.4 nats"><span class="track"><span class="bar core" style="width:68.7%"></span></span><span class="num">12,330.4</span></td><td class="num" data-v="0.64">0.6400</td><td class="num" data-v="19265">19,265</td><td class="num" data-v="0.5724">0.5724</td><td class="num" data-v="245170.0">245,170</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="13389.1779" title="CORE (no forgetting): 13,389.2 nats"><span class="track"><span class="bar core" style="width:74.6%"></span></span><span class="num">13,389.2</span></td><td class="num" data-v="0.695">0.6950</td><td class="num" data-v="19265">19,265</td><td class="num" data-v="0.633">0.6330</td><td class="num" data-v="245170.0">245,170</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="17939.2245" title="CORE (no hierarchy): 17,939.2 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">17,939.2</span></td><td class="num" data-v="0.9312">0.9312</td><td class="num" data-v="19265">19,265</td><td class="num" data-v="0.8651">0.8651</td><td class="num" data-v="245170.0">245,170</td></tr><tr><td>Transformer</td><td class="barcell" data-v="15785.7815" title="Transformer: 15,785.8 nats"><span class="track"><span class="bar base" style="width:88.0%"></span></span><span class="num">15,785.8</span></td><td class="num" data-v="0.8194">0.8194</td><td class="num" data-v="19265">19,265</td><td class="num" data-v="0.7434">0.7434</td><td class="num" data-v="245170.0">245,170</td></tr><tr><td>Centaur</td><td class="barcell" data-v="12456.5332" title="Centaur: 12,456.5 nats"><span class="track"><span class="bar base" style="width:69.4%"></span></span><span class="num">12,456.5</span></td><td class="num" data-v="0.6466">0.6466</td><td class="num" data-v="19265">19,265</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>FiveArmedBandit</td><td class="num">672</td><td class="num">166,497</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp1</td><td>SamplingParadigm</td><td class="num">671</td><td class="num">97,938</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option><option value="t1">exp1 · all participants</option></select></label><div class="transcript" id="t0"><pre>You play a game with five buttons. On each trial you click one button and it reveals a number of points; your goal is to earn as many points as possible. The screen shows the trial number, how many times each button has been selected, the average points per click for each button, and your total points so far. For every 100 points you earn a bonus of 1p. On each trial press the letter for the button you choose: Button 1 = D, Button 2 = A, Button 3 = C, Button 4 = B, Button 5 = E.
+practice block begins with five new buttons.
+practice trial: you press <mark title="human response">C</mark>; it pays 58 points.
+practice trial: you press <mark title="human response">C</mark>; it pays 63 points.
+practice trial: you press <mark title="human response">D</mark>; it pays 39 points.
+practice trial: you press <mark title="human response">E</mark>; it pays 62 points.
+practice trial: you press <mark title="human response">B</mark>; it pays 58 points.
+practice trial: you press <mark title="human response">A</mark>; it pays 53 points.
+practice trial: you press <mark title="human response">C</mark>; it pays 67 points.
+practice trial: you press <mark title="human response">B</mark>; it pays 48 points.
+practice trial: you press <mark title="human response">E</mark>; it pays 55 points.
+practice trial: you press <mark title="human response">C</mark>; it pays 66 points.
+practice trial: you press <mark title="human response">B</mark>; it pays 47 points.
+practice trial: you press <mark title="human response">E</mark>; it pays 63 points.
+practice trial: you press <mark title="human response">A</mark>; it pays 54 points.
+practice trial: you press <mark title="human response">C</mark>; it pays 58 points.
+practice trial: you press <mark title="human response">E</mark>; it pays 62 points.
+practice trial: you press <mark title="human response">A</mark>; it pays 50 points.
+practice trial: you press <mark title="human response">C</mark>; it pays 58 points.
+practice trial: you press <mark title="human response">E</mark>; it pays 62 points.
+practice trial: you press <mark title="human response">C</mark>; it pays 54 points.
+practice trial: you press <mark title="human response">E</mark>; it pays 50 points.
+incentivized block begins with five new buttons.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 55 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">A</mark>; it pays 48 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 59 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 62 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 55 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 63 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 65 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 49 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 57 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 42 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 63 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 62 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 59 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 57 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 51 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 59 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 55 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 47 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 56 points.
+incentivized block begins with five new buttons.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 68 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 55 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 62 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 57 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 64 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 41 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 47 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 51 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 52 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 67 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 64 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 66 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 59 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 65 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 66 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 44 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 47 points.
+incentivized trial: you press <mark title="human response">A</mark>; it pays 44 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 57 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 53 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 60 points.
+incentivized block begins with five new buttons.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 48 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 44 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 64 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 51 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 64 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 47 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">A</mark>; it pays 49 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 65 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 65 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 65 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 63 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 62 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 64 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 62 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 67 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 70 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 55 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 57 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 52 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 55 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 57 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 59 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 51 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 64 points.
+incentivized trial: you press <mark title="human response">C</mark>; it pays 58 points.
+incentivized block begins with five new buttons.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">D</mark>; it pays 49 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 47 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 69 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 63 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 53 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 57 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 50 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 54 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 62 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 53 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 59 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 58 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 74 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 65 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 55 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 59 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 60 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 57 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 59 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 53 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 46 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 61 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 56 points.
+incentivized trial: you press <mark title="human response">B</mark>; it pays 64 points.
+incentivized trial: you press <mark title="human response">E</mark>; it pays 62 points.</pre></div><div class="transcript" id="t1" hidden><pre>You see two buttons, each with an unknown chance of paying a fixed number of points. You can sample the buttons as many times as you like (up to 100 per block) to learn what they pay; each sample shows what that button would have paid. You must sample each button at least once. When you stop sampling you choose which button to be paid out from, and it pays once more. For each point you earn a bonus of 5p. Press B to sample Button 1, C to sample Button 2, A to stop and be paid from Button 1, or D to stop and be paid from Button 2.
+practice block begins.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">C</mark> and sample Button 2.
+You press <mark title="human response">A</mark> and choose to be paid from Button 1; it pays 1 points.
+incentivized block begins.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">C</mark> and sample Button 2.
+You press <mark title="human response">A</mark> and choose to be paid from Button 1; it pays 4 points.
+incentivized block begins.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">C</mark> and sample Button 2.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">C</mark> and sample Button 2.
+You press <mark title="human response">A</mark> and choose to be paid from Button 1; it pays 10 points.
+incentivized block begins.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">C</mark> and sample Button 2.
+You press <mark title="human response">A</mark> and choose to be paid from Button 1; it pays 3 points.
+incentivized block begins.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">C</mark> and sample Button 2.
+You press <mark title="human response">A</mark> and choose to be paid from Button 1; it pays 3 points.
+incentivized block begins.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">C</mark> and sample Button 2.
+You press <mark title="human response">B</mark> and sample Button 1.
+You press <mark title="human response">C</mark> and sample Button 2.
+You press <mark title="human response">D</mark> and choose to be paid from Button 2; it pays 0 points.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

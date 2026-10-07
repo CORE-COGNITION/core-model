@@ -1,0 +1,1532 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ciranka_2025_internal</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / ciranka_2025_internal</nav>
+<h1>ciranka_2025_internal</h1>
+<p class="tags"><span class="chip paradigm">risky-choice</span> <span class="chip minor">psych-201</span></p>
+<p>A single laboratory lottery (&#x27;Developing Marbles&#x27;) experiment in which 166 participants (N=166, aged 10-26; children, adolescents, and adults) each made 144 risky choices between a safe option and a risky gamble, in either a SoloChoice or SocialChoice phase. Risky gambles varied in expected value (points 8/20/50, winning probabilities 0.125-0.75) and were presented under low vs. high external uncertainty (`from_description` vs. `from_experience`, the latter showing a 9-marble sample). Participants chose risky vs. safe, estimated the winning-marble probability, and gave a confidence (&#x27;How sure&#x27;) rating. The study asks whether age-related differences in susceptibility to social influence on risky choice are driven by adolescents&#x27; greater internal uncertainty about choice utility, and is tested with Bayesian-updating and computational (utility-based) cognitive models. Each raw gamble yields three response rows (estimate, confidence, choice) grouped by `block`.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">23,887</div><div class="tile-sub">2,301 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.283</div><div class="tile-sub">rank 1 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE</div><div class="tile-sub">test NLL (avg) 0.283</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr class="best"><td>CORE <span class="pill best-pill">best</span></td><td class="barcell" data-v="652.4445" title="CORE: 652.4 nats"><span class="track"><span class="bar core" style="width:41.6%"></span></span><span class="num">652.4</span></td><td class="num" data-v="0.2835">0.2835</td><td class="num" data-v="2301">2,301</td><td class="num" data-v="0.2952">0.2952</td><td class="num" data-v="21586.0">21,586</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="687.7555" title="CORE (no prediction errors): 687.8 nats"><span class="track"><span class="bar core" style="width:43.8%"></span></span><span class="num">687.8</span></td><td class="num" data-v="0.2989">0.2989</td><td class="num" data-v="2301">2,301</td><td class="num" data-v="0.3046">0.3046</td><td class="num" data-v="21586.0">21,586</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="672.9337" title="CORE (no phonemes): 672.9 nats"><span class="track"><span class="bar core" style="width:42.9%"></span></span><span class="num">672.9</span></td><td class="num" data-v="0.2925">0.2925</td><td class="num" data-v="2301">2,301</td><td class="num" data-v="0.2682">0.2682</td><td class="num" data-v="21586.0">21,586</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="684.5257" title="CORE (no forgetting): 684.5 nats"><span class="track"><span class="bar core" style="width:43.6%"></span></span><span class="num">684.5</span></td><td class="num" data-v="0.2975">0.2975</td><td class="num" data-v="2301">2,301</td><td class="num" data-v="0.3029">0.3029</td><td class="num" data-v="21586.0">21,586</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="1568.6952" title="CORE (no hierarchy): 1,568.7 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">1,568.7</span></td><td class="num" data-v="0.6817">0.6817</td><td class="num" data-v="2301">2,301</td><td class="num" data-v="0.6515">0.6515</td><td class="num" data-v="21586.0">21,586</td></tr><tr><td>Transformer</td><td class="barcell" data-v="1534.8931" title="Transformer: 1,534.9 nats"><span class="track"><span class="bar base" style="width:97.8%"></span></span><span class="num">1,534.9</span></td><td class="num" data-v="0.6671">0.6671</td><td class="num" data-v="2301">2,301</td><td class="num" data-v="0.634">0.6340</td><td class="num" data-v="21586.0">21,586</td></tr><tr><td>Centaur</td><td class="barcell" data-v="1059.7379" title="Centaur: 1,059.7 nats"><span class="track"><span class="bar base" style="width:67.6%"></span></span><span class="num">1,059.7</span></td><td class="num" data-v="0.4606">0.4606</td><td class="num" data-v="2301">2,301</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>DevelopingMarbles</td><td class="num">166</td><td class="num">23,887</td><td class="num">3</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · age_group=child</option><option value="t1">exp0 · age_group=adult</option><option value="t2">exp0 · age_group=adolescent</option></select></label><div class="transcript" id="t0"><pre>You are playing a lottery game. On each round you choose between two jars from which a random marble is drawn: a safe jar containing only blue marbles that always pays 5 points, and a risky jar containing both blue and red marbles that pays more (8, 20, or 50 points) but only if the marble you draw is blue. In this session you press A to choose the SAFE jar and B to choose the RISKY jar. On some rounds the risky jar&#x27;s winning chance is stated directly as a proportion of blue marbles in the jar; on other rounds you instead watch a brief sample of 9 marbles drawn from the jar and judge its chance from that sample, then rate how sure you are with a second slider. On every round you first set a slider (0-100) to estimate the percent chance of drawing a blue marble, then make your choice. In the second half of the game you also see how another participant chose in the same lottery before you choose. Points accumulate and are converted to a bonus at the end.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 38%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 38%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 38%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You rate how sure you are about that estimate as 39.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 20%.
+You rate how sure you are about that estimate as 45.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 20%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 20%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 36%.
+You rate how sure you are about that estimate as 26.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 36%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 36%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 36%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 60.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You rate how sure you are about that estimate as 34.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 62%.
+You rate how sure you are about that estimate as 54.
+You choose <mark title="human response">B</mark> (the risky jar). You win 8 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 62%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 62%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You rate how sure you are about that estimate as 45.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 17%.
+You rate how sure you are about that estimate as 55.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 33%.
+You rate how sure you are about that estimate as 59.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 33%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 33%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 33%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 58%.
+You rate how sure you are about that estimate as 55.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 26%.
+You rate how sure you are about that estimate as 59.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 43%.
+You rate how sure you are about that estimate as 54.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 65%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 69%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You rate how sure you are about that estimate as 54.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 16%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 54%.
+You rate how sure you are about that estimate as 55.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 54%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 54%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 54%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 39%.
+You rate how sure you are about that estimate as 55.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 61%.
+You rate how sure you are about that estimate as 57.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 61%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 61%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 21%.
+You rate how sure you are about that estimate as 67.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 72.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 36%.
+You rate how sure you are about that estimate as 55.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 36%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 36%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 23%.
+You rate how sure you are about that estimate as 56.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 23%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 21%.
+You rate how sure you are about that estimate as 100.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 68.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 31%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 60.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 27.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 28.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 23%.
+You rate how sure you are about that estimate as 22.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You rate how sure you are about that estimate as 45.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 18%.
+You rate how sure you are about that estimate as 42.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 18%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 18%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 18%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 23%.
+You rate how sure you are about that estimate as 59.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 65%.
+You rate how sure you are about that estimate as 62.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 70%.
+You rate how sure you are about that estimate as 30.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 44%.
+You rate how sure you are about that estimate as 40.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 44%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 44%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 41%.
+You rate how sure you are about that estimate as 57.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 41%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 41%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 41%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 8 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You rate how sure you are about that estimate as 53.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 43.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 69%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">B</mark> (the risky jar). You win 8 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 69%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 69%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 56%.
+You rate how sure you are about that estimate as 25.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 56%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 27%.
+You rate how sure you are about that estimate as 71.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You rate how sure you are about that estimate as 61.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 31%.
+You rate how sure you are about that estimate as 47.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 26%.
+You rate how sure you are about that estimate as 58.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 43%.
+You rate how sure you are about that estimate as 56.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 64%.
+You rate how sure you are about that estimate as 59.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 59%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 40%.
+You rate how sure you are about that estimate as 45.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 40%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 40%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 40%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 56%.
+You rate how sure you are about that estimate as 32.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 54%.
+You rate how sure you are about that estimate as 58.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 54%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 54%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 54%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 45%.
+You rate how sure you are about that estimate as 61.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 36%.
+You rate how sure you are about that estimate as 51.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 36%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 36%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 49%.
+You rate how sure you are about that estimate as 52.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 49%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 49%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 49%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 32%.
+You rate how sure you are about that estimate as 56.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 55.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 8 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 63%.
+You rate how sure you are about that estimate as 71.
+You choose <mark title="human response">B</mark> (the risky jar). You win 8 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 63%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 63%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 36%.
+You rate how sure you are about that estimate as 65.
+You choose <mark title="human response">B</mark> (the risky jar). You win 8 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 36%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 100.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 29%.
+You rate how sure you are about that estimate as 51.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 29%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 29%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 29%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 68%.
+You rate how sure you are about that estimate as 64.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 36%.
+You rate how sure you are about that estimate as 64.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 64%.
+You rate how sure you are about that estimate as 60.
+You choose <mark title="human response">B</mark> (the risky jar). You win 8 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 40%.
+You rate how sure you are about that estimate as 60.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 56%.
+You rate how sure you are about that estimate as 58.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 38%.
+You rate how sure you are about that estimate as 34.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 42.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 58%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 54%.
+You rate how sure you are about that estimate as 54.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.</pre></div><div class="transcript" id="t1" hidden><pre>You are playing a lottery game. On each round you choose between two jars from which a random marble is drawn: a safe jar containing only blue marbles that always pays 5 points, and a risky jar containing both blue and red marbles that pays more (8, 20, or 50 points) but only if the marble you draw is blue. In this session you press A to choose the SAFE jar and B to choose the RISKY jar. On some rounds the risky jar&#x27;s winning chance is stated directly as a proportion of blue marbles in the jar; on other rounds you instead watch a brief sample of 9 marbles drawn from the jar and judge its chance from that sample, then rate how sure you are with a second slider. On every round you first set a slider (0-100) to estimate the percent chance of drawing a blue marble, then make your choice. In the second half of the game you also see how another participant chose in the same lottery before you choose. Points accumulate and are converted to a bonus at the end.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 40%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 40%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 40.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 70%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 89.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 80%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 80%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 35.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 45%.
+You rate how sure you are about that estimate as 43.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 45%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 45%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 45%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 70%.
+You rate how sure you are about that estimate as 63.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 65%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 65%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 25%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 25%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 25%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 25%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 22%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 15%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 20%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 59.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 70%.
+You rate how sure you are about that estimate as 80.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 70%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 70%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 78.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 10%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 10%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 26%.
+You rate how sure you are about that estimate as 57.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 31%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 31%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 31%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 31%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 65%.
+You rate how sure you are about that estimate as 68.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 65%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 86%.
+You rate how sure you are about that estimate as 76.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 95.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 80%.
+You rate how sure you are about that estimate as 74.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 80%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 75%.
+You rate how sure you are about that estimate as 65.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 75%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 75%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 57%.
+You rate how sure you are about that estimate as 65.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 57%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 57%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 57%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 57.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 71%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 80%.
+You rate how sure you are about that estimate as 80.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 80%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 64.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 26%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 25%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 40.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 75%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 75%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 75%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 12%.
+You rate how sure you are about that estimate as 66.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 12%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 12%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 24%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 24%.
+You rate how sure you are about that estimate as 72.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 24%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 65%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 65%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 74.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 80%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 80%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 70%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 70%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 70%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 57.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 29%.
+You rate how sure you are about that estimate as 65.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 70%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 68.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 65.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 41%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 31%.
+You rate how sure you are about that estimate as 72.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 80%.
+You rate how sure you are about that estimate as 91.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 80%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 80%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 74.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 10%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 10%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 40%.
+You rate how sure you are about that estimate as 77.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 45%.
+You rate how sure you are about that estimate as 41.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 45%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 88%.
+You rate how sure you are about that estimate as 77.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 7%.
+You rate how sure you are about that estimate as 77.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 80%.
+You rate how sure you are about that estimate as 82.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 80%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 69%.
+You rate how sure you are about that estimate as 82.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 69%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 69%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 72.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 50 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 40%.
+You rate how sure you are about that estimate as 72.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 73%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 74%.
+You rate how sure you are about that estimate as 63.
+You choose <mark title="human response">B</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 74%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 41%.
+You rate how sure you are about that estimate as 57.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 41%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 41%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 41%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 25%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 74.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 43%.
+You rate how sure you are about that estimate as 20.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 70%.
+You rate how sure you are about that estimate as 77.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 85%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 85%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 85%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 10%.
+You rate how sure you are about that estimate as 71.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 10%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 10%.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 35%.
+You rate how sure you are about that estimate as 61.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 28%.
+You rate how sure you are about that estimate as 21.
+You choose <mark title="human response">A</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 28%.
+You choose <mark title="human response">B</mark> (the risky jar). You win 20 points.</pre></div><div class="transcript" id="t2" hidden><pre>You are playing a lottery game. On each round you choose between two jars from which a random marble is drawn: a safe jar containing only blue marbles that always pays 5 points, and a risky jar containing both blue and red marbles that pays more (8, 20, or 50 points) but only if the marble you draw is blue. In this session you press B to choose the SAFE jar and A to choose the RISKY jar. On some rounds the risky jar&#x27;s winning chance is stated directly as a proportion of blue marbles in the jar; on other rounds you instead watch a brief sample of 9 marbles drawn from the jar and judge its chance from that sample, then rate how sure you are with a second slider. On every round you first set a slider (0-100) to estimate the percent chance of drawing a blue marble, then make your choice. In the second half of the game you also see how another participant chose in the same lottery before you choose. Points accumulate and are converted to a bonus at the end.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 52%.
+You rate how sure you are about that estimate as 55.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 62.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 38%.
+You rate how sure you are about that estimate as 53.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 38%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 55%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 55%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 55%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 60.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 25%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You rate how sure you are about that estimate as 67.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 40%.
+You rate how sure you are about that estimate as 68.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 59.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 46%.
+You rate how sure you are about that estimate as 56.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 46%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 68%.
+You rate how sure you are about that estimate as 62.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 68%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 41%.
+You rate how sure you are about that estimate as 54.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 63%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You rate how sure you are about that estimate as 63.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 34%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 8 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 73%.
+You rate how sure you are about that estimate as 80.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 65%.
+You rate how sure you are about that estimate as 67.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 18%.
+You rate how sure you are about that estimate as 84.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 18%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 26%.
+You rate how sure you are about that estimate as 79.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 26%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 62.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 63.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 29%.
+You rate how sure you are about that estimate as 64.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 43%.
+You rate how sure you are about that estimate as 57.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 21%.
+You rate how sure you are about that estimate as 67.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 24%.
+You rate how sure you are about that estimate as 61.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 46%.
+You rate how sure you are about that estimate as 56.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 54%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 54%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 57%.
+You rate how sure you are about that estimate as 60.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 57%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 15%.
+You rate how sure you are about that estimate as 71.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You rate how sure you are about that estimate as 57.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 42%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 67.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 8 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 62%.
+You rate how sure you are about that estimate as 63.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 11%.
+You rate how sure you are about that estimate as 75.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points.
+You estimate the chance of drawing a blue marble as 11%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 66%.
+You rate how sure you are about that estimate as 68.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 66%.
+You rate how sure you are about that estimate as 68.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 17%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 17%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 24%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 24%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 76.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 25%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 80.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 34%.
+You rate how sure you are about that estimate as 72.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 39%.
+You rate how sure you are about that estimate as 71.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 67%.
+You rate how sure you are about that estimate as 77.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 35%.
+You rate how sure you are about that estimate as 73.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 35%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 62%.
+You rate how sure you are about that estimate as 71.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 62%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 13%.
+You rate how sure you are about that estimate as 73.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 56%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 56%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 56%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 56%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 56%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 56%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 56%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 63%.
+You rate how sure you are about that estimate as 62.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 63%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 63%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 63%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 63%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 63%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 59%.
+You rate how sure you are about that estimate as 65.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 30%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 73%.
+You rate how sure you are about that estimate as 66.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 56%.
+You rate how sure you are about that estimate as 69.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 15%.
+You rate how sure you are about that estimate as 80.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 15%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 31%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 31%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You rate how sure you are about that estimate as 66.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 33%.
+You rate how sure you are about that estimate as 61.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 54%.
+You rate how sure you are about that estimate as 50.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 30%.
+You rate how sure you are about that estimate as 60.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 6 red and 3 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 39%.
+You rate how sure you are about that estimate as 63.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 40%.
+You rate how sure you are about that estimate as 58.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 7 red and 2 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 29%.
+You rate how sure you are about that estimate as 70.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 29%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 53%.
+You rate how sure you are about that estimate as 64.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 53%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 25%.
+You rate how sure you are about that estimate as 83.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 4 red and 5 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You rate how sure you are about that estimate as 72.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 12 of them blue, so it wins with probability 12%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 0 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 50%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+You see a sample of 2 red and 7 blue marbles drawn from the risky jar, which offers 20 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 64%.
+You rate how sure you are about that estimate as 78.
+You choose <mark title="human response">A</mark> (the risky jar). You win 20 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 38 of them blue, so it wins with probability 38%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 64%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 20 points if you draw blue, is shown with 100 marbles, 25 of them blue, so it wins with probability 25%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 64%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 64%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 50 points if you draw blue, is shown with 100 marbles, 68 of them blue, so it wins with probability 68%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 64%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 50 of them blue, so it wins with probability 50%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 64%.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+You see a sample of 3 red and 6 blue marbles drawn from the risky jar, which offers 50 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 60%.
+You rate how sure you are about that estimate as 78.
+You choose <mark title="human response">A</mark> (the risky jar). You win 50 points.
+You see a sample of 8 red and 1 blue marbles drawn from the risky jar, which offers 8 points if you draw blue; the safe jar always draws blue and pays 5 points. A peer previously chose the safe option.
+You estimate the chance of drawing a blue marble as 25%.
+You rate how sure you are about that estimate as 81.
+You choose <mark title="human response">B</mark> (the safe jar). You win 5 points.
+The risky jar, which offers 8 points if you draw blue, is shown with 100 marbles, 75 of them blue, so it wins with probability 75%. Choosing it risks drawing red for nothing. The safe jar always draws blue and pays 5 points. A peer previously chose the risky option.
+You estimate the chance of drawing a blue marble as 25%.
+You choose <mark title="human response">A</mark> (the risky jar). You win 8 points.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

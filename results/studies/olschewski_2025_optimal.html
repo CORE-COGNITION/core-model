@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>olschewski_2025_optimal</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / olschewski_2025_optimal</nav>
+<h1>olschewski_2025_optimal</h1>
+<p class="tags"><span class="chip paradigm">risky-choice</span> <span class="chip minor">psych-201</span></p>
+<p>Two preregistered online (Prolific) studies investigated how people allocate deliberation time to risky choices under opportunity costs. In Study 1 (exp0, N=127) participants rated 60 single lotteries and then chose between pairs of them, with the utility difference between the lotteries either known or unknown across blocked conditions; in Study 2 (exp1, N=240) they chose between lotteries under a manipulated opportunity cost, either with or without a time limit per block. Response type is a binary choice (Lottery A/B) with per-trial reaction times; the rating phase itself is not in the data, only the resulting ratings of each pair. The authors fit drift-diffusion models with constant versus collapsing decision bounds to ask whether decision-makers adaptively adjust their evidence-accumulation threshold to the environment&#x27;s cost structure.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">53,916</div><div class="tile-sub">5,148 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.445</div><div class="tile-sub">rank 1 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE</div><div class="tile-sub">test NLL (avg) 0.445</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr class="best"><td>CORE <span class="pill best-pill">best</span></td><td class="barcell" data-v="2291.1438" title="CORE: 2,291.1 nats"><span class="track"><span class="bar core" style="width:68.2%"></span></span><span class="num">2,291.1</span></td><td class="num" data-v="0.4451">0.4451</td><td class="num" data-v="5148">5,148</td><td class="num" data-v="0.4125">0.4125</td><td class="num" data-v="48768.0">48,768</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="2328.907" title="CORE (no prediction errors): 2,328.9 nats"><span class="track"><span class="bar core" style="width:69.3%"></span></span><span class="num">2,328.9</span></td><td class="num" data-v="0.4524">0.4524</td><td class="num" data-v="5148">5,148</td><td class="num" data-v="0.4162">0.4162</td><td class="num" data-v="48768.0">48,768</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="2292.8165" title="CORE (no phonemes): 2,292.8 nats"><span class="track"><span class="bar core" style="width:68.2%"></span></span><span class="num">2,292.8</span></td><td class="num" data-v="0.4454">0.4454</td><td class="num" data-v="5148">5,148</td><td class="num" data-v="0.4053">0.4053</td><td class="num" data-v="48768.0">48,768</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="2547.9753" title="CORE (no forgetting): 2,548.0 nats"><span class="track"><span class="bar core" style="width:75.8%"></span></span><span class="num">2,548.0</span></td><td class="num" data-v="0.4949">0.4949</td><td class="num" data-v="5148">5,148</td><td class="num" data-v="0.4541">0.4541</td><td class="num" data-v="48768.0">48,768</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="3360.7116" title="CORE (no hierarchy): 3,360.7 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">3,360.7</span></td><td class="num" data-v="0.6528">0.6528</td><td class="num" data-v="5148">5,148</td><td class="num" data-v="0.6417">0.6417</td><td class="num" data-v="48768.0">48,768</td></tr><tr><td>Transformer</td><td class="barcell" data-v="2847.1343" title="Transformer: 2,847.1 nats"><span class="track"><span class="bar base" style="width:84.7%"></span></span><span class="num">2,847.1</span></td><td class="num" data-v="0.5531">0.5531</td><td class="num" data-v="5148">5,148</td><td class="num" data-v="0.5569">0.5569</td><td class="num" data-v="48768.0">48,768</td></tr><tr><td>Centaur</td><td class="barcell" data-v="2936.0708" title="Centaur: 2,936.1 nats"><span class="track"><span class="bar base" style="width:87.4%"></span></span><span class="num">2,936.1</span></td><td class="num" data-v="0.5703">0.5703</td><td class="num" data-v="5148">5,148</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>RiskyChoice</td><td class="num">127</td><td class="num">20,964</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp1</td><td>RiskyChoice</td><td class="num">240</td><td class="num">32,952</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option><option value="t1">exp1 · all participants</option></select></label><div class="transcript" id="t0"><pre>You take part in a risky-choice experiment. Earlier you rated 60 lotteries on a scale from 1 (least attractive) to 7 (most attractive). Now you choose between pairs of lotteries. On each trial you see Lottery A and Lottery B. Press A to choose Lottery A, or press B to choose Lottery B. At the end, one trial is selected and the chosen lottery played out, paying a bonus in experimental pounds converted to sterling at 20 to 1.
+New block: all pairs in this block have the same rating difference of 1.0 and there is no time limit.
+Lottery A: 49 at 37%, or 92 at 63%. Lottery B: 70 at 38%, or 60 at 62%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 63 at 50%, or 58 at 50%. Lottery B: 47 at 34%, or 92 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 81 at 35%, or 70 at 65%. Lottery B: 47 at 34%, or 92 at 66%. You press <mark title="human response">A</mark>.
+Lottery A: 78 at 41%, or 73 at 59%. Lottery B: 88 at 35%, or 49 at 65%. You press <mark title="human response">A</mark>.
+Lottery A: 41 at 50%, or 31 at 50%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">B</mark>.
+Lottery A: 53 at 44%, or 42 at 56%. Lottery B: 24 at 50%, or 46 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 84 at 50%, or 44 at 50%. Lottery B: 45 at 50%, or 55 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 56 at 50%, or 37 at 50%. Lottery B: 88 at 35%, or 49 at 65%. You press <mark title="human response">B</mark>.
+Lottery A: 56 at 50%, or 37 at 50%. Lottery B: 81 at 37%, or 40 at 63%. You press <mark title="human response">B</mark>.
+Lottery A: 56 at 50%, or 37 at 50%. Lottery B: 53 at 40%, or 48 at 60%. You press <mark title="human response">B</mark>.
+Lottery A: 47 at 34%, or 92 at 66%. Lottery B: 82 at 27%, or 71 at 73%. You press <mark title="human response">B</mark>.
+Lottery A: 32 at 25%, or 56 at 75%. Lottery B: 35 at 50%, or 75 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 88 at 39%, or 67 at 61%. Lottery B: 35 at 50%, or 75 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 53 at 40%, or 48 at 60%. Lottery B: 45 at 50%, or 55 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 50 at 32%, or 55 at 68%. Lottery B: 48 at 35%, or 69 at 65%. You press <mark title="human response">B</mark>.
+Lottery A: 84 at 50%, or 44 at 50%. Lottery B: 82 at 50%, or 72 at 50%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 56 at 50%, or 51 at 50%. Lottery B: 88 at 35%, or 49 at 65%. You press <mark title="human response">B</mark>.
+Lottery A: 83 at 34%, or 43 at 66%. Lottery B: 81 at 37%, or 40 at 63%. You press <mark title="human response">A</mark>.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 39 at 34%, or 34 at 66%. You press <mark title="human response">A</mark>.
+Lottery A: 50 at 32%, or 55 at 68%. Lottery B: 47 at 50%, or 66 at 50%. You press <mark title="human response">A</mark>.
+New block: all pairs in this block have the same rating difference of 1.5 and there is no time limit.
+Lottery A: 32 at 32%, or 75 at 68%. Lottery B: 72 at 26%, or 60 at 74%. You press <mark title="human response">B</mark>.
+Lottery A: 95 at 26%, or 70 at 74%. Lottery B: 35 at 50%, or 75 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 83 at 34%, or 43 at 66%. Lottery B: 48 at 45%, or 58 at 55%. You press <mark title="human response">A</mark>.
+Lottery A: 20 at 25%, or 41 at 75%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 46 at 34%, or 69 at 66%. Lottery B: 56 at 50%, or 51 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 44 at 50%, or 49 at 50%. Lottery B: 56 at 50%, or 37 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 68 at 35%, or 47 at 65%. Lottery B: 72 at 26%, or 60 at 74%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 88 at 35%, or 49 at 65%. Lottery B: 22 at 39%, or 62 at 61%. You press <mark title="human response">B</mark>.
+Lottery A: 32 at 25%, or 56 at 75%. Lottery B: 81 at 37%, or 40 at 63%. You press <mark title="human response">B</mark>.
+Lottery A: 69 at 50%, or 59 at 50%. Lottery B: 46 at 34%, or 69 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 35 at 50%, or 75 at 50%. Lottery B: 72 at 26%, or 60 at 74%. You press <mark title="human response">A</mark>.
+Lottery A: 51 at 45%, or 56 at 55%. Lottery B: 32 at 32%, or 75 at 68%. You press <mark title="human response">B</mark>.
+Lottery A: 46 at 34%, or 69 at 66%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 63 at 50%, or 58 at 50%. Lottery B: 32 at 32%, or 75 at 68%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 82 at 50%, or 72 at 50%. Lottery B: 32 at 32%, or 75 at 68%. You press <mark title="human response">A</mark>.
+Lottery A: 73 at 50%, or 52 at 50%. Lottery B: 32 at 32%, or 75 at 68%. You press <mark title="human response">A</mark>.
+Lottery A: 32 at 32%, or 75 at 68%. Lottery B: 81 at 35%, or 70 at 65%. You press <mark title="human response">A</mark>.
+Lottery A: 33 at 37%, or 54 at 63%. Lottery B: 44 at 50%, or 49 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 39 at 34%, or 34 at 66%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 33 at 37%, or 54 at 63%. Lottery B: 59 at 50%, or 49 at 50%. You press <mark title="human response">B</mark>.
+New block: the pairs have varying rating differences, and a 90-second red timer counts down; the block ends when it reaches zero.
+Lottery A: 41 at 50%, or 31 at 50%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">B</mark>.
+Lottery A: 57 at 50%, or 16 at 50%. Lottery B: 33 at 37%, or 54 at 63%. You press <mark title="human response">B</mark>.
+Lottery A: 49 at 37%, or 92 at 63%. Lottery B: 82 at 50%, or 72 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 63 at 50%, or 58 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 28 at 34%, or 39 at 66%. Lottery B: 57 at 50%, or 16 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 56 at 50%, or 37 at 50%. Lottery B: 53 at 44%, or 42 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 79 at 31%, or 32 at 69%. Lottery B: 39 at 34%, or 34 at 66%. You press <mark title="human response">A</mark>.
+Lottery A: 24 at 50%, or 46 at 50%. Lottery B: 2 at 26%, or 49 at 74%. You press <mark title="human response">A</mark>.
+Lottery A: 35 at 50%, or 75 at 50%. Lottery B: 69 at 50%, or 59 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 51 at 45%, or 56 at 55%. You press <mark title="human response">B</mark>.
+Lottery A: 28 at 34%, or 39 at 66%. Lottery B: 52 at 50%, or 94 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 66 at 42%, or 61 at 56%. You press <mark title="human response">B</mark>.
+Lottery A: 69 at 50%, or 59 at 50%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">B</mark>.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 53 at 44%, or 42 at 56%. You press <mark title="human response">B</mark>.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 84 at 50%, or 44 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 56 at 50%, or 37 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 46 at 36%, or 27 at 64%. You press <mark title="human response">A</mark>.
+Lottery A: 73 at 50%, or 52 at 50%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 72 at 26%, or 60 at 74%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 50 at 32%, or 55 at 68%. Lottery B: 51 at 45%, or 56 at 55%. You press <mark title="human response">A</mark>.
+Lottery A: 88 at 39%, or 67 at 61%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 32 at 32%, or 75 at 68%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">B</mark>.
+Lottery A: 56 at 50%, or 37 at 50%. Lottery B: 72 at 28%, or 48 at 72%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 53 at 44%, or 42 at 56%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 81 at 37%, or 40 at 63%. Lottery B: 66 at 42%, or 61 at 56%. You press <mark title="human response">A</mark>.
+The timer reaches zero; the remaining 7 lottery pairs of this block are not shown.
+New block: the pairs have varying rating differences, and a 90-second red timer counts down; the block ends when it reaches zero.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 56 at 50%, or 51 at 50%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 35 at 50%, or 75 at 50%. Lottery B: 70 at 38%, or 60 at 62%. You press <mark title="human response">B</mark>.
+Lottery A: 57 at 50%, or 16 at 50%. Lottery B: 56 at 50%, or 37 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 84 at 50%, or 44 at 50%. Lottery B: 56 at 50%, or 51 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 72 at 28%, or 48 at 72%. You press <mark title="human response">B</mark>.
+Lottery A: 49 at 37%, or 92 at 63%. Lottery B: 86 at 50%, or 66 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 68 at 35%, or 47 at 65%. Lottery B: 48 at 45%, or 58 at 55%. You press <mark title="human response">B</mark>.
+Lottery A: 58 at 28%, or 63 at 71%. Lottery B: 68 at 35%, or 47 at 65%. You press <mark title="human response">B</mark>.
+Lottery A: 2 at 26%, or 49 at 74%. Lottery B: 39 at 34%, or 34 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 53 at 40%, or 48 at 60%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">B</mark>.
+Lottery A: 48 at 45%, or 58 at 55%. Lottery B: 46 at 36%, or 27 at 64%. You press <mark title="human response">A</mark>.
+Lottery A: 2 at 26%, or 49 at 74%. Lottery B: 41 at 50%, or 31 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 79 at 31%, or 32 at 69%. Lottery B: 63 at 50%, or 58 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 78 at 41%, or 73 at 59%. Lottery B: 47 at 34%, or 92 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 52 at 50%, or 94 at 50%. Lottery B: 46 at 34%, or 69 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 13 at 42%, or 52 at 56%. Lottery B: 33 at 45%, or 38 at 55%. You press <mark title="human response">A</mark>.
+Lottery A: 24 at 50%, or 46 at 50%. Lottery B: 57 at 50%, or 16 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 51 at 45%, or 56 at 55%. Lottery B: 35 at 50%, or 75 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 79 at 31%, or 32 at 69%. Lottery B: 33 at 45%, or 38 at 55%. You press <mark title="human response">A</mark>.
+Lottery A: 32 at 32%, or 75 at 68%. Lottery B: 77 at 50%, or 72 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 32 at 25%, or 56 at 75%. Lottery B: 84 at 50%, or 44 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 68 at 35%, or 47 at 65%. Lottery B: 56 at 50%, or 51 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 79 at 31%, or 32 at 69%. Lottery B: 78 at 41%, or 73 at 59%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 57 at 50%, or 16 at 50%. Lottery B: 46 at 34%, or 69 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 78 at 28%, or 72 at 71%. Lottery B: 47 at 34%, or 92 at 66%. You press <mark title="human response">A</mark>.
+The timer reaches zero; the remaining 7 lottery pairs of this block are not shown.
+New block: all pairs in this block have the same rating difference of 2.5 and there is no time limit.
+Lottery A: 52 at 50%, or 94 at 50%. Lottery B: 32 at 25%, or 56 at 75%. You press <mark title="human response">A</mark>.
+Lottery A: 66 at 42%, or 61 at 56%. Lottery B: 22 at 39%, or 62 at 61%. You press <mark title="human response">A</mark>.
+Lottery A: 56 at 50%, or 37 at 50%. Lottery B: 2 at 26%, or 49 at 74%. You press <mark title="human response">A</mark>.
+Lottery A: 72 at 26%, or 60 at 74%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">B</mark>.
+Lottery A: 83 at 34%, or 43 at 66%. Lottery B: 2 at 26%, or 49 at 74%. You press <mark title="human response">A</mark>.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 56 at 50%, or 51 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 48 at 35%, or 69 at 65%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 66 at 42%, or 61 at 56%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">A</mark>.
+Lottery A: 79 at 31%, or 32 at 69%. Lottery B: 56 at 50%, or 51 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 79 at 31%, or 32 at 69%. Lottery B: 95 at 26%, or 70 at 74%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 45 at 50%, or 55 at 50%. Lottery B: 22 at 39%, or 62 at 61%. You press <mark title="human response">A</mark>.
+Lottery A: 51 at 45%, or 56 at 55%. Lottery B: 22 at 39%, or 62 at 61%. You press <mark title="human response">A</mark>.
+Lottery A: 47 at 50%, or 66 at 50%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 53 at 33%, or 43 at 67%. You press <mark title="human response">B</mark>.
+Lottery A: 13 at 42%, or 52 at 56%. Lottery B: 39 at 34%, or 34 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 2 at 26%, or 49 at 74%. Lottery B: 28 at 39%, or 38 at 61%. You press <mark title="human response">B</mark>.
+Lottery A: 32 at 25%, or 56 at 75%. Lottery B: 73 at 50%, or 52 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 79 at 31%, or 32 at 69%. Lottery B: 58 at 28%, or 63 at 71%. You press <mark title="human response">B</mark>.
+Lottery A: 70 at 38%, or 60 at 62%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">A</mark>.
+Lottery A: 82 at 27%, or 71 at 73%. Lottery B: 79 at 31%, or 32 at 69%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+New block: all pairs in this block have the same rating difference of 3.0 and there is no time limit.
+Lottery A: 46 at 36%, or 27 at 64%. Lottery B: 53 at 33%, or 43 at 67%. You press <mark title="human response">B</mark>.
+Lottery A: 53 at 40%, or 48 at 60%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 13 at 42%, or 52 at 56%. Lottery B: 84 at 50%, or 44 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 48 at 35%, or 69 at 65%. Lottery B: 46 at 36%, or 27 at 64%. You press <mark title="human response">A</mark>.
+Lottery A: 88 at 35%, or 49 at 65%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 95 at 26%, or 70 at 74%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 57 at 50%, or 16 at 50%. Lottery B: 50 at 32%, or 55 at 68%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 2 at 26%, or 49 at 74%. Lottery B: 45 at 27%, or 51 at 73%. You press <mark title="human response">B</mark>.
+Lottery A: 82 at 50%, or 72 at 50%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 28 at 34%, or 39 at 66%. Lottery B: 82 at 50%, or 72 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 35 at 50%, or 75 at 50%. Lottery B: 2 at 26%, or 49 at 74%. You press <mark title="human response">A</mark>.
+Lottery A: 49 at 37%, or 92 at 63%. Lottery B: 13 at 42%, or 52 at 56%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 28 at 34%, or 39 at 66%. Lottery B: 56 at 50%, or 51 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 57 at 50%, or 16 at 50%. Lottery B: 41 at 50%, or 31 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 44 at 50%, or 49 at 50%. Lottery B: 46 at 36%, or 27 at 64%. You press <mark title="human response">A</mark>.
+Lottery A: 46 at 34%, or 69 at 66%. Lottery B: 2 at 26%, or 49 at 74%. You press <mark title="human response">A</mark>.
+Lottery A: 32 at 32%, or 75 at 68%. Lottery B: 57 at 50%, or 16 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 46 at 36%, or 27 at 64%. Lottery B: 47 at 50%, or 66 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 33 at 45%, or 38 at 55%. Lottery B: 57 at 50%, or 16 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 2 at 26%, or 49 at 74%. Lottery B: 33 at 45%, or 38 at 55%. You press <mark title="human response">B</mark>.
+New block: the pairs have varying rating differences, and a 90-second red timer counts down; the block ends when it reaches zero.
+Lottery A: 32 at 32%, or 75 at 68%. Lottery B: 52 at 50%, or 94 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 68 at 35%, or 47 at 65%. Lottery B: 51 at 45%, or 56 at 55%. You press <mark title="human response">B</mark>.
+Lottery A: 49 at 37%, or 92 at 63%. Lottery B: 81 at 35%, or 70 at 65%. You press <mark title="human response">B</mark>.
+Lottery A: 79 at 31%, or 32 at 69%. Lottery B: 51 at 45%, or 56 at 55%. You press <mark title="human response">B</mark>.
+Lottery A: 45 at 27%, or 51 at 73%. Lottery B: 28 at 50%, or 70 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 68 at 35%, or 47 at 65%. Lottery B: 2 at 26%, or 49 at 74%. You press <mark title="human response">A</mark>.
+Lottery A: 53 at 40%, or 48 at 60%. Lottery B: 32 at 25%, or 56 at 75%. You press <mark title="human response">A</mark>.
+Lottery A: 51 at 45%, or 56 at 55%. Lottery B: 47 at 27%, or 58 at 73%. You press <mark title="human response">A</mark>.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 70 at 38%, or 60 at 62%. You press <mark title="human response">B</mark>.
+Lottery A: 81 at 37%, or 40 at 63%. Lottery B: 69 at 50%, or 59 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 56 at 50%, or 51 at 50%. Lottery B: 32 at 32%, or 75 at 68%. You press <mark title="human response">A</mark>.
+Lottery A: 28 at 34%, or 39 at 66%. Lottery B: 86 at 50%, or 66 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 83 at 34%, or 43 at 66%. Lottery B: 72 at 28%, or 48 at 72%. You press <mark title="human response">A</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 52 at 50%, or 94 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 52 at 50%, or 94 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 47 at 34%, or 92 at 66%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 24 at 50%, or 46 at 50%. Lottery B: 37 at 50%, or 32 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 86 at 50%, or 66 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 57 at 50%, or 16 at 50%. Lottery B: 83 at 34%, or 43 at 66%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 88 at 35%, or 49 at 65%. Lottery B: 73 at 50%, or 52 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 57 at 50%, or 16 at 50%. Lottery B: 35 at 50%, or 75 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 33 at 37%, or 54 at 63%. Lottery B: 47 at 50%, or 66 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 47 at 34%, or 92 at 66%. Lottery B: 72 at 26%, or 60 at 74%. You press <mark title="human response">A</mark>.
+Lottery A: 35 at 50%, or 75 at 50%. Lottery B: 20 at 25%, or 41 at 75%. You press <mark title="human response">A</mark>.
+The timer reaches zero; the remaining 8 lottery pairs of this block are not shown.
+New block: the pairs have varying rating differences, and a 90-second red timer counts down; the block ends when it reaches zero.
+Lottery A: 47 at 50%, or 66 at 50%. Lottery B: 32 at 32%, or 75 at 68%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 22 at 39%, or 62 at 61%. Lottery B: 73 at 50%, or 52 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 45 at 50%, or 55 at 50%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">B</mark>.
+Lottery A: 56 at 50%, or 51 at 50%. Lottery B: 81 at 37%, or 40 at 63%. You press <mark title="human response">B</mark>.
+Lottery A: 45 at 27%, or 51 at 73%. Lottery B: 57 at 50%, or 16 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 47 at 27%, or 58 at 73%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 52 at 50%, or 94 at 50%. Lottery B: 49 at 37%, or 92 at 63%. You press <mark title="human response">A</mark>.
+Lottery A: 39 at 34%, or 34 at 66%. Lottery B: 57 at 50%, or 16 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 63 at 50%, or 58 at 50%. Lottery B: 28 at 34%, or 39 at 66%. You press <mark title="human response">A</mark>.
+Lottery A: 44 at 50%, or 49 at 50%. Lottery B: 83 at 34%, or 43 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 81 at 37%, or 40 at 63%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 77 at 50%, or 72 at 50%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">A</mark>.
+Lottery A: 41 at 50%, or 31 at 50%. Lottery B: 22 at 39%, or 62 at 61%. You press <mark title="human response">A</mark>.
+Lottery A: 82 at 27%, or 71 at 73%. Lottery B: 32 at 32%, or 75 at 68%. You press <mark title="human response">A</mark>.
+Lottery A: 32 at 25%, or 56 at 75%. Lottery B: 45 at 50%, or 55 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 73 at 50%, or 52 at 50%. Lottery B: 50 at 32%, or 55 at 68%. You press <mark title="human response">A</mark>.
+Lottery A: 45 at 27%, or 51 at 73%. Lottery B: 59 at 50%, or 49 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 88 at 35%, or 49 at 65%. Lottery B: 32 at 25%, or 56 at 75%. You press <mark title="human response">A</mark>.
+Lottery A: 68 at 35%, or 47 at 65%. Lottery B: 13 at 42%, or 52 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 49 at 37%, or 92 at 63%. Lottery B: 73 at 50%, or 52 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 81 at 35%, or 70 at 65%. You press <mark title="human response">B</mark>.
+Lottery A: 28 at 50%, or 70 at 50%. Lottery B: 69 at 50%, or 59 at 50%. You press <mark title="human response">B</mark>.
+Lottery A: 68 at 35%, or 47 at 65%. Lottery B: 57 at 50%, or 16 at 50%. You press <mark title="human response">A</mark>.
+Lottery A: 37 at 50%, or 32 at 50%. Lottery B: 28 at 39%, or 38 at 61%. You press <mark title="human response">A</mark>.
+Lottery A: 78 at 28%, or 72 at 71%. Lottery B: 79 at 31%, or 32 at 69%. You press <mark title="human response">A</mark>.
+Lottery A: 56 at 50%, or 37 at 50%. Lottery B: 53 at 33%, or 43 at 67%. You press <mark title="human response">B</mark>.
+Lottery A: 46 at 36%, or 27 at 64%. Lottery B: 24 at 50%, or 46 at 50%. You press <mark title="human response">A</mark>.
+The timer reaches zero; the remaining 5 lottery pairs of this block are not shown.
+At the end, one trial was selected for payment and the chosen lottery played out. Your total bonus was 72 experimental pounds.</pre></div><div class="transcript" id="t1" hidden><pre>You take part in a risky-choice experiment. Earlier you rated pairs of lotteries on a sliding scale from -100 (preferring the left lottery) to +100 (preferring the right). Now you choose between pairs of lotteries. On each trial you see Lottery A and Lottery B. Press A to choose Lottery A, or press B to choose Lottery B. One trial is selected at the end and paid as a bonus in experimental pounds converted to sterling at 20 to 1.
+New block: an 80-second timer counts down and the block ends when it reaches zero.
+Lottery A: 55 at 62%, or 73 at 38%. Lottery B: 75 at 53%, or 32 at 47%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 17 at 5%, or 24 at 95%. Lottery B: 63 at 8%, or 11 at 92%. You press <mark title="human response">B</mark>.
+Lottery A: 93 at 66%, or 13 at 34%. Lottery B: 20 at 65%, or 86 at 35%. You press <mark title="human response">A</mark>.
+Lottery A: 14 at 58%, or 88 at 42%. Lottery B: 12 at 34%, or 96 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 86 at 1%, or 26 at 99%. Lottery B: 77 at 10%, or 37 at 90%. You press <mark title="human response">A</mark>.
+Lottery A: 99 at 1%, or 28 at 99%. Lottery B: 53 at 93%, or 38 at 7%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 89 at 86%, or 92 at 14%. Lottery B: 29 at 10%, or 94 at 90%. You press <mark title="human response">B</mark>.
+Lottery A: 94 at 95%, or 24 at 5%. Lottery B: 85 at 96%, or 35 at 4%. You press <mark title="human response">A</mark>.
+Lottery A: 61 at 43%, or 76 at 57%. Lottery B: 57 at 32%, or 98 at 68%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 94 at 51%, or 14 at 49%. Lottery B: 93 at 57%, or 25 at 43%. You press <mark title="human response">B</mark>.
+Lottery A: 35 at 31%, or 45 at 69%. Lottery B: 21 at 44%, or 54 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 39 at 47%, or 60 at 53%. Lottery B: 36 at 54%, or 70 at 46%. You press <mark title="human response">B</mark>.
+Lottery A: 67 at 12%, or 41 at 88%. Lottery B: 36 at 98%, or 75 at 2%. The block timer runs out before you respond.
+The timer reaches zero; the remaining 7 lottery pairs of this block are not shown.
+New block: an 80-second timer counts down and the block ends when it reaches zero.
+Lottery A: 61 at 97%, or 80 at 3%. Lottery B: 12 at 15%, or 97 at 85%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 13 at 93%, or 85 at 7%. Lottery B: 36 at 88%, or 75 at 12%. You press <mark title="human response">B</mark>.
+Lottery A: 14 at 31%, or 73 at 69%. Lottery B: 15 at 45%, or 46 at 55%. You press <mark title="human response">A</mark>.
+Lottery A: 68 at 69%, or 46 at 31%. Lottery B: 64 at 68%, or 49 at 32%. You press <mark title="human response">A</mark>.
+Lottery A: 43 at 13%, or 94 at 87%. Lottery B: 74 at 85%, or 58 at 15%. You press <mark title="human response">A</mark>.
+Lottery A: 84 at 49%, or 60 at 51%. Lottery B: 99 at 39%, or 17 at 61%. You press <mark title="human response">B</mark>.
+Lottery A: 87 at 88%, or 83 at 12%. Lottery B: 82 at 89%, or 96 at 11%. You press <mark title="human response">B</mark>.
+Lottery A: 39 at 94%, or 33 at 6%. Lottery B: 97 at 14%, or 11 at 86%. You press <mark title="human response">A</mark>.
+Lottery A: 32 at 92%, or 96 at 8%. Lottery B: 34 at 88%, or 51 at 12%. You press <mark title="human response">A</mark>.
+Lottery A: 99 at 35%, or 15 at 65%. Lottery B: 64 at 70%, or 47 at 30%. The block timer runs out before you respond.
+The timer reaches zero; the remaining 10 lottery pairs of this block are not shown.
+New block: no time limit.
+Lottery A: 61 at 43%, or 76 at 57%. Lottery B: 57 at 32%, or 98 at 68%. You press <mark title="human response">B</mark>.
+Lottery A: 99 at 1%, or 28 at 99%. Lottery B: 53 at 93%, or 38 at 7%. You press <mark title="human response">B</mark>.
+Lottery A: 32 at 68%, or 98 at 32%. Lottery B: 40 at 37%, or 97 at 63%. You press <mark title="human response">B</mark>.
+Lottery A: 14 at 58%, or 88 at 42%. Lottery B: 12 at 34%, or 96 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 94 at 51%, or 14 at 49%. Lottery B: 93 at 57%, or 25 at 43%. You press <mark title="human response">B</mark>.
+Lottery A: 86 at 1%, or 26 at 99%. Lottery B: 77 at 10%, or 37 at 90%. You press <mark title="human response">B</mark>.
+Lottery A: 17 at 64%, or 99 at 36%. Lottery B: 63 at 34%, or 42 at 66%. You press <mark title="human response">B</mark>.
+Lottery A: 93 at 66%, or 13 at 34%. Lottery B: 20 at 65%, or 86 at 35%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 67 at 12%, or 41 at 88%. Lottery B: 36 at 98%, or 75 at 2%. You press <mark title="human response">B</mark>.
+Lottery A: 89 at 86%, or 92 at 14%. Lottery B: 29 at 10%, or 94 at 90%. You press <mark title="human response">A</mark>.
+Lottery A: 55 at 62%, or 73 at 38%. Lottery B: 75 at 53%, or 32 at 47%. You press <mark title="human response">A</mark>.
+Lottery A: 35 at 31%, or 45 at 69%. Lottery B: 21 at 44%, or 54 at 56%. You press <mark title="human response">A</mark>.
+Lottery A: 39 at 47%, or 60 at 53%. Lottery B: 36 at 54%, or 70 at 46%. You press <mark title="human response">B</mark>.
+Lottery A: 17 at 5%, or 24 at 95%. Lottery B: 63 at 8%, or 11 at 92%. You press <mark title="human response">B</mark>.
+Lottery A: 27 at 1%, or 72 at 99%. Lottery B: 39 at 14%, or 60 at 86%. You press <mark title="human response">A</mark>.
+Lottery A: 65 at 9%, or 50 at 91%. Lottery B: 21 at 86%, or 67 at 14%. You press <mark title="human response">A</mark>.
+Lottery A: 25 at 15%, or 72 at 85%. Lottery B: 75 at 96%, or 18 at 4%. You press <mark title="human response">B</mark>.
+Lottery A: 94 at 95%, or 24 at 5%. Lottery B: 85 at 96%, or 35 at 4%. You press <mark title="human response">A</mark>.
+Lottery A: 20 at 91%, or 38 at 9%. Lottery B: 39 at 85%, or 17 at 15%. You press <mark title="human response">B</mark>.
+Lottery A: 42 at 62%, or 53 at 38%. Lottery B: 19 at 63%, or 72 at 37%. You press <mark title="human response">A</mark>.
+New block: no time limit.
+Lottery A: 87 at 88%, or 83 at 12%. Lottery B: 82 at 89%, or 96 at 11%. You press <mark title="human response">B</mark>.
+Lottery A: 11 at 42%, or 97 at 58%. Lottery B: 93 at 62%, or 46 at 38%. You press <mark title="human response">B</mark>.
+Lottery A: 68 at 69%, or 46 at 31%. Lottery B: 64 at 68%, or 49 at 32%. You press <mark title="human response">A</mark>.
+Lottery A: 96 at 67%, or 14 at 33%. Lottery B: 57 at 57%, or 78 at 43%. You press <mark title="human response">B</mark>.
+Lottery A: 44 at 12%, or 65 at 88%. Lottery B: 64 at 14%, or 60 at 86%. You press <mark title="human response">B</mark>.
+Lottery A: 13 at 93%, or 85 at 7%. Lottery B: 36 at 88%, or 75 at 12%. You press <mark title="human response">B</mark>.
+Lottery A: 61 at 97%, or 80 at 3%. Lottery B: 12 at 15%, or 97 at 85%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 37 at 69%, or 33 at 31%. Lottery B: 32 at 57%, or 74 at 43%. You press <mark title="human response">B</mark>.
+Lottery A: 99 at 35%, or 15 at 65%. Lottery B: 64 at 70%, or 47 at 30%. You press <mark title="human response">A</mark>.
+Lottery A: 43 at 13%, or 94 at 87%. Lottery B: 74 at 85%, or 58 at 15%. You press <mark title="human response">A</mark>.
+Lottery A: 13 at 93%, or 98 at 7%. Lottery B: 42 at 13%, or 33 at 87%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 84 at 49%, or 60 at 51%. Lottery B: 99 at 39%, or 17 at 61%. You press <mark title="human response">A</mark>.
+Lottery A: 19 at 55%, or 92 at 45%. Lottery B: 87 at 69%, or 22 at 31%. You press <mark title="human response">B</mark>.
+Lottery A: 39 at 94%, or 33 at 6%. Lottery B: 97 at 14%, or 11 at 86%. You press <mark title="human response">A</mark>.
+Lottery A: 14 at 31%, or 73 at 69%. Lottery B: 15 at 45%, or 46 at 55%. You press <mark title="human response">A</mark>.
+Lottery A: 73 at 48%, or 20 at 52%. Lottery B: 72 at 31%, or 21 at 69%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 46 at 86%, or 69 at 14%. Lottery B: 96 at 10%, or 28 at 90%. You press <mark title="human response">B</mark>.
+Lottery A: 51 at 31%, or 48 at 69%. Lottery B: 62 at 63%, or 20 at 37%. You press <mark title="human response">A</mark>.
+Lottery A: 32 at 92%, or 96 at 8%. Lottery B: 34 at 88%, or 51 at 12%. You press <mark title="human response">A</mark>.
+Lottery A: 66 at 93%, or 55 at 7%. Lottery B: 38 at 15%, or 98 at 85%. You press <mark title="human response">B</mark>.
+New block: an 80-second timer counts down and the block ends when it reaches zero.
+Lottery A: 45 at 60%, or 72 at 40%. Lottery B: 67 at 54%, or 47 at 46%. You press <mark title="human response">A</mark>.
+Lottery A: 11 at 13%, or 95 at 87%. Lottery B: 68 at 2%, or 76 at 98%. You press <mark title="human response">A</mark>.
+Lottery A: 54 at 12%, or 50 at 88%. Lottery B: 42 at 94%, or 60 at 6%. You press <mark title="human response">A</mark>.
+Lottery A: 85 at 91%, or 90 at 9%. Lottery B: 17 at 15%, or 99 at 85%. You press <mark title="human response">A</mark>.
+Lottery A: 79 at 33%, or 44 at 67%. Lottery B: 60 at 30%, or 51 at 70%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 47 at 60%, or 88 at 40%. Lottery B: 71 at 53%, or 86 at 47%. You press <mark title="human response">B</mark>.
+Lottery A: 70 at 93%, or 99 at 7%. Lottery B: 83 at 5%, or 88 at 95%. You press <mark title="human response">B</mark>.
+Lottery A: 63 at 95%, or 40 at 5%. Lottery B: 66 at 94%, or 31 at 6%. You press <mark title="human response">A</mark>.
+Lottery A: 75 at 10%, or 44 at 90%. Lottery B: 29 at 13%, or 76 at 87%. You press <mark title="human response">B</mark>.
+Lottery A: 20 at 67%, or 95 at 33%. Lottery B: 24 at 44%, or 89 at 56%. You press <mark title="human response">B</mark>.
+Lottery A: 37 at 4%, or 28 at 96%. Lottery B: 98 at 15%, or 13 at 85%. You press <mark title="human response">B</mark>.
+Lottery A: 96 at 99%, or 30 at 1%. Lottery B: 99 at 94%, or 18 at 6%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 19 at 30%, or 88 at 70%. Lottery B: 89 at 43%, or 12 at 57%. You press <mark title="human response">B</mark>.
+Lottery A: 34 at 45%, or 45 at 55%. Lottery B: 79 at 51%, or 14 at 49%. You press <mark title="human response">B</mark>.
+Lottery A: 22 at 40%, or 28 at 60%. Lottery B: 40 at 68%, or 21 at 32%. You press <mark title="human response">B</mark>.
+The timer reaches zero; the remaining 5 lottery pairs of this block are not shown.
+New block: an 80-second timer counts down and the block ends when it reaches zero.
+Lottery A: 62 at 45%, or 81 at 55%. Lottery B: 94 at 62%, or 18 at 38%. You press <mark title="human response">A</mark>.
+Lottery A: 94 at 40%, or 39 at 60%. Lottery B: 30 at 30%, or 95 at 70%. You press <mark title="human response">B</mark>.
+Lottery A: 98 at 14%, or 12 at 86%. Lottery B: 16 at 99%, or 96 at 1%. You press <mark title="human response">A</mark>.
+Lottery A: 99 at 35%, or 21 at 65%. Lottery B: 97 at 46%, or 48 at 54%. You press <mark title="human response">B</mark>.
+Lottery A: 53 at 94%, or 30 at 6%. Lottery B: 98 at 12%, or 20 at 88%. You press <mark title="human response">B</mark>.
+Lottery A: 94 at 15%, or 13 at 85%. Lottery B: 47 at 90%, or 52 at 10%. You press <mark title="human response">B</mark>.
+Lottery A: 33 at 56%, or 22 at 44%. Lottery B: 16 at 53%, or 91 at 47%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 89 at 48%, or 63 at 52%. Lottery B: 66 at 41%, or 69 at 59%. You press <mark title="human response">A</mark>.
+Lottery A: 87 at 48%, or 48 at 52%. Lottery B: 45 at 70%, or 94 at 30%. You press <mark title="human response">A</mark>.
+Lottery A: 86 at 92%, or 23 at 8%. Lottery B: 84 at 14%, or 71 at 86%. You press <mark title="human response">B</mark>.
+Lottery A: 34 at 86%, or 88 at 14%. Lottery B: 93 at 1%, or 17 at 99%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 28 at 12%, or 91 at 88%. Lottery B: 82 at 2%, or 68 at 98%. You press <mark title="human response">A</mark>.
+Lottery A: 48 at 67%, or 33 at 33%. Lottery B: 30 at 38%, or 88 at 62%. You press <mark title="human response">B</mark>.
+Lottery A: 80 at 42%, or 22 at 58%. Lottery B: 58 at 33%, or 74 at 67%. The block timer runs out before you respond.
+The timer reaches zero; the remaining 6 lottery pairs of this block are not shown.
+New block: no time limit.
+Lottery A: 19 at 30%, or 88 at 70%. Lottery B: 89 at 43%, or 12 at 57%. You press <mark title="human response">B</mark>.
+Lottery A: 20 at 67%, or 95 at 33%. Lottery B: 24 at 44%, or 89 at 56%. You press <mark title="human response">B</mark>.
+Lottery A: 85 at 91%, or 90 at 9%. Lottery B: 17 at 15%, or 99 at 85%. You press <mark title="human response">A</mark>.
+Lottery A: 45 at 60%, or 72 at 40%. Lottery B: 67 at 54%, or 47 at 46%. You press <mark title="human response">A</mark>.
+Lottery A: 22 at 40%, or 28 at 60%. Lottery B: 40 at 68%, or 21 at 32%. You press <mark title="human response">B</mark>.
+Lottery A: 47 at 60%, or 88 at 40%. Lottery B: 71 at 53%, or 86 at 47%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 11 at 13%, or 95 at 87%. Lottery B: 68 at 2%, or 76 at 98%. You press <mark title="human response">A</mark>.
+Lottery A: 63 at 95%, or 40 at 5%. Lottery B: 66 at 94%, or 31 at 6%. You press <mark title="human response">A</mark>.
+Lottery A: 54 at 12%, or 50 at 88%. Lottery B: 42 at 94%, or 60 at 6%. You press <mark title="human response">A</mark>.
+Lottery A: 58 at 9%, or 71 at 91%. Lottery B: 94 at 99%, or 26 at 1%. You press <mark title="human response">A</mark>.
+Lottery A: 70 at 93%, or 99 at 7%. Lottery B: 83 at 5%, or 88 at 95%. You press <mark title="human response">B</mark>.
+Lottery A: 91 at 43%, or 45 at 57%. Lottery B: 58 at 47%, or 54 at 53%. You press <mark title="human response">A</mark>.
+Lottery A: 34 at 45%, or 45 at 55%. Lottery B: 79 at 51%, or 14 at 49%. You press <mark title="human response">B</mark>.
+Lottery A: 17 at 67%, or 83 at 33%. Lottery B: 22 at 56%, or 27 at 44%. You press <mark title="human response">A</mark>.
+Lottery A: 96 at 99%, or 30 at 1%. Lottery B: 99 at 94%, or 18 at 6%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 37 at 4%, or 28 at 96%. Lottery B: 98 at 15%, or 13 at 85%. You press <mark title="human response">A</mark>.
+Lottery A: 12 at 15%, or 98 at 85%. Lottery B: 89 at 8%, or 94 at 92%. You press <mark title="human response">B</mark>.
+Lottery A: 64 at 43%, or 39 at 57%. Lottery B: 76 at 30%, or 36 at 70%. You press <mark title="human response">A</mark>.
+Lottery A: 75 at 10%, or 44 at 90%. Lottery B: 29 at 13%, or 76 at 87%. You press <mark title="human response">A</mark>.
+Lottery A: 79 at 33%, or 44 at 67%. Lottery B: 60 at 30%, or 51 at 70%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+New block: no time limit.
+Lottery A: 75 at 13%, or 16 at 87%. Lottery B: 38 at 9%, or 32 at 91%. You respond, but this trial was removed from the data set as one of your 5% fastest or slowest responses.
+Lottery A: 94 at 40%, or 39 at 60%. Lottery B: 30 at 30%, or 95 at 70%. You press <mark title="human response">A</mark>.
+Lottery A: 17 at 98%, or 78 at 2%. Lottery B: 20 at 99%, or 42 at 1%. You press <mark title="human response">B</mark>.
+Lottery A: 86 at 92%, or 23 at 8%. Lottery B: 84 at 14%, or 71 at 86%. You press <mark title="human response">B</mark>.
+Lottery A: 48 at 67%, or 33 at 33%. Lottery B: 30 at 38%, or 88 at 62%. You press <mark title="human response">B</mark>.
+Lottery A: 89 at 48%, or 63 at 52%. Lottery B: 66 at 41%, or 69 at 59%. You press <mark title="human response">A</mark>.
+Lottery A: 62 at 45%, or 81 at 55%. Lottery B: 94 at 62%, or 18 at 38%. You press <mark title="human response">A</mark>.
+Lottery A: 53 at 94%, or 30 at 6%. Lottery B: 98 at 12%, or 20 at 88%. You press <mark title="human response">A</mark>.
+Lottery A: 29 at 31%, or 78 at 69%. Lottery B: 55 at 36%, or 63 at 64%. You press <mark title="human response">B</mark>.
+Lottery A: 80 at 42%, or 22 at 58%. Lottery B: 58 at 33%, or 74 at 67%. You press <mark title="human response">B</mark>.
+Lottery A: 87 at 48%, or 48 at 52%. Lottery B: 45 at 70%, or 94 at 30%. You press <mark title="human response">B</mark>.
+Lottery A: 99 at 35%, or 21 at 65%. Lottery B: 97 at 46%, or 48 at 54%. You press <mark title="human response">B</mark>.
+Lottery A: 20 at 70%, or 91 at 30%. Lottery B: 97 at 48%, or 19 at 52%. You press <mark title="human response">B</mark>.
+Lottery A: 72 at 92%, or 68 at 8%. Lottery B: 19 at 15%, or 99 at 85%. You press <mark title="human response">A</mark>.
+Lottery A: 33 at 56%, or 22 at 44%. Lottery B: 16 at 53%, or 91 at 47%. You press <mark title="human response">A</mark>.
+Lottery A: 94 at 15%, or 13 at 85%. Lottery B: 47 at 90%, or 52 at 10%. You press <mark title="human response">B</mark>.
+Lottery A: 34 at 86%, or 88 at 14%. Lottery B: 93 at 1%, or 17 at 99%. You press <mark title="human response">A</mark>.
+Lottery A: 28 at 12%, or 91 at 88%. Lottery B: 82 at 2%, or 68 at 98%. You press <mark title="human response">B</mark>.
+Lottery A: 98 at 14%, or 12 at 86%. Lottery B: 16 at 99%, or 96 at 1%. You press <mark title="human response">A</mark>.
+Lottery A: 18 at 9%, or 96 at 91%. Lottery B: 88 at 97%, or 73 at 3%. You press <mark title="human response">B</mark>.
+At the end, one trial was selected for payment and the chosen lottery played out. Your total bonus was 26 experimental pounds.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

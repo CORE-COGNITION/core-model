@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cox_2018_information</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / cox_2018_information</nav>
+<h1>cox_2018_information</h1>
+<p class="tags"><span class="chip paradigm">memory</span> <span class="chip minor">psych-101</span></p>
+<p>A single large study (N=462 participants in this dataset) had each participant complete five episodic/semantic memory tasks: single-item recognition, associative recognition, cued recall, free recall, and lexical decision. Each task presents word pairs or single words across study and test phases; responses are old/new recognition decisions, recalled words, and lexical decisions, recorded with reaction times and subsequently classified as hits/FAs/CR/miss or recall categories. The research question is how shared cognitive processes and item information give rise to correlations across memory tasks, addressed via hierarchical Bayesian joint analysis and fitted drift-diffusion/logistic (Wiener) models. Memory performance was above chance across all five tasks.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">80,855</div><div class="tile-sub">8,180 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.563</div><div class="tile-sub">rank 2 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">Centaur</div><div class="tile-sub">test NLL (avg) 0.365</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="4605.9186" title="CORE: 4,605.9 nats"><span class="track"><span class="bar core" style="width:56.0%"></span></span><span class="num">4,605.9</span></td><td class="num" data-v="0.5631">0.5631</td><td class="num" data-v="8180">8,180</td><td class="num" data-v="0.5581">0.5581</td><td class="num" data-v="72675.0">72,675</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="4705.8537" title="CORE (no prediction errors): 4,705.9 nats"><span class="track"><span class="bar core" style="width:57.2%"></span></span><span class="num">4,705.9</span></td><td class="num" data-v="0.5753">0.5753</td><td class="num" data-v="8180">8,180</td><td class="num" data-v="0.5655">0.5655</td><td class="num" data-v="72675.0">72,675</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="8222.002" title="CORE (no phonemes): 8,222.0 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">8,222.0</span></td><td class="num" data-v="1.0051">1.0051</td><td class="num" data-v="8180">8,180</td><td class="num" data-v="0.0255">0.0255</td><td class="num" data-v="72675.0">72,675</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="5431.4023" title="CORE (no forgetting): 5,431.4 nats"><span class="track"><span class="bar core" style="width:66.1%"></span></span><span class="num">5,431.4</span></td><td class="num" data-v="0.664">0.6640</td><td class="num" data-v="8180">8,180</td><td class="num" data-v="0.6759">0.6759</td><td class="num" data-v="72675.0">72,675</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="5617.2946" title="CORE (no hierarchy): 5,617.3 nats"><span class="track"><span class="bar core" style="width:68.3%"></span></span><span class="num">5,617.3</span></td><td class="num" data-v="0.6867">0.6867</td><td class="num" data-v="8180">8,180</td><td class="num" data-v="0.6946">0.6946</td><td class="num" data-v="72675.0">72,675</td></tr><tr><td>Transformer</td><td class="barcell" data-v="5736.4723" title="Transformer: 5,736.5 nats"><span class="track"><span class="bar base" style="width:69.8%"></span></span><span class="num">5,736.5</span></td><td class="num" data-v="0.7013">0.7013</td><td class="num" data-v="8180">8,180</td><td class="num" data-v="0.3701">0.3701</td><td class="num" data-v="72675.0">72,675</td></tr><tr class="best"><td>Centaur <span class="pill best-pill">best</span></td><td class="barcell" data-v="2984.8867" title="Centaur: 2,984.9 nats"><span class="track"><span class="bar base" style="width:36.3%"></span></span><span class="num">2,984.9</span></td><td class="num" data-v="0.3649">0.3649</td><td class="num" data-v="8180">8,180</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>MemoryExperiment</td><td class="num">462</td><td class="num">80,855</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option></select></label><div class="transcript" id="t0"><pre>You are taking part in a memory experiment with five tasks: single-item recognition, associative recognition, cued recall, free recall, and lexical decision. Each task (except lexical decision) begins with a study phase in which 20 word pairs are presented one at a time, each for 2 seconds. Immediately after each pair you rate how associated the two words are on a scale from 1 to 9, by typing the number. The study phase is followed by a 45-second math distractor task, and then a memory test. Each of the five tasks is repeated three times, for 15 study/test blocks in total; the tasks appear in a different order each time.
+Block 1: Free recall.
+You study the word pair PURCHASE ESCAPE. You rate how associated the two words are (1-9): 1.
+You study the word pair COMPOSED SLIGHT. You rate how associated the two words are (1-9): 1.
+You study the word pair LOAD TRIAL. You rate how associated the two words are (1-9): 1.
+You study the word pair COVERS NOTED. You rate how associated the two words are (1-9): 1.
+You study the word pair RELIGION STAGES. You rate how associated the two words are (1-9): 4.
+You study the word pair TYPICAL CONTRACT. You rate how associated the two words are (1-9): 6.
+You study the word pair PINK ANNOUNCED. You rate how associated the two words are (1-9): 1.
+You study the word pair ASSIGNED POUNDS. You rate how associated the two words are (1-9): 1.
+You study the word pair HONOR TRADITIONAL. You rate how associated the two words are (1-9): 6.
+You study the word pair COMPUTER INSECTS. You rate how associated the two words are (1-9): 1.
+You study the word pair EXCLAIMED SEEDS. You rate how associated the two words are (1-9): 2.
+You study the word pair YELLED PERIODS. You rate how associated the two words are (1-9): 3.
+You study the word pair MOM SOCIETIES. You rate how associated the two words are (1-9): 2.
+You study the word pair TOWARDS CLASSIFIED. You rate how associated the two words are (1-9): 1.
+You study the word pair INDICATE FEATURE. You rate how associated the two words are (1-9): 6.
+You study the word pair MENTAL CIVILIZATION. You rate how associated the two words are (1-9): 2.
+You study the word pair UNIVERSE HEARING. You rate how associated the two words are (1-9): 1.
+You study the word pair CULTURAL CHOSE. You rate how associated the two words are (1-9): 1.
+You study the word pair DISCOVERY EMPLOYEES. You rate how associated the two words are (1-9): 1.
+You study the word pair SCIENTIST DETAIL. You rate how associated the two words are (1-9): 7.
+Free recall test: type as many words from the study list as you can remember.
+You type pink.
+You type computer.
+You type insects.
+You type trail.
+You type religion.
+You type contracts.
+You type honor.
+You type companies.
+You type tradition.
+You do not recall PURCHASE.
+You do not recall COMPOSED.
+You do not recall LOAD.
+You do not recall COVERS.
+You do not recall TYPICAL.
+You do not recall ASSIGNED.
+You do not recall EXCLAIMED.
+You do not recall YELLED.
+You do not recall MOM.
+You do not recall TOWARDS.
+You do not recall INDICATE.
+You do not recall MENTAL.
+You do not recall UNIVERSE.
+You do not recall CULTURAL.
+You do not recall DISCOVERY.
+You do not recall SCIENTIST.
+You do not recall ESCAPE.
+You do not recall SLIGHT.
+You do not recall TRIAL.
+You do not recall NOTED.
+You do not recall STAGES.
+You do not recall CONTRACT.
+You do not recall ANNOUNCED.
+You do not recall POUNDS.
+You do not recall TRADITIONAL.
+You do not recall SEEDS.
+You do not recall PERIODS.
+You do not recall SOCIETIES.
+You do not recall CLASSIFIED.
+You do not recall FEATURE.
+You do not recall CIVILIZATION.
+You do not recall HEARING.
+You do not recall CHOSE.
+You do not recall EMPLOYEES.
+You do not recall DETAIL.
+Block 2: Single item recognition.
+You study the word pair NUMEROUS PLANTED. You rate how associated the two words are (1-9): 1.
+You study the word pair CREDIT COTTON. You rate how associated the two words are (1-9): 1.
+You study the word pair JOY STRESS. You rate how associated the two words are (1-9): 5.
+You study the word pair TECHNIQUE CLOUD. You rate how associated the two words are (1-9): 1.
+You study the word pair VILLAGES RIDING. You rate how associated the two words are (1-9): 5.
+You study the word pair EARN ELECTRONS. You rate how associated the two words are (1-9): 1.
+You study the word pair SOUGHT GOLDEN. You rate how associated the two words are (1-9): 2.
+You study the word pair FLEW DIOXIDE. You rate how associated the two words are (1-9): 1.
+You study the word pair HUNT MARRIAGE. You rate how associated the two words are (1-9): 1.
+You study the word pair FINANCIAL FULLY. You rate how associated the two words are (1-9): 6.
+You study the word pair GATE WONDERFUL. You rate how associated the two words are (1-9): 1.
+You study the word pair FLOWS REPORTS. You rate how associated the two words are (1-9): 7.
+You study the word pair POLITICS WIRE. You rate how associated the two words are (1-9): 1.
+You study the word pair MINDS POURED. You rate how associated the two words are (1-9): 4.
+You study the word pair WAVE SHADOW. You rate how associated the two words are (1-9): 1.
+You study the word pair ACID ARRANGED. You rate how associated the two words are (1-9): 1.
+You study the word pair LOTS VICTORY. You rate how associated the two words are (1-9): 1.
+You study the word pair TAX POLLUTION. You rate how associated the two words are (1-9): 3.
+You study the word pair AGRICULTURE POTENTIAL. You rate how associated the two words are (1-9): 3.
+You study the word pair SHELTER RUBBER. You rate how associated the two words are (1-9): 2.
+Single-item recognition test: for each word, press Y if the word was on the list you just studied (old) or N if it was not (new).
+You see the word PRIDE. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word POTENTIAL. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word MIXTURE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word PLANTED. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word TRIBES. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word KNEES. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word COTTON. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word SHADOW. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word REPRESENTATIVES. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word GATE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word MINDS. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word JOY. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word IMPACT. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word SHELTER. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word AFFORD. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word BURIED. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word ARRANGED. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word SPENDING. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word EARN. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word ENJOYED. Was it on the list you just studied? <mark title="human response">N</mark>
+Block 3: Associative recognition.
+You study the word pair SENTENCES ROUTE. You rate how associated the two words are (1-9): 1.
+You study the word pair GERMAN NURSE. You rate how associated the two words are (1-9): 1.
+You study the word pair YARDS HELPFUL. You rate how associated the two words are (1-9): 1.
+You study the word pair ANALYSIS CONSIDERABLE. You rate how associated the two words are (1-9): 5.
+You study the word pair ACCIDENT STATEMENTS. You rate how associated the two words are (1-9): 5.
+You study the word pair TRAFFIC CHECKED. You rate how associated the two words are (1-9): 1.
+You study the word pair INTERIOR INTRODUCED. You rate how associated the two words are (1-9): 1.
+You study the word pair LANDED TOM. You rate how associated the two words are (1-9): 1.
+You study the word pair INTERNATIONAL VEGETABLES. You rate how associated the two words are (1-9): 1.
+You study the word pair BEACH ODD. You rate how associated the two words are (1-9): 1.
+You study the word pair BAG STANDS. You rate how associated the two words are (1-9): 1.
+You study the word pair MISSING FARMER. You rate how associated the two words are (1-9): 1.
+You study the word pair MEDICINE TOPIC. You rate how associated the two words are (1-9): 2.
+You study the word pair REMAINING FORMING. You rate how associated the two words are (1-9): 1.
+You study the word pair PRACTICAL REPEATED. You rate how associated the two words are (1-9): 3.
+You study the word pair PROGRESS MENTIONED. You rate how associated the two words are (1-9): 3.
+You study the word pair PROTECTED DRINKING. You rate how associated the two words are (1-9): 1.
+You study the word pair VITAL BARE. You rate how associated the two words are (1-9): 1.
+You study the word pair INFLUENCED TRADING. You rate how associated the two words are (1-9): 1.
+You study the word pair FOLLOWS DEEPLY. You rate how associated the two words are (1-9): 3.
+Associative recognition test: for each pair, press Y if the pair was studied together (old) or N if it is a rearranged, new pair.
+You see the pair PROGRESS MENTIONED. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair MEDICINE TRADING. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair VITAL TOPIC. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair FORMING REMAINING. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair DRINKING PROTECTED. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair NURSE GERMAN. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair INTERNATIONAL CONSIDERABLE. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair BEACH HELPFUL. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair PRACTICAL REPEATED. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair SENTENCES ROUTE. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair TOM YARDS. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair TRAFFIC DEEPLY. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair ACCIDENT STATEMENTS. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair STANDS BAG. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair LANDED VEGETABLES. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair ODD ANALYSIS. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair MISSING FARMER. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair CHECKED FOLLOWS. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair INFLUENCED BARE. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair INTERIOR INTRODUCED. Is this pair intact from study? <mark title="human response">Y</mark>
+Block 4: Cued recall.
+You study the word pair PILE GENERATION. You rate how associated the two words are (1-9): 1.
+You study the word pair ROYAL SEX. You rate how associated the two words are (1-9): 7.
+You study the word pair INSTRUCTIONS SECTIONS. You rate how associated the two words are (1-9): 7.
+You study the word pair PAPERS SMILING. You rate how associated the two words are (1-9): 1.
+You study the word pair PREVIOUS REASONABLE. You rate how associated the two words are (1-9): 6.
+You study the word pair CARRIES FINISH. You rate how associated the two words are (1-9): 1.
+You study the word pair SELECTION SHEET. You rate how associated the two words are (1-9): 6.
+You study the word pair ERA GOAL. You rate how associated the two words are (1-9): 6.
+You study the word pair PROCESSING HEIGHT. You rate how associated the two words are (1-9): 1.
+You study the word pair FORGOTTEN BADLY. You rate how associated the two words are (1-9): 4.
+You study the word pair CHRISTMAS OWNER. You rate how associated the two words are (1-9): 1.
+You study the word pair INDUSTRIES APPLICATION. You rate how associated the two words are (1-9): 1.
+You study the word pair POLICIES WRAPPED. You rate how associated the two words are (1-9): 2.
+You study the word pair FILM STONES. You rate how associated the two words are (1-9): 3.
+You study the word pair RARELY UNABLE. You rate how associated the two words are (1-9): 7.
+You study the word pair ELECTION RELATIVE. You rate how associated the two words are (1-9): 1.
+You study the word pair ADDRESS OCEANS. You rate how associated the two words are (1-9): 1.
+You study the word pair REALIZE SILENCE. You rate how associated the two words are (1-9): 1.
+You study the word pair PRESIDENTIAL UNKNOWN. You rate how associated the two words are (1-9): 2.
+You study the word pair SEAS FASHION. You rate how associated the two words are (1-9): 1.
+Cued recall test: for each cue word, type the other word from the studied pair. If you cannot recall it, click DON&#x27;T REMEMBER.
+Cue: PREVIOUS. You do not recall the partner word.
+Cue: PAPERS. You type flows.
+Cue: SEAS. You type flows.
+Cue: SELECTION. You type paper.
+Cue: INSTRUCTIONS. You type incites.
+Cue: POLICIES. You do not recall the partner word.
+Cue: CARRIES. You do not recall the partner word.
+Cue: FORGOTTEN. You do not recall the partner word.
+Cue: PROCESSING. You do not recall the partner word.
+Cue: ERA. You type honor.
+Cue: PILE. You type medow.
+Cue: CHRISTMAS. You do not recall the partner word.
+Cue: RARELY. You do not recall the partner word.
+Cue: INDUSTRIES. You do not recall the partner word.
+Cue: PRESIDENTIAL. You do not recall the partner word.
+Cue: ROYAL. You type sex.
+Cue: ADDRESS. You do not recall the partner word.
+Cue: REALIZE. You do not recall the partner word.
+Cue: ELECTION. You do not recall the partner word.
+Cue: FILM. You do not recall the partner word.
+Block 5: Lexical decision.
+Lexical decision test: for each letter string, press Y if it is a word or N if it is not a word. Respond as quickly as possible.
+You see the letter string KNOUS. Is it a word? <mark title="human response">N</mark>
+You see the letter string SYNNIRILITY. Is it a word? <mark title="human response">N</mark>
+You see the letter string SUPPORTED. Is it a word? <mark title="human response">Y</mark>
+You see the letter string TITLE. Is it a word? <mark title="human response">Y</mark>
+You see the letter string BERANG. Is it a word? <mark title="human response">N</mark>
+You see the letter string EIR. Is it a word? <mark title="human response">N</mark>
+You see the letter string DAT. Is it a word? <mark title="human response">N</mark>
+You see the letter string LIKES. Is it a word? <mark title="human response">Y</mark>
+You see the letter string SUFFICIENT. Is it a word? <mark title="human response">Y</mark>
+You see the letter string RAILSOUD. Is it a word? <mark title="human response">N</mark>
+You see the letter string EMPLAXIAS. Is it a word? <mark title="human response">N</mark>
+You see the letter string OBTAINED. Is it a word? <mark title="human response">Y</mark>
+You see the letter string DECIGIAN. Is it a word? <mark title="human response">N</mark>
+You see the letter string REFLECT. Is it a word? <mark title="human response">Y</mark>
+You see the letter string SECONDS. Is it a word? <mark title="human response">Y</mark>
+You see the letter string CONTINENT. Is it a word? <mark title="human response">Y</mark>
+You see the letter string DEBISE. Is it a word? <mark title="human response">N</mark>
+You see the letter string OCCASIONALLY. Is it a word? <mark title="human response">Y</mark>
+You see the letter string SPEAKER. Is it a word? <mark title="human response">Y</mark>
+You see the letter string ESCHASTE. Is it a word? <mark title="human response">N</mark>
+Block 6: Cued recall.
+You study the word pair APARTMENT COLUMN. You rate how associated the two words are (1-9): 5.
+You study the word pair REDUCE STOMACH. You rate how associated the two words are (1-9): 4.
+You study the word pair HARMFUL PRESS. You rate how associated the two words are (1-9): 8.
+You study the word pair RESISTANCE FORMER. You rate how associated the two words are (1-9): 5.
+You study the word pair INCH DEFINITION. You rate how associated the two words are (1-9): 1.
+You study the word pair DEPRESSION AUTHOR. You rate how associated the two words are (1-9): 4.
+You study the word pair CAUSING STEADY. You rate how associated the two words are (1-9): 1.
+You study the word pair QUANTITY LINED. You rate how associated the two words are (1-9): 1.
+You study the word pair BLOW DAD. You rate how associated the two words are (1-9): 1.
+You study the word pair ENORMOUS SOLVE. You rate how associated the two words are (1-9): 3.
+You study the word pair COAT PLAYS. You rate how associated the two words are (1-9): 1.
+You study the word pair READER HIGHEST. You rate how associated the two words are (1-9): 6.
+You study the word pair AUTHORITY CROP. You rate how associated the two words are (1-9): 1.
+You study the word pair RAYS READILY. You rate how associated the two words are (1-9): 1.
+You study the word pair GRAIN LEANED. You rate how associated the two words are (1-9): 4.
+You study the word pair WORST LEATHER. You rate how associated the two words are (1-9): 2.
+You study the word pair DESIRE PSYCHOLOGICAL. You rate how associated the two words are (1-9): 1.
+You study the word pair OFFICER FIRMS. You rate how associated the two words are (1-9): 3.
+You study the word pair IDENTIFIED PASSING. You rate how associated the two words are (1-9): 3.
+You study the word pair AUNT ILLUSTRATION. You rate how associated the two words are (1-9): 1.
+Cued recall test: for each cue word, type the other word from the studied pair. If you cannot recall it, click DON&#x27;T REMEMBER.
+Cue: AUTHORITY. You type crop.
+Cue: AUNT. You type crawd.
+Cue: GRAIN. You do not recall the partner word.
+Cue: APARTMENT. You type cuff.
+Cue: HARMFUL. You do not recall the partner word.
+Cue: IDENTIFIED. You do not recall the partner word.
+Cue: DESIRE. You type pol....
+Cue: ENORMOUS. You type enturnity.
+Cue: INCH. You do not recall the partner word.
+Cue: OFFICER. You do not recall the partner word.
+Cue: RESISTANCE. You do not recall the partner word.
+Cue: RAYS. You do not recall the partner word.
+Cue: READER. You do not recall the partner word.
+Cue: REDUCE. You do not recall the partner word.
+Cue: WORST. You do not recall the partner word.
+Cue: COAT. You do not recall the partner word.
+Cue: DEPRESSION. You do not recall the partner word.
+Cue: QUANTITY. You do not recall the partner word.
+Cue: BLOW. You do not recall the partner word.
+Cue: CAUSING. You do not recall the partner word.
+Block 7: Single item recognition.
+You study the word pair INSURANCE NATIVE. You rate how associated the two words are (1-9): 7.
+You study the word pair RELATIONS SECURITY. You rate how associated the two words are (1-9): 6.
+You study the word pair ARGUED STAR. You rate how associated the two words are (1-9): 1.
+You study the word pair DEVICE FRAME. You rate how associated the two words are (1-9): 1.
+You study the word pair PLASTIC BELONG. You rate how associated the two words are (1-9): 1.
+You study the word pair OPERATIONS BURST. You rate how associated the two words are (1-9): 1.
+You study the word pair EVERYDAY COFFEE. You rate how associated the two words are (1-9): 1.
+You study the word pair BEDROOM OUTER. You rate how associated the two words are (1-9): 3.
+You study the word pair REACHES PENCIL. You rate how associated the two words are (1-9): 1.
+You study the word pair EARLIEST TRUCK. You rate how associated the two words are (1-9): 1.
+You study the word pair CUTTING PROPERTIES. You rate how associated the two words are (1-9): 1.
+You study the word pair SURVIVE JUMP. You rate how associated the two words are (1-9): 1.
+You study the word pair SIGNAL ENEMY. You rate how associated the two words are (1-9): 4.
+You study the word pair CARD SETTLE. You rate how associated the two words are (1-9): 1.
+You study the word pair EAGER CHRISTIAN. You rate how associated the two words are (1-9): 1.
+You study the word pair BLIND THINKS. You rate how associated the two words are (1-9): 2.
+You study the word pair CHARACTERISTIC FUEL. You rate how associated the two words are (1-9): 3.
+You study the word pair PRINCIPLE AFFAIRS. You rate how associated the two words are (1-9): 3.
+You study the word pair TOOL ADVANTAGES. You rate how associated the two words are (1-9): 1.
+You study the word pair TISSUE CONNECTED. You rate how associated the two words are (1-9): 5.
+Single-item recognition test: for each word, press Y if the word was on the list you just studied (old) or N if it was not (new).
+You see the word ADVANCE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word REACHES. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word RULER. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word FUEL. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word OPERATIONS. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word NATIVE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word PLASTIC. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word TISSUE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word MUD. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word CASH. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word EARLIEST. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word STAR. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word ENGINE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word INTERNAL. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word HOUSEHOLD. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word STRUGGLE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word PORTION. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word EXPERIENCES. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word JUMP. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word OUTER. Was it on the list you just studied? <mark title="human response">Y</mark>
+Block 8: Single item recognition.
+You study the word pair ATTEMPTS ROOMS. You rate how associated the two words are (1-9): 1.
+You study the word pair LARGELY MALE. You rate how associated the two words are (1-9): 6.
+You study the word pair RESPOND MINOR. You rate how associated the two words are (1-9): 1.
+You study the word pair BRINGING LORD. You rate how associated the two words are (1-9): 1.
+You study the word pair LABORATORY ORGANS. You rate how associated the two words are (1-9): 1.
+You study the word pair PASSAGE TEARS. You rate how associated the two words are (1-9): 3.
+You study the word pair FACTOR ANGER. You rate how associated the two words are (1-9): 4.
+You study the word pair MAXIMUM SHINING. You rate how associated the two words are (1-9): 1.
+You study the word pair COMFORTABLE LIPS. You rate how associated the two words are (1-9): 1.
+You study the word pair HIRED TRULY. You rate how associated the two words are (1-9): 1.
+You study the word pair CLOTH REFERENCE. You rate how associated the two words are (1-9): 1.
+You study the word pair FLOWER SHEEP. You rate how associated the two words are (1-9): 1.
+You study the word pair RODE CAREER. You rate how associated the two words are (1-9): 1.
+You study the word pair DISAPPEARED PACKED. You rate how associated the two words are (1-9): 4.
+You study the word pair SHORE AWFUL. You rate how associated the two words are (1-9): 1.
+You study the word pair EXAMINE HANDED. You rate how associated the two words are (1-9): 1.
+You study the word pair GOVERNOR ADMINISTRATION. You rate how associated the two words are (1-9): 4.
+You study the word pair FORMAL BRANCH. You rate how associated the two words are (1-9): 5.
+You study the word pair EMPIRE TIED. You rate how associated the two words are (1-9): 2.
+You study the word pair SING SAVED. You rate how associated the two words are (1-9): 2.
+Single-item recognition test: for each word, press Y if the word was on the list you just studied (old) or N if it was not (new).
+You see the word ORGANS. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word AWFUL. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word GOVERNOR. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word ASSUME. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word CLOTH. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word MECHANICAL. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word WOODEN. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word FAVOR. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word MAGIC. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word PUSHING. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word LIPS. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word HURRY. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word EXAMINE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word RESPOND. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word TEARS. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word FLOWER. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word DECLARED. Was it on the list you just studied? <mark title="human response">N</mark>
+You see the word REPLACE. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word TIED. Was it on the list you just studied? <mark title="human response">Y</mark>
+You see the word SPORTS. Was it on the list you just studied? <mark title="human response">N</mark>
+Block 9: Lexical decision.
+Lexical decision test: for each letter string, press Y if it is a word or N if it is not a word. Respond as quickly as possible.
+You see the letter string RASSING. Is it a word? <mark title="human response">Y</mark>
+You see the letter string WOOTING. Is it a word? <mark title="human response">N</mark>
+You see the letter string LOVELY. Is it a word? <mark title="human response">Y</mark>
+You see the letter string PLANET. Is it a word? <mark title="human response">Y</mark>
+You see the letter string LISTUE. Is it a word? <mark title="human response">N</mark>
+You see the letter string MORELY. Is it a word? <mark title="human response">N</mark>
+You see the letter string DRIVER. Is it a word? <mark title="human response">Y</mark>
+You see the letter string COMMERCIAL. Is it a word? <mark title="human response">Y</mark>
+You see the letter string SHARED. Is it a word? <mark title="human response">Y</mark>
+You see the letter string BROCK. Is it a word? <mark title="human response">N</mark>
+You see the letter string SIZES. Is it a word? <mark title="human response">Y</mark>
+You see the letter string FEERED. Is it a word? <mark title="human response">N</mark>
+You see the letter string CAMBLE. Is it a word? <mark title="human response">N</mark>
+You see the letter string FREEN. Is it a word? <mark title="human response">N</mark>
+You see the letter string VALUABLE. Is it a word? <mark title="human response">Y</mark>
+You see the letter string ACCURATE. Is it a word? <mark title="human response">Y</mark>
+You see the letter string TEMPERATURES. Is it a word? <mark title="human response">Y</mark>
+You see the letter string HUNENS. Is it a word? <mark title="human response">N</mark>
+You see the letter string MAME. Is it a word? <mark title="human response">N</mark>
+You see the letter string CLIMB. Is it a word? <mark title="human response">Y</mark>
+Block 10: Associative recognition.
+You study the word pair RAPID CLAY. You rate how associated the two words are (1-9): 1.
+You study the word pair TRANSPORTATION BARN. You rate how associated the two words are (1-9): 1.
+You study the word pair EXERCISE BENEFIT. You rate how associated the two words are (1-9): 7.
+You study the word pair ASLEEP CROWD. You rate how associated the two words are (1-9): 1.
+You study the word pair JOURNEY DARKNESS. You rate how associated the two words are (1-9): 1.
+You study the word pair SALE WAGES. You rate how associated the two words are (1-9): 1.
+You study the word pair BEAT IMMEDIATE. You rate how associated the two words are (1-9): 3.
+You study the word pair METALS SPLIT. You rate how associated the two words are (1-9): 6.
+You study the word pair PERMANENT RECOGNIZE. You rate how associated the two words are (1-9): 1.
+You study the word pair PAYMENT PORT. You rate how associated the two words are (1-9): 1.
+You study the word pair AGREEMENT PARENT. You rate how associated the two words are (1-9): 2.
+You study the word pair WASTES EVIL. You rate how associated the two words are (1-9): 1.
+You study the word pair MAIL LISTENED. You rate how associated the two words are (1-9): 1.
+You study the word pair LOOSE CHARACTERS. You rate how associated the two words are (1-9): 2.
+You study the word pair EXPLORE SECRETARY. You rate how associated the two words are (1-9): 5.
+You study the word pair CURIOUS POSSIBILITY. You rate how associated the two words are (1-9): 3.
+You study the word pair ATTRACTIVE SOUNDED. You rate how associated the two words are (1-9): 1.
+You study the word pair DOUBLE WEARING. You rate how associated the two words are (1-9): 1.
+You study the word pair NEGATIVE SLAVERY. You rate how associated the two words are (1-9): 5.
+You study the word pair LATIN CREW. You rate how associated the two words are (1-9): 5.
+Associative recognition test: for each pair, press Y if the pair was studied together (old) or N if it is a rearranged, new pair.
+You see the pair CREW LATIN. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair EXERCISE BENEFIT. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair LISTENED ASLEEP. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair TRANSPORTATION IMMEDIATE. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair ATTRACTIVE RECOGNIZE. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair BEAT CROWD. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair SALE WAGES. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair SPLIT METALS. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair EXPLORE CLAY. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair RAPID PARENT. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair SECRETARY PERMANENT. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair PORT PAYMENT. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair WEARING DOUBLE. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair POSSIBILITY CURIOUS. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair CHARACTERS LOOSE. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair WASTES EVIL. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair SOUNDED NEGATIVE. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair BARN MAIL. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair SLAVERY AGREEMENT. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair DARKNESS JOURNEY. Is this pair intact from study? <mark title="human response">Y</mark>
+Block 11: Cued recall.
+You study the word pair OLDEST NEWSPAPERS. You rate how associated the two words are (1-9): 6.
+You study the word pair GLANCE RID. You rate how associated the two words are (1-9): 1.
+You study the word pair PLEASANT AUTOMOBILE. You rate how associated the two words are (1-9): 4.
+You study the word pair ANNUAL RAILROAD. You rate how associated the two words are (1-9): 4.
+You study the word pair TRAIL BITTER. You rate how associated the two words are (1-9): 1.
+You study the word pair DEFINED GROWS. You rate how associated the two words are (1-9): 1.
+You study the word pair FENCE TRACK. You rate how associated the two words are (1-9): 4.
+You study the word pair JUDGE CALLS. You rate how associated the two words are (1-9): 7.
+You study the word pair STRIKE AGENCY. You rate how associated the two words are (1-9): 1.
+You study the word pair WORRY FACTORY. You rate how associated the two words are (1-9): 1.
+You study the word pair ASPECTS PROPOSED. You rate how associated the two words are (1-9): 1.
+You study the word pair OPPOSED WHISPERED. You rate how associated the two words are (1-9): 5.
+You study the word pair CAPABLE FAILURE. You rate how associated the two words are (1-9): 1.
+You study the word pair RELEASE COLONIAL. You rate how associated the two words are (1-9): 1.
+You study the word pair COMMUNICATE DISTANT. You rate how associated the two words are (1-9): 6.
+You study the word pair CONSTANTLY EXPANSION. You rate how associated the two words are (1-9): 6.
+You study the word pair CIRCUMSTANCES JAPANESE. You rate how associated the two words are (1-9): 6.
+You study the word pair COMPOUND SKILLED. You rate how associated the two words are (1-9): 3.
+You study the word pair PRINCIPAL WINGS. You rate how associated the two words are (1-9): 1.
+You study the word pair WAGON SOUL. You rate how associated the two words are (1-9): 1.
+Cued recall test: for each cue word, type the other word from the studied pair. If you cannot recall it, click DON&#x27;T REMEMBER.
+Cue: PRINCIPAL. You do not recall the partner word.
+Cue: JUDGE. You do not recall the partner word.
+Cue: DEFINED. You do not recall the partner word.
+Cue: STRIKE. You do not recall the partner word.
+Cue: ASPECTS. You do not recall the partner word.
+Cue: CIRCUMSTANCES. You do not recall the partner word.
+Cue: COMMUNICATE. You do not recall the partner word.
+Cue: TRAIL. You do not recall the partner word.
+Cue: FENCE. You type track.
+Cue: CONSTANTLY. You do not recall the partner word.
+Cue: COMPOUND. You do not recall the partner word.
+Cue: OPPOSED. You do not recall the partner word.
+Cue: WAGON. You do not recall the partner word.
+Cue: GLANCE. You do not recall the partner word.
+Cue: PLEASANT. You do not recall the partner word.
+Cue: OLDEST. You type communication.
+Cue: CAPABLE. You do not recall the partner word.
+Cue: RELEASE. You do not recall the partner word.
+Cue: WORRY. You do not recall the partner word.
+Cue: ANNUAL. You do not recall the partner word.
+Block 12: Associative recognition.
+You study the word pair BOATS SLIPPED. You rate how associated the two words are (1-9): 8.
+You study the word pair CREATURE EXACT. You rate how associated the two words are (1-9): 8.
+You study the word pair ESTABLISH BONE. You rate how associated the two words are (1-9): 1.
+You study the word pair SIGHED COLONISTS. You rate how associated the two words are (1-9): 4.
+You study the word pair REALITY OBVIOUS. You rate how associated the two words are (1-9): 5.
+You study the word pair SLAVES COUNT. You rate how associated the two words are (1-9): 4.
+You study the word pair ADOPTED BITS. You rate how associated the two words are (1-9): 1.
+You study the word pair OBSERVATION VISITED. You rate how associated the two words are (1-9): 8.
+You study the word pair SMALLEST WIDELY. You rate how associated the two words are (1-9): 1.
+You study the word pair DISEASES ENTRY. You rate how associated the two words are (1-9): 1.
+You study the word pair LITERATURE WORN. You rate how associated the two words are (1-9): 1.
+You study the word pair ORGANIZATIONS POOL. You rate how associated the two words are (1-9): 1.
+You study the word pair INNER OPINION. You rate how associated the two words are (1-9): 5.
+You study the word pair BRIEF GRANDFATHER. You rate how associated the two words are (1-9): 1.
+You study the word pair FUNNY CONFIDENCE. You rate how associated the two words are (1-9): 7.
+You study the word pair BLEW VALLEYS. You rate how associated the two words are (1-9): 1.
+You study the word pair CAMPAIGN COMMUNIST. You rate how associated the two words are (1-9): 1.
+You study the word pair VIEWS ORANGE. You rate how associated the two words are (1-9): 5.
+You study the word pair MIXED TECHNOLOGY. You rate how associated the two words are (1-9): 8.
+You study the word pair ATOM ENTRANCE. You rate how associated the two words are (1-9): 1.
+Associative recognition test: for each pair, press Y if the pair was studied together (old) or N if it is a rearranged, new pair.
+You see the pair BOATS COMMUNIST. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair WIDELY CAMPAIGN. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair SIGHED COLONISTS. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair EXACT REALITY. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair LITERATURE WORN. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair BRIEF GRANDFATHER. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair CREATURE VISITED. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair MIXED TECHNOLOGY. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair COUNT SLAVES. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair OPINION INNER. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair BLEW VALLEYS. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair ORANGE VIEWS. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair OBSERVATION POOL. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair SMALLEST SLIPPED. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair CONFIDENCE ESTABLISH. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair OBVIOUS FUNNY. Is this pair intact from study? <mark title="human response">Y</mark>
+You see the pair ADOPTED BONE. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair ENTRY DISEASES. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair ENTRANCE ATOM. Is this pair intact from study? <mark title="human response">N</mark>
+You see the pair BITS ORGANIZATIONS. Is this pair intact from study? <mark title="human response">N</mark>
+Block 13: Lexical decision.
+Lexical decision test: for each letter string, press Y if it is a word or N if it is not a word. Respond as quickly as possible.
+You see the letter string AWAKE. Is it a word? <mark title="human response">N</mark>
+You see the letter string CLAIM. Is it a word? <mark title="human response">Y</mark>
+You see the letter string BANSITORY. Is it a word? <mark title="human response">N</mark>
+You see the letter string JICAL. Is it a word? <mark title="human response">N</mark>
+You see the letter string CLERRIFIED. Is it a word? <mark title="human response">Y</mark>
+You see the letter string HOTS. Is it a word? <mark title="human response">Y</mark>
+You see the letter string SHOEP. Is it a word? <mark title="human response">N</mark>
+You see the letter string PLATE. Is it a word? <mark title="human response">Y</mark>
+You see the letter string MOVEMENTS. Is it a word? <mark title="human response">Y</mark>
+You see the letter string MINERALS. Is it a word? <mark title="human response">N</mark>
+You see the letter string FILE. Is it a word? <mark title="human response">Y</mark>
+You see the letter string DEVELOPING. Is it a word? <mark title="human response">Y</mark>
+You see the letter string URTNESS. Is it a word? <mark title="human response">N</mark>
+You see the letter string LOWANDS. Is it a word? <mark title="human response">N</mark>
+You see the letter string VOSULL. Is it a word? <mark title="human response">N</mark>
+You see the letter string SHIGES. Is it a word? <mark title="human response">N</mark>
+You see the letter string MUSCLE. Is it a word? <mark title="human response">Y</mark>
+You see the letter string ROULE. Is it a word? <mark title="human response">N</mark>
+You see the letter string SURROUNDING. Is it a word? <mark title="human response">Y</mark>
+You see the letter string TEACH. Is it a word? <mark title="human response">Y</mark>
+Block 14: Free recall.
+You study the word pair WEALTH ARTICLE. You rate how associated the two words are (1-9): 1.
+You study the word pair SUIT FROZEN. You rate how associated the two words are (1-9): 1.
+You study the word pair SPITE STAIRS. You rate how associated the two words are (1-9): 1.
+You study the word pair TUBE FEWER. You rate how associated the two words are (1-9): 1.
+You study the word pair CHINESE SEPARATED. You rate how associated the two words are (1-9): 1.
+You study the word pair BASEBALL CONFLICT. You rate how associated the two words are (1-9): 6.
+You study the word pair PRINT ADULTS. You rate how associated the two words are (1-9): 1.
+You study the word pair EXTERNAL UNIFORM. You rate how associated the two words are (1-9): 1.
+You study the word pair GASES ARRANGEMENT. You rate how associated the two words are (1-9): 1.
+You study the word pair FORMATION EUROPEANS. You rate how associated the two words are (1-9): 1.
+You study the word pair WARS WRITERS. You rate how associated the two words are (1-9): 5.
+You study the word pair DEFENSE CONTRAST. You rate how associated the two words are (1-9): 5.
+You study the word pair FURNITURE LOCATION. You rate how associated the two words are (1-9): 7.
+You study the word pair FUR ITEM. You rate how associated the two words are (1-9): 7.
+You study the word pair PAINT EXECUTIVE. You rate how associated the two words are (1-9): 1.
+You study the word pair KID LATTER. You rate how associated the two words are (1-9): 5.
+You study the word pair SETTLEMENT COMMAND. You rate how associated the two words are (1-9): 1.
+You study the word pair ADVICE DIRECTED. You rate how associated the two words are (1-9): 1.
+You study the word pair REMARKABLE MACHINERY. You rate how associated the two words are (1-9): 7.
+You study the word pair PAYING COMPLICATED. You rate how associated the two words are (1-9): 2.
+Free recall test: type as many words from the study list as you can remember.
+You type pink.
+You type cotton.
+You type rubber.
+You type trail.
+You type religion.
+You type communication.
+You type mail.
+You type trade.
+You type tradition.
+You type money.
+You type train.
+You type rubber.
+You type glance.
+You type funny.
+You type companies.
+You type equal.
+You type right.
+You type yelled.
+You type talk.
+You type hand.
+You type simpliy.
+You type huge.
+You type sex.
+You type very.
+You type mixture.
+You type judge.
+You type call.
+You type practice.
+You do not recall WEALTH.
+You do not recall SUIT.
+You do not recall SPITE.
+You do not recall TUBE.
+You do not recall CHINESE.
+You do not recall BASEBALL.
+You do not recall PRINT.
+You do not recall EXTERNAL.
+You do not recall GASES.
+You do not recall FORMATION.
+You do not recall WARS.
+You do not recall DEFENSE.
+You do not recall FURNITURE.
+You do not recall FUR.
+You do not recall PAINT.
+You do not recall KID.
+You do not recall SETTLEMENT.
+You do not recall ADVICE.
+You do not recall REMARKABLE.
+You do not recall PAYING.
+You do not recall ARTICLE.
+You do not recall FROZEN.
+You do not recall STAIRS.
+You do not recall FEWER.
+You do not recall SEPARATED.
+You do not recall CONFLICT.
+You do not recall ADULTS.
+You do not recall UNIFORM.
+You do not recall ARRANGEMENT.
+You do not recall EUROPEANS.
+You do not recall WRITERS.
+You do not recall CONTRAST.
+You do not recall LOCATION.
+You do not recall ITEM.
+You do not recall EXECUTIVE.
+You do not recall LATTER.
+You do not recall COMMAND.
+You do not recall DIRECTED.
+You do not recall MACHINERY.
+You do not recall COMPLICATED.
+Block 15: Free recall.
+You study the word pair SPIRIT STRETCH. You rate how associated the two words are (1-9): 1.
+You study the word pair BREATHE DESIGN. You rate how associated the two words are (1-9): 6.
+You study the word pair REGARDED ORGANISM. You rate how associated the two words are (1-9): 1.
+You study the word pair ILL HAVEN. You rate how associated the two words are (1-9): 4.
+You study the word pair HYDROGEN FEARED. You rate how associated the two words are (1-9): 1.
+You study the word pair COUPLE BLOCKS. You rate how associated the two words are (1-9): 8.
+You study the word pair POST TREATMENT. You rate how associated the two words are (1-9): 8.
+You study the word pair FRIENDLY RECALL. You rate how associated the two words are (1-9): 1.
+You study the word pair ATTITUDE ASSEMBLY. You rate how associated the two words are (1-9): 1.
+You study the word pair PERFECTLY ARMED. You rate how associated the two words are (1-9): 1.
+You study the word pair BAY SORRY. You rate how associated the two words are (1-9): 1.
+You study the word pair SATISFACTION CONTINUES. You rate how associated the two words are (1-9): 5.
+You study the word pair OCCURRED LEGAL. You rate how associated the two words are (1-9): 1.
+You study the word pair APPOINTED CHALLENGE. You rate how associated the two words are (1-9): 1.
+You study the word pair WHEEL DANCE. You rate how associated the two words are (1-9): 1.
+You study the word pair DULL RISES. You rate how associated the two words are (1-9): 1.
+You study the word pair BURN GUIDE. You rate how associated the two words are (1-9): 1.
+You study the word pair PEOPLES NEIGHBORS. You rate how associated the two words are (1-9): 2.
+You study the word pair TREMENDOUS LAUGH. You rate how associated the two words are (1-9): 1.
+You study the word pair DESTROY ASKING. You rate how associated the two words are (1-9): 1.
+Free recall test: type as many words from the study list as you can remember.
+You type friendly.
+You type badly.
+You type recall.
+You type statisfied.
+You type attitude.
+You type assumbly.
+You type bay.
+You type dull.
+You type raise.
+You do not recall SPIRIT.
+You do not recall BREATHE.
+You do not recall REGARDED.
+You do not recall ILL.
+You do not recall HYDROGEN.
+You do not recall COUPLE.
+You do not recall POST.
+You do not recall PERFECTLY.
+You do not recall SATISFACTION.
+You do not recall OCCURRED.
+You do not recall APPOINTED.
+You do not recall WHEEL.
+You do not recall BURN.
+You do not recall PEOPLES.
+You do not recall TREMENDOUS.
+You do not recall DESTROY.
+You do not recall STRETCH.
+You do not recall DESIGN.
+You do not recall ORGANISM.
+You do not recall HAVEN.
+You do not recall FEARED.
+You do not recall BLOCKS.
+You do not recall TREATMENT.
+You do not recall ARMED.
+You do not recall SORRY.
+You do not recall CONTINUES.
+You do not recall LEGAL.
+You do not recall CHALLENGE.
+You do not recall DANCE.
+You do not recall RISES.
+You do not recall GUIDE.
+You do not recall NEIGHBORS.
+You do not recall LAUGH.
+You do not recall ASKING.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

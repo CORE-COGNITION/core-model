@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>krueger_2024_identifying</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / krueger_2024_identifying</nav>
+<h1>krueger_2024_identifying</h1>
+<p class="tags"><span class="chip paradigm">risky-choice</span> <span class="chip minor">psych-101</span></p>
+<p>In this mouselab risky-choice study, participants (2,368 in Experiment 1 and 404 in Experiment 2, MTurk adults) sequentially reveal payoff cells of a 4-outcome x 6-gamble payoff matrix by paying a per-click cost, then choose one gamble. Experiment 2 additionally manipulates whether expected values are displayed (EV-display, con vs exp). Both experiments record every trial across instruction blocks (practice) and the test block, with per-trial clicks, click times, reaction time, gambles, payoffs, and choice. The paper derives resource-rational heuristics via machine-learning/meta-RL strategy distillation and tests when people rely on heuristic vs rational strategies, fitting strategy-selection/RL cognitive models to the click-and-choice data.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">85,124</div><div class="tile-sub">3,058 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.555</div><div class="tile-sub">rank 1 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE</div><div class="tile-sub">test NLL (avg) 0.555</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr class="best"><td>CORE <span class="pill best-pill">best</span></td><td class="barcell" data-v="1696.0163" title="CORE: 1,696.0 nats"><span class="track"><span class="bar core" style="width:43.1%"></span></span><span class="num">1,696.0</span></td><td class="num" data-v="0.5546">0.5546</td><td class="num" data-v="3058">3,058</td><td class="num" data-v="0.5654">0.5654</td><td class="num" data-v="82066.0">82,066</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="1756.0819" title="CORE (no prediction errors): 1,756.1 nats"><span class="track"><span class="bar core" style="width:44.7%"></span></span><span class="num">1,756.1</span></td><td class="num" data-v="0.5743">0.5743</td><td class="num" data-v="3058">3,058</td><td class="num" data-v="0.5561">0.5561</td><td class="num" data-v="82066.0">82,066</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="1698.5079" title="CORE (no phonemes): 1,698.5 nats"><span class="track"><span class="bar core" style="width:43.2%"></span></span><span class="num">1,698.5</span></td><td class="num" data-v="0.5554">0.5554</td><td class="num" data-v="3058">3,058</td><td class="num" data-v="0.5396">0.5396</td><td class="num" data-v="82066.0">82,066</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="1924.8707" title="CORE (no forgetting): 1,924.9 nats"><span class="track"><span class="bar core" style="width:48.9%"></span></span><span class="num">1,924.9</span></td><td class="num" data-v="0.6295">0.6295</td><td class="num" data-v="3058">3,058</td><td class="num" data-v="0.6649">0.6649</td><td class="num" data-v="82066.0">82,066</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="3932.4158" title="CORE (no hierarchy): 3,932.4 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">3,932.4</span></td><td class="num" data-v="1.2859">1.2859</td><td class="num" data-v="3058">3,058</td><td class="num" data-v="1.296">1.2960</td><td class="num" data-v="82066.0">82,066</td></tr><tr><td>Transformer</td><td class="barcell" data-v="2462.6627" title="Transformer: 2,462.7 nats"><span class="track"><span class="bar base" style="width:62.6%"></span></span><span class="num">2,462.7</span></td><td class="num" data-v="0.8053">0.8053</td><td class="num" data-v="3058">3,058</td><td class="num" data-v="0.8437">0.8437</td><td class="num" data-v="82066.0">82,066</td></tr><tr><td>Centaur</td><td class="barcell" data-v="2828.6851" title="Centaur: 2,828.7 nats"><span class="track"><span class="bar base" style="width:71.9%"></span></span><span class="num">2,828.7</span></td><td class="num" data-v="0.925">0.9250</td><td class="num" data-v="3058">3,058</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>MouselabExperiment1</td><td class="num">2,368</td><td class="num">73,408</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp1</td><td>MouselabExperiment2</td><td class="num">404</td><td class="num">11,716</td><td class="num">2</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · version=1.0</option><option value="t1">exp1 · condition=exp, version=2.3</option><option value="t2">exp1 · condition=con, version=2.3</option></select></label><div class="transcript" id="t0"><pre>You are choosing between gambles to earn points. Your bonus is $0.01 for every 5 points you earn.
+On each round, 6 gambles labeled A, B, C, D, E, F (left to right) are on offer. Each gamble pays off in one of 4 possible outcomes, numbered 1 to 4 from top to bottom. Each outcome has a chance of occurring, shown as a percentage. The payoff of each gamble under each outcome is shown in a cell of the table, but all cells start hidden.
+To reveal a cell, type its label: the gamble letter followed by the outcome number (e.g. A1 is gamble A under outcome 1). Each reveal costs 4 points. Revealed cells stay visible for the rest of the round, and you may reveal as many or as few as you like, in any order.
+When you are ready, choose a gamble by typing its letter: A, B, C, D, E, or F. The outcome is then drawn at random according to the chances, and you earn that gamble&#x27;s payoff for that outcome minus the 4 points you paid for each reveal.
+Instruction block 1 (practice):
+Trial 1. Chances: 1:1%, 2:60%, 3:2%, 4:37%.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 2 occurs. Your gamble pays 0 points. Net: 0 points.
+Trial 2. Chances: 1:12%, 2:32%, 3:45%, 4:11%.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays -38 points. Net: -38 points.
+Trial 3. Chances: 1:21%, 2:18%, 3:4%, 4:57%.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 1 occurs. Your gamble pays -45 points. Net: -45 points.
+Instruction block 2 (practice):
+Trial 4. Chances: 1:1%, 2:20%, 3:2%, 4:77%.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays 236 points. Net: 236 points.
+Trial 5. Chances: 1:73%, 2:7%, 3:3%, 4:17%.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 1 occurs. Your gamble pays 206 points. Net: 206 points.
+Trial 6. Chances: 1:12%, 2:25%, 3:19%, 4:44%.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays 172 points. Net: 172 points.
+Trial 7. Chances: 1:3%, 2:71%, 3:25%, 4:1%.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 3 occurs. Your gamble pays 240 points. Net: 240 points.
+Trial 8. Chances: 1:34%, 2:28%, 3:32%, 4:6%.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 3 occurs. Your gamble pays 290 points. Net: 290 points.
+Instruction block 3 (practice):
+Trial 9. Chances: 1:17%, 2:3%, 3:7%, 4:73%.
+You reveal E4. E4 shows 188.
+You reveal B4. B4 shows -200.
+You reveal D4. D4 shows 250.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 4 occurs. Your gamble pays 250 points. Net: 238 points (payoff minus 12 points for reveals).
+Trial 10. Chances: 1:1%, 2:65%, 3:22%, 4:12%.
+You reveal A2. A2 shows -163.
+You reveal C2. C2 shows -54.
+You reveal F2. F2 shows 100.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 2 occurs. Your gamble pays -310 points. Net: -322 points (payoff minus 12 points for reveals).
+Trial 11. Chances: 1:9%, 2:48%, 3:39%, 4:4%.
+You reveal A2. A2 shows -248.
+You reveal B3. B3 shows 279.
+You reveal F3. F3 shows 74.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 3 occurs. Your gamble pays 279 points. Net: 267 points (payoff minus 12 points for reveals).
+Test block:
+Trial 12. Chances: 1:44%, 2:6%, 3:2%, 4:48%.
+You reveal A4. A4 shows 8.
+You reveal A1. A1 shows -132.
+You reveal C4. C4 shows 18.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 4 occurs. Your gamble pays -31 points. Net: -43 points (payoff minus 12 points for reveals).
+Trial 13. Chances: 1:2%, 2:1%, 3:47%, 4:50%.
+You reveal A4. A4 shows -156.
+You reveal C4. C4 shows 108.
+You reveal E4. E4 shows -48.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 3 occurs. Your gamble pays 300 points. Net: 288 points (payoff minus 12 points for reveals).
+Trial 14. Chances: 1:6%, 2:48%, 3:3%, 4:43%.
+You reveal A2. A2 shows -61.
+You reveal F2. F2 shows 260.
+You reveal C2. C2 shows 69.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 4 occurs. Your gamble pays -76 points. Net: -88 points (payoff minus 12 points for reveals).
+Trial 15. Chances: 1:17%, 2:28%, 3:38%, 4:17%.
+You reveal B3. B3 shows -56.
+You reveal D3. D3 shows 98.
+You reveal F3. F3 shows 29.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 3 occurs. Your gamble pays 98 points. Net: 86 points (payoff minus 12 points for reveals).
+Trial 16. Chances: 1:1%, 2:12%, 3:42%, 4:45%.
+You reveal A4. A4 shows -8.
+You reveal C4. C4 shows -98.
+You reveal D4. D4 shows -272.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 2 occurs. Your gamble pays -13 points. Net: -25 points (payoff minus 12 points for reveals).
+Trial 17. Chances: 1:46%, 2:33%, 3:5%, 4:16%.
+You reveal B1. B1 shows 92.
+You reveal E1. E1 shows 78.
+You reveal C1. C1 shows 518.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays -227 points. Net: -239 points (payoff minus 12 points for reveals).
+Trial 18. Chances: 1:35%, 2:22%, 3:32%, 4:11%.
+You reveal A3. A3 shows 123.
+You reveal F3. F3 shows -12.
+You reveal C3. C3 shows 237.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 1 occurs. Your gamble pays 69 points. Net: 57 points (payoff minus 12 points for reveals).
+Trial 19. Chances: 1:4%, 2:23%, 3:71%, 4:2%.
+You reveal A3. A3 shows 74.
+You reveal D3. D3 shows 330.
+You reveal F3. F3 shows 3.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 3 occurs. Your gamble pays 330 points. Net: 318 points (payoff minus 12 points for reveals).
+Trial 20. Chances: 1:21%, 2:30%, 3:3%, 4:46%.
+You reveal A4. A4 shows -129.
+You reveal D4. D4 shows -112.
+You reveal F4. F4 shows 12.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 4 occurs. Your gamble pays 12 points. Net: 0 points (payoff minus 12 points for reveals).
+Trial 21. Chances: 1:30%, 2:1%, 3:60%, 4:9%.
+You reveal A3. A3 shows -129.
+You reveal B3. B3 shows 191.
+You reveal C3. C3 shows -29.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 1 occurs. Your gamble pays 131 points. Net: 119 points (payoff minus 12 points for reveals).
+Trial 22. Chances: 1:51%, 2:17%, 3:1%, 4:31%.
+You reveal A1. A1 shows 121.
+You reveal D1. D1 shows -103.
+You reveal F1. F1 shows 106.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 4 occurs. Your gamble pays 203 points. Net: 191 points (payoff minus 12 points for reveals).
+Trial 23. Chances: 1:73%, 2:1%, 3:18%, 4:8%.
+You reveal A1. A1 shows -226.
+You reveal D1. D1 shows -195.
+You reveal F1. F1 shows -99.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 3 occurs. Your gamble pays 84 points. Net: 72 points (payoff minus 12 points for reveals).
+Trial 24. Chances: 1:5%, 2:42%, 3:15%, 4:38%.
+You reveal A2. A2 shows 139.
+You reveal C2. C2 shows 154.
+You reveal F2. F2 shows -188.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays 102 points. Net: 90 points (payoff minus 12 points for reveals).
+Trial 25. Chances: 1:40%, 2:9%, 3:12%, 4:39%.
+You reveal A1. A1 shows 104.
+You reveal A4. A4 shows -88.
+You reveal D1. D1 shows -19.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays 58 points. Net: 46 points (payoff minus 12 points for reveals).
+Trial 26. Chances: 1:1%, 2:50%, 3:6%, 4:43%.
+You reveal A2. A2 shows -21.
+You reveal E2. E2 shows 142.
+You reveal E4. E4 shows 182.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 4 occurs. Your gamble pays 182 points. Net: 170 points (payoff minus 12 points for reveals).
+Trial 27. Chances: 1:3%, 2:1%, 3:77%, 4:19%.
+You reveal A3. A3 shows -8.
+You reveal F3. F3 shows -12.
+You reveal C3. C3 shows -119.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 1 occurs. Your gamble pays -80 points. Net: -92 points (payoff minus 12 points for reveals).
+Trial 28. Chances: 1:21%, 2:3%, 3:62%, 4:14%.
+You reveal A3. A3 shows -106.
+You reveal C3. C3 shows 26.
+You reveal E3. E3 shows 14.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays -227 points. Net: -239 points (payoff minus 12 points for reveals).
+Trial 29. Chances: 1:9%, 2:10%, 3:61%, 4:20%.
+You reveal B3. B3 shows -77.
+You reveal D3. D3 shows 11.
+You reveal F3. F3 shows -148.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 4 occurs. Your gamble pays 103 points. Net: 91 points (payoff minus 12 points for reveals).
+Trial 30. Chances: 1:35%, 2:11%, 3:1%, 4:53%.
+You reveal A4. A4 shows 195.
+You reveal A1. A1 shows 149.
+You reveal E4. E4 shows -140.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 1 occurs. Your gamble pays 149 points. Net: 137 points (payoff minus 12 points for reveals).
+Trial 31. Chances: 1:1%, 2:4%, 3:1%, 4:94%.
+You reveal A4. A4 shows 182.
+You reveal D4. D4 shows 52.
+You reveal F4. F4 shows -154.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 4 occurs. Your gamble pays 182 points. Net: 170 points (payoff minus 12 points for reveals).</pre></div><div class="transcript" id="t1" hidden><pre>You are choosing between gambles to earn points. Your bonus is $0.01 for every 5 points you earn.
+On each round, 6 gambles labeled A, B, C, D, E, F (left to right) are on offer. Each gamble pays off in one of 4 possible outcomes, numbered 1 to 4 from top to bottom. Each outcome has a chance of occurring, shown as a percentage. The payoff of each gamble under each outcome is shown in a cell of the table, but all cells start hidden.
+To reveal a cell, type its label: the gamble letter followed by the outcome number (e.g. A1 is gamble A under outcome 1). Each reveal costs 1 point. Revealed cells stay visible for the rest of the round, and you may reveal as many or as few as you like, in any order.
+When you are ready, choose a gamble by typing its letter: A, B, C, D, E, or F. The outcome is then drawn at random according to the chances, and you earn that gamble&#x27;s payoff for that outcome minus the 1 point you paid for each reveal.
+A running expected value for each gamble is displayed next to its letter and updates as you reveal cells. You must wait at least 20 seconds each round before choosing; a countdown timer shows the remaining time.
+Instruction block 1 (practice):
+Trial 1. Chances: 1:16%, 2:19%, 3:14%, 4:51%.
+Expected-value display: A:0, B:0, C:0, D:0, E:0, F:0.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 4 occurs. Your gamble pays 39 points. Net: 39 points.
+Trial 2. Chances: 1:23%, 2:20%, 3:41%, 4:16%.
+Expected-value display: A:0, B:0, C:0, D:0, E:0, F:0.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 3 occurs. Your gamble pays 0 points. Net: 0 points.
+Trial 3. Chances: 1:21%, 2:18%, 3:4%, 4:57%.
+Expected-value display: A:0, B:0, C:0, D:0, E:0, F:0.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 1 occurs. Your gamble pays -56 points. Net: -56 points.
+Instruction block 2 (practice):
+Trial 4. Chances: 1:19%, 2:18%, 3:38%, 4:25%.
+Expected-value display: A:0, B:0, C:0, D:0, E:0, F:0.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 4 occurs. Your gamble pays 0 points. Net: 0 points.
+Trial 5. Chances: 1:20%, 2:13%, 3:32%, 4:35%.
+Expected-value display: A:0, B:0, C:0, D:0, E:0, F:0.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 3 occurs. Your gamble pays 173 points. Net: 173 points.
+Trial 6. Chances: 1:37%, 2:14%, 3:33%, 4:16%.
+Expected-value display: A:0, B:0, C:0, D:0, E:0, F:0.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 1 occurs. Your gamble pays 203 points. Net: 203 points.
+Instruction block 3 (practice):
+Trial 7. Chances: 1:27%, 2:19%, 3:18%, 4:36%.
+You reveal A4. A4 shows -36.
+You reveal B4. B4 shows -113.
+You reveal C4. C4 shows -20.
+You reveal D4. D4 shows 7.
+You reveal E4. E4 shows 100.
+You reveal F4. F4 shows 42.
+Expected-value display: A:-13, B:-41, C:-7, D:3, E:36, F:15.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 3 occurs. Your gamble pays -59 points. Net: -65 points (payoff minus 6 points for reveals).
+Trial 8. Chances: 1:26%, 2:30%, 3:11%, 4:33%.
+You reveal A2. A2 shows 45.
+You reveal B2. B2 shows 60.
+You reveal C2. C2 shows 117.
+You reveal D2. D2 shows 8.
+You reveal E2. E2 shows -91.
+You reveal F2. F2 shows -4.
+Expected-value display: A:14, B:18, C:35, D:2, E:-27, F:-1.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays -49 points. Net: -55 points (payoff minus 6 points for reveals).
+Trial 9. Chances: 1:9%, 2:14%, 3:43%, 4:34%.
+You reveal A3. A3 shows 65.
+You reveal B3. B3 shows 66.
+You reveal C3. C3 shows 81.
+You reveal D3. D3 shows -21.
+You reveal E3. E3 shows -21.
+You reveal F3. F3 shows -30.
+You reveal A4. A4 shows -7.
+You reveal B4. B4 shows -124.
+You reveal C4. C4 shows -14.
+Expected-value display: A:26, B:-14, C:30, D:-9, E:-9, F:-13.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 4 occurs. Your gamble pays -14 points. Net: -23 points (payoff minus 9 points for reveals).
+Test block:
+Trial 10. Chances: 1:29%, 2:22%, 3:26%, 4:23%.
+You reveal A1. A1 shows 27.
+You reveal B2. B2 shows 3.
+You reveal C3. C3 shows -68.
+You reveal D1. D1 shows -18.
+You reveal E2. E2 shows -146.
+You reveal F4. F4 shows -101.
+Expected-value display: A:8, B:1, C:-18, D:-5, E:-32, F:-23.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 2 occurs. Your gamble pays 29 points. Net: 23 points (payoff minus 6 points for reveals).
+Trial 11. Chances: 1:23%, 2:32%, 3:29%, 4:16%.
+You reveal A2. A2 shows 13.
+You reveal B2. B2 shows -25.
+You reveal C2. C2 shows 81.
+You reveal D2. D2 shows 4.
+You reveal E2. E2 shows -24.
+You reveal F2. F2 shows -10.
+You reveal C3. C3 shows -88.
+You reveal D3. D3 shows 37.
+Expected-value display: A:4, B:-8, C:0, D:12, E:-8, F:-3.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 1 occurs. Your gamble pays 57 points. Net: 49 points (payoff minus 8 points for reveals).
+Trial 12. Chances: 1:13%, 2:20%, 3:22%, 4:45%.
+You reveal A4. A4 shows 138.
+You reveal B4. B4 shows -20.
+You reveal C4. C4 shows 55.
+You reveal D4. D4 shows -19.
+You reveal F4. F4 shows -19.
+You reveal E4. E4 shows -23.
+You reveal A3. A3 shows 59.
+You reveal C3. C3 shows -70.
+Expected-value display: A:75, B:-9, C:9, D:-9, E:-10, F:-9.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 4 occurs. Your gamble pays 138 points. Net: 130 points (payoff minus 8 points for reveals).
+Trial 13. Chances: 1:45%, 2:20%, 3:18%, 4:17%.
+You reveal A1. A1 shows 40.
+You reveal B1. B1 shows -1.
+You reveal C1. C1 shows 19.
+You reveal D2. D2 shows -38.
+You reveal D1. D1 shows 112.
+You reveal E1. E1 shows 19.
+You reveal F1. F1 shows 75.
+You reveal F2. F2 shows 86.
+You reveal A2. A2 shows 47.
+You reveal D3. D3 shows -87.
+Expected-value display: A:27, B:0, C:9, D:27, E:9, F:51.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 3 occurs. Your gamble pays 65 points. Net: 55 points (payoff minus 10 points for reveals).
+Trial 14. Chances: 1:20%, 2:30%, 3:19%, 4:31%.
+You reveal A2. A2 shows -77.
+You reveal B2. B2 shows 73.
+You reveal C2. C2 shows -11.
+You reveal D2. D2 shows 60.
+You reveal E2. E2 shows -57.
+You reveal F2. F2 shows 2.
+You reveal B4. B4 shows 24.
+You reveal A4. A4 shows 31.
+You reveal D4. D4 shows -144.
+You reveal E4. E4 shows -34.
+You reveal B1. B1 shows 30.
+Expected-value display: A:-13, B:35, C:-3, D:-27, E:-28, F:1.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 2 occurs. Your gamble pays 73 points. Net: 62 points (payoff minus 11 points for reveals).
+Trial 15. Chances: 1:14%, 2:45%, 3:5%, 4:36%.
+You reveal A1. A1 shows -85.
+You reveal A2. A2 shows -103.
+You reveal B2. B2 shows 20.
+You reveal C2. C2 shows 12.
+You reveal D2. D2 shows 8.
+You reveal E2. E2 shows 1.
+You reveal F2. F2 shows -43.
+You reveal B4. B4 shows -133.
+You reveal C4. C4 shows -24.
+You reveal D4. D4 shows 127.
+You reveal E4. E4 shows 45.
+You reveal F4. F4 shows 36.
+You reveal D1. D1 shows -82.
+You reveal D3. D3 shows 62.
+Expected-value display: A:-58, B:-39, C:-3, D:41, E:17, F:-6.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 2 occurs. Your gamble pays 8 points. Net: -6 points (payoff minus 14 points for reveals).
+Trial 16. Chances: 1:40%, 2:14%, 3:20%, 4:26%.
+You reveal A1. A1 shows -33.
+You reveal B1. B1 shows -36.
+You reveal C1. C1 shows -64.
+You reveal D1. D1 shows -39.
+You reveal E1. E1 shows -109.
+You reveal F1. F1 shows 24.
+You reveal A3. A3 shows 61.
+You reveal B3. B3 shows -11.
+You reveal C3. C3 shows 147.
+You reveal D3. D3 shows 71.
+You reveal E3. E3 shows 140.
+You reveal F3. F3 shows 2.
+You reveal C4. C4 shows 64.
+You reveal E4. E4 shows -76.
+Expected-value display: A:-1, B:-17, C:20, D:-1, E:-35, F:10.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 1 occurs. Your gamble pays -64 points. Net: -78 points (payoff minus 14 points for reveals).
+Trial 17. Chances: 1:6%, 2:31%, 3:35%, 4:28%.
+You reveal A3. A3 shows -64.
+You reveal A2. A2 shows 36.
+You reveal B2. B2 shows -62.
+You reveal B3. B3 shows -38.
+You reveal C3. C3 shows 68.
+You reveal C2. C2 shows 14.
+You reveal D2. D2 shows 74.
+You reveal D3. D3 shows 51.
+You reveal E3. E3 shows -33.
+You reveal E2. E2 shows 0.
+Expected-value display: A:-11, B:-33, C:28, D:41, E:-12, F:0.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 3 occurs. Your gamble pays 51 points. Net: 41 points (payoff minus 10 points for reveals).
+Trial 18. Chances: 1:30%, 2:22%, 3:8%, 4:40%.
+You reveal A4. A4 shows 112.
+You reveal B4. B4 shows -22.
+You reveal C4. C4 shows -4.
+You reveal D4. D4 shows -108.
+You reveal E4. E4 shows -63.
+You reveal F4. F4 shows 30.
+You reveal A1. A1 shows -96.
+You reveal D1. D1 shows 47.
+You reveal F1. F1 shows 28.
+Expected-value display: A:16, B:-9, C:-2, D:-29, E:-25, F:20.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 4 occurs. Your gamble pays 30 points. Net: 21 points (payoff minus 9 points for reveals).
+Trial 19. Chances: 1:15%, 2:31%, 3:28%, 4:26%.
+You reveal A2. A2 shows 116.
+You reveal B2. B2 shows -83.
+You reveal A3. A3 shows -145.
+You reveal B3. B3 shows 63.
+You reveal C2. C2 shows -48.
+You reveal D2. D2 shows -153.
+You reveal E2. E2 shows -19.
+You reveal F2. F2 shows -15.
+You reveal D3. D3 shows 42.
+You reveal D4. D4 shows -6.
+You reveal A4. A4 shows 65.
+Expected-value display: A:12, B:-8, C:-15, D:-37, E:-6, F:-5.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 3 occurs. Your gamble pays -145 points. Net: -156 points (payoff minus 11 points for reveals).
+Trial 20. Chances: 1:5%, 2:47%, 3:28%, 4:20%.
+You reveal A2. A2 shows 68.
+You reveal B2. B2 shows 33.
+You reveal C2. C2 shows 81.
+You reveal D2. D2 shows -31.
+You reveal E2. E2 shows 134.
+You reveal F2. F2 shows 13.
+You reveal E3. E3 shows 23.
+Expected-value display: A:32, B:16, C:38, D:-15, E:69, F:6.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 3 occurs. Your gamble pays 23 points. Net: 16 points (payoff minus 7 points for reveals).
+Trial 21. Chances: 1:31%, 2:14%, 3:41%, 4:14%.
+You reveal A3. A3 shows 65.
+You reveal B3. B3 shows 14.
+You reveal D3. D3 shows 68.
+You reveal C3. C3 shows 45.
+You reveal E3. E3 shows 43.
+You reveal F3. F3 shows -74.
+You reveal D1. D1 shows -19.
+You reveal A1. A1 shows -17.
+You reveal E1. E1 shows -145.
+You reveal C1. C1 shows -75.
+You reveal D2. D2 shows -48.
+You reveal F1. F1 shows 57.
+You reveal F2. F2 shows 46.
+Expected-value display: A:21, B:6, C:-5, D:15, E:-27, F:-6.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 1 occurs. Your gamble pays 57 points. Net: 44 points (payoff minus 13 points for reveals).
+Trial 22. Chances: 1:31%, 2:33%, 3:9%, 4:27%.
+You reveal A2. A2 shows -3.
+You reveal B2. B2 shows -132.
+You reveal C2. C2 shows 45.
+You reveal D2. D2 shows 78.
+You reveal E2. E2 shows 5.
+You reveal F2. F2 shows 2.
+You reveal D1. D1 shows -120.
+You reveal D4. D4 shows 56.
+Expected-value display: A:-1, B:-44, C:15, D:4, E:2, F:1.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 1 occurs. Your gamble pays -120 points. Net: -128 points (payoff minus 8 points for reveals).
+Trial 23. Chances: 1:25%, 2:11%, 3:47%, 4:17%.
+You reveal A3. A3 shows -71.
+You reveal B3. B3 shows 31.
+You reveal C3. C3 shows -34.
+You reveal D3. D3 shows -6.
+You reveal E3. E3 shows -5.
+You reveal F3. F3 shows 13.
+You reveal B1. B1 shows -114.
+Expected-value display: A:-33, B:-14, C:-16, D:-3, E:-2, F:6.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 2 occurs. Your gamble pays -61 points. Net: -68 points (payoff minus 7 points for reveals).
+Trial 24. Chances: 1:19%, 2:51%, 3:10%, 4:20%.
+You reveal A2. A2 shows 93.
+You reveal B2. B2 shows 107.
+You reveal C2. C2 shows -71.
+You reveal B4. B4 shows 73.
+Expected-value display: A:47, B:69, C:-36, D:0, E:0, F:0.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 2 occurs. Your gamble pays 107 points. Net: 103 points (payoff minus 4 points for reveals).
+Trial 25. Chances: 1:48%, 2:25%, 3:24%, 4:3%.
+You reveal A1. A1 shows 11.
+You reveal B1. B1 shows -192.
+You reveal C1. C1 shows -3.
+You reveal D1. D1 shows -131.
+You reveal E1. E1 shows 0.
+You reveal F1. F1 shows 63.
+You reveal F2. F2 shows 101.
+Expected-value display: A:5, B:-92, C:-1, D:-63, E:0, F:55.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 2 occurs. Your gamble pays 101 points. Net: 94 points (payoff minus 7 points for reveals).
+Trial 26. Chances: 1:8%, 2:33%, 3:16%, 4:43%.
+You reveal A4. A4 shows -98.
+You reveal B4. B4 shows 115.
+You reveal C4. C4 shows -44.
+You reveal D4. D4 shows -8.
+You reveal E4. E4 shows 33.
+You reveal F4. F4 shows -7.
+You reveal B2. B2 shows 43.
+Expected-value display: A:-42, B:64, C:-19, D:-3, E:14, F:-3.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 2 occurs. Your gamble pays 43 points. Net: 36 points (payoff minus 7 points for reveals).
+Trial 27. Chances: 1:30%, 2:28%, 3:7%, 4:35%.
+You reveal A4. A4 shows 34.
+You reveal B4. B4 shows 60.
+You reveal C4. C4 shows -124.
+You reveal D4. D4 shows 8.
+You reveal E4. E4 shows -30.
+You reveal F4. F4 shows 180.
+You reveal F1. F1 shows 62.
+You reveal B1. B1 shows -78.
+Expected-value display: A:12, B:-2, C:-43, D:3, E:-10, F:82.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 2 occurs. Your gamble pays -37 points. Net: -45 points (payoff minus 8 points for reveals).
+Trial 28. Chances: 1:15%, 2:13%, 3:43%, 4:29%.
+You reveal A3. A3 shows -83.
+You reveal B3. B3 shows -200.
+You reveal C3. C3 shows 54.
+You reveal D3. D3 shows 89.
+You reveal E3. E3 shows 118.
+You reveal F3. F3 shows -117.
+You reveal E4. E4 shows -19.
+You reveal D4. D4 shows -56.
+Expected-value display: A:-36, B:-86, C:23, D:22, E:45, F:-50.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 4 occurs. Your gamble pays -19 points. Net: -27 points (payoff minus 8 points for reveals).
+Trial 29. Chances: 1:10%, 2:54%, 3:15%, 4:21%.
+You reveal A2. A2 shows -102.
+You reveal B2. B2 shows 110.
+You reveal C2. C2 shows 161.
+You reveal D2. D2 shows -24.
+You reveal E2. E2 shows -71.
+You reveal F2. F2 shows 37.
+You reveal B4. B4 shows -16.
+You reveal C4. C4 shows 17.
+Expected-value display: A:-55, B:56, C:91, D:-13, E:-38, F:20.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 2 occurs. Your gamble pays 161 points. Net: 153 points (payoff minus 8 points for reveals).</pre></div><div class="transcript" id="t2" hidden><pre>You are choosing between gambles to earn points. Your bonus is $0.01 for every 5 points you earn.
+On each round, 6 gambles labeled A, B, C, D, E, F (left to right) are on offer. Each gamble pays off in one of 4 possible outcomes, numbered 1 to 4 from top to bottom. Each outcome has a chance of occurring, shown as a percentage. The payoff of each gamble under each outcome is shown in a cell of the table, but all cells start hidden.
+To reveal a cell, type its label: the gamble letter followed by the outcome number (e.g. A1 is gamble A under outcome 1). Each reveal costs 4 points. Revealed cells stay visible for the rest of the round, and you may reveal as many or as few as you like, in any order.
+When you are ready, choose a gamble by typing its letter: A, B, C, D, E, or F. The outcome is then drawn at random according to the chances, and you earn that gamble&#x27;s payoff for that outcome minus the 4 points you paid for each reveal.
+Instruction block 1 (practice):
+Trial 1. Chances: 1:16%, 2:19%, 3:14%, 4:51%.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 1 occurs. Your gamble pays 7 points. Net: 7 points.
+Trial 2. Chances: 1:23%, 2:20%, 3:41%, 4:16%.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 2 occurs. Your gamble pays -18 points. Net: -18 points.
+Trial 3. Chances: 1:21%, 2:18%, 3:4%, 4:57%.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 4 occurs. Your gamble pays 5 points. Net: 5 points.
+Instruction block 2 (practice):
+Trial 4. Chances: 1:19%, 2:18%, 3:38%, 4:25%.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 1 occurs. Your gamble pays 150 points. Net: 150 points.
+Trial 5. Chances: 1:20%, 2:13%, 3:32%, 4:35%.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 4 occurs. Your gamble pays 68 points. Net: 68 points.
+Trial 6. Chances: 1:37%, 2:14%, 3:33%, 4:16%.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 2 occurs. Your gamble pays -136 points. Net: -136 points.
+Instruction block 3 (practice):
+Trial 7. Chances: 1:27%, 2:19%, 3:18%, 4:36%.
+You reveal A1. A1 shows 67.
+You reveal B2. B2 shows 40.
+You reveal D3. D3 shows -84.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 1 occurs. Your gamble pays 67 points. Net: 55 points (payoff minus 12 points for reveals).
+Trial 8. Chances: 1:26%, 2:30%, 3:11%, 4:33%.
+You reveal E1. E1 shows -95.
+You reveal C3. C3 shows 28.
+You reveal B3. B3 shows 49.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 3 occurs. Your gamble pays -54 points. Net: -66 points (payoff minus 12 points for reveals).
+Trial 9. Chances: 1:9%, 2:14%, 3:43%, 4:34%.
+You reveal F3. F3 shows -30.
+You reveal E4. E4 shows 23.
+You reveal B3. B3 shows 66.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 3 occurs. Your gamble pays 66 points. Net: 54 points (payoff minus 12 points for reveals).
+Test block:
+Trial 10. Chances: 1:29%, 2:22%, 3:26%, 4:23%.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 1 occurs. Your gamble pays -18 points. Net: -18 points.
+Trial 11. Chances: 1:23%, 2:32%, 3:29%, 4:16%.
+You reveal E3. E3 shows -86.
+You reveal C2. C2 shows 81.
+You reveal A1. A1 shows -50.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 1 occurs. Your gamble pays -163 points. Net: -175 points (payoff minus 12 points for reveals).
+Trial 12. Chances: 1:13%, 2:20%, 3:22%, 4:45%.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 2 occurs. Your gamble pays -42 points. Net: -42 points.
+Trial 13. Chances: 1:45%, 2:20%, 3:18%, 4:17%.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 1 occurs. Your gamble pays 112 points. Net: 112 points.
+Trial 14. Chances: 1:20%, 2:30%, 3:19%, 4:31%.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 4 occurs. Your gamble pays 24 points. Net: 24 points.
+Trial 15. Chances: 1:14%, 2:45%, 3:5%, 4:36%.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 3 occurs. Your gamble pays 62 points. Net: 62 points.
+Trial 16. Chances: 1:40%, 2:14%, 3:20%, 4:26%.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 4 occurs. Your gamble pays 13 points. Net: 13 points.
+Trial 17. Chances: 1:6%, 2:31%, 3:35%, 4:28%.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 4 occurs. Your gamble pays -23 points. Net: -23 points.
+Trial 18. Chances: 1:30%, 2:22%, 3:8%, 4:40%.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 2 occurs. Your gamble pays -47 points. Net: -47 points.
+Trial 19. Chances: 1:15%, 2:31%, 3:28%, 4:26%.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 2 occurs. Your gamble pays -48 points. Net: -48 points.
+Trial 20. Chances: 1:5%, 2:47%, 3:28%, 4:20%.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 2 occurs. Your gamble pays 33 points. Net: 33 points.
+Trial 21. Chances: 1:31%, 2:14%, 3:41%, 4:14%.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 1 occurs. Your gamble pays -19 points. Net: -19 points.
+Trial 22. Chances: 1:31%, 2:33%, 3:9%, 4:27%.
+You choose gamble <mark title="human response">A</mark>.
+Outcome 2 occurs. Your gamble pays -3 points. Net: -3 points.
+Trial 23. Chances: 1:25%, 2:11%, 3:47%, 4:17%.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 3 occurs. Your gamble pays 31 points. Net: 31 points.
+Trial 24. Chances: 1:19%, 2:51%, 3:10%, 4:20%.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 3 occurs. Your gamble pays -43 points. Net: -43 points.
+Trial 25. Chances: 1:48%, 2:25%, 3:24%, 4:3%.
+You choose gamble <mark title="human response">F</mark>.
+Outcome 3 occurs. Your gamble pays -177 points. Net: -177 points.
+Trial 26. Chances: 1:8%, 2:33%, 3:16%, 4:43%.
+You choose gamble <mark title="human response">B</mark>.
+Outcome 4 occurs. Your gamble pays 115 points. Net: 115 points.
+Trial 27. Chances: 1:30%, 2:28%, 3:7%, 4:35%.
+You choose gamble <mark title="human response">D</mark>.
+Outcome 2 occurs. Your gamble pays -12 points. Net: -12 points.
+Trial 28. Chances: 1:15%, 2:13%, 3:43%, 4:29%.
+You choose gamble <mark title="human response">C</mark>.
+Outcome 1 occurs. Your gamble pays 8 points. Net: 8 points.
+Trial 29. Chances: 1:10%, 2:54%, 3:15%, 4:21%.
+You choose gamble <mark title="human response">E</mark>.
+Outcome 3 occurs. Your gamble pays 70 points. Net: 70 points.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

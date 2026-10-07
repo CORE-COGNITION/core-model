@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sadeghiyeh_2020_temporal</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / sadeghiyeh_2020_temporal</nav>
+<h1>sadeghiyeh_2020_temporal</h1>
+<p class="tags"><span class="chip paradigm">bandit</span> <span class="chip minor">psych-101</span></p>
+<p>82 human participants (N=82) completed the 27-item Delay-Discounting Questionnaire (Kirby et al.) to estimate temporal discounting (k), and the two-armed bandit Horizon Task (256 allocated game slots per session, 25–160 games actually played; horizon 1 or 6; forced then free trials; varied mean rewards and uncertainty) to quantify directed and random exploration from per-trial choices, RTs, and rewards. exp0 contains Horizon-task trial data (57,040 rows; 82 subjects), and exp1 contains the per-item questionnaire choices and estimated discounting rates (2,214 rows; 82 subjects). The paper reports that greater temporal discounting correlates with less directed exploration — driven by lower uncertainty seeking at short (horizon 1) games — but not with random exploration; analyses fit a logistic RL model with an information-bonus and decision-noise parameter and then test individual-difference correlations with k.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">28,866</div><div class="tile-sub">2,629 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.462</div><div class="tile-sub">rank 1 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE</div><div class="tile-sub">test NLL (avg) 0.462</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr class="best"><td>CORE <span class="pill best-pill">best</span></td><td class="barcell" data-v="1215.1128" title="CORE: 1,215.1 nats"><span class="track"><span class="bar core" style="width:79.9%"></span></span><span class="num">1,215.1</span></td><td class="num" data-v="0.4622">0.4622</td><td class="num" data-v="2629">2,629</td><td class="num" data-v="0.5098">0.5098</td><td class="num" data-v="26237.0">26,237</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="1237.0007" title="CORE (no prediction errors): 1,237.0 nats"><span class="track"><span class="bar core" style="width:81.4%"></span></span><span class="num">1,237.0</span></td><td class="num" data-v="0.4705">0.4705</td><td class="num" data-v="2629">2,629</td><td class="num" data-v="0.5187">0.5187</td><td class="num" data-v="26237.0">26,237</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="1219.6354" title="CORE (no phonemes): 1,219.6 nats"><span class="track"><span class="bar core" style="width:80.2%"></span></span><span class="num">1,219.6</span></td><td class="num" data-v="0.4639">0.4639</td><td class="num" data-v="2629">2,629</td><td class="num" data-v="0.5052">0.5052</td><td class="num" data-v="26237.0">26,237</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="1270.9417" title="CORE (no forgetting): 1,270.9 nats"><span class="track"><span class="bar core" style="width:83.6%"></span></span><span class="num">1,270.9</span></td><td class="num" data-v="0.4834">0.4834</td><td class="num" data-v="2629">2,629</td><td class="num" data-v="0.5381">0.5381</td><td class="num" data-v="26237.0">26,237</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="1520.4297" title="CORE (no hierarchy): 1,520.4 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">1,520.4</span></td><td class="num" data-v="0.5783">0.5783</td><td class="num" data-v="2629">2,629</td><td class="num" data-v="0.6503">0.6503</td><td class="num" data-v="26237.0">26,237</td></tr><tr><td>Transformer</td><td class="barcell" data-v="1385.3901" title="Transformer: 1,385.4 nats"><span class="track"><span class="bar base" style="width:91.1%"></span></span><span class="num">1,385.4</span></td><td class="num" data-v="0.527">0.5270</td><td class="num" data-v="2629">2,629</td><td class="num" data-v="0.5907">0.5907</td><td class="num" data-v="26237.0">26,237</td></tr><tr><td>Centaur</td><td class="barcell" data-v="1221.389" title="Centaur: 1,221.4 nats"><span class="track"><span class="bar base" style="width:80.3%"></span></span><span class="num">1,221.4</span></td><td class="num" data-v="0.4646">0.4646</td><td class="num" data-v="2629">2,629</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>HorizonTask</td><td class="num">82</td><td class="num">26,652</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp1</td><td>DelayDiscountingQuestionnaire</td><td class="num">82</td><td class="num">2,214</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option><option value="t1">exp1 · all participants</option></select></label><div class="transcript" id="t0"><pre>You will play a series of games, each featuring two slot machines: Machine A and Machine B. Each machine pays out points drawn from a bell-shaped distribution, but you are not told the average payout of either machine and it changes from game to game; one machine is better on average, and you can only find out which by playing them. Your goal is to win as many points as possible. Each game begins with four forced draws, in which the computer tells you which machine to play, so you can learn about their payoffs. After the forced draws come free draws, in which you choose for yourself. Games have either 1 or 6 free draws. On each free draw, press A to play Machine A or press B to play Machine B, and then you will see how many points you won.
+
+Game 1. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 76 points.
+You are instructed to play Machine B. You win 58 points.
+You are instructed to play Machine A. You win 89 points.
+You are instructed to play Machine A. You win 74 points.
+You press <mark title="human response">A</mark>. You win 80 points.
+
+Game 2. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 46 points.
+You are instructed to play Machine B. You win 26 points.
+You are instructed to play Machine A. You win 38 points.
+You are instructed to play Machine B. You win 34 points.
+You press <mark title="human response">A</mark>. You win 36 points.
+You press <mark title="human response">A</mark>. You win 39 points.
+You press <mark title="human response">A</mark>. You win 39 points.
+You press <mark title="human response">A</mark>. You win 48 points.
+You press <mark title="human response">A</mark>. You win 43 points.
+You press <mark title="human response">A</mark>. You win 40 points.
+
+Game 3. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 71 points.
+You are instructed to play Machine B. You win 70 points.
+You are instructed to play Machine B. You win 48 points.
+You are instructed to play Machine A. You win 62 points.
+You press <mark title="human response">A</mark>. You win 64 points.
+You press <mark title="human response">A</mark>. You win 74 points.
+You press <mark title="human response">A</mark>. You win 62 points.
+You press <mark title="human response">A</mark>. You win 72 points.
+You press <mark title="human response">A</mark>. You win 63 points.
+You press <mark title="human response">A</mark>. You win 66 points.
+
+Game 4. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 42 points.
+You are instructed to play Machine A. You win 42 points.
+You are instructed to play Machine B. You win 71 points.
+You are instructed to play Machine B. You win 59 points.
+You press <mark title="human response">A</mark>. You win 43 points.
+You press <mark title="human response">A</mark>. You win 42 points.
+You press <mark title="human response">B</mark>. You win 49 points.
+You press <mark title="human response">B</mark>. You win 59 points.
+You press <mark title="human response">A</mark>. You win 47 points.
+You press <mark title="human response">A</mark>. You win 41 points.
+
+Game 5. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 44 points.
+You are instructed to play Machine A. You win 57 points.
+You are instructed to play Machine B. You win 48 points.
+You are instructed to play Machine B. You win 58 points.
+You press <mark title="human response">B</mark>. You win 45 points.
+
+Game 6. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 35 points.
+You are instructed to play Machine B. You win 45 points.
+You are instructed to play Machine A. You win 44 points.
+You are instructed to play Machine B. You win 33 points.
+You press <mark title="human response">A</mark>. You win 30 points.
+You press <mark title="human response">A</mark>. You win 27 points.
+You press <mark title="human response">A</mark>. You win 45 points.
+You press <mark title="human response">A</mark>. You win 31 points.
+You press <mark title="human response">A</mark>. You win 22 points.
+You press <mark title="human response">A</mark>. You win 43 points.
+
+Game 7. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 58 points.
+You are instructed to play Machine A. You win 73 points.
+You are instructed to play Machine B. You win 56 points.
+You are instructed to play Machine A. You win 77 points.
+You press <mark title="human response">A</mark>. You win 85 points.
+You press <mark title="human response">A</mark>. You win 77 points.
+You press <mark title="human response">A</mark>. You win 78 points.
+You press <mark title="human response">A</mark>. You win 73 points.
+You press <mark title="human response">A</mark>. You win 71 points.
+You press <mark title="human response">A</mark>. You win 79 points.
+
+Game 8. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 56 points.
+You are instructed to play Machine A. You win 45 points.
+You are instructed to play Machine A. You win 53 points.
+You are instructed to play Machine B. You win 38 points.
+You press <mark title="human response">A</mark>. You win 41 points.
+
+Game 9. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 43 points.
+You are instructed to play Machine B. You win 39 points.
+You are instructed to play Machine A. You win 43 points.
+You are instructed to play Machine A. You win 44 points.
+You press <mark title="human response">A</mark>. You win 43 points.
+
+Game 10. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 48 points.
+You are instructed to play Machine B. You win 54 points.
+You are instructed to play Machine A. You win 39 points.
+You are instructed to play Machine B. You win 42 points.
+You press <mark title="human response">B</mark>. You win 50 points.
+
+Game 11. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 45 points.
+You are instructed to play Machine A. You win 48 points.
+You are instructed to play Machine A. You win 67 points.
+You are instructed to play Machine B. You win 48 points.
+You press <mark title="human response">A</mark>. You win 47 points.
+
+Game 12. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 46 points.
+You are instructed to play Machine B. You win 26 points.
+You are instructed to play Machine A. You win 38 points.
+You are instructed to play Machine B. You win 34 points.
+You press <mark title="human response">A</mark>. You win 52 points.
+You press <mark title="human response">A</mark>. You win 31 points.
+You press <mark title="human response">A</mark>. You win 45 points.
+You press <mark title="human response">A</mark>. You win 46 points.
+You press <mark title="human response">A</mark>. You win 44 points.
+You press <mark title="human response">A</mark>. You win 54 points.
+
+Game 13. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 71 points.
+You are instructed to play Machine B. You win 67 points.
+You are instructed to play Machine A. You win 58 points.
+You are instructed to play Machine B. You win 68 points.
+You press <mark title="human response">A</mark>. You win 77 points.
+
+Game 14. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 58 points.
+You are instructed to play Machine A. You win 73 points.
+You are instructed to play Machine B. You win 56 points.
+You are instructed to play Machine A. You win 77 points.
+You press <mark title="human response">A</mark>. You win 62 points.
+You press <mark title="human response">A</mark>. You win 50 points.
+You press <mark title="human response">A</mark>. You win 68 points.
+You press <mark title="human response">A</mark>. You win 90 points.
+You press <mark title="human response">A</mark>. You win 67 points.
+You press <mark title="human response">A</mark>. You win 83 points.
+
+Game 15. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 29 points.
+You are instructed to play Machine B. You win 51 points.
+You are instructed to play Machine B. You win 36 points.
+You are instructed to play Machine B. You win 35 points.
+You press <mark title="human response">A</mark>. You win 35 points.
+You press <mark title="human response">B</mark>. You win 38 points.
+You press <mark title="human response">B</mark>. You win 31 points.
+You press <mark title="human response">B</mark>. You win 35 points.
+You press <mark title="human response">B</mark>. You win 39 points.
+You press <mark title="human response">A</mark>. You win 40 points.
+
+Game 16. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 13 points.
+You are instructed to play Machine A. You win 48 points.
+You are instructed to play Machine A. You win 32 points.
+You are instructed to play Machine A. You win 43 points.
+You press <mark title="human response">A</mark>. You win 40 points.
+You press <mark title="human response">A</mark>. You win 30 points.
+You press <mark title="human response">A</mark>. You win 38 points.
+You press <mark title="human response">A</mark>. You win 39 points.
+You press <mark title="human response">A</mark>. You win 31 points.
+You press <mark title="human response">A</mark>. You win 24 points.
+
+Game 17. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 34 points.
+You are instructed to play Machine B. You win 57 points.
+You are instructed to play Machine A. You win 32 points.
+You are instructed to play Machine A. You win 6 points.
+You press <mark title="human response">B</mark>. You win 47 points.
+
+Game 18. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 39 points.
+You are instructed to play Machine B. You win 41 points.
+You are instructed to play Machine B. You win 36 points.
+You are instructed to play Machine A. You win 28 points.
+You press <mark title="human response">B</mark>. You win 37 points.
+You press <mark title="human response">B</mark>. You win 38 points.
+You press <mark title="human response">B</mark>. You win 48 points.
+You press <mark title="human response">B</mark>. You win 44 points.
+You press <mark title="human response">B</mark>. You win 29 points.
+You press <mark title="human response">B</mark>. You win 42 points.
+
+Game 19. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 49 points.
+You are instructed to play Machine B. You win 67 points.
+You are instructed to play Machine B. You win 61 points.
+You are instructed to play Machine A. You win 38 points.
+You press <mark title="human response">B</mark>. You win 47 points.
+
+Game 20. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 65 points.
+You are instructed to play Machine B. You win 49 points.
+You are instructed to play Machine B. You win 50 points.
+You are instructed to play Machine A. You win 68 points.
+You press <mark title="human response">A</mark>. You win 68 points.
+You press <mark title="human response">B</mark>. You win 79 points.
+You press <mark title="human response">B</mark>. You win 67 points.
+You press <mark title="human response">B</mark>. You win 61 points.
+You press <mark title="human response">B</mark>. You win 63 points.
+You press <mark title="human response">B</mark>. You win 44 points.
+
+Game 21. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 50 points.
+You are instructed to play Machine A. You win 42 points.
+You are instructed to play Machine B. You win 32 points.
+You are instructed to play Machine B. You win 32 points.
+You press <mark title="human response">A</mark>. You win 73 points.
+
+Game 22. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 46 points.
+You are instructed to play Machine B. You win 42 points.
+You are instructed to play Machine B. You win 32 points.
+You are instructed to play Machine A. You win 56 points.
+You press <mark title="human response">A</mark>. You win 58 points.
+You press <mark title="human response">A</mark>. You win 50 points.
+You press <mark title="human response">A</mark>. You win 49 points.
+You press <mark title="human response">A</mark>. You win 67 points.
+You press <mark title="human response">A</mark>. You win 60 points.
+You press <mark title="human response">A</mark>. You win 55 points.
+
+Game 23. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 32 points.
+You are instructed to play Machine A. You win 24 points.
+You are instructed to play Machine A. You win 16 points.
+You are instructed to play Machine B. You win 19 points.
+You press <mark title="human response">A</mark>. You win 20 points.
+You press <mark title="human response">B</mark>. You win 35 points.
+You press <mark title="human response">B</mark>. You win 58 points.
+You press <mark title="human response">B</mark>. You win 40 points.
+You press <mark title="human response">B</mark>. You win 46 points.
+You press <mark title="human response">B</mark>. You win 35 points.
+
+Game 24. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 28 points.
+You are instructed to play Machine A. You win 33 points.
+You are instructed to play Machine B. You win 19 points.
+You are instructed to play Machine B. You win 15 points.
+You press <mark title="human response">A</mark>. You win 43 points.
+You press <mark title="human response">A</mark>. You win 36 points.
+You press <mark title="human response">A</mark>. You win 45 points.
+You press <mark title="human response">A</mark>. You win 24 points.
+You press <mark title="human response">A</mark>. You win 44 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+
+Game 25. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 53 points.
+You are instructed to play Machine B. You win 31 points.
+You are instructed to play Machine A. You win 45 points.
+You are instructed to play Machine A. You win 57 points.
+You press <mark title="human response">A</mark>. You win 37 points.
+You press <mark title="human response">A</mark>. You win 46 points.
+You press <mark title="human response">A</mark>. You win 42 points.
+You press <mark title="human response">A</mark>. You win 33 points.
+You press <mark title="human response">A</mark>. You win 20 points.
+You press <mark title="human response">A</mark>. You win 21 points.
+
+Game 26. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 71 points.
+You are instructed to play Machine B. You win 67 points.
+You are instructed to play Machine A. You win 58 points.
+You are instructed to play Machine B. You win 68 points.
+You press <mark title="human response">A</mark>. You win 62 points.
+
+Game 27. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 56 points.
+You are instructed to play Machine B. You win 53 points.
+You are instructed to play Machine B. You win 73 points.
+You are instructed to play Machine A. You win 52 points.
+You press <mark title="human response">B</mark>. You win 74 points.
+
+Game 28. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 71 points.
+You are instructed to play Machine B. You win 78 points.
+You are instructed to play Machine A. You win 61 points.
+You are instructed to play Machine B. You win 89 points.
+You press <mark title="human response">B</mark>. You win 71 points.
+You press <mark title="human response">B</mark>. You win 73 points.
+You press <mark title="human response">B</mark>. You win 81 points.
+You press <mark title="human response">B</mark>. You win 72 points.
+You press <mark title="human response">B</mark>. You win 71 points.
+You press <mark title="human response">B</mark>. You win 65 points.
+
+Game 29. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 66 points.
+You are instructed to play Machine B. You win 39 points.
+You are instructed to play Machine B. You win 57 points.
+You are instructed to play Machine A. You win 60 points.
+You press <mark title="human response">A</mark>. You win 62 points.
+
+Game 30. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 34 points.
+You are instructed to play Machine B. You win 57 points.
+You are instructed to play Machine A. You win 32 points.
+You are instructed to play Machine A. You win 6 points.
+You press <mark title="human response">B</mark>. You win 40 points.
+
+Game 31. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 49 points.
+You are instructed to play Machine A. You win 55 points.
+You are instructed to play Machine A. You win 63 points.
+You are instructed to play Machine B. You win 57 points.
+You press <mark title="human response">A</mark>. You win 62 points.
+You press <mark title="human response">A</mark>. You win 69 points.
+You press <mark title="human response">A</mark>. You win 62 points.
+You press <mark title="human response">A</mark>. You win 61 points.
+You press <mark title="human response">A</mark>. You win 63 points.
+You press <mark title="human response">A</mark>. You win 70 points.
+
+Game 32. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 51 points.
+You are instructed to play Machine A. You win 67 points.
+You are instructed to play Machine A. You win 58 points.
+You are instructed to play Machine B. You win 51 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+You press <mark title="human response">A</mark>. You win 68 points.
+You press <mark title="human response">A</mark>. You win 69 points.
+You press <mark title="human response">A</mark>. You win 67 points.
+You press <mark title="human response">A</mark>. You win 56 points.
+You press <mark title="human response">A</mark>. You win 61 points.
+
+Game 33. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 64 points.
+You are instructed to play Machine B. You win 40 points.
+You are instructed to play Machine B. You win 27 points.
+You are instructed to play Machine B. You win 30 points.
+You press <mark title="human response">A</mark>. You win 52 points.
+
+Game 34. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 23 points.
+You are instructed to play Machine A. You win 46 points.
+You are instructed to play Machine B. You win 34 points.
+You are instructed to play Machine B. You win 34 points.
+You press <mark title="human response">A</mark>. You win 59 points.
+
+Game 35. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 49 points.
+You are instructed to play Machine B. You win 67 points.
+You are instructed to play Machine B. You win 61 points.
+You are instructed to play Machine A. You win 38 points.
+You press <mark title="human response">B</mark>. You win 53 points.
+
+Game 36. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 71 points.
+You are instructed to play Machine B. You win 78 points.
+You are instructed to play Machine A. You win 61 points.
+You are instructed to play Machine B. You win 89 points.
+You press <mark title="human response">B</mark>. You win 78 points.
+You press <mark title="human response">B</mark>. You win 58 points.
+You press <mark title="human response">B</mark>. You win 73 points.
+You press <mark title="human response">B</mark>. You win 68 points.
+You press <mark title="human response">B</mark>. You win 66 points.
+You press <mark title="human response">B</mark>. You win 55 points.
+
+Game 37. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 50 points.
+You are instructed to play Machine A. You win 42 points.
+You are instructed to play Machine B. You win 32 points.
+You are instructed to play Machine B. You win 32 points.
+You press <mark title="human response">A</mark>. You win 63 points.
+
+Game 38. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 63 points.
+You are instructed to play Machine B. You win 60 points.
+You are instructed to play Machine B. You win 57 points.
+You are instructed to play Machine A. You win 38 points.
+You press <mark title="human response">B</mark>. You win 62 points.
+
+Game 39. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 45 points.
+You are instructed to play Machine B. You win 16 points.
+You are instructed to play Machine B. You win 24 points.
+You are instructed to play Machine B. You win 17 points.
+You press <mark title="human response">A</mark>. You win 41 points.
+
+Game 40. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 48 points.
+You are instructed to play Machine A. You win 65 points.
+You are instructed to play Machine B. You win 64 points.
+You are instructed to play Machine A. You win 55 points.
+You press <mark title="human response">A</mark>. You win 59 points.
+You press <mark title="human response">A</mark>. You win 62 points.
+You press <mark title="human response">A</mark>. You win 59 points.
+You press <mark title="human response">A</mark>. You win 74 points.
+You press <mark title="human response">A</mark>. You win 73 points.
+You press <mark title="human response">A</mark>. You win 65 points.
+
+Game 41. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 59 points.
+You are instructed to play Machine B. You win 73 points.
+You are instructed to play Machine A. You win 71 points.
+You are instructed to play Machine B. You win 55 points.
+You press <mark title="human response">A</mark>. You win 70 points.
+You press <mark title="human response">A</mark>. You win 57 points.
+You press <mark title="human response">A</mark>. You win 60 points.
+You press <mark title="human response">A</mark>. You win 67 points.
+You press <mark title="human response">A</mark>. You win 65 points.
+You press <mark title="human response">A</mark>. You win 47 points.
+
+Game 42. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 64 points.
+You are instructed to play Machine B. You win 63 points.
+You are instructed to play Machine A. You win 60 points.
+You are instructed to play Machine A. You win 69 points.
+You press <mark title="human response">A</mark>. You win 49 points.
+You press <mark title="human response">B</mark>. You win 63 points.
+You press <mark title="human response">B</mark>. You win 59 points.
+You press <mark title="human response">B</mark>. You win 66 points.
+You press <mark title="human response">B</mark>. You win 59 points.
+You press <mark title="human response">B</mark>. You win 65 points.
+
+Game 43. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 63 points.
+You are instructed to play Machine A. You win 77 points.
+You are instructed to play Machine A. You win 67 points.
+You are instructed to play Machine A. You win 70 points.
+You press <mark title="human response">B</mark>. You win 70 points.
+You press <mark title="human response">A</mark>. You win 80 points.
+You press <mark title="human response">A</mark>. You win 74 points.
+You press <mark title="human response">A</mark>. You win 65 points.
+You press <mark title="human response">A</mark>. You win 68 points.
+You press <mark title="human response">A</mark>. You win 79 points.
+
+Game 44. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 57 points.
+You are instructed to play Machine B. You win 52 points.
+You are instructed to play Machine A. You win 47 points.
+You are instructed to play Machine B. You win 61 points.
+You press <mark title="human response">A</mark>. You win 73 points.
+
+Game 45. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 76 points.
+You are instructed to play Machine B. You win 58 points.
+You are instructed to play Machine A. You win 89 points.
+You are instructed to play Machine A. You win 74 points.
+You press <mark title="human response">A</mark>. You win 95 points.
+
+Game 46. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 45 points.
+You are instructed to play Machine A. You win 48 points.
+You are instructed to play Machine A. You win 67 points.
+You are instructed to play Machine B. You win 48 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+
+Game 47. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 46 points.
+You are instructed to play Machine B. You win 45 points.
+You are instructed to play Machine A. You win 22 points.
+You are instructed to play Machine A. You win 26 points.
+You press <mark title="human response">B</mark>. You win 55 points.
+You press <mark title="human response">B</mark>. You win 34 points.
+You press <mark title="human response">B</mark>. You win 36 points.
+You press <mark title="human response">B</mark>. You win 54 points.
+You press <mark title="human response">B</mark>. You win 35 points.
+You press <mark title="human response">B</mark>. You win 29 points.
+
+Game 48. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 66 points.
+You are instructed to play Machine A. You win 58 points.
+You are instructed to play Machine A. You win 49 points.
+You are instructed to play Machine B. You win 38 points.
+You press <mark title="human response">B</mark>. You win 40 points.
+You press <mark title="human response">B</mark>. You win 40 points.
+You press <mark title="human response">A</mark>. You win 37 points.
+You press <mark title="human response">A</mark>. You win 68 points.
+You press <mark title="human response">A</mark>. You win 61 points.
+You press <mark title="human response">A</mark>. You win 45 points.
+
+Game 49. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 62 points.
+You are instructed to play Machine B. You win 53 points.
+You are instructed to play Machine A. You win 52 points.
+You are instructed to play Machine A. You win 48 points.
+You press <mark title="human response">B</mark>. You win 44 points.
+You press <mark title="human response">B</mark>. You win 50 points.
+You press <mark title="human response">B</mark>. You win 64 points.
+You press <mark title="human response">B</mark>. You win 66 points.
+You press <mark title="human response">B</mark>. You win 41 points.
+You press <mark title="human response">B</mark>. You win 55 points.
+
+Game 50. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 44 points.
+You are instructed to play Machine A. You win 57 points.
+You are instructed to play Machine B. You win 48 points.
+You are instructed to play Machine B. You win 58 points.
+You press <mark title="human response">B</mark>. You win 48 points.
+
+Game 51. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 59 points.
+You are instructed to play Machine A. You win 62 points.
+You are instructed to play Machine B. You win 66 points.
+You are instructed to play Machine A. You win 61 points.
+You press <mark title="human response">B</mark>. You win 60 points.
+
+Game 52. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 72 points.
+You are instructed to play Machine B. You win 72 points.
+You are instructed to play Machine B. You win 52 points.
+You are instructed to play Machine A. You win 70 points.
+You press <mark title="human response">A</mark>. You win 83 points.
+
+Game 53. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 32 points.
+You are instructed to play Machine B. You win 60 points.
+You are instructed to play Machine A. You win 52 points.
+You are instructed to play Machine B. You win 65 points.
+You press <mark title="human response">B</mark>. You win 58 points.
+
+Game 54. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 71 points.
+You are instructed to play Machine B. You win 70 points.
+You are instructed to play Machine B. You win 48 points.
+You are instructed to play Machine A. You win 62 points.
+You press <mark title="human response">A</mark>. You win 87 points.
+You press <mark title="human response">A</mark>. You win 65 points.
+You press <mark title="human response">A</mark>. You win 70 points.
+You press <mark title="human response">A</mark>. You win 54 points.
+You press <mark title="human response">A</mark>. You win 68 points.
+You press <mark title="human response">A</mark>. You win 55 points.
+
+Game 55. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 45 points.
+You are instructed to play Machine A. You win 57 points.
+You are instructed to play Machine B. You win 37 points.
+You are instructed to play Machine A. You win 45 points.
+You press <mark title="human response">A</mark>. You win 59 points.
+You press <mark title="human response">A</mark>. You win 50 points.
+You press <mark title="human response">A</mark>. You win 54 points.
+You press <mark title="human response">A</mark>. You win 68 points.
+You press <mark title="human response">A</mark>. You win 59 points.
+You press <mark title="human response">A</mark>. You win 59 points.
+
+Game 56. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 52 points.
+You are instructed to play Machine B. You win 61 points.
+You are instructed to play Machine B. You win 54 points.
+You are instructed to play Machine B. You win 65 points.
+You press <mark title="human response">B</mark>. You win 65 points.
+
+Game 57. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 35 points.
+You are instructed to play Machine B. You win 45 points.
+You are instructed to play Machine A. You win 44 points.
+You are instructed to play Machine B. You win 33 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+You press <mark title="human response">A</mark>. You win 31 points.
+You press <mark title="human response">A</mark>. You win 41 points.
+You press <mark title="human response">A</mark>. You win 48 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+You press <mark title="human response">A</mark>. You win 30 points.
+
+Game 58. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 62 points.
+You are instructed to play Machine A. You win 58 points.
+You are instructed to play Machine A. You win 59 points.
+You are instructed to play Machine B. You win 28 points.
+You press <mark title="human response">A</mark>. You win 59 points.
+
+Game 59. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 49 points.
+You are instructed to play Machine B. You win 32 points.
+You are instructed to play Machine B. You win 38 points.
+You are instructed to play Machine A. You win 40 points.
+You press <mark title="human response">A</mark>. You win 22 points.
+
+Game 60. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 23 points.
+You are instructed to play Machine B. You win 41 points.
+You are instructed to play Machine A. You win 16 points.
+You are instructed to play Machine B. You win 38 points.
+You press <mark title="human response">B</mark>. You win 41 points.
+You press <mark title="human response">B</mark>. You win 11 points.
+You press <mark title="human response">B</mark>. You win 52 points.
+You press <mark title="human response">B</mark>. You win 39 points.
+You press <mark title="human response">B</mark>. You win 36 points.
+You press <mark title="human response">B</mark>. You win 22 points.
+
+Game 61. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 63 points.
+You are instructed to play Machine B. You win 60 points.
+You are instructed to play Machine B. You win 57 points.
+You are instructed to play Machine A. You win 38 points.
+You press <mark title="human response">B</mark>. You win 79 points.
+
+Game 62. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 52 points.
+You are instructed to play Machine B. You win 72 points.
+You are instructed to play Machine A. You win 43 points.
+You are instructed to play Machine A. You win 50 points.
+You press <mark title="human response">B</mark>. You win 75 points.
+You press <mark title="human response">B</mark>. You win 47 points.
+You press <mark title="human response">B</mark>. You win 62 points.
+You press <mark title="human response">B</mark>. You win 55 points.
+You press <mark title="human response">B</mark>. You win 62 points.
+You press <mark title="human response">B</mark>. You win 70 points.
+
+Game 63. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 52 points.
+You are instructed to play Machine B. You win 65 points.
+You are instructed to play Machine B. You win 53 points.
+You are instructed to play Machine A. You win 53 points.
+You press <mark title="human response">B</mark>. You win 53 points.
+
+Game 64. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 51 points.
+You are instructed to play Machine A. You win 40 points.
+You are instructed to play Machine B. You win 74 points.
+You are instructed to play Machine A. You win 58 points.
+You press <mark title="human response">B</mark>. You win 59 points.
+
+Game 65. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 60 points.
+You are instructed to play Machine A. You win 62 points.
+You are instructed to play Machine A. You win 52 points.
+You are instructed to play Machine A. You win 71 points.
+You press <mark title="human response">A</mark>. You win 46 points.
+
+Game 66. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 28 points.
+You are instructed to play Machine A. You win 33 points.
+You are instructed to play Machine B. You win 19 points.
+You are instructed to play Machine B. You win 15 points.
+You press <mark title="human response">B</mark>. You win 12 points.
+You press <mark title="human response">A</mark>. You win 44 points.
+You press <mark title="human response">A</mark>. You win 38 points.
+You press <mark title="human response">A</mark>. You win 24 points.
+You press <mark title="human response">A</mark>. You win 41 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+
+Game 67. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 49 points.
+You are instructed to play Machine A. You win 55 points.
+You are instructed to play Machine A. You win 63 points.
+You are instructed to play Machine B. You win 57 points.
+You press <mark title="human response">B</mark>. You win 68 points.
+You press <mark title="human response">B</mark>. You win 51 points.
+You press <mark title="human response">B</mark>. You win 50 points.
+You press <mark title="human response">B</mark>. You win 64 points.
+You press <mark title="human response">B</mark>. You win 51 points.
+You press <mark title="human response">B</mark>. You win 49 points.
+
+Game 68. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 64 points.
+You are instructed to play Machine B. You win 63 points.
+You are instructed to play Machine A. You win 60 points.
+You are instructed to play Machine A. You win 69 points.
+You press <mark title="human response">A</mark>. You win 47 points.
+You press <mark title="human response">A</mark>. You win 43 points.
+You press <mark title="human response">A</mark>. You win 60 points.
+You press <mark title="human response">A</mark>. You win 49 points.
+You press <mark title="human response">A</mark>. You win 49 points.
+You press <mark title="human response">A</mark>. You win 56 points.
+
+Game 69. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 42 points.
+You are instructed to play Machine A. You win 42 points.
+You are instructed to play Machine B. You win 71 points.
+You are instructed to play Machine B. You win 59 points.
+You press <mark title="human response">B</mark>. You win 60 points.
+You press <mark title="human response">B</mark>. You win 36 points.
+You press <mark title="human response">B</mark>. You win 68 points.
+You press <mark title="human response">B</mark>. You win 67 points.
+You press <mark title="human response">B</mark>. You win 57 points.
+You press <mark title="human response">B</mark>. You win 39 points.
+
+Game 70. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 20 points.
+You are instructed to play Machine A. You win 38 points.
+You are instructed to play Machine B. You win 25 points.
+You are instructed to play Machine B. You win 35 points.
+You press <mark title="human response">B</mark>. You win 27 points.
+
+Game 71. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 60 points.
+You are instructed to play Machine B. You win 67 points.
+You are instructed to play Machine A. You win 35 points.
+You are instructed to play Machine A. You win 40 points.
+You press <mark title="human response">B</mark>. You win 52 points.
+You press <mark title="human response">B</mark>. You win 60 points.
+You press <mark title="human response">B</mark>. You win 56 points.
+You press <mark title="human response">B</mark>. You win 73 points.
+You press <mark title="human response">B</mark>. You win 58 points.
+You press <mark title="human response">B</mark>. You win 52 points.
+
+Game 72. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 46 points.
+You are instructed to play Machine B. You win 45 points.
+You are instructed to play Machine A. You win 22 points.
+You are instructed to play Machine A. You win 26 points.
+You press <mark title="human response">B</mark>. You win 35 points.
+You press <mark title="human response">B</mark>. You win 39 points.
+You press <mark title="human response">B</mark>. You win 20 points.
+You press <mark title="human response">B</mark>. You win 44 points.
+You press <mark title="human response">B</mark>. You win 41 points.
+You press <mark title="human response">B</mark>. You win 35 points.
+
+Game 73. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 45 points.
+You are instructed to play Machine A. You win 57 points.
+You are instructed to play Machine B. You win 37 points.
+You are instructed to play Machine A. You win 45 points.
+You press <mark title="human response">A</mark>. You win 63 points.
+You press <mark title="human response">A</mark>. You win 67 points.
+You press <mark title="human response">A</mark>. You win 66 points.
+You press <mark title="human response">A</mark>. You win 65 points.
+You press <mark title="human response">A</mark>. You win 60 points.
+You press <mark title="human response">A</mark>. You win 65 points.
+
+Game 74. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 32 points.
+You are instructed to play Machine A. You win 24 points.
+You are instructed to play Machine A. You win 16 points.
+You are instructed to play Machine B. You win 19 points.
+You press <mark title="human response">B</mark>. You win 23 points.
+You press <mark title="human response">B</mark>. You win 43 points.
+You press <mark title="human response">B</mark>. You win 33 points.
+You press <mark title="human response">B</mark>. You win 30 points.
+You press <mark title="human response">B</mark>. You win 61 points.
+You press <mark title="human response">B</mark>. You win 33 points.
+
+Game 75. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 64 points.
+You are instructed to play Machine B. You win 40 points.
+You are instructed to play Machine B. You win 27 points.
+You are instructed to play Machine B. You win 30 points.
+You press <mark title="human response">A</mark>. You win 42 points.
+
+Game 76. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 56 points.
+You are instructed to play Machine A. You win 45 points.
+You are instructed to play Machine A. You win 53 points.
+You are instructed to play Machine B. You win 38 points.
+You press <mark title="human response">A</mark>. You win 52 points.
+
+Game 77. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 65 points.
+You are instructed to play Machine A. You win 75 points.
+You are instructed to play Machine B. You win 59 points.
+You are instructed to play Machine A. You win 79 points.
+You press <mark title="human response">A</mark>. You win 71 points.
+
+Game 78. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 58 points.
+You are instructed to play Machine B. You win 71 points.
+You are instructed to play Machine A. You win 66 points.
+You are instructed to play Machine A. You win 64 points.
+You press <mark title="human response">A</mark>. You win 56 points.
+You press <mark title="human response">A</mark>. You win 56 points.
+You press <mark title="human response">A</mark>. You win 54 points.
+You press <mark title="human response">A</mark>. You win 67 points.
+You press <mark title="human response">A</mark>. You win 58 points.
+You press <mark title="human response">A</mark>. You win 59 points.
+
+Game 79. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 48 points.
+You are instructed to play Machine A. You win 53 points.
+You are instructed to play Machine B. You win 46 points.
+You are instructed to play Machine A. You win 34 points.
+You press <mark title="human response">B</mark>. You win 42 points.
+
+Game 80. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine B. You win 23 points.
+You are instructed to play Machine A. You win 46 points.
+You are instructed to play Machine B. You win 34 points.
+You are instructed to play Machine B. You win 34 points.
+You press <mark title="human response">A</mark>. You win 51 points.
+
+Game 81. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 38 points.
+You are instructed to play Machine B. You win 57 points.
+You are instructed to play Machine A. You win 60 points.
+You are instructed to play Machine B. You win 26 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+
+Game 82. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 48 points.
+You are instructed to play Machine A. You win 65 points.
+You are instructed to play Machine B. You win 64 points.
+You are instructed to play Machine A. You win 55 points.
+You press <mark title="human response">A</mark>. You win 64 points.
+You press <mark title="human response">A</mark>. You win 43 points.
+You press <mark title="human response">A</mark>. You win 54 points.
+You press <mark title="human response">A</mark>. You win 56 points.
+You press <mark title="human response">A</mark>. You win 62 points.
+You press <mark title="human response">A</mark>. You win 67 points.
+
+Game 83. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 13 points.
+You are instructed to play Machine A. You win 48 points.
+You are instructed to play Machine A. You win 32 points.
+You are instructed to play Machine A. You win 43 points.
+You press <mark title="human response">A</mark>. You win 49 points.
+You press <mark title="human response">A</mark>. You win 48 points.
+You press <mark title="human response">A</mark>. You win 44 points.
+You press <mark title="human response">A</mark>. You win 50 points.
+You press <mark title="human response">A</mark>. You win 45 points.
+You press <mark title="human response">A</mark>. You win 44 points.
+
+Game 84. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 23 points.
+You are instructed to play Machine B. You win 62 points.
+You are instructed to play Machine B. You win 52 points.
+You are instructed to play Machine A. You win 37 points.
+You press <mark title="human response">B</mark>. You win 47 points.
+You press <mark title="human response">B</mark>. You win 56 points.
+You press <mark title="human response">B</mark>. You win 62 points.
+You press <mark title="human response">B</mark>. You win 52 points.
+You press <mark title="human response">B</mark>. You win 58 points.
+You press <mark title="human response">B</mark>. You win 47 points.
+
+Game 85. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 65 points.
+You are instructed to play Machine A. You win 60 points.
+You are instructed to play Machine A. You win 65 points.
+You are instructed to play Machine B. You win 52 points.
+You press <mark title="human response">A</mark>. You win 51 points.
+You press <mark title="human response">A</mark>. You win 74 points.
+You press <mark title="human response">A</mark>. You win 54 points.
+You press <mark title="human response">A</mark>. You win 58 points.
+You press <mark title="human response">A</mark>. You win 65 points.
+You press <mark title="human response">A</mark>. You win 61 points.
+
+Game 86. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 46 points.
+You are instructed to play Machine B. You win 42 points.
+You are instructed to play Machine B. You win 32 points.
+You are instructed to play Machine A. You win 56 points.
+You press <mark title="human response">A</mark>. You win 57 points.
+You press <mark title="human response">A</mark>. You win 58 points.
+You press <mark title="human response">A</mark>. You win 55 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+You press <mark title="human response">A</mark>. You win 66 points.
+You press <mark title="human response">A</mark>. You win 60 points.
+
+Game 87. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 62 points.
+You are instructed to play Machine B. You win 53 points.
+You are instructed to play Machine A. You win 52 points.
+You are instructed to play Machine A. You win 48 points.
+You press <mark title="human response">A</mark>. You win 54 points.
+You press <mark title="human response">B</mark>. You win 42 points.
+You press <mark title="human response">B</mark>. You win 61 points.
+You press <mark title="human response">B</mark>. You win 43 points.
+You press <mark title="human response">B</mark>. You win 47 points.
+You press <mark title="human response">B</mark>. You win 61 points.
+
+Game 88. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 33 points.
+You are instructed to play Machine B. You win 36 points.
+You are instructed to play Machine B. You win 42 points.
+You are instructed to play Machine A. You win 48 points.
+You press <mark title="human response">A</mark>. You win 56 points.
+You press <mark title="human response">A</mark>. You win 43 points.
+You press <mark title="human response">A</mark>. You win 60 points.
+You press <mark title="human response">A</mark>. You win 41 points.
+You press <mark title="human response">A</mark>. You win 53 points.
+You press <mark title="human response">A</mark>. You win 38 points.
+
+Game 89. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine B. You win 39 points.
+You are instructed to play Machine B. You win 41 points.
+You are instructed to play Machine B. You win 36 points.
+You are instructed to play Machine A. You win 28 points.
+You press <mark title="human response">A</mark>. You win 28 points.
+You press <mark title="human response">B</mark>. You win 37 points.
+You press <mark title="human response">B</mark>. You win 42 points.
+You press <mark title="human response">B</mark>. You win 32 points.
+You press <mark title="human response">B</mark>. You win 39 points.
+You press <mark title="human response">B</mark>. You win 46 points.
+
+Game 90. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 57 points.
+You are instructed to play Machine B. You win 52 points.
+You are instructed to play Machine A. You win 47 points.
+You are instructed to play Machine B. You win 61 points.
+You press <mark title="human response">B</mark>. You win 66 points.
+
+Game 91. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 43 points.
+You are instructed to play Machine B. You win 39 points.
+You are instructed to play Machine A. You win 43 points.
+You are instructed to play Machine A. You win 44 points.
+You press <mark title="human response">A</mark>. You win 31 points.
+
+Game 92. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 56 points.
+You are instructed to play Machine B. You win 53 points.
+You are instructed to play Machine B. You win 73 points.
+You are instructed to play Machine A. You win 52 points.
+You press <mark title="human response">B</mark>. You win 60 points.
+
+Game 93. Two machines (A and B); this game has 1 free draw(s).
+You are instructed to play Machine A. You win 53 points.
+You are instructed to play Machine A. You win 61 points.
+You are instructed to play Machine B. You win 46 points.
+You are instructed to play Machine A. You win 51 points.
+You press <mark title="human response">A</mark>. You win 69 points.
+
+Game 94. Two machines (A and B); this game has 6 free draw(s).
+You are instructed to play Machine A. You win 29 points.
+You are instructed to play Machine B. You win 51 points.
+You are instructed to play Machine B. You win 36 points.
+You are instructed to play Machine B. You win 35 points.
+You press <mark title="human response">A</mark>. You win 37 points.
+You press <mark title="human response">B</mark>. You win 35 points.
+You press <mark title="human response">B</mark>. You win 42 points.
+You press <mark title="human response">B</mark>. You win 31 points.
+You press <mark title="human response">B</mark>. You win 33 points.
+You press <mark title="human response">B</mark>. You win 27 points.</pre></div><div class="transcript" id="t1" hidden><pre>You will answer 27 questions about money. In each question you choose between a smaller amount available today and a larger amount available later. You have a 1 in 4 chance of actually receiving a payment based on the preferences you indicate; if you do receive payment, the question on which it is based is chosen at random. The &#x27;today&#x27; choice would be paid out as soon as you complete the study, while the &#x27;later&#x27; choice would be paid out after the number of days indicated in that question. For each question, press T for &#x27;today&#x27; or press L for &#x27;later&#x27;.
+Question 1: Would you prefer $54 today or $55 in 117 days? You press <mark title="human response">T</mark>.
+Question 2: Would you prefer $55 today or $75 in 61 days? You press <mark title="human response">T</mark>.
+Question 3: Would you prefer $19 today or $25 in 53 days? You press <mark title="human response">L</mark>.
+Question 4: Would you prefer $31 today or $85 in 7 days? You press <mark title="human response">L</mark>.
+Question 5: Would you prefer $14 today or $25 in 19 days? You press <mark title="human response">T</mark>.
+Question 6: Would you prefer $47 today or $50 in 160 days? You press <mark title="human response">T</mark>.
+Question 7: Would you prefer $15 today or $35 in 13 days? You press <mark title="human response">L</mark>.
+Question 8: Would you prefer $25 today or $60 in 14 days? You press <mark title="human response">L</mark>.
+Question 9: Would you prefer $78 today or $80 in 162 days? You press <mark title="human response">T</mark>.
+Question 10: Would you prefer $40 today or $55 in 62 days? You press <mark title="human response">T</mark>.
+Question 11: Would you prefer $11 today or $30 in 7 days? You press <mark title="human response">L</mark>.
+Question 12: Would you prefer $67 today or $75 in 119 days? You press <mark title="human response">T</mark>.
+Question 13: Would you prefer $34 today or $35 in 186 days? You press <mark title="human response">T</mark>.
+Question 14: Would you prefer $27 today or $50 in 21 days? You press <mark title="human response">L</mark>.
+Question 15: Would you prefer $69 today or $85 in 91 days? You press <mark title="human response">L</mark>.
+Question 16: Would you prefer $49 today or $60 in 89 days? You press <mark title="human response">L</mark>.
+Question 17: Would you prefer $80 today or $85 in 157 days? You press <mark title="human response">T</mark>.
+Question 18: Would you prefer $24 today or $35 in 29 days? You press <mark title="human response">L</mark>.
+Question 19: Would you prefer $33 today or $80 in 14 days? You press <mark title="human response">L</mark>.
+Question 20: Would you prefer $28 today or $30 in 179 days? You press <mark title="human response">T</mark>.
+Question 21: Would you prefer $34 today or $50 in 30 days? You press <mark title="human response">L</mark>.
+Question 22: Would you prefer $25 today or $30 in 80 days? You press <mark title="human response">T</mark>.
+Question 23: Would you prefer $41 today or $75 in 20 days? You press <mark title="human response">L</mark>.
+Question 24: Would you prefer $54 today or $60 in 111 days? You press <mark title="human response">T</mark>.
+Question 25: Would you prefer $54 today or $80 in 30 days? You press <mark title="human response">L</mark>.
+Question 26: Would you prefer $22 today or $25 in 136 days? You press <mark title="human response">T</mark>.
+Question 27: Would you prefer $20 today or $55 in 7 days? You press <mark title="human response">L</mark>.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

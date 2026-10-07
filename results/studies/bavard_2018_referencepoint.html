@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bavard_2018_referencepoint</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / bavard_2018_referencepoint</nav>
+<h1>bavard_2018_referencepoint</h1>
+<p class="tags"><span class="chip paradigm">bandit</span> <span class="chip minor">psych-201</span></p>
+<p>A probabilistic instrumental learning task in which participants repeatedly choose between two cues within each context; contexts cross valence (reward/loss) and magnitude (big/small). Exp1 (N=20) uses a 2x2 design; Exp2 (N=40) adds partial vs complete (counterfactual) feedback. Every participant completes 160 learning trials (two 80-trial sessions presenting 4 cue pairs 20 times each) followed by a 112-trial transfer test with novel cue pairs to probe generalization. Responses are binary choices between the two cues, and feedback on the chosen (and in Exp2, optionally unchosen) outcome is delivered on each learning trial. The paper asks how reference-point centering and range adaptation in state-dependent value normalization shape reinforcement learning and produce irrational preferences.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">4,800</div><div class="tile-sub">480 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.522</div><div class="tile-sub">rank 4 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">Centaur</div><div class="tile-sub">test NLL (avg) 0.497</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr><td>CORE</td><td class="barcell" data-v="250.6627" title="CORE: 250.7 nats"><span class="track"><span class="bar core" style="width:52.2%"></span></span><span class="num">250.7</span></td><td class="num" data-v="0.5222">0.5222</td><td class="num" data-v="480">480</td><td class="num" data-v="0.5328">0.5328</td><td class="num" data-v="4320.0">4,320</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="247.1465" title="CORE (no prediction errors): 247.1 nats"><span class="track"><span class="bar core" style="width:51.5%"></span></span><span class="num">247.1</span></td><td class="num" data-v="0.5149">0.5149</td><td class="num" data-v="480">480</td><td class="num" data-v="0.5235">0.5235</td><td class="num" data-v="4320.0">4,320</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="248.7759" title="CORE (no phonemes): 248.8 nats"><span class="track"><span class="bar core" style="width:51.8%"></span></span><span class="num">248.8</span></td><td class="num" data-v="0.5183">0.5183</td><td class="num" data-v="480">480</td><td class="num" data-v="0.506">0.5060</td><td class="num" data-v="4320.0">4,320</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="257.0888" title="CORE (no forgetting): 257.1 nats"><span class="track"><span class="bar core" style="width:53.6%"></span></span><span class="num">257.1</span></td><td class="num" data-v="0.5356">0.5356</td><td class="num" data-v="480">480</td><td class="num" data-v="0.5349">0.5349</td><td class="num" data-v="4320.0">4,320</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="480.0907" title="CORE (no hierarchy): 480.1 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">480.1</span></td><td class="num" data-v="1.0002">1.0002</td><td class="num" data-v="480">480</td><td class="num" data-v="0.997">0.9970</td><td class="num" data-v="4320.0">4,320</td></tr><tr><td>Transformer</td><td class="barcell" data-v="307.1434" title="Transformer: 307.1 nats"><span class="track"><span class="bar base" style="width:64.0%"></span></span><span class="num">307.1</span></td><td class="num" data-v="0.6399">0.6399</td><td class="num" data-v="480">480</td><td class="num" data-v="0.6366">0.6366</td><td class="num" data-v="4320.0">4,320</td></tr><tr class="best"><td>Centaur <span class="pill best-pill">best</span></td><td class="barcell" data-v="238.5854" title="Centaur: 238.6 nats"><span class="track"><span class="bar base" style="width:49.7%"></span></span><span class="num">238.6</span></td><td class="num" data-v="0.4971">0.4971</td><td class="num" data-v="480">480</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>ReferencePointLearning</td><td class="num">20</td><td class="num">1,600</td><td class="num">1</td><td>no</td><td>–</td></tr><tr><td>exp1</td><td>ReferencePointLearningComplete</td><td class="num">40</td><td class="num">3,200</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option><option value="t1">exp1 · all participants</option></select></label><div class="transcript" id="t0"><pre>You are taking part in an experiment in which you can win or lose money. Your goal is to maximize your payoff: seeking monetary rewards and avoiding monetary losses are equally important.
+On each trial you see two abstract symbols, one on the left and one on the right of a central fixation cross. Each symbol is associated with a chance of producing a monetary outcome, and your task is to learn, from the outcomes you receive, which symbol is more advantageous and to choose it.
+To make your choice, press the button that matches the side of the chosen symbol (leftmost or rightmost) within 3 seconds. A red pointer then marks your selection and the outcome of the chosen symbol is shown: &#x27;+1.0€&#x27;, &#x27;+0.1€&#x27;, &#x27;0.0€&#x27;, &#x27;-0.1€&#x27; or &#x27;-1.0€&#x27;.
+In this transcript every symbol has a label, and your choice is recorded as the label of the symbol you selected.
+--- Session 1 begins. ---
+Session 1 uses four pairs of symbols, which are labeled as follows in this transcript:
+- reward/big pair: Symbol A and Symbol B
+- reward/small pair: Symbol C and Symbol D
+- loss/big pair: Symbol E and Symbol F
+- loss/small pair: Symbol G and Symbol H
+When you make a choice, type the label (A, B, C, D, E, F, G or H) of the symbol you choose.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">B</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows -0.1€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows -0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows -0.1€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows -1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows -0.1€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows -0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows -0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows 0.0€.
+--- Session 2 begins. ---
+Session 2 uses four new pairs of symbols, numbered 1 to 8 in this transcript:
+- reward/big pair: Symbol 1 and Symbol 2
+- reward/small pair: Symbol 3 and Symbol 4
+- loss/big pair: Symbol 5 and Symbol 6
+- loss/small pair: Symbol 7 and Symbol 8
+When you make a choice, type the number (1, 2, 3, 4, 5, 6, 7 or 8) of the symbol you choose.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 8. The chosen symbol shows -0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 2. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows +0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows +0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows +0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows +0.1€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows -1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows +0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€.
+After the two learning sessions you perform a transfer test of 112 trials.
+In each trial you again see two of the eight symbols of Session 2 (Symbols 1 to 8), possibly in a combination you have never seen together before. There is no feedback: you simply indicate which of the two symbols you believe has the higher value by typing its number (1 to 8).
+Symbol 8 and Symbol 4 are shown. You press 4.
+Symbol 1 and Symbol 7 are shown. You press 1.
+Symbol 6 and Symbol 8 are shown. You press 8.
+Symbol 7 and Symbol 5 are shown. You press 7.
+Symbol 6 and Symbol 1 are shown. You press 1.
+Symbol 4 and Symbol 5 are shown. You press 4.
+Symbol 4 and Symbol 7 are shown. You press 4.
+Symbol 5 and Symbol 3 are shown. You press 5.
+Symbol 2 and Symbol 6 are shown. You press 6.
+Symbol 8 and Symbol 1 are shown. You press 1.
+Symbol 2 and Symbol 7 are shown. You press 7.
+Symbol 1 and Symbol 5 are shown. You press 1.
+Symbol 7 and Symbol 1 are shown. You press 1.
+Symbol 5 and Symbol 7 are shown. You press 7.
+Symbol 3 and Symbol 1 are shown. You press 1.
+Symbol 7 and Symbol 8 are shown. You press 7.
+Symbol 8 and Symbol 7 are shown. You press 7.
+Symbol 7 and Symbol 3 are shown. You press 7.
+Symbol 1 and Symbol 4 are shown. You press 1.
+Symbol 7 and Symbol 8 are shown. You press 7.
+Symbol 8 and Symbol 6 are shown. You press 8.
+Symbol 7 and Symbol 4 are shown. You press 7.
+Symbol 1 and Symbol 2 are shown. You press 1.
+Symbol 4 and Symbol 2 are shown. You press 4.
+Symbol 6 and Symbol 2 are shown. You press 6.
+Symbol 3 and Symbol 1 are shown. You press 1.
+Symbol 3 and Symbol 8 are shown. You press 8.
+Symbol 6 and Symbol 5 are shown. You press 5.
+Symbol 7 and Symbol 1 are shown. You press 1.
+Symbol 7 and Symbol 3 are shown. You press 7.
+Symbol 4 and Symbol 3 are shown. You press 4.
+Symbol 2 and Symbol 4 are shown. You press 4.
+Symbol 1 and Symbol 3 are shown. You press 1.
+Symbol 6 and Symbol 2 are shown. You press 6.
+Symbol 8 and Symbol 2 are shown. You press 8.
+Symbol 2 and Symbol 1 are shown. You press 1.
+Symbol 7 and Symbol 2 are shown. You press 7.
+Symbol 8 and Symbol 5 are shown. You press 8.
+Symbol 4 and Symbol 8 are shown. You press 4.
+Symbol 6 and Symbol 3 are shown. You press 3.
+Symbol 3 and Symbol 2 are shown. You press 3.
+Symbol 6 and Symbol 7 are shown. You press 7.
+Symbol 1 and Symbol 7 are shown. You press 1.
+Symbol 5 and Symbol 2 are shown. You press 5.
+Symbol 8 and Symbol 7 are shown. You press 8.
+Symbol 2 and Symbol 3 are shown. You press 3.
+Symbol 4 and Symbol 5 are shown. You press 4.
+Symbol 6 and Symbol 4 are shown. You press 4.
+Symbol 1 and Symbol 6 are shown. You press 1.
+Symbol 3 and Symbol 6 are shown. You press 3.
+Symbol 7 and Symbol 4 are shown. You press 7.
+Symbol 1 and Symbol 3 are shown. You press 1.
+Symbol 2 and Symbol 5 are shown. You press 5.
+Symbol 5 and Symbol 3 are shown. You press 5.
+Symbol 5 and Symbol 4 are shown. You press 4.
+Symbol 8 and Symbol 1 are shown. You press 1.
+Symbol 4 and Symbol 7 are shown. You press 7.
+Symbol 3 and Symbol 7 are shown. You press 7.
+Symbol 4 and Symbol 6 are shown. You press 4.
+Symbol 2 and Symbol 8 are shown. You press 8.
+Symbol 6 and Symbol 5 are shown. You press 5.
+Symbol 5 and Symbol 6 are shown. You press 5.
+Symbol 2 and Symbol 4 are shown. You press 4.
+Symbol 5 and Symbol 1 are shown. You press 1.
+Symbol 4 and Symbol 2 are shown. You press 4.
+Symbol 4 and Symbol 3 are shown. You press 4.
+Symbol 6 and Symbol 7 are shown. You press 7.
+Symbol 2 and Symbol 6 are shown. You press 6.
+Symbol 8 and Symbol 2 are shown. You press 8.
+Symbol 2 and Symbol 7 are shown. You press 7.
+Symbol 1 and Symbol 6 are shown. You press 1.
+Symbol 3 and Symbol 5 are shown. You press 5.
+Symbol 5 and Symbol 8 are shown. You press 5.
+Symbol 4 and Symbol 1 are shown. You press 4.
+Symbol 3 and Symbol 4 are shown. You press 4.
+Symbol 1 and Symbol 5 are shown. You press 1.
+Symbol 7 and Symbol 6 are shown. You press 7.
+Symbol 6 and Symbol 3 are shown. You press 3.
+Symbol 3 and Symbol 8 are shown. You press 3.
+Symbol 4 and Symbol 6 are shown. You press 4.
+Symbol 3 and Symbol 5 are shown. You press 5.
+Symbol 1 and Symbol 4 are shown. You press 1.
+Symbol 1 and Symbol 8 are shown. You press 1.
+Symbol 3 and Symbol 6 are shown. You press 3.
+Symbol 4 and Symbol 1 are shown. You press 1.
+Symbol 8 and Symbol 3 are shown. You press 8.
+Symbol 6 and Symbol 1 are shown. You press 1.
+Symbol 2 and Symbol 3 are shown. You press 3.
+Symbol 5 and Symbol 4 are shown. You press 5.
+Symbol 5 and Symbol 2 are shown. You press 5.
+Symbol 1 and Symbol 2 are shown. You press 1.
+Symbol 2 and Symbol 5 are shown. You press 5.
+Symbol 2 and Symbol 8 are shown. You press 8.
+Symbol 3 and Symbol 4 are shown. You press 4.
+Symbol 5 and Symbol 6 are shown. You press 5.
+Symbol 6 and Symbol 8 are shown. You press 8.
+Symbol 2 and Symbol 1 are shown. You press 1.
+Symbol 5 and Symbol 7 are shown. You press 7.
+Symbol 5 and Symbol 1 are shown. You press 1.
+Symbol 6 and Symbol 4 are shown. You press 4.
+Symbol 7 and Symbol 6 are shown. You press 7.
+Symbol 7 and Symbol 5 are shown. You press 7.
+Symbol 3 and Symbol 2 are shown. You press 3.
+Symbol 8 and Symbol 6 are shown. You press 8.
+Symbol 3 and Symbol 7 are shown. You press 7.
+Symbol 7 and Symbol 2 are shown. You press 7.
+Symbol 1 and Symbol 8 are shown. You press 1.
+Symbol 8 and Symbol 3 are shown. You press 8.
+Symbol 8 and Symbol 5 are shown. You press 8.
+Symbol 8 and Symbol 4 are shown. You press 4.
+Symbol 5 and Symbol 8 are shown. You press 5.
+Symbol 4 and Symbol 8 are shown. You press 4.</pre></div><div class="transcript" id="t1" hidden><pre>You are taking part in an experiment in which you can win or lose money. Your goal is to maximize your payoff: seeking monetary rewards and avoiding monetary losses are equally important.
+On each trial you see two abstract symbols, one on the left and one on the right of a central fixation cross. Each symbol is associated with a chance of producing a monetary outcome, and your task is to learn, from the outcomes you receive, which symbol is more advantageous and to choose it.
+To make your choice, press the button that matches the side of the chosen symbol (leftmost or rightmost) within 3 seconds. A red pointer then marks your selection and the outcome of the chosen symbol is shown: &#x27;+1.0€&#x27;, &#x27;+0.1€&#x27;, &#x27;0.0€&#x27;, &#x27;-0.1€&#x27; or &#x27;-1.0€&#x27;.
+In this transcript every symbol has a label, and your choice is recorded as the label of the symbol you selected.
+In this second version of the experiment, some trials give &#x27;complete&#x27; feedback: after your choice you see the outcomes of BOTH the chosen symbol and the other, unchosen symbol. In the other, &#x27;partial&#x27; trials, you only see the outcome of the chosen symbol.
+
+--- Session 1 begins. ---
+Session 1 uses four pairs of symbols, which are labeled as follows in this transcript:
+- reward/big pair: Symbol A and Symbol B
+- reward/small pair: Symbol C and Symbol D
+- loss/big pair: Symbol E and Symbol F
+- loss/small pair: Symbol G and Symbol H
+When you make a choice, type the label (A, B, C, D, E, F, G or H) of the symbol you choose.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows -1.0€; the unchosen symbol would have shown -1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows -0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">D</mark>. The chosen symbol shows +0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows -1.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows -0.1€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown +1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows -0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown +1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">D</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">E</mark>. The chosen symbol shows -1.0€; the unchosen symbol would have shown 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">G</mark>. The chosen symbol shows -0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€; the unchosen symbol would have shown -1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown +1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows -0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown +1.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows -0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows -0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows +0.1€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows -1.0€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol G and Symbol H) is presented. You press <mark title="human response">H</mark>. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol A and Symbol B) is presented. You press <mark title="human response">A</mark>. The chosen symbol shows +1.0€; the unchosen symbol would have shown +1.0€.
+The loss/big pair (Symbol E and Symbol F) is presented. You press <mark title="human response">F</mark>. The chosen symbol shows 0.0€; the unchosen symbol would have shown -1.0€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">D</mark>. The chosen symbol shows +0.1€.
+The reward/small pair (Symbol C and Symbol D) is presented. You press <mark title="human response">C</mark>. The chosen symbol shows 0.0€.
+--- Session 2 begins. ---
+Session 2 uses four new pairs of symbols, numbered 1 to 8 in this transcript:
+- reward/big pair: Symbol 1 and Symbol 2
+- reward/small pair: Symbol 3 and Symbol 4
+- loss/big pair: Symbol 5 and Symbol 6
+- loss/small pair: Symbol 7 and Symbol 8
+When you make a choice, type the number (1, 2, 3, 4, 5, 6, 7 or 8) of the symbol you choose.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€; the unchosen symbol would have shown +0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows 0.0€; the unchosen symbol would have shown +0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 8. The chosen symbol shows -0.1€; the unchosen symbol would have shown -0.1€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€; the unchosen symbol would have shown -0.1€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€; the unchosen symbol would have shown +0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown +0.1€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€; the unchosen symbol would have shown +0.1€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€; the unchosen symbol would have shown -0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows +0.1€; the unchosen symbol would have shown 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€; the unchosen symbol would have shown +0.1€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows -1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€; the unchosen symbol would have shown +0.1€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 4. The chosen symbol shows 0.0€; the unchosen symbol would have shown +0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown +0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€; the unchosen symbol would have shown -0.1€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows -1.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows -0.1€; the unchosen symbol would have shown -0.1€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 6. The chosen symbol shows -1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows 0.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown +0.1€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown -0.1€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+The reward/big pair (Symbol 1 and Symbol 2) is presented. You press 1. The chosen symbol shows +1.0€.
+The reward/small pair (Symbol 3 and Symbol 4) is presented. You press 3. The chosen symbol shows +0.1€; the unchosen symbol would have shown 0.0€.
+The loss/big pair (Symbol 5 and Symbol 6) is presented. You press 5. The chosen symbol shows 0.0€.
+The loss/small pair (Symbol 7 and Symbol 8) is presented. You press 7. The chosen symbol shows 0.0€; the unchosen symbol would have shown 0.0€.
+After the two learning sessions you perform a transfer test of 112 trials.
+In each trial you again see two of the eight symbols of Session 2 (Symbols 1 to 8), possibly in a combination you have never seen together before. There is no feedback: you simply indicate which of the two symbols you believe has the higher value by typing its number (1 to 8).
+Symbol 5 and Symbol 7 are shown. You press 7.
+Symbol 1 and Symbol 6 are shown. You press 1.
+Symbol 1 and Symbol 2 are shown. You press 1.
+Symbol 4 and Symbol 7 are shown. You press 7.
+Symbol 5 and Symbol 2 are shown. You press 5.
+Symbol 5 and Symbol 4 are shown. You press 5.
+Symbol 8 and Symbol 4 are shown. You press 4.
+Symbol 2 and Symbol 1 are shown. You press 1.
+Symbol 4 and Symbol 2 are shown. You press 2.
+Symbol 1 and Symbol 5 are shown. You press 1.
+Symbol 4 and Symbol 7 are shown. You press 7.
+Symbol 6 and Symbol 2 are shown. You press 6.
+Symbol 5 and Symbol 2 are shown. You press 2.
+Symbol 4 and Symbol 5 are shown. You press 5.
+Symbol 8 and Symbol 3 are shown. You press 3.
+Symbol 4 and Symbol 6 are shown. You press 6.
+Symbol 7 and Symbol 2 are shown. You press 7.
+Symbol 6 and Symbol 7 are shown. You press 7.
+Symbol 6 and Symbol 5 are shown. You press 6.
+Symbol 7 and Symbol 2 are shown. You press 7.
+Symbol 6 and Symbol 2 are shown. You press 6.
+Symbol 2 and Symbol 7 are shown. You press 7.
+Symbol 5 and Symbol 7 are shown. You press 7.
+Symbol 2 and Symbol 5 are shown. You press 5.
+Symbol 2 and Symbol 7 are shown. You press 7.
+Symbol 1 and Symbol 7 are shown. You press 1.
+Symbol 2 and Symbol 5 are shown. You press 5.
+Symbol 5 and Symbol 1 are shown. You press 1.
+Symbol 6 and Symbol 4 are shown. You press 4.
+Symbol 7 and Symbol 3 are shown. You press 7.
+Symbol 5 and Symbol 3 are shown. You press 3.
+Symbol 8 and Symbol 1 are shown. You press 1.
+Symbol 7 and Symbol 8 are shown. You press 7.
+Symbol 8 and Symbol 6 are shown. You press 6.
+Symbol 2 and Symbol 3 are shown. You press 3.
+Symbol 6 and Symbol 8 are shown. You press 6.
+Symbol 8 and Symbol 3 are shown. You press 3.
+Symbol 7 and Symbol 3 are shown. You press 7.
+Symbol 2 and Symbol 8 are shown. You press 2.
+Symbol 1 and Symbol 2 are shown. You press 1.
+Symbol 7 and Symbol 6 are shown. You press 7.
+Symbol 4 and Symbol 2 are shown. You press 4.
+Symbol 3 and Symbol 8 are shown. You press 3.
+Symbol 3 and Symbol 8 are shown. You press 3.
+Symbol 8 and Symbol 1 are shown. You press 1.
+Symbol 6 and Symbol 4 are shown. You press 6.
+Symbol 1 and Symbol 8 are shown. You press 1.
+Symbol 8 and Symbol 2 are shown. You press 2.
+Symbol 4 and Symbol 8 are shown. You press 4.
+Symbol 7 and Symbol 1 are shown. You press 1.
+Symbol 5 and Symbol 8 are shown. You press 5.
+Symbol 1 and Symbol 7 are shown. You press 1.
+Symbol 7 and Symbol 8 are shown. You press 7.
+Symbol 7 and Symbol 5 are shown. You press 7.
+Symbol 7 and Symbol 4 are shown. You press 7.
+Symbol 7 and Symbol 1 are shown. You press 1.
+Symbol 1 and Symbol 4 are shown. You press 1.
+Symbol 7 and Symbol 4 are shown. You press 7.
+Symbol 6 and Symbol 1 are shown. You press 1.
+Symbol 7 and Symbol 5 are shown. You press 7.
+Symbol 6 and Symbol 1 are shown. You press 1.
+Symbol 3 and Symbol 5 are shown. You press 3.
+Symbol 6 and Symbol 3 are shown. You press 3.
+Symbol 2 and Symbol 6 are shown. You press 6.
+Symbol 8 and Symbol 2 are shown. You press 8.
+Symbol 8 and Symbol 4 are shown. You press 4.
+Symbol 3 and Symbol 2 are shown. You press 3.
+Symbol 3 and Symbol 1 are shown. You press 1.
+Symbol 2 and Symbol 4 are shown. You press 2.
+Symbol 4 and Symbol 1 are shown. You press 1.
+Symbol 5 and Symbol 4 are shown. You press 5.
+Symbol 4 and Symbol 6 are shown. You press 6.
+Symbol 3 and Symbol 7 are shown. You press 7.
+Symbol 3 and Symbol 2 are shown. You press 3.
+Symbol 3 and Symbol 7 are shown. You press 7.
+Symbol 1 and Symbol 8 are shown. You press 1.
+Symbol 1 and Symbol 6 are shown. You press 1.
+Symbol 8 and Symbol 5 are shown. You press 5.
+Symbol 3 and Symbol 6 are shown. You press 6.
+Symbol 5 and Symbol 3 are shown. You press 3.
+Symbol 4 and Symbol 8 are shown. You press 4.
+Symbol 7 and Symbol 6 are shown. You press 7.
+Symbol 8 and Symbol 7 are shown. You press 7.
+Symbol 6 and Symbol 8 are shown. You press 6.
+Symbol 8 and Symbol 6 are shown. You press 6.
+Symbol 4 and Symbol 3 are shown. You press 3.
+Symbol 1 and Symbol 5 are shown. You press 1.
+Symbol 4 and Symbol 5 are shown. You press 4.
+Symbol 6 and Symbol 7 are shown. You press 7.
+Symbol 5 and Symbol 6 are shown. You press 6.
+Symbol 3 and Symbol 4 are shown. You press 3.
+Symbol 3 and Symbol 1 are shown. You press 1.
+Symbol 4 and Symbol 3 are shown. You press 3.
+Symbol 2 and Symbol 8 are shown. You press 2.
+Symbol 5 and Symbol 1 are shown. You press 1.
+Symbol 8 and Symbol 5 are shown. You press 8.
+Symbol 1 and Symbol 4 are shown. You press 1.
+Symbol 1 and Symbol 3 are shown. You press 1.
+Symbol 4 and Symbol 1 are shown. You press 1.
+Symbol 2 and Symbol 3 are shown. You press 3.
+Symbol 2 and Symbol 6 are shown. You press 6.
+Symbol 3 and Symbol 4 are shown. You press 4.
+Symbol 3 and Symbol 6 are shown. You press 3.
+Symbol 3 and Symbol 5 are shown. You press 3.
+Symbol 5 and Symbol 8 are shown. You press 5.
+Symbol 2 and Symbol 4 are shown. You press 4.
+Symbol 1 and Symbol 3 are shown. You press 1.
+Symbol 6 and Symbol 5 are shown. You press 6.
+Symbol 6 and Symbol 3 are shown. You press 3.
+Symbol 2 and Symbol 1 are shown. You press 1.
+Symbol 5 and Symbol 6 are shown. You press 6.
+Symbol 8 and Symbol 7 are shown. You press 7.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

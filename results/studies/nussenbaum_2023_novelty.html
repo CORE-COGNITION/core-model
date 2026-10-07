@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nussenbaum_2023_novelty</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<main>
+<nav class="crumbs"><a href="../index.html">All studies</a> / nussenbaum_2023_novelty</nav>
+<h1>nussenbaum_2023_novelty</h1>
+<p class="tags"><span class="chip paradigm">bandit</span> <span class="chip minor">psych-201</span></p>
+<p>One experiment (exp0, N = 122) with participants aged 8–27. In each of 10 blocks (~15 trials each), a creature hid a coin under one of two presented stimuli and participants chose between the two; reward probabilities were re-randomized per block and the design decoupled novelty (how many times a stimulus had been seen) from uncertainty (the spread of the belief about reward). Trial-level data include the binary choice, RT, reward outcome, per-block reward probabilities, and cumulative selection/rejection/win/loss/exposure histories per stimulus, plus a surprise memory test after the task. Participants also completed WASI IQ subtests. The research question was how age moderates novelty-seeking vs. uncertainty-aversion as drivers of exploration, tested with computational reinforcement-learning models.</p>
+<div class="tiles"><div class="tile"><div class="tile-label">Responses</div><div class="tile-value">19,415</div><div class="tile-sub">1,906 held out</div></div><div class="tile"><div class="tile-label">CORE effects</div><div class="tile-value">–</div><div class="tile-sub">no effects simulated</div></div><div class="tile"><div class="tile-label">CORE test NLL (avg)</div><div class="tile-value">0.605</div><div class="tile-sub">rank 1 of 7 models</div></div><div class="tile"><div class="tile-label">Best model</div><div class="tile-value">CORE</div><div class="tile-sub">test NLL (avg) 0.605</div></div></div>
+<section class="card" id="likelihood"><h2>Likelihood of human responses</h2><div class="scroll"><table class="sortable">
+<thead><tr><th>model</th><th>PNLL</th><th class="num">test NLL (avg)</th><th class="num">test responses</th>
+<th class="num">train NLL (avg)</th><th class="num">train responses</th></tr></thead>
+<tbody><tr class="best"><td>CORE <span class="pill best-pill">best</span></td><td class="barcell" data-v="1153.6646" title="CORE: 1,153.7 nats"><span class="track"><span class="bar core" style="width:77.6%"></span></span><span class="num">1,153.7</span></td><td class="num" data-v="0.6053">0.6053</td><td class="num" data-v="1906">1,906</td><td class="num" data-v="0.6164">0.6164</td><td class="num" data-v="17509.0">17,509</td></tr><tr><td>CORE (no prediction errors)</td><td class="barcell" data-v="1164.3522" title="CORE (no prediction errors): 1,164.4 nats"><span class="track"><span class="bar core" style="width:78.3%"></span></span><span class="num">1,164.4</span></td><td class="num" data-v="0.6109">0.6109</td><td class="num" data-v="1906">1,906</td><td class="num" data-v="0.6108">0.6108</td><td class="num" data-v="17509.0">17,509</td></tr><tr><td>CORE (no phonemes)</td><td class="barcell" data-v="1200.4856" title="CORE (no phonemes): 1,200.5 nats"><span class="track"><span class="bar core" style="width:80.7%"></span></span><span class="num">1,200.5</span></td><td class="num" data-v="0.6298">0.6298</td><td class="num" data-v="1906">1,906</td><td class="num" data-v="0.5314">0.5314</td><td class="num" data-v="17509.0">17,509</td></tr><tr><td>CORE (no forgetting)</td><td class="barcell" data-v="1441.2936" title="CORE (no forgetting): 1,441.3 nats"><span class="track"><span class="bar core" style="width:96.9%"></span></span><span class="num">1,441.3</span></td><td class="num" data-v="0.7562">0.7562</td><td class="num" data-v="1906">1,906</td><td class="num" data-v="0.7394">0.7394</td><td class="num" data-v="17509.0">17,509</td></tr><tr><td>CORE (no hierarchy)</td><td class="barcell" data-v="1486.9409" title="CORE (no hierarchy): 1,486.9 nats"><span class="track"><span class="bar core" style="width:100.0%"></span></span><span class="num">1,486.9</span></td><td class="num" data-v="0.7801">0.7801</td><td class="num" data-v="1906">1,906</td><td class="num" data-v="0.7734">0.7734</td><td class="num" data-v="17509.0">17,509</td></tr><tr><td>Transformer</td><td class="barcell" data-v="1451.7312" title="Transformer: 1,451.7 nats"><span class="track"><span class="bar base" style="width:97.6%"></span></span><span class="num">1,451.7</span></td><td class="num" data-v="0.7617">0.7617</td><td class="num" data-v="1906">1,906</td><td class="num" data-v="0.7363">0.7363</td><td class="num" data-v="17509.0">17,509</td></tr><tr><td>Centaur</td><td class="barcell" data-v="1288.0573" title="Centaur: 1,288.1 nats"><span class="track"><span class="bar base" style="width:86.6%"></span></span><span class="num">1,288.1</span></td><td class="num" data-v="0.6758">0.6758</td><td class="num" data-v="1906">1,906</td><td class="num" data-v="">–</td><td class="num" data-v="">–</td></tr></tbody></table></div></section>
+<section class="card" id="experiments"><h2>Experiments</h2><div class="scroll"><table>
+<thead><tr><th>exp</th><th>task class</th><th class="num">participants</th><th class="num">responses</th><th class="num">conditions</th><th>simulated</th><th>effects</th></tr></thead>
+<tbody><tr><td>exp0</td><td>NoveltyExploration</td><td class="num">122</td><td class="num">19,415</td><td class="num">1</td><td>no</td><td>–</td></tr></tbody></table></div></section>
+<section class="card" id="effects"><h2>Behavioral effects</h2><p class="hint">No behavioral effects were simulated for this study.</p></section>
+<section class="card" id="transcript"><h2>Transcript</h2><label class="picker">Experiment and condition <select id="transcript-select"><option value="t0">exp0 · all participants</option></select></label><div class="transcript" id="t0"><pre>An enchanted kingdom needs gold coins to build a bridge to unite two sides. Various creatures have hidden coins in hiding spots around different territories. On each trial you search one of two hiding spots for a coin. Each creature has its own favorite hiding spots, which stay stable throughout its block, but a creature does not always hide its coin in its favorite spot. Every new creature has different favorite spots, so the odds reset at each new block.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see mossRock and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see mossRock and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see mossRock and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see mossRock and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see campfire and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and mossRock (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and mossRock (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see rockPile and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see rockPile and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see rockPile and mossRock (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see mossRock and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see mossRock and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see campfire and mossRock (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see mossRock and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see campfire and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see corn and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see corn and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see corn and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see mossRock and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see mossRock and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see corn and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see campfire and corn (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see campfire and mossRock (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see corn and mossRock (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see mossRock and corn (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see campfire and mossRock (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see mossRock and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see mossRock and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see mossRock and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see mossRock and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and mossRock (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see pumpkinCluster and mossRock (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see mossRock and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see campfire and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see pumpkinCluster and mossRock (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and mossRock (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see mossRock and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see rockPile and birdNest (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see rockPile and birdNest (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see birdNest and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see birdNest and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see rockPile and birdNest (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see rockPile and birdNest (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see rockPile and birdNest (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see birdNest and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see birdNest and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see rockPile and birdNest (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see birdNest and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see birdNest and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see birdNest and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see birdNest and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see birdNest and rockPile (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see campfire and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see pumpkinCluster and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see campfire and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see pumpkinCluster and treeDoor (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see leaves and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see leaves and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see leaves and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and leaves (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see leaves and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see corn and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see leaves and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see corn and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see corn and pumpkinCluster (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see pumpkinCluster and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see cabin and corn (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see cabin and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see cabin and corn (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see cabin and corn (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see watermelon and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see campfire and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and watermelon (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see campfire and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see watermelon and campfire (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see campfire and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see birdNest and campfire (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see watermelon and birdNest (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see campfire and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see birdNest and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see campfire and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see birdNest and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see watermelon and birdNest (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see leaves and cabin (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see cabin and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see cabin and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see leaves and cabin (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see cabin and leaves (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see leaves and cabin (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see leaves and cabin (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see cabin and leaves (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see cabin and leaves (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see leaves and appleTree (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see cabin and appleTree (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see appleTree and leaves (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see appleTree and cabin (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see leaves and appleTree (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see cabin and appleTree (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+
+Block: a new creature hides coins in a new territory. Its favorite hiding spots are unknown to you.
+You see vines and watermelon (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see watermelon and vines (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see vines and watermelon (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+You see watermelon and vines (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see watermelon and vines (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see vines and watermelon (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see watermelon and vines (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see watermelon and vines (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see vines and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see watermelon and vines (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see vines and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You find a coin.
+You see vines and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see watermelon and vines (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You find a coin.
+You see vines and watermelon (A = the first spot, B = the second). You press <mark title="human response">B</mark>. You do not find a coin.
+You see vines and leaves (A = the first spot, B = the second). You press <mark title="human response">A</mark>. You do not find a coin.
+
+Surprise memory test: each of the ten creatures appears one at a time, and you must recall which of its hiding spots was its favorite. Five spots are shown at once, labeled A, B, C, D and E in the order they appear. Press the letter of the spot you think was the creature&#x27;s favorite.
+Creature from territory 5: five hiding spots shown, A = mossRock, B = pumpkinCluster, C = cherryBlossom, D = campfire, E = treeDoor. You press <mark title="human response">B</mark>.
+Creature from territory 8: five hiding spots shown, A = watermelon, B = campfire, C = birdNest, D = cattail, E = treeDoor. You press <mark title="human response">A</mark>.
+Creature from territory 1: five hiding spots shown, A = mossRock, B = mushroom, C = leaves, D = rockPile, E = campfire. You press <mark title="human response">D</mark>.
+Creature from territory 10: five hiding spots shown, A = watermelon, B = leaves, C = vines, D = yellowTree, E = mossRock. You press <mark title="human response">C</mark>.
+Creature from territory 7: five hiding spots shown, A = cabin, B = pumpkinCluster, C = birdNest, D = corn, E = windmill. You press <mark title="human response">C</mark>.
+Creature from territory 2: five hiding spots shown, A = campfire, B = corn, C = birdNest, D = mossRock, E = fort. You press <mark title="human response">A</mark>.
+Creature from territory 3: five hiding spots shown, A = antHill, B = mossRock, C = treeDoor, D = pumpkinCluster, E = campfire. You press <mark title="human response">B</mark>.
+Creature from territory 6: five hiding spots shown, A = hay, B = corn, C = leaves, D = campfire, E = birdNest. You press <mark title="human response">B</mark>.
+Creature from territory 4: five hiding spots shown, A = cave, B = rockPile, C = birdNest, D = mossRock, E = corn. You press <mark title="human response">B</mark>.
+Creature from territory 9: five hiding spots shown, A = well, B = leaves, C = mossRock, D = cabin, E = appleTree. You press <mark title="human response">D</mark>.</pre></div></section>
+</main>
+<footer><div class="wrap">Built from <code>results_reports/</code> and <code>psych201_agentic/results_effects/</code> (runs 2209) by <code>results_browser/build.py</code>.</div></footer>
+<script src="../app.js"></script>
+</body></html>

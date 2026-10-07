@@ -1,14 +1,6 @@
 # CORE: COntextual Retrieval and Encoding
 
-Code for the paper *A small cognitive core explains human behavior at scale* (Binz & Schulz).
-
-`CORE` is a sequence model of human cognition: a stack of associative memories into which prediction errors are written,
-and whose encoding, retrieval, and forgetting depend on context.
-It reads natural-language transcripts of psychological experiments and predicts human button presses.
-This repository trains `CORE`, its ablations, and the baselines (Transformer, GatedDeltaNet, Centaur),
-evaluates them by likelihood, and simulates participants whose behavioral effects are compared with the original studies.
-
-Results browser (per-study likelihoods, behavioral effects, example transcripts):
+Detailed results (per-study likelihoods, behavioral effects, example transcripts):
 https://core-cognition.github.io/core-model/results/
 
 ## Contents

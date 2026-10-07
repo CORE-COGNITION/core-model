@@ -3,7 +3,7 @@
 Instructions = transcript text before the first human response, from the first row of the experiment
 (test split; train split if the experiment has no test row). all-MiniLM-L6-v2 reads at most 256 word pieces.
 
-Usage (from core-model/, env_full): python results_browser/embed.py
+Usage (from core-model/): python results_browser/embed.py
 Output: results_browser/embedding.json (read by build.py).
 """
 

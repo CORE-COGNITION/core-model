@@ -5,7 +5,7 @@
        simulated experiments (every experiment has equal weight), pooled over the four heads
   C-D  single layer-5 channels over the course of a game and at the boundary to the next game
 
-Steps (run from core-model/, with env_full):
+Steps (run from core-model/):
   python plotting/fig3_latents.py reduce <latents.pth> ...  # A-B: histograms -> plotting/gate_cache/<experiment>__<agent>.npz
   python plotting/fig3_latents.py channels                  # C-D: per-channel curves and table -> plotting/gate_cache/channels_fb.*
   python plotting/fig3_latents.py plot                      # -> paper/figures/fig3_latents.{pdf,png}; numbers -> plotting/gate_cache/fig3_latents.txt
@@ -14,7 +14,7 @@ Inputs
   A-B  psych201_agentic/results_simulations/*_latents.pth of one agent (simulate_core.py): per-token gates of every
        simulated participant, fp16 [num_layers, T, num_heads], each the mean over the head's 32 channels.
        tau = -1 / log_alpha in tokens (1/e decay time of the head's mean log retention).
-  C-D  *_channels.npz (psych201_agentic/replay_channels.py, scripts/replay_channels.sh; the 18 game experiments,
+  C-D  *_channels.npz (psych201_agentic/replay_channels.py; the 18 game experiments,
        no dubois_2022): per press and channel (6 layers x 4 heads x 32), the gates over the feedback of the press
        (beta_fb, la_fb) and over the post segment (beta_post, la_post); the per-press cache
        plotting/cache_2209 (press order, game structure; plotting/build_cache.py); the press positions of the *_latents.pth

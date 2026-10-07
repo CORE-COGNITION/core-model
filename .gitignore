@@ -1,7 +1,5 @@
 *.pyc
 __pycache__/
-logs/*
-!logs/.gitkeep
 results_evals/
 trained_models/
 .claude/settings.local.json

@@ -8,7 +8,7 @@
 
 Inputs: results_reports/<run>.md of the 2209 runs and of Centaur (header line "log marginal likelihood", NLL table
 with a TOTAL row). NLML = -log marginal likelihood; PNLL = TOTAL nll (test), 597,873 held-out choices.
-Run from core-model/ with env_full:  python plotting/fig2_comparison.py   -> paper/figures/fig2_comparison.{pdf,png}; numbers printed.
+Run from core-model/:  python plotting/fig2_comparison.py   -> paper/figures/fig2_comparison.{pdf,png}; numbers printed.
 """
 import os
 import re

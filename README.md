@@ -5,7 +5,7 @@ https://core-cognition.github.io/core-model/results/
 
 ## Contents
 
-- `run_core.py`, `run_gdn.py`, `run_transformer.py` — train, evaluate, and report one model each.
+- `run_core.py`, `run_transformer.py` — train, evaluate, and report one model each.
 - `eval_centaur.py` — evaluation of Centaur (`marcelbinz/Llama-3.1-Centaur-70B-adapter`).
 - `utils.py` (data loading, tokenizers), `packed_collator.py` (batch packing), `laplace.py` (Laplace log marginal likelihood), `reporting.py` (writes `results_reports/<run>.md`).
 - `flash-linear-attention-040526/` — pruned fork of [flash-linear-attention](https://github.com/fla-org/flash-linear-attention) with the `CORE` model (`fla.models.core_model`) and its Triton kernel (`fla.ops.delta_value`).

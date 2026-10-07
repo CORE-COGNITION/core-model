@@ -13,12 +13,11 @@ from collections import defaultdict
 
 import torch
 import torch.nn.functional as F
-from datasets import load_dataset
 from trl import DataCollatorForCompletionOnlyLM
 from unsloth import FastLanguageModel
 from xformers.ops.fmha.attn_bias import LowerTriangularMask
 
-from utils import DATA_DIR, MARKERS
+from utils import MARKERS, load_split
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--max_seq_length", type=int, default=131072, help="Centaur's context in tokens; longer transcripts are cut after the last response that fits.")
@@ -59,7 +58,7 @@ def to_centaur_format(ex):
     return enc
 
 
-test_set = load_dataset("json", data_files=os.path.join(DATA_DIR, "test.jsonl"))["train"].map(to_centaur_format, batched=False)
+test_set = load_split("test").map(to_centaur_format, batched=False)
 n_truncated = int(sum(test_set["truncated"]))
 print(f"[final_eval] {n_truncated} of {len(test_set)} transcripts cut to Centaur's {args.max_seq_length}-token context", flush=True)
 

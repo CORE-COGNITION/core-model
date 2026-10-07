@@ -104,8 +104,7 @@ at the verified commits (99 of 135 script copies changed, cheung_2024 exp1/exp2 
   exactly as training saw it: `build_dataset.to_discrete`, then `[HUMAN_RESPONSE]X` -> `[HUMAN_RESPONSE]PRESS_X` (`utils.load_data`),
   ending in the `[HUMAN_RESPONSE]` cue (checked 2026-09-15 on every call of a random-agent run of all 136 experiments: the cue plus
   the response is a prefix of the participant's final training text, and one call per marked response; 134 pass after
-  the Hub fixes below, cox_2018's recall misses and xu_2021's endless loop remain; the check is
-  `project-big/.claude/skills/auto-exp-sim/scripts/check_calls.py`, a skill of the sibling project).
+  the Hub fixes below, cox_2018's recall misses and xu_2021's endless loop remain).
   Participants per experiment = source count capped at 1000 (14,361 of 42,932). Since 2026-09-17 the agent continues a prompt that
   extends the previous call's prompt from the stored memory state (fla recurrent-state cache), tokenizing only the new text, so a
   participant costs one pass over their transcript instead of one per choice (`--no-cache`: the old agent; `--check_cache N`, default
@@ -181,11 +180,10 @@ Limits (all from the source scripts; counts from a `--random --on_nonletter rand
   `build_jsonl.py` writes `Options: symbol 4 (left), symbol 3 (right). You press [HUMAN_RESPONSE]B[/HUMAN_RESPONSE] (left:
   symbol 4). You get +1
   point (green smiley).` and describes two fixed pairs per session instead of contexts; `simulate0.py` mirrored (round
-  trip byte-identical, `check_calls.py` passes); presses unchanged (56 rows, 17,472). Working copy and push script:
-  `~/workspace/hf_fix/vandendriessche_2022_contextual/` (the Hub commit was pending when this was written:
+  trip byte-identical, `check_calls.py` passes); presses unchanged (56 rows, 17,472). The Hub commit was pending when this was written:
   `manifest.json` still pins f90904b7 while `data/raw/vandendriessche_2022_contextual/transcripts0.jsonl` and
   `hf/vandendriessche_2022_contextual/{simulate0.py,exp0.csv}` are the fixed files; re-run `build_dataset.py` and
-  `fetch_hf_scripts.py` after the push to re-pin).
+  `fetch_hf_scripts.py` after the push to re-pin.
 - Hub fix 2026-09-21 (bahrami_2020_arm, simulator only, commit 25bbbb9c, re-pinned here by hand in `manifest.json`,
   `experiments.json` and `hf/bahrami_2020_arm/simulate0.py`): the study used three fixed payoff schedules (in `exp0.csv`
   `reward_c1..c4` are identical on every trial for all participants of a `version`, and the reward equals the chosen
@@ -195,7 +193,6 @@ Limits (all from the source scripts; counts from a `--random --on_nonletter rand
   schedules (`PAYOFFS[version][trial]`, inline); miss rate, version assignment, columns and text unchanged (round trip
   byte-identical, `check_calls.py` passes; a random agent fails both curated effects). Transcripts, CSV and analysis
   untouched, so the training data does not change; bahrami simulations before this date used the random walks.
-  Working copy and push script: `~/workspace/hf_fix/bahrami_2020_arm/`.
 - xu_2021_novelty loops until a goal is reached (prompt > 400,000 chars with the random agent); run it with
   `--max_prompt_chars` so it fails loudly. olschewski_2025_optimal's simulators read the human
   `exp0/1.csv` (21 MB, `--with_csv olschewski_2025_optimal`; copy to the cluster like `data/`).

@@ -8,13 +8,15 @@ Output: results_browser/embedding.json (read by build.py).
 """
 
 import json
+import sys
 from pathlib import Path
 
 import umap
 from sentence_transformers import SentenceTransformer
 
 ROOT = Path(__file__).resolve().parent.parent  # core-model/
-DATA = ROOT / "psych201_agentic" / "data"
+sys.path.insert(0, str(ROOT))
+from utils import load_split  # noqa: E402
 OUT = Path(__file__).resolve().parent / "embedding.json"
 MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 SEED = 0
@@ -23,8 +25,7 @@ SEED = 0
 def load_instructions():
     instructions = {}
     for split in ("test", "train"):
-        for line in open(DATA / f"{split}.jsonl"):
-            row = json.loads(line)
+        for row in load_split(split):
             if row["experiment"] not in instructions:
                 instructions[row["experiment"]] = row["text"].split("[HUMAN_RESPONSE]", 1)[0].strip()
     return instructions

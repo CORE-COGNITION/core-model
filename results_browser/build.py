@@ -7,7 +7,7 @@ Sources (all read-only):
 - psych201_agentic/manifest.json: Hugging-Brain tags and notes
 - psych201_agentic/hf/<study>/README.md: "## Experiment summary" of the dataset card
 - psych201_agentic/hf/<study>/analysis.py: verbal effect descriptions (module docstring, "- <effect> (<exp>): ...")
-- psych201_agentic/data/test.jsonl: held-out transcripts (one example per condition)
+- utils.load_split: held-out transcripts from the Hugging Face Hub (one example per condition)
 
 Usage (from core-model/): python results_browser/build.py
 Output: results_browser/site/ (open site/index.html in a browser; no server needed).
@@ -17,10 +17,13 @@ import html
 import json
 import re
 import shutil
+import sys
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent  # core-model/
+sys.path.insert(0, str(ROOT))
+from utils import load_split  # noqa: E402
 OUT = Path(__file__).resolve().parent / "site"
 AGENTIC = ROOT / "psych201_agentic"
 
@@ -107,8 +110,7 @@ def load_transcripts():
     n_sessions, n_test_sessions, n_choices = 0, 0, 0
     for split in ("test", "train"):
         in_test = set(examples)
-        for line in open(AGENTIC / "data" / f"{split}.jsonl"):
-            row = json.loads(line)
+        for row in load_split(split):
             n_sessions += 1
             n_test_sessions += split == "test"
             n_choices += row["n_choices"]

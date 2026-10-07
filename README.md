@@ -38,8 +38,8 @@ pip install -e flash-linear-attention-040526
 The training and test sets are on the Hugging Face Hub:
 [Psych-201-discrete-agentic](https://huggingface.co/datasets/marcelbinz/Psych-201-discrete-agentic) and
 [Psych-201-discrete-agentic-test](https://huggingface.co/datasets/marcelbinz/Psych-201-discrete-agentic-test).
-The code reads them from `psych201_agentic/data/{train,test}.jsonl`.
-`psych201_agentic/build_dataset.py` rebuilds both files from the source repositories.
+The code loads them directly from the Hub, pinned to a revision (`DATA_REPOS` in `utils.py`).
+`psych201_agentic/build_dataset.py` rebuilds both splits from the source repositories.
 
 The simulators and effect analyses of the individual studies are downloaded at pinned commits with
 `python psych201_agentic/fetch_hf_scripts.py` (into `psych201_agentic/hf/`).

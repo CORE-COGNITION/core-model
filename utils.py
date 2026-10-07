@@ -31,11 +31,14 @@ def latest_checkpoint(load_path):
                 best = (step, os.path.join(load_path, entry))
     return best[1] if best else load_path
 
-# The data: the Psych-201-agentic split (psych201_agentic/data, built by psych201_agentic/build_dataset.py
+# The data: the Psych-201-agentic split on the Hugging Face Hub (built by psych201_agentic/build_dataset.py), pinned to a commit.
 # Each letter response is `[HUMAN_RESPONSE]X[/HUMAN_RESPONSE]`; load_data
 # rewrites it to `[HUMAN_RESPONSE]PRESS_X[/HUMAN_RESPONSE]` and DataCollatorForCompletionOnlyLM keys on the two
 # single-token markers (added to the vocabulary by build_tokenizer), so the loss sits on PRESS_X alone.
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "psych201_agentic", "data")
+DATA_REPOS = {  # split -> (Hub dataset, revision)
+    "train": ("marcelbinz/Psych-201-discrete-agentic", "6666b2215983f3ed081814c619a7ecb4941b5c85"),
+    "test": ("marcelbinz/Psych-201-discrete-agentic-test", "8db062045e2b063ba27e3050a76a369a9bec0034"),
+}
 MARKERS = {"open": "[HUMAN_RESPONSE]", "close": "[/HUMAN_RESPONSE]"}
 
 
@@ -45,13 +48,10 @@ TOKENIZED_CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "
 TOKENIZE_VERSION = 3
 
 
-def _sha256_files(paths):
-    h = hashlib.sha256()
-    for path in paths:
-        with open(path, "rb") as f:
-            for chunk in iter(lambda: f.read(1 << 24), b""):
-                h.update(chunk)
-    return h.hexdigest()
+def load_split(split):
+    """The 'train' or 'test' split of Psych-201-agentic from the Hub, at the pinned revision (one row = one session)."""
+    repo, revision = DATA_REPOS[split]
+    return load_dataset(repo, revision=revision, split="train")
 
 
 def _tokenizer_identity(tokenizer):
@@ -74,9 +74,9 @@ def _tokenizer_identity(tokenizer):
 
 
 def load_data(tokenizer, num_proc=16, add_press=True):
-    """Train/test splits of the Psych-201-agentic data (DATA_DIR train.jsonl / test.jsonl).
+    """Train/test splits of the Psych-201-agentic data (DATA_REPOS on the Hugging Face Hub).
     add_press: rewrite each letter response `[HUMAN_RESPONSE]X[/HUMAN_RESPONSE]` to `[HUMAN_RESPONSE]PRESS_X[/HUMAN_RESPONSE]`.
-    Tokenized once and cached under TOKENIZED_CACHE_DIR, keyed by a hash of the source file contents, the tokenizer,
+    Tokenized once and cached under TOKENIZED_CACHE_DIR, keyed by a hash of the Hub datasets and revisions, the tokenizer,
     and the arguments; changed data gets a new cache dir."""
     def tok_fn(ex):
         text = ex["text"]
@@ -84,27 +84,22 @@ def load_data(tokenizer, num_proc=16, add_press=True):
             text = text.replace(MARKERS["open"], MARKERS["open"] + "PRESS_")
         return tokenizer(text, truncation=False)
 
-    source_files = [os.path.join(DATA_DIR, "train.jsonl"), os.path.join(DATA_DIR, "test.jsonl")]
-    print(f"data: {source_files}")
+    print(f"data: {DATA_REPOS}")
 
     cache_key = {
         "tokenize_version": TOKENIZE_VERSION,
-        "source_files": source_files,
-        "source_sha256": _sha256_files(source_files),
+        "data_repos": DATA_REPOS,
         "add_press": add_press,
         "markers": MARKERS,
         "tokenizer": _tokenizer_identity(tokenizer),
     }
-    # Paths are recorded for traceability but kept out of the hash, so the same data at another path reuses the cache.
-    key_hash = hashlib.sha256(
-        json.dumps({k: v for k, v in cache_key.items() if k != "source_files"}, sort_keys=True).encode()
-    ).hexdigest()[:12]
+    key_hash = hashlib.sha256(json.dumps(cache_key, sort_keys=True).encode()).hexdigest()[:12]
     cache_dir = os.path.join(TOKENIZED_CACHE_DIR, f"{os.path.basename(tokenizer.name_or_path)}-{key_hash}")
 
     if not os.path.isdir(cache_dir):
         print(f"tokenized cache miss, building {cache_dir}")
-        train_set = load_dataset("json", data_files=source_files[0])["train"]
-        test_set = load_dataset("json", data_files=source_files[1])["train"]
+        train_set = load_split("train")
+        test_set = load_split("test")
 
         train_set = train_set.map(tok_fn, batched=False, num_proc=num_proc)
         test_set = test_set.map(tok_fn, batched=False, num_proc=num_proc)
